@@ -1,0 +1,45 @@
+{
+  "updated": "2026-08-31",
+  "schema_version": 1,
+  "purpose": "Quantified evidence of animal-study reduction, avoidance, or replacement. Metrics are kept separate from event chronology and regulatory-context records because a policy may exist without a measurable denominator or realized displacement.",
+  "metrics": [
+    {
+      "id": "epa-2016-acute-dermal-waiver-estimated-annual-savings",
+      "regulator": "US EPA Office of Pesticide Programs",
+      "jurisdiction": "United States",
+      "date": "2016-11-29",
+      "context": "Waiver of acute dermal toxicity tests for pesticide formulations",
+      "metric_type": "prospective_annual_animal_avoidance_estimate",
+      "value": 2500,
+      "unit": "animals_per_year_or_more",
+      "basis": "EPA reported receiving approximately 200–300 dermal formulation toxicity tests annually and stated that each generally used 10 animals per test.",
+      "realized_or_estimated": "estimated",
+      "source_url": "https://www.epa.gov/pesticides/new-epa-guidance-testing-pesticides-will-reduce-animal-testing",
+      "source_strength": "direct_regulator_statement",
+      "human_based_replacement": false,
+      "note": "This is a mature study-waiver precedent rather than a human-model substitution. It is valuable as a benchmark for how an agency can translate regulatory streamlining into a quantitative animal-use estimate.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"Adoption should ultimately be evaluated using measurable displacement rather than event counts alone","effect":"strong quantitative precedent"}
+      ]
+    },
+    {
+      "id": "epa-2026-ghs-mixtures-validation-corpus",
+      "regulator": "US EPA",
+      "jurisdiction": "United States",
+      "date": "2026-08-27",
+      "context": "Evaluation supporting use of the GHS mixtures equation for acute oral toxicity of covered pesticide formulations",
+      "metric_type": "validation_dataset_size",
+      "value": 700,
+      "unit": "pesticide_formulations_approximately",
+      "basis": "EPA states that the decision followed a comprehensive EPA/NIEHS analysis evaluating nearly 700 pesticide formulations.",
+      "realized_or_estimated": "observed_validation_corpus",
+      "source_url": "https://www.epa.gov/newsreleases/epa-announces-two-major-scientific-advancements-further-eliminate-animal-testing-raise",
+      "source_strength": "direct_regulator_statement",
+      "human_based_replacement": false,
+      "note": "This is not itself an animal-count displacement denominator. It quantifies the empirical base supporting an implemented computational alternative and should not be converted into animals avoided without further data.",
+      "manuscript_impacts": [
+        {"section":"III/IV","claim":"Large retrospective datasets can support transition from validation to regulatory implementation","effect":"supports"}
+      ]
+    }
+  ]
+}
