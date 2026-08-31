@@ -1,0 +1,132 @@
+{
+  "updated": "2026-08-31",
+  "schema_version": 1,
+  "purpose": "Source-audited candidates awaiting promotion, correction, merge, or rejection. Candidate status is not equivalent to inclusion in the verified public event ledger.",
+  "candidates": [
+    {
+      "id": "2025-04-29-nih-human-based-initiative",
+      "status": "ready_to_promote",
+      "action": "replace_existing_approximate_record",
+      "replaces_or_affects": ["2025-07-nih-human-based-priority"],
+      "date": "2025-04-29",
+      "institution": "NIH",
+      "title": "NIH launches initiative prioritizing human-based research technologies",
+      "stage": ["commitment", "review-infrastructure"],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_url": "https://www.nih.gov/news-events/news-releases/nih-prioritize-human-based-research-technologies",
+      "note": "Corrects approximate July chronology. Announcement includes planned ORIVA, reviewer-bias mitigation training, alternative-method expertise in study sections, funding/training/infrastructure expansion, and annual spending reporting."
+    },
+    {
+      "id": "2025-07-10-nih-nofo-model-policy",
+      "status": "ready_to_promote",
+      "action": "add",
+      "date": "2025-07-10",
+      "institution": "NIH",
+      "title": "NIH changes new funding-opportunity policy for animal-model systems",
+      "stage": ["adoption"],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_url": "https://grants.nih.gov/news-events/nih-extramural-nexus-news/2025/07/nih-funding-announcements-to-align-with-nih-initiative-to-prioritize-human-based-research",
+      "note": "New NOFOs relating to animal-model systems must also support human-focused approaches; NIH says it will no longer issue NOFOs exclusively supporting animal models or prescribe the model type. This is implementation of the April commitment."
+    },
+    {
+      "id": "2025-07-18-nih-model-choice-clarification",
+      "status": "supporting_only",
+      "action": "do_not_make_major_milestone",
+      "date": "2025-07-18",
+      "institution": "NIH",
+      "title": "NIH clarifies that scientifically justified animal-model proposals remain eligible",
+      "stage": ["adoption"],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_url": "https://grants.nih.gov/news-events/nih-extramural-nexus-news/2025/07/how-does-the-nih-initiative-to-prioritize-human-based-research-affect-research-proposing-the-use-of-laboratory-animals",
+      "note": "Use primarily to prevent overstatement of the July 10 policy. NIH remains model-neutral at application level subject to scientific merit and justification."
+    },
+    {
+      "id": "2025-09-25-nih-som-center",
+      "status": "ready_to_promote",
+      "action": "add",
+      "date": "2025-09-25",
+      "institution": "NIH",
+      "title": "NIH establishes $87M Standardized Organoid Modeling Center",
+      "stage": ["qualification", "validation-infrastructure"],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_url": "https://www.nih.gov/news-events/news-releases/nih-establishes-nations-first-dedicated-organoid-development-center-reduce-reliance-animal-modeling",
+      "note": "Three-year contracts total $87M. Center targets reproducible standardized organoid protocols, open access, scalable production, and collaboration with FDA toward preclinical-testing standards."
+    },
+    {
+      "id": "2026-06-03-fda-istand-digital-liver",
+      "status": "ready_to_promote",
+      "action": "add",
+      "date": "2026-06-03",
+      "institution": "FDA",
+      "title": "First in-silico DDT LOI accepted into ISTAND",
+      "stage": ["qualification"],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-accepts-first-silico-drug-development-tool-under-istand-program-help-predict-drug-induced-liver",
+      "note": "AI-driven digital liver model for DILI prediction. Accepted LOI is entry into qualification, not qualification."
+    },
+    {
+      "id": "2026-06-02-epa-nam-list-source-normalization",
+      "status": "ready_to_merge",
+      "action": "normalize_existing_source",
+      "replaces_or_affects": ["2026-06-epa-nams"],
+      "date": "2026-06-02",
+      "institution": "EPA",
+      "source_url": "https://www.epa.gov/newsreleases/trump-epa-takes-new-action-eliminate-animal-testing",
+      "note": "Primary source verifies accepted-method-list expansion and a streamlined nomination pathway. Keep distinct from Aug. 27 documented use in specific regulatory decisions."
+    },
+    {
+      "id": "2026-06-01-eu-roadmap-source-normalization",
+      "status": "ready_to_merge",
+      "action": "normalize_existing_source",
+      "replaces_or_affects": ["2026-06-eu-roadmap"],
+      "date": "2026-06-01",
+      "institution": "European Commission",
+      "source_url": "https://single-market-economy.ec.europa.eu/publications/roadmap-towards-phasing-out-animal-testing-chemical-safety-assessments_en",
+      "note": "Commission Communication C(2026)3497 spans 15 legislative domains and includes implementation architecture."
+    },
+    {
+      "id": "2025-11-11-uk-strategy-source-normalization",
+      "status": "ready_to_merge",
+      "action": "correct_date_and_normalize_source",
+      "replaces_or_affects": ["2025-11-uk-replacing-animals"],
+      "date": "2025-11-11",
+      "institution": "UK Government",
+      "source_url": "https://www.gov.uk/government/publications/replacing-animals-in-science-strategy",
+      "note": "Five-year strategy explicitly covers development, validation, regulatory confidence and uptake; correct public date is Nov. 11, 2025."
+    },
+    {
+      "id": "2024-01-25-complement-arie-concept-source-normalization",
+      "status": "ready_to_merge",
+      "action": "normalize_existing_source",
+      "replaces_or_affects": ["2024-01-complement-arie-concept"],
+      "date": "2024-01-25",
+      "institution": "NIH",
+      "source_url": "https://commonfund.nih.gov/complementarie",
+      "note": "NIH Common Fund page confirms Council of Councils approval on Jan. 25, 2024."
+    },
+    {
+      "id": "2026-isscr-consortium-source-normalization",
+      "status": "ready_to_merge",
+      "action": "normalize_existing_source",
+      "replaces_or_affects": ["2026-isscr-consortium"],
+      "institution": "ISSCR",
+      "source_url": "https://www.isscr.org/stem-cell-models-consortium",
+      "note": "Primary organizational source supports standards/reproducibility/coordination characterization; consortium is infrastructure, not regulatory qualification."
+    },
+    {
+      "id": "2026-ohsu-onprc-date-and-claim-audit",
+      "status": "requires_resolution",
+      "action": "audit_before_publication",
+      "replaces_or_affects": ["2026-07-27-ohsu-onprc"],
+      "institution": "OHSU",
+      "source_url": "https://news.ohsu.edu/2026/02/11/ohsu-enters-discussions-to-transition-onprc-to-primate-sanctuary",
+      "secondary_primary_record": "https://www.ohsu.edu/sites/default/files/2026-02/new-proposed-resolution-2026-02-01-re-onprc.pdf",
+      "note": "Sources found verify a Feb. 9, 2026 board resolution authorizing 180 days of negotiations with NIH over a possible sanctuary transition and conditioning research transition on alternative-method readiness. They do not verify the current ledger's July 27 NAM-center-of-excellence description. Locate the later board record or correct/remove the current record."
+    }
+  ]
+}
