@@ -1,0 +1,115 @@
+{
+  "updated": "2026-08-31",
+  "schema_version": 1,
+  "purpose": "Context-of-use ledger for documented opportunities to omit, replace, reduce, or avoid animal studies. This is analytically distinct from the event chronology: an event records that something happened; a regulatory-context record captures what evidence can be used for which decision and with what status.",
+  "contexts": [
+    {
+      "id": "fda-qt-anticancer-hipsc-cm",
+      "regulator": "FDA CDER",
+      "jurisdiction": "United States",
+      "decision_context": "QT prolongation or proarrhythmic-risk assessment for anticancer pharmaceuticals when cause for concern warrants assessment",
+      "legacy_animal_component": "Animal study otherwise conducted to evaluate QT prolongation or proarrhythmic risk",
+      "alternative": "Human induced pluripotent stem cell-derived cardiomyocyte (hiPSC-CM) studies following best practices, with hERG testing as appropriate",
+      "displacement_type": "replace",
+      "regulatory_status": "applied_regulatory_example",
+      "evidence_strength": "direct_regulator_statement",
+      "human_based": true,
+      "major_context": true,
+      "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
+      "source_note": "FDA's CDER inventory explicitly states that qualifying hiPSC-CM studies can be used in place of an animal study that would otherwise be conducted in this context.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"Some NAMs have crossed from validation into decision-level substitution","effect":"strengthens"}
+      ]
+    },
+    {
+      "id": "epa-surfactant-inhalation-human-airway-digital",
+      "regulator": "US EPA",
+      "jurisdiction": "United States",
+      "decision_context": "Respiratory-risk assessment for covered surfactant formulas",
+      "legacy_animal_component": "New animal inhalation studies otherwise ordered for covered assessments",
+      "alternative": "3D human airway tissue integrated with existing digital models",
+      "displacement_type": "avoid_new_study",
+      "regulatory_status": "implemented_regulatory_use",
+      "evidence_strength": "direct_regulator_statement",
+      "human_based": true,
+      "major_context": true,
+      "source_url": "https://www.epa.gov/newsreleases/epa-announces-two-major-scientific-advancements-further-eliminate-animal-testing-raise",
+      "source_note": "EPA states that reviewers can estimate risks using the updated human-airway-tissue framework and existing digital models rather than ordering new animal studies.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"Regulatory adoption should be measured by avoided legacy studies, not announcements alone","effect":"direct evidence"}
+      ]
+    },
+    {
+      "id": "epa-pesticide-acute-oral-ghs-mixtures",
+      "regulator": "US EPA",
+      "jurisdiction": "United States",
+      "decision_context": "Acute oral toxicity prediction for covered pesticide formulations",
+      "legacy_animal_component": "New acute oral animal testing for covered mixtures",
+      "alternative": "Globally Harmonized System mixtures equation using component toxicity information",
+      "displacement_type": "avoid_new_study",
+      "regulatory_status": "implemented_regulatory_use",
+      "evidence_strength": "direct_regulator_statement",
+      "human_based": false,
+      "major_context": true,
+      "source_url": "https://www.epa.gov/newsreleases/epa-announces-two-major-scientific-advancements-further-eliminate-animal-testing-raise",
+      "source_note": "This is computational/weight-of-evidence replacement rather than a human-derived biological model, so it belongs in the broader NAM transition but should not be labeled human-based without qualification.",
+      "manuscript_impacts": [
+        {"section":"II/IV","claim":"The transition includes computational replacements as well as human biological models","effect":"clarifies"}
+      ]
+    },
+    {
+      "id": "fda-recombinant-endotoxin-drugs-devices",
+      "regulator": "FDA",
+      "jurisdiction": "United States",
+      "decision_context": "Bacterial endotoxin testing for suitable drugs and devices",
+      "legacy_animal_component": "Use of horseshoe-crab-derived LAL reagents; in the wider pyrogen-testing context, animal-derived and in vivo approaches",
+      "alternative": "Recombinant Factor C or recombinant cascade reagents, with assay suitability verified for intended use",
+      "displacement_type": "replace_animal_derived_reagent",
+      "regulatory_status": "final_guidance_flexibility",
+      "evidence_strength": "direct_regulator_statement",
+      "human_based": false,
+      "major_context": true,
+      "source_url": "https://www.fda.gov/science-research/advancing-alternative-methods-fda/fda-clarifies-current-thinking-pyrogen-and-endotoxins-testing",
+      "source_note": "FDA's March 2026 final guidance update accommodates recombinant reagents and aligns with USP <86>. This is not identical to replacement of an in vivo animal study, so displacement type is kept separate.",
+      "manuscript_impacts": [
+        {"section":"III.D/VII","claim":"Standards plus regulatory flexibility can enable reusable replacement across products","effect":"strengthens"}
+      ]
+    },
+    {
+      "id": "fda-ich-s1b-r1-carcinogenicity-woe",
+      "regulator": "FDA / ICH",
+      "jurisdiction": "United States / ICH regions",
+      "decision_context": "Carcinogenicity assessment for pharmaceuticals within ICH S1B(R1) scope",
+      "legacy_animal_component": "Two-year rat carcinogenicity study in cases where an integrated weight-of-evidence assessment can adequately characterize human carcinogenic risk",
+      "alternative": "Integrated weight-of-evidence assessment using biologic, pharmacologic, toxicologic, and other relevant information, with regulatory consultation",
+      "displacement_type": "omit_conditional",
+      "regulatory_status": "final_guidance",
+      "evidence_strength": "direct_guideline",
+      "human_based": false,
+      "major_context": true,
+      "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/s1br1-addendum-s1b-testing-carcinogenicity-pharmaceuticals",
+      "source_note": "Final November 2022 guidance permits a weight-of-evidence pathway in which sponsors may seek agreement not to conduct the two-year rat study. This is a mature reduction precedent and predates the 2025 FDA roadmap.",
+      "manuscript_impacts": [
+        {"section":"II/Table 2","claim":"Some routine animal-testing reductions predate the current policy acceleration and provide precedents for evidence integration","effect":"strengthens historical baseline"}
+      ]
+    },
+    {
+      "id": "fda-photosafety-nonanimal",
+      "regulator": "FDA / ICH",
+      "jurisdiction": "United States / ICH regions",
+      "decision_context": "Photosafety assessment for small-molecule pharmaceuticals",
+      "legacy_animal_component": "Animal phototoxicity testing",
+      "alternative": "Risk assessment using photochemical properties plus in chemico, in vitro, nonclinical, and clinical information as appropriate",
+      "displacement_type": "replace_or_avoid",
+      "regulatory_status": "established_guidance",
+      "evidence_strength": "direct_regulator_inventory",
+      "human_based": false,
+      "major_context": false,
+      "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
+      "source_note": "FDA's current inventory states that non-animal methods or clinical data are typically used for photosafety assessment; this is an established rather than newly emerging NAM context.",
+      "manuscript_impacts": [
+        {"section":"Table 2","claim":"Routine/established contexts demonstrate that adoption can become invisible once embedded in guidance","effect":"strengthens"}
+      ]
+    }
+  ]
+}
