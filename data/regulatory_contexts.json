@@ -17,9 +17,7 @@
       "major_context": true,
       "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
       "source_note": "FDA's CDER inventory explicitly states that qualifying hiPSC-CM studies can be used in place of an animal study that would otherwise be conducted in this context.",
-      "manuscript_impacts": [
-        {"section":"IV/VII","claim":"Some NAMs have crossed from validation into decision-level substitution","effect":"strengthens"}
-      ]
+      "manuscript_impacts": [{"section":"IV/VII","claim":"Some NAMs have crossed from validation into decision-level substitution","effect":"strengthens"}]
     },
     {
       "id": "epa-surfactant-inhalation-human-airway-digital",
@@ -35,9 +33,7 @@
       "major_context": true,
       "source_url": "https://www.epa.gov/newsreleases/epa-announces-two-major-scientific-advancements-further-eliminate-animal-testing-raise",
       "source_note": "EPA states that reviewers can estimate risks using the updated human-airway-tissue framework and existing digital models rather than ordering new animal studies.",
-      "manuscript_impacts": [
-        {"section":"IV/VII","claim":"Regulatory adoption should be measured by avoided legacy studies, not announcements alone","effect":"direct evidence"}
-      ]
+      "manuscript_impacts": [{"section":"IV/VII","claim":"Regulatory adoption should be measured by avoided legacy studies, not announcements alone","effect":"direct evidence"}]
     },
     {
       "id": "epa-pesticide-acute-oral-ghs-mixtures",
@@ -53,9 +49,7 @@
       "major_context": true,
       "source_url": "https://www.epa.gov/newsreleases/epa-announces-two-major-scientific-advancements-further-eliminate-animal-testing-raise",
       "source_note": "This is computational/weight-of-evidence replacement rather than a human-derived biological model, so it belongs in the broader NAM transition but should not be labeled human-based without qualification.",
-      "manuscript_impacts": [
-        {"section":"II/IV","claim":"The transition includes computational replacements as well as human biological models","effect":"clarifies"}
-      ]
+      "manuscript_impacts": [{"section":"II/IV","claim":"The transition includes computational replacements as well as human biological models","effect":"clarifies"}]
     },
     {
       "id": "fda-recombinant-endotoxin-drugs-devices",
@@ -71,9 +65,7 @@
       "major_context": true,
       "source_url": "https://www.fda.gov/science-research/advancing-alternative-methods-fda/fda-clarifies-current-thinking-pyrogen-and-endotoxins-testing",
       "source_note": "FDA's March 2026 final guidance update accommodates recombinant reagents and aligns with USP <86>. This is not identical to replacement of an in vivo animal study, so displacement type is kept separate.",
-      "manuscript_impacts": [
-        {"section":"III.D/VII","claim":"Standards plus regulatory flexibility can enable reusable replacement across products","effect":"strengthens"}
-      ]
+      "manuscript_impacts": [{"section":"III.D/VII","claim":"Standards plus regulatory flexibility can enable reusable replacement across products","effect":"strengthens"}]
     },
     {
       "id": "fda-ich-s1b-r1-carcinogenicity-woe",
@@ -89,9 +81,7 @@
       "major_context": true,
       "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/s1br1-addendum-s1b-testing-carcinogenicity-pharmaceuticals",
       "source_note": "Final November 2022 guidance permits a weight-of-evidence pathway in which sponsors may seek agreement not to conduct the two-year rat study. This is a mature reduction precedent and predates the 2025 FDA roadmap.",
-      "manuscript_impacts": [
-        {"section":"II/Table 2","claim":"Some routine animal-testing reductions predate the current policy acceleration and provide precedents for evidence integration","effect":"strengthens historical baseline"}
-      ]
+      "manuscript_impacts": [{"section":"II/Table 2","claim":"Some routine animal-testing reductions predate the current policy acceleration and provide precedents for evidence integration","effect":"strengthens historical baseline"}]
     },
     {
       "id": "fda-photosafety-nonanimal",
@@ -107,9 +97,87 @@
       "major_context": false,
       "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
       "source_note": "FDA's current inventory states that non-animal methods or clinical data are typically used for photosafety assessment; this is an established rather than newly emerging NAM context.",
-      "manuscript_impacts": [
-        {"section":"Table 2","claim":"Routine/established contexts demonstrate that adoption can become invisible once embedded in guidance","effect":"strengthens"}
-      ]
+      "manuscript_impacts": [{"section":"Table 2","claim":"Routine/established contexts demonstrate that adoption can become invisible once embedded in guidance","effect":"strengthens"}]
+    },
+    {
+      "id": "fda-mab-no-relevant-species-no-animal-tox",
+      "regulator": "FDA CDER",
+      "jurisdiction": "United States",
+      "decision_context": "Monospecific monoclonal antibodies when pharmacology shows no binding or pharmacological activity in any nonclinical species",
+      "legacy_animal_component": "General animal toxicology studies",
+      "alternative": "Weight-of-evidence risk assessment using pharmacology and other relevant evidence",
+      "displacement_type": "omit_conditional",
+      "regulatory_status": "draft_guidance_context",
+      "evidence_strength": "direct_regulator_inventory",
+      "human_based": "mixed",
+      "major_context": true,
+      "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
+      "source_note": "FDA's current inventory states that when a monospecific antibody does not bind to the target in any nonclinical species or binding has no pharmacological activity, no animal toxicology studies are warranted. The underlying mAb guidance remains draft, so this is not final guidance.",
+      "manuscript_impacts": [{"section":"II/IV","claim":"Scientific irrelevance of the animal model can itself justify omission when alternative evidence supports risk assessment","effect":"strengthens"}]
+    },
+    {
+      "id": "fda-pdl1-mab-chronic-woe",
+      "regulator": "FDA CDER",
+      "jurisdiction": "United States",
+      "decision_context": "Chronic-effects assessment for PD-(L)1 blocking monospecific antibodies",
+      "legacy_animal_component": "Three-month toxicology study",
+      "alternative": "Weight-of-evidence risk assessment; with justification, the one-month study may also be non-sacrificial and supplemented by WoE",
+      "displacement_type": "replace_or_reduce_conditional",
+      "regulatory_status": "draft_guidance_context",
+      "evidence_strength": "direct_regulator_inventory",
+      "human_based": "mixed",
+      "major_context": false,
+      "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
+      "source_note": "This is a modality-specific streamlined context in FDA's current inventory; the referenced mAb guidance is draft and should not be presented as final policy.",
+      "manuscript_impacts": [{"section":"II/Table 2","claim":"Streamlining is becoming endpoint- and modality-specific rather than uniform","effect":"strengthens"}]
+    },
+    {
+      "id": "fda-cd3-bispecific-chronic-woe",
+      "regulator": "FDA CDER",
+      "jurisdiction": "United States",
+      "decision_context": "Chronic-effects assessment for CD3 bispecific T-cell engagers",
+      "legacy_animal_component": "Three-month toxicology study",
+      "alternative": "Weight-of-evidence risk assessment",
+      "displacement_type": "replace_conditional",
+      "regulatory_status": "draft_guidance_context",
+      "evidence_strength": "direct_regulator_inventory",
+      "human_based": "mixed",
+      "major_context": false,
+      "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
+      "source_note": "FDA's inventory states that chronic effects may be based on a weight-of-evidence assessment in lieu of a three-month toxicology study. The oncology guidance underlying this context is draft.",
+      "manuscript_impacts": [{"section":"II/Table 2","claim":"Streamlined nonclinical expectations are spreading across specific biologic classes","effect":"supports"}]
+    },
+    {
+      "id": "fda-oligonucleotide-dart-woe",
+      "regulator": "FDA CDER",
+      "jurisdiction": "United States",
+      "decision_context": "Developmental and reproductive toxicity assessment for oligonucleotide-based therapeutics",
+      "legacy_animal_component": "Additional DART animal studies",
+      "alternative": "Existing weight of evidence when sufficient to communicate reproductive and embryofetal-development risk",
+      "displacement_type": "omit_conditional",
+      "regulatory_status": "established_guidance",
+      "evidence_strength": "direct_regulator_inventory",
+      "human_based": "mixed",
+      "major_context": false,
+      "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
+      "source_note": "FDA's inventory states that existing data may in some cases be sufficient such that no additional nonclinical studies are warranted.",
+      "manuscript_impacts": [{"section":"Table 2","claim":"Established guidance already contains conditional study-omission pathways","effect":"strengthens"}]
+    },
+    {
+      "id": "fda-microdose-radiopharmaceutical-repeat-dart",
+      "regulator": "FDA CDER",
+      "jurisdiction": "United States",
+      "decision_context": "Microdose radiopharmaceutical diagnostic drugs",
+      "legacy_animal_component": "Repeat-dose toxicity studies and developmental/reproductive toxicity studies",
+      "alternative": "Study omission based on the microdose diagnostic context and established nonclinical recommendations",
+      "displacement_type": "omit",
+      "regulatory_status": "established_guidance",
+      "evidence_strength": "direct_regulator_inventory",
+      "human_based": false,
+      "major_context": false,
+      "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
+      "source_note": "FDA's current inventory lists repeat-dose toxicity and DART as not warranted for microdose radiopharmaceutical diagnostic drugs under the cited guidance.",
+      "manuscript_impacts": [{"section":"Table 2","claim":"Routine omission is an important endpoint of transition even when it is not branded as a NAM innovation","effect":"strengthens"}]
     }
   ]
 }
