@@ -4,15 +4,18 @@ Updated: 2026-08-31
 
 ## Current objective
 
-Build the repository into a living research product supporting the paper *From Commitment to Adoption: The Path Ahead for New Biology*. The roadmap should maintain a broader evidence corpus than the paper, preserve regulatory-stage distinctions, expose a compact major-milestones view, and maintain a separate prospective program of observable future milestones.
+Build the repository into a living research product supporting the paper *From Commitment to Adoption: The Path Ahead for New Biology*. The roadmap should maintain a broader evidence corpus than the paper, preserve regulatory-stage distinctions, expose a compact major-milestones view, maintain a separate prospective program of observable future milestones, and now separately track verified contexts in which legacy animal studies or animal-derived test components can actually be omitted, replaced, shortened, or avoided.
 
 ## Current architecture
 
 - `data/events.json` — observed/foundation/emerging evidence ledger.
 - `data/prospective.json` — forward-looking targets, recommendations, forecasts, and catalytic proposals.
+- `data/regulatory_contexts.json` — context-of-use ledger for documented animal-study or animal-derived-component displacement.
+- `data/candidates.json` — source-audited candidates awaiting promotion, correction, merge, or rejection.
 - `RESEARCH_PROTOCOL.md` — inclusion/exclusion, evidence hierarchy, stage discipline, and research rounds.
-- `EVENT_SCHEMA.md` — field definitions and migration rules.
+- `EVENT_SCHEMA.md` — event field definitions and migration rules.
 - `PAPER_INTEGRATION.md` — plan for manuscript figures, supplementary chronology, linking, and publication freeze.
+- `research/ROUND_1_ADOPTION_DISPLACEMENT_SWEEP_2026-08-31.md` — first explicit adoption/displacement audit.
 - `RESEARCH_HANDOFF.md` — coordination state for future agents/researchers.
 - `scripts/validate_data.py` + `.github/workflows/validate.yml` — CI validation of schema-critical fields and source links.
 
@@ -25,7 +28,10 @@ Primary-source verification completed in this round for the following additions 
 - 2024-09-24 — FDA accepts the first organ-on-chip LOI into ISTAND, a human Liver-Chip intended to assess DILI risk for certain drug candidates. Important distinction: accepted LOI, not qualification.
 - 2025-04-03 — NIH Common Fund/FNIH launch the Complement-ARIE Validation and Qualification Network partnership.
 - 2025-04-10 — FDA publishes its Roadmap to Reducing Animal Testing in Preclinical Safety Studies and announces immediate implementation beginning with monoclonal-antibody development.
-- 2025 — FDA establishes ISTAND as a permanent DDT Qualification Program; FDA explicitly describes qualification as reusable within a stated context of use.
+- 2025-04-29 — NIH announces its human-based research initiative, including planned ORIVA, review-system changes, funding/training/infrastructure expansion, and annual spending reporting. This should replace the approximate July 2025 record.
+- 2025-07-10 — NIH changes new NOFO policy: opportunities involving animal-model systems must also permit human-focused approaches; NIH says it will no longer issue NOFOs exclusively supporting animal models. Keep distinct from the April commitment.
+- 2025-07-31 — FDA establishes ISTAND as a permanent DDT Qualification Program; FDA explicitly describes qualification as reusable within a stated context of use.
+- 2025-09-25 — NIH establishes the Standardized Organoid Modeling Center with $87M over the first three years, targeting reproducibility, standardization, scale, open resources, and work with FDA toward preclinical-testing standards.
 - 2025-09-30 — Complement-ARIE launches the $7M Reduction to Practice Challenge with staged reproducibility and VQN-delivery milestones.
 - 2025-12-02 — FDA issues draft guidance on streamlined nonclinical safety studies for monoclonal antibodies; draft, not final.
 - 2025-12-08 — FDA qualifies AIM-NASH, the first AI drug-development tool; this is a formal qualification through the Biomarker Qualification Program, not ISTAND.
@@ -43,6 +49,21 @@ Primary-source verification completed in this round for the following additions 
 - 2026-08-27 — EPA announces actual use of 3D human airway tissue plus digital models for specified surfactant respiratory-risk assessment and a GHS mixtures equation for some pesticide oral-toxicity decisions.
 - 2026-08-31 — FDA/ICMRA recombinant-endotoxin PACMP collaborative assessment already verified and retained as adoption/international convergence.
 
+## Adoption/displacement layer
+
+A second empirical object is now required in addition to the chronology. `data/regulatory_contexts.json` records defined contexts in which an authoritative source supports actual omission, replacement, reduction, or avoidance of a legacy animal study or animal-derived component.
+
+Initial verified contexts include:
+
+- FDA CDER applied regulatory example: hiPSC-derived cardiomyocyte studies following best practices can be used in place of an animal study otherwise conducted for QT/proarrhythmic-risk assessment in the specified anticancer context.
+- EPA surfactant assessment: 3D human airway tissue plus existing digital models allow covered respiratory-risk decisions without ordering new animal studies.
+- EPA pesticide acute-oral assessment: the GHS mixtures equation can avoid new animal testing for covered formulations; this is computational rather than human-biological.
+- FDA final 2026 pyrogen/endotoxin guidance: recombinant reagents are accommodated as alternatives to horseshoe-crab-derived LAL reagents; code this as replacement of an animal-derived reagent, not an in vivo study.
+- ICH S1B(R1)/FDA final 2022 guidance: an integrated weight-of-evidence pathway can support regulatory consultation on omitting the two-year rat carcinogenicity study in appropriate cases.
+- FDA photosafety inventory: non-animal methods or clinical data are typically used for small-molecule photosafety assessment, an example of mature adoption that no longer looks like a new milestone.
+
+Do not equate a NAM-supportive announcement, qualification pathway entry, corporate platform deployment, or validation study with displacement. For the stricter adoption measure, the record should support that a legacy study/component can actually be omitted, replaced, shortened, or avoided for a defined decision.
+
 ## Important decompositions
 
 The initial seed ledger contained records that merged analytically distinct developments. The v2 migration has already split:
@@ -52,38 +73,35 @@ The initial seed ledger contained records that merged analytically distinct deve
 
 Remaining decomposition candidate:
 
-- `2026-iamps-ring-trials`: IAMPS launch and specific ring-trial evidence should be separate if primary sources can be verified independently.
+- `2026-iamps-ring-trials`: IAMPS launch and specific ring-trial evidence should be separate. IAMPS is industry coordination/standards infrastructure; the Liver MPS Ring Trial is a distinct reproducibility exercise. Trial initiation is not evidence of successful reproducibility or regulatory acceptance.
 
 Do not use combined records for quantitative counts of Commitment → Qualification → Adoption.
 
-## Known high-priority source gaps
+## Known high-priority source gaps and audits
 
-Normalize primary sources for the remaining manuscript-seeded events before treating the corpus as audit-ready:
+Normalize or resolve the following before treating the corpus as audit-ready:
 
 - FDA Modernization Act 2.0 statutory source;
-- Complement-ARIE 2024 concept approval;
-- NIH human-based research prioritization source/date;
-- UK Replacing Animals in Science strategy;
-- EU chemical-safety roadmap;
-- OHSU/ONPRC board resolution;
+- OHSU/ONPRC record: primary sources found verify a Feb. 9, 2026 board resolution authorizing negotiations over a possible sanctuary transition, but do not yet verify the current July 27 NAM-center-of-excellence formulation. Resolve or correct rather than silently retaining it.
 - NIH reviewer EOI/public posting status;
-- EPA June 2, 2026 NAM-list additions;
 - NIEHS/SCIOME contract award;
-- ISSCR consortium;
-- IAMPS and ring-trial records.
+- IAMPS and Liver MPS Ring Trial results/outcomes, not merely launch;
+- direct primary source for quantified animal-use displacement in industry programs;
+- regulator/sponsor records of named drug-development programs where NAM evidence caused a specific animal study to be waived or omitted.
 
-Primary sources have now been found for the FDA 2025 Roadmap, ISTAND permanence, AIM-NASH qualification, FDA Year One report, NCI Aug. 4 guidance, FDA QSP-MABEL draft guidance, and EPA Aug. 27 regulatory-use announcement. Promote those corresponding ledger records from `manuscript_seed` to `primary_source_verified` in the next structured data edit.
+Primary sources have now been found for the FDA 2025 Roadmap, ISTAND permanence, AIM-NASH qualification, FDA Year One report, NCI Aug. 4 guidance, FDA QSP-MABEL draft guidance, EPA June 2 accepted-method expansion, EPA Aug. 27 regulatory-use announcement, EU roadmap, UK strategy, Complement-ARIE concept approval, ISSCR consortium, and multiple NIH implementation milestones. Promote/normalize those corresponding ledger records in the next structured data edit.
 
 ## Research Round 1 next searches
 
 Search systematically rather than by news recall:
 
-1. FDA: NAM hub, guidance documents, ISTAND/BQP qualification records, device-recognition databases, CBER/manufacturing alternatives, oncology, pharmacology/toxicology, QSP/MABEL. Add the June 3 first in-silico ISTAND LOI and decide whether the Feb. 2 pipeline metrics warrant a separate medium-materiality record.
-2. NIH: ORIVA, Complement-ARIE funded research, VQN pilots, reviewer/review-policy changes, NCI/NIEHS/NCATS implementation.
-3. EPA: TSCA/FIFRA accepted-method lists, waivers, actual decision use, baselines/metrics, guidance/CFR flexibility.
-4. Europe/UK: European Commission roadmap implementation, EMA/ICMRA actions, ECHA/OECD test-guideline changes, UK roadmap milestones, NC3Rs validation/adoption infrastructure.
-5. Industry: documented regulatory submissions using MPS/in silico/human-based approaches, cross-company ring trials, reproducibility studies, CRO/pharma platform adoption, dedicated facilities, and measured animal-study displacement.
-6. Standards: OECD test guidelines, ISO standards, USP chapters, and other formal standards that materially enable regulatory use.
+1. FDA adoption inventory: exhaustively review CDER's streamlined-nonclinical/NAM table and linked guidance for every explicit animal-study displacement context. Separate established historical adoption from genuinely new 2025–2026 changes.
+2. Sponsor/regulator cases: locate named IND/NDA/BLA or development-program examples where animal studies were waived, omitted, shortened, or replaced because of NAM evidence.
+3. EPA: search TSCA/FIFRA waiver decisions and accepted-method implementation records beyond the August 27 announcement; look for denominators or counts of avoided studies.
+4. International: EMA, MHRA, PMDA, TGA, Health Canada, OECD/ECHA and ICMRA records for explicit replacement/reduction contexts and mutual-recognition effects.
+5. Industry: cross-company ring-trial results, reproducibility outcomes, regulatory submissions using MPS/in silico/human-based approaches, and measured animal-study displacement. Corporate statements that a method is merely used internally are supporting evidence, not regulatory displacement.
+6. Standards: OECD test guidelines, ISO standards, USP chapters, ICH guidance and other formal standards that materially enable substitution.
+7. Baselines: identify public animal-use denominators that would let the roadmap report not only contexts but estimated or observed numbers of studies/animals displaced.
 
 ## Prospective program
 
@@ -104,12 +122,16 @@ Prospective records must never be rendered as completed events. When achieved, a
 
 After Round 1 is materially complete, update the paper rather than merely adding events to the site. Likely changes:
 
-- revise Supplementary Table S1 from the larger corpus;
-- derive a compact major-milestones figure from the data;
+- revise Supplementary Table S1 from the larger event corpus;
+- derive a compact major-milestones figure from the event data;
 - derive a prospective roadmap figure from `data/prospective.json`;
+- add a small adoption/displacement table or figure from `data/regulatory_contexts.json`, with a stricter operational definition of adoption;
 - add a methods/availability note and a link to the living resource;
-- reassess whether event density and stage transitions support stronger empirical claims about the gap between commitment, qualification, and adoption.
+- reassess whether event density and stage transitions support stronger empirical claims about the gap between commitment, qualification, and adoption;
+- distinguish narrower human-based substitution from the broader NAM transition, which also includes computational methods and replacement of animal-derived reagents.
+
+A promising operational definition for later manuscript development is: adoption is evidenced when an authoritative regulatory or development context permits a legacy animal study, component, or requirement to be omitted, replaced, shortened, or avoided for a defined decision. This should remain provisional until the corpus is larger.
 
 ## Quality bar
 
-Primary sources whenever possible. Preserve draft/final, accepted/qualified, funded/awarded, collaboration/acceptance, validation/qualification/adoption, and intent/implementation distinctions. Do not add an event simply because it is recent or rhetorically aligned with the project.
+Primary sources whenever possible. Preserve draft/final, accepted/qualified, funded/awarded, collaboration/acceptance, validation/qualification/adoption, intent/implementation, human-based/broader-NAM, and in-vivo-study/animal-derived-component distinctions. Do not add an event simply because it is recent or rhetorically aligned with the project.
