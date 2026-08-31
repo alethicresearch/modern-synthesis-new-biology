@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A living, source-linked roadmap of regulatory, funding, qualification, validation, and adoption milestones in human-based biomedicine.">
+  <title>New Biology — Living Roadmap</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">Modern Synthesis · New Biology</div>
+    <h1>A living roadmap of the transition to human-based biomedicine</h1>
+    <p class="lede">Track material regulatory, funding, qualification, validation, industry, and adoption events as they accumulate. The roadmap distinguishes institutional commitment from reusable qualification and real-world adoption.</p>
+    <div class="hero-meta">
+      <span id="last-updated">Updated —</span>
+      <span id="event-count">— events</span>
+      <span>Primary-source links where verified</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Roadmap filters">
+      <label>Search
+        <input id="search" type="search" placeholder="FDA, organ chip, qualification…">
+      </label>
+      <label>Stage
+        <select id="stage"><option value="all">All stages</option></select>
+      </label>
+      <label>Institution
+        <select id="institution"><option value="all">All institutions</option></select>
+      </label>
+      <label>Year
+        <select id="year"><option value="all">All years</option></select>
+      </label>
+      <label class="check"><input id="material" type="checkbox" checked> High-materiality only</label>
+      <button id="reset" type="button">Reset</button>
+    </section>
+
+    <section class="summary" aria-label="Roadmap summary">
+      <div><strong id="visible-count">0</strong><span>visible events</span></div>
+      <div><strong id="commitment-count">0</strong><span>commitment</span></div>
+      <div><strong id="qualification-count">0</strong><span>qualification</span></div>
+      <div><strong id="adoption-count">0</strong><span>adoption</span></div>
+    </section>
+
+    <section class="legend" aria-label="Stage definitions">
+      <p><b>Commitment</b> changes the institutional direction.</p>
+      <p><b>Qualification</b> makes scientific confidence explicit and reusable.</p>
+      <p><b>Adoption</b> shows methods entering real decisions or routine practice.</p>
+    </section>
+
+    <section id="timeline" class="timeline" aria-live="polite"></section>
+    <p id="empty" class="empty" hidden>No events match the current filters.</p>
+  </main>
+
+  <footer>
+    <p>Data are maintained in <code>data/events.json</code>. “Source status” distinguishes primary-source verification from manuscript-seeded records that still need direct-link normalization. This site is an evolving research companion, not an agency publication.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
