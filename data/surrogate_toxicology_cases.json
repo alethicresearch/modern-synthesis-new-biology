@@ -1,0 +1,57 @@
+{
+  "updated": "2026-08-31",
+  "schema_version": 1,
+  "purpose": "Regulator-authored named product cases in which the clinical molecule lacks an ordinary pharmacologically relevant experimental animal species and a surrogate molecule/model was nevertheless used for substantive animal toxicology. This dataset is kept separate from direct relevant-species toxicology and from human-relevant omission cases.",
+  "cases": [
+    {
+      "id": "blincyto-surrogate-mouse-toxicology",
+      "product": "Blincyto (blinatumomab)",
+      "approval_year": 2015,
+      "regulator": "Health Canada",
+      "jurisdiction": "Canada",
+      "modality": "CD19 x CD3 bispecific T-cell engager",
+      "clinical_product_species_relevance": "Blinatumomab binds human and chimpanzee B/T cells but does not bind lymphocytes of other animal species.",
+      "surrogate_strategy": "Rat anti-mouse antibodies against murine CD19 and CD3 were engineered into a surrogate molecule for a comprehensive general and specialized mouse toxicology program; limited short-duration chimpanzee infusions were also performed.",
+      "general_repeat_toxicology_outcome": "surrogate_animal_toxicology_retained",
+      "why_it_matters": "Demonstrates that species non-relevance can lead to surrogate-animal substitution rather than omission of conventional toxicology.",
+      "source_url": "https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD00207",
+      "source_strength": "direct_regulator_summary_basis_of_decision"
+    },
+    {
+      "id": "ultomiris-surrogate-c5-mouse-toxicology",
+      "product": "Ultomiris (ravulizumab)",
+      "approval_year": 2019,
+      "regulator": "Health Canada",
+      "jurisdiction": "Canada",
+      "modality": "anti-C5 monoclonal antibody",
+      "clinical_product_species_relevance": "Ravulizumab does not bind non-human C5; Health Canada states there are no animal species with a pharmacologically active response to the clinical molecule.",
+      "surrogate_strategy": "A surrogate antibody against murine C5 was used for a 26-week repeat-dose toxicity study and reproductive studies in mice.",
+      "general_repeat_toxicology_outcome": "surrogate_animal_toxicology_retained",
+      "why_it_matters": "Shows a mature biologics program using surrogate toxicology when the clinical antibody lacks a pharmacologically active animal species.",
+      "source_url": "https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD00463",
+      "source_strength": "direct_regulator_summary_basis_of_decision"
+    },
+    {
+      "id": "tzield-surrogate-cd3-mouse-toxicology",
+      "product": "Tzield (teplizumab)",
+      "approval_year": 2025,
+      "regulator": "Health Canada",
+      "jurisdiction": "Canada",
+      "modality": "anti-CD3 monoclonal antibody",
+      "clinical_product_species_relevance": "Teplizumab cross-reactivity is limited to humans, chimpanzees, gorillas and other species that are not established experimental species.",
+      "surrogate_strategy": "Health Canada reviewed a package with one chimpanzee study plus repeat-dose and reproductive/developmental toxicology using a surrogate anti-mouse CD3 antibody; in-vitro binding studies were used to establish surrogate relevance.",
+      "general_repeat_toxicology_outcome": "surrogate_animal_toxicology_retained",
+      "why_it_matters": "A 2025 authorization demonstrates that surrogate toxicology remains a contemporary regulatory strategy and is not merely an older historical practice.",
+      "source_url": "https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD1750255396960/",
+      "source_strength": "direct_regulator_summary_basis_of_decision"
+    }
+  ],
+  "policy_contrast": {
+    "regulator": "MHRA",
+    "jurisdiction": "United Kingdom",
+    "date": "2026-03-25",
+    "policy": "For drug substances that are not pharmacologically active in animals, MHRA states that it does not support testing in animals, including with surrogate molecules; non-animal-based methods can suffice for efficacy and safety expectations for this group.",
+    "source_url": "https://www.gov.uk/guidance/mhra-approach-to-medicines-using-non-animal-methods",
+    "interpretation": "This is a regulator-policy contrast, not proof that another regulator would reject a Health Canada-style surrogate package. It establishes that current regulatory approaches to the same species-nonrelevance problem are not fully converged."
+  }
+}
