@@ -33,6 +33,8 @@ if(sourcesView&&methodsGrid){
 document.querySelector('.view-tab[data-view="methods"]')?.remove();
 methodsView?.remove();
 if(location.hash==='#methods') history.replaceState(null,'','#sources');
+/* The serpentine should stand on its own visually. */
+document.querySelector('.snake-note')?.remove();
 
 const popupPreviewStyle = document.createElement('style');
 popupPreviewStyle.textContent = `
@@ -43,10 +45,24 @@ popupPreviewStyle.textContent = `
   .snake-tooltip-why{display:block!important;color:#d8d2c9!important;margin:0 0 9px!important;padding-top:7px!important;border-top:1px solid rgba(255,255,255,.12)!important;font-size:.73rem!important}
   .snake-tooltip-why strong{display:inline!important;color:#fff!important;font-size:inherit!important}
 
-  /* Keep each serpentine connector outside the timeline row, in a dedicated side gutter. */
-  .snake-timeline{padding-inline:30px!important}
-  .snake-turn.right span{right:-26px!important}
-  .snake-turn.left span{left:-26px!important}
+  /* Compose the full five-row snake like the reference view at ~70–75% browser zoom. */
+  .snake-shell{margin:18px 0 14px!important;padding:14px 0 8px!important}
+  .snake-scroll{padding:22px 0 12px!important;overflow:visible!important}
+  .snake-timeline{padding-inline:64px!important;min-width:900px!important}
+  .snake-row{height:104px!important}
+  .snake-row-years{font-size:.62rem!important;padding:0 4px 5px!important;letter-spacing:.055em!important}
+  .snake-track{height:54px!important;padding-inline:4px!important}
+  .snake-node{min-width:12px!important}
+  .snake-dot{width:11px!important;height:11px!important;margin-top:-6px!important}
+  .snake-node.anchor .snake-dot{width:15px!important;height:15px!important;margin-top:-8px!important}
+  .snake-anchor-text{top:14px!important;width:108px!important;font-size:.60rem!important;line-height:1.12!important}
+  .snake-anchor-text b{font-size:.59rem!important;margin-bottom:1px!important}
+
+  /* The bend lives in a true outside gutter, well beyond the row endpoint. */
+  .snake-turn{height:18px!important;margin-top:-46px!important;margin-bottom:28px!important}
+  .snake-turn span{width:46px!important;height:52px!important;top:-2px!important;border-radius:0 30px 30px 0!important}
+  .snake-turn.right span{right:-50px!important}
+  .snake-turn.left span{left:-50px!important}
 
   .snake-node .snake-tooltip.snake-smart-popup{
     position:fixed!important;
@@ -95,16 +111,30 @@ popupPreviewStyle.textContent = `
     border-color:transparent #22211f transparent transparent!important;
   }
   .source-methods{margin-top:42px}
+  @media(max-width:960px) and (min-width:721px){
+    .snake-timeline{padding-inline:52px!important;min-width:820px!important}
+    .snake-turn.right span{right:-42px!important}
+    .snake-turn.left span{left:-42px!important}
+  }
   @media(max-width:720px){
     .hero h1{font-size:clamp(1.8rem,9vw,2.6rem)!important}
-    .snake-timeline{padding-inline:18px!important}
-    .snake-turn.right span{right:-16px!important}
-    .snake-turn.left span{left:-16px!important}
+    .snake-shell{margin:14px 0 10px!important;padding:10px 0 6px!important}
+    .snake-scroll{padding:18px 0 8px!important}
+    .snake-timeline{padding-inline:30px!important;min-width:0!important}
+    .snake-row{height:88px!important}
+    .snake-row-years{font-size:.56rem!important;padding-bottom:4px!important}
+    .snake-track{height:46px!important}
+    .snake-anchor-text{top:14px!important;width:70px!important;font-size:.54rem!important;line-height:1.06!important}
+    .snake-anchor-text b{font-size:.53rem!important}
+    .snake-turn{height:14px!important;margin-top:-41px!important;margin-bottom:27px!important}
+    .snake-turn span{width:24px!important;height:42px!important;top:-1px!important}
+    .snake-turn.right span{right:-24px!important}
+    .snake-turn.left span{left:-24px!important}
     .snake-node.popup-open .snake-tooltip.snake-smart-popup{width:min(320px,calc(100vw - 20px))!important}
     .snake-tooltip-description{font-size:.78rem!important}
     .snake-tooltip-why{font-size:.74rem!important}
   }
-  @media(max-width:380px){.hero h1{font-size:1.8rem!important}}
+  @media(max-width:380px){.hero h1{font-size:1.8rem!important}.snake-timeline{padding-inline:26px!important}.snake-turn.right span{right:-21px!important}.snake-turn.left span{left:-21px!important}}
 `;
 document.head.appendChild(popupPreviewStyle);
 
