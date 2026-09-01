@@ -36,7 +36,7 @@
       "success_criteria": ["Multi-site study is prospectively specified", "Independent sites meet predefined performance thresholds", "Results and protocols are publicly inspectable or regulator-accessible"],
       "dependencies": ["Reference standards", "Quality systems", "Common reporting elements"],
       "paper_origin": "Table 3 / validation milestones",
-      "linked_event_ids": ["2025-04-03-complement-arie-vqn", "2026-07-20-complement-r2p-phase1"]
+      "linked_event_ids": ["2024-05-29-liver-mps-ring-trial", "2025-04-03-complement-arie-vqn", "2026-07-20-complement-r2p-phase1"]
     },
     {
       "id": "prospective-animal-use-baselines",
@@ -44,17 +44,35 @@
       "display_date": "By 2027",
       "title": "Public animal-use baselines and displacement metrics",
       "summary": "Major regulators and funders publish baseline measures that make reductions, replacements, waivers, and avoided studies attributable to human-based methods trackable over time.",
-      "rationale": "Without a denominator, claims of transition cannot be distinguished from growth in NAM activity alongside unchanged animal use.",
+      "rationale": "Without a denominator, claims of transition cannot be distinguished from growth in NAM activity alongside unchanged animal use. EPA demonstrates that agency-level study and animal-reduction metrics are feasible.",
       "stage": ["commitment", "adoption"],
       "domain": ["metrics", "transparency", "animal-use"],
       "major_milestone": true,
       "type": "catalytic_proposal",
-      "status": "watch",
+      "status": "in_progress",
       "actors": ["FDA", "NIH", "EPA", "European Commission", "UK Government"],
-      "success_criteria": ["Baseline methodology is public", "At least annual reporting is specified", "Metrics distinguish reduction, replacement, waiver, and avoided new studies"],
-      "dependencies": ["Consistent definitions", "Agency data collection"],
+      "success_criteria": ["Baseline methodology is public", "At least annual reporting is specified", "Metrics distinguish reduction, replacement, waiver, and avoided new studies", "At least two major biomedical regulators or funders publish realized denominators rather than activity counts alone"],
+      "dependencies": ["Consistent definitions", "Agency data collection", "Public reporting infrastructure"],
       "paper_origin": "Table 3 / accountability milestones",
-      "linked_event_ids": []
+      "linked_event_ids": ["2026-08-27-epa-regulatory-use"]
+    },
+    {
+      "id": "prospective-adoption-transparency",
+      "target_date": "2028-12-31",
+      "display_date": "By 2028",
+      "title": "Structured public reporting of NAM regulatory adoption",
+      "summary": "At least two major medicines regulators publish a structured, searchable record linking accepted non-animal or human-relevant evidence to the regulatory context, legacy study or evidence requirement, and resulting decision.",
+      "rationale": "Current named adoption can often be reconstructed only by reading individual product reviews. FDA's accepted-method inventory and EPA's displacement metrics show that more systematic public reporting is technically feasible.",
+      "stage": ["adoption", "review-infrastructure"],
+      "domain": ["transparency", "regulatory-use", "precedent", "metrics"],
+      "major_milestone": true,
+      "type": "catalytic_proposal",
+      "status": "in_progress",
+      "actors": ["FDA", "EMA", "MHRA", "PMDA", "Health Canada", "TGA", "other regulators"],
+      "success_criteria": ["At least two major medicines regulators maintain a public structured adoption inventory", "Records identify the context of use or regulatory question", "Records distinguish animal-study displacement from broader NAM reliance", "Where a legacy study is avoided, the omitted or replaced study type is stated", "Named product examples or reusable precedents are linked to underlying regulatory evidence"],
+      "dependencies": ["Common terminology", "Public review metadata", "Agency reporting workflows"],
+      "paper_origin": "living-roadmap evidence synthesis / publish-the-learning argument",
+      "linked_event_ids": ["2026-04-20-fda-year-one", "2026-03-25-mhra-nonanimal-medicines-approach"]
     },
     {
       "id": "prospective-reviewer-expertise",
@@ -72,7 +90,7 @@
       "success_criteria": ["Standing expertise mechanism is publicly documented", "Use is routine rather than ad hoc", "Relevant review panels can access human-based-method specialists"],
       "dependencies": ["Expert rosters", "Conflict-of-interest procedures", "Training"],
       "paper_origin": "Table 3 / reviewer expertise",
-      "linked_event_ids": ["2026-nih-reviewer-eoi", "2026-06-nih-oriva"]
+      "linked_event_ids": ["2026-nih-reviewer-eoi", "2026-06-15-nih-oriva"]
     },
     {
       "id": "prospective-species-matched-benchmarking",
@@ -98,7 +116,7 @@
       "display_date": "By 2028",
       "title": "International convergence on reusable NAM evidence packages",
       "summary": "Multiple major regulators accept a common or mutually intelligible evidence package for at least one human-based method or method class in a defined context of use.",
-      "rationale": "Convergence lowers duplicated validation costs and increases the return on qualification evidence across jurisdictions.",
+      "rationale": "Convergence lowers duplicated validation costs and increases the return on qualification evidence across jurisdictions. Independent product-level convergence is already visible, but the milestone requires reusable evidence beyond isolated product decisions.",
       "stage": ["qualification", "adoption"],
       "domain": ["international-convergence", "regulatory"],
       "major_milestone": true,
@@ -123,10 +141,10 @@
       "type": "forecast",
       "status": "in_progress",
       "actors": ["regulators", "pharmaceutical industry", "chemical industry", "CROs"],
-      "success_criteria": ["At least three distinct decision contexts document avoided or replaced animal studies", "Use is repeated across more than one sponsor or organization", "Displacement is attributable to named human-based methods or evidence frameworks"],
+      "success_criteria": ["At least three distinct decision contexts document avoided or replaced animal studies", "Use is repeated across more than one sponsor or organization", "Displacement is attributable to named human-based methods or evidence frameworks", "At least one context demonstrates routinized use rather than an isolated exception"],
       "dependencies": ["Regulatory acceptance", "Operational availability", "Transparent metrics"],
       "paper_origin": "new roadmap synthesis from adoption argument",
-      "linked_event_ids": ["2026-08-27-epa-regulatory-use", "2026-08-31-fda-icmra-endotoxin"]
+      "linked_event_ids": ["2026-08-27-epa-regulatory-use", "2026-08-31-fda-icmra-endotoxin", "2026-03-25-mhra-nonanimal-medicines-approach"]
     },
     {
       "id": "prospective-composable-qualification",
