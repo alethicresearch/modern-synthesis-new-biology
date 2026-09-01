@@ -231,3 +231,22 @@ addEventListener('scroll',e=>{if(e.target instanceof Element&&e.target.closest('
 
 /* Header metadata: retain only the updated date visually, but keep loader targets in the DOM. */
 document.querySelectorAll('.hero-meta span:not(#last-updated)').forEach(el=>el.hidden=true);
+
+/* Mobile endpoint separation: arrows outside, years inward/up, dots untouched. */
+const mobileEndpointStyle=document.createElement('style');
+mobileEndpointStyle.textContent=`
+  @media(max-width:720px){
+    .snake-row-years{padding-inline:0!important;transform:translateY(-5px)!important}
+    .snake-row-years span:first-child{transform:translateX(9px)!important}
+    .snake-row-years span:last-child{transform:translateX(-9px)!important}
+    .snake-row:last-child .snake-track::before{left:-15px!important;top:-5px!important;transform:none!important}
+    .snake-row:first-child .snake-track::after{right:-15px!important;top:-5px!important}
+  }
+  @media(max-width:380px){
+    .snake-row-years span:first-child{transform:translateX(8px)!important}
+    .snake-row-years span:last-child{transform:translateX(-8px)!important}
+    .snake-row:last-child .snake-track::before{left:-14px!important}
+    .snake-row:first-child .snake-track::after{right:-14px!important}
+  }
+`;
+document.head.appendChild(mobileEndpointStyle);
