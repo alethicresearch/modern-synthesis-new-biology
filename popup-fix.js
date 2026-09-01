@@ -255,5 +255,5 @@ mobileCaptionClearance.textContent=`
 `;
 document.head.appendChild(mobileCaptionClearance);
 
-/* Header metadata: retain only the updated date. */
-document.querySelectorAll('.hero-meta span:not(#last-updated)').forEach(el=>el.remove());
+/* Header metadata: retain only the updated date visually, but keep loader targets in the DOM. */
+document.querySelectorAll('.hero-meta span:not(#last-updated)').forEach(el=>el.hidden=true);
