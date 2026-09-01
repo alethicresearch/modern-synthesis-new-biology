@@ -17,12 +17,18 @@
       "animal_displacement_class": "human_based_evidence_used_when_relevant_animal_model_unavailable",
       "counts_as_animal_displacement": true,
       "counts_as_named_nam_adoption": true,
-      "evidence_strength": "regulator_authored_synthesis_of_public_fda_review",
+      "evidence_strength": "multi_regulator_corroborated_named_product_precedent",
       "fda_review_source": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2022/761228Orig1s000MultidisciplineR.pdf",
       "regulator_authored_synthesis": "https://journals.sagepub.com/doi/full/10.1177/10915818251384270",
-      "note": "FDA/CDER/OND authors explicitly identify Kimmtrak as a NAM regulatory-decision example and state that the human tissue/cell assay suite supported clinical-trial safety in the absence of pharmacologically relevant animal models. This is stronger than a sponsor claim, but it is not a one-for-one statement that a particular mandated animal study was waived.",
+      "ema_source": "https://www.ema.europa.eu/en/documents/product-information/kimmtrak-epar-product-information_en.pdf",
+      "tga_source": "https://www.tga.gov.au/sites/default/files/2022-11/auspar-kimmtrak-221025.pdf",
+      "cross_jurisdiction_confirmed": true,
+      "jurisdictions_confirming_species_irrelevance": ["FDA", "European Union/EMA", "Australia/TGA"],
+      "cross_jurisdiction_note": "EMA product information states that tebentafusp is human-specific and that there are no relevant animal species in which its nonclinical toxicology could be tested. TGA's AusPAR independently states that the absence of animal-species toxicity studies was justified by human specificity and absence of equivalent targets, while describing the supporting human target-binding, tissue-panel, cytokine and related in vitro evidence. This makes Kimmtrak a cross-jurisdiction precedent rather than an FDA-only anecdote.",
+      "note": "FDA/CDER/OND authors explicitly identify Kimmtrak as a NAM regulatory-decision example and state that the human tissue/cell assay suite supported clinical-trial safety in the absence of pharmacologically relevant animal models. EMA and TGA independently corroborate the absence of a relevant animal species and the corresponding nonclinical strategy. This remains different from a one-for-one waiver of a named mandatory animal study.",
       "manuscript_impacts": [
-        {"section":"IV/VII","claim":"Human-based methods have already supported named drug programs when relevant animal models were unavailable","effect":"strong direct example"}
+        {"section":"IV/VII","claim":"Human-based methods have already supported named drug programs when relevant animal models were unavailable","effect":"strong direct example"},
+        {"section":"VII","claim":"The same scientific constraint and alternative evidence strategy can be recognized across regulators","effect":"strengthens international-convergence argument"}
       ]
     },
     {
