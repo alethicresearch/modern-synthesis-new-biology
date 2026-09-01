@@ -29,11 +29,53 @@ Each observed/foundation/emerging event should use:
 }
 ```
 
+`source_url` remains the backward-compatible canonical locator carried by the event ledger. When an event has several useful sources, or when source verification needs to be recorded separately from the event claim, use the verified source registry described below.
+
 `stage` may contain supplemental process tags where useful, but at least one of the core stages should be used whenever the event can be classified as commitment, qualification, or adoption.
 
 `major_milestone` controls the compact/default roadmap view. It is independent of `materiality`: a high-materiality specialist development may still be omitted from the major-milestones view if it does not improve the compact explanatory history.
 
 `temporal_status: emerging` is reserved for processes with concrete institutional evidence whose outcome is not complete. The summary must state the incomplete stage explicitly.
+
+## `data/source_registry.json`
+
+The source registry is a provenance overlay keyed by stable event ID. It supports multiple well-labeled sources without duplicating event content and allows source verification to be strengthened independently of the historical ledger.
+
+A source-registry record may use:
+
+```json
+{
+  "source_status": "primary_source_verified",
+  "canonical_source_url": "https://...",
+  "sources": [
+    {
+      "label": "Reader-facing source description",
+      "short_label": "Compact label",
+      "url": "https://...",
+      "type": "enacted_law | bill_text | agency_report | agency_announcement | draft_guidance | federal_award_notice | ...",
+      "role": "legal_basis | primary_document | announcement | implementation_context | award_record | corroboration | ...",
+      "verified_by": "official-government-text | official-agency-page | ...",
+      "checked_at": "YYYY-MM-DD"
+    }
+  ]
+}
+```
+
+Source ordering is intentional. Put the source that most directly establishes the event first; follow it with useful primary context, implementation material, or clearly labeled corroboration. A search-results page is never a source locator. Prefer enacted law, official bill text, regulator or agency documents, official award records, and regulator-hosted product reviews over secondary accounts.
+
+`canonical_source_url` may update the public canonical locator while preserving the original ledger entry. `sources` supplies the ordered reader-facing source set. Existing single-source records remain valid through `source_url`.
+
+If a specific public claim cannot be verified, do not substitute a related source that establishes only a broader proposition. The overlay may instead use:
+
+```json
+{
+  "exclude_from_public": true,
+  "source_status": "needs_public_source",
+  "reason": "Why the specific public claim could not be verified"
+}
+```
+
+This withholds the record from the verified public rendering without deleting the research-side record. It is the preferred treatment for an author-supplied notice or other lead whose public source has not been confirmed.
 
 ## `data/prospective.json`
 
