@@ -1,7 +1,7 @@
 {
   "updated": "2026-09-01",
   "schema_version": 1,
-  "purpose": "Verified source overlays for roadmap records. This registry can add multiple well-labeled sources, correct source status, or withhold an unresolved record from the verified public rendering without erasing the research-side record.",
+  "purpose": "Verified source overlays for roadmap records. This registry can add multiple well-labeled sources, correct source status, or annotate unresolved sourcing without erasing the research-side record.",
   "records": {
     "2022-12-fda-modernization-2": {
       "source_status": "primary_source_verified",
@@ -114,9 +114,8 @@
       ]
     },
     "2026-nih-reviewer-eoi": {
-      "exclude_from_public": true,
       "source_status": "needs_public_source",
-      "reason": "The current manuscript source is an author-supplied recruitment notice. No public NIH posting for the specific Expression of Interest / subject-matter-expert directory could be verified on 2026-09-01. Broader NIH sources confirm plans to integrate alternative-method experts into study sections, but they do not verify this specific recruitment notice."
+      "source_note": "Author-confirmed NIH recruitment notice; retain as an emerging roadmap record while the public locator is pending."
     }
   }
 }
