@@ -14,16 +14,25 @@ tooltip = function(r){
   </div>`;
 };
 
-/* Remove explanatory copy the public interface no longer needs. */
+/* Simplify section intros and fold Methods into Sources. */
 const evidenceIntro=document.querySelector('#view-evidence .section-intro');
 if(evidenceIntro){
   evidenceIntro.querySelector('h2')?.remove();
   evidenceIntro.querySelectorAll(':scope > p:not(.kicker)').forEach(el=>el.remove());
 }
-const methodsIntro=document.querySelector('#view-methods .section-intro');
-if(methodsIntro){
-  methodsIntro.querySelector(':scope > p:not(.kicker)')?.remove();
+const sourcesView=document.querySelector('#view-sources');
+const methodsView=document.querySelector('#view-methods');
+const methodsGrid=methodsView?.querySelector('.methods-grid');
+if(sourcesView&&methodsGrid){
+  const methodsSection=document.createElement('section');
+  methodsSection.className='source-methods evidence-block';
+  methodsSection.innerHTML='<div class="block-head"><div><p class="kicker">Methods + provenance</p></div></div>';
+  methodsSection.appendChild(methodsGrid);
+  sourcesView.appendChild(methodsSection);
 }
+document.querySelector('.view-tab[data-view="methods"]')?.remove();
+methodsView?.remove();
+if(location.hash==='#methods') history.replaceState(null,'','#sources');
 
 const popupPreviewStyle = document.createElement('style');
 popupPreviewStyle.textContent = `
@@ -80,6 +89,7 @@ popupPreviewStyle.textContent = `
     border-width:7px 7px 7px 0!important;
     border-color:transparent #22211f transparent transparent!important;
   }
+  .source-methods{margin-top:42px}
   @media(max-width:720px){
     .hero h1{font-size:clamp(1.8rem,9vw,2.6rem)!important}
     .snake-node.popup-open .snake-tooltip.snake-smart-popup{width:min(320px,calc(100vw - 20px))!important}
