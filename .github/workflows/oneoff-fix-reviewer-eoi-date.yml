@@ -1,0 +1,66 @@
+name: One-off reviewer EOI date repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/oneoff-fix-reviewer-eoi-date.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore and date reviewer recruitment record
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('data/events.json')
+          data = json.loads(path.read_text())
+          rid = '2026-nih-reviewer-eoi'
+          record = next((r for r in data['events'] if r.get('id') == rid), None)
+          if record is None:
+              record = {
+                  'id': rid,
+                  'date': '2026-09-01',
+                  'date_precision': 'month',
+                  'display_date': 'Sep 2026',
+                  'temporal_status': 'emerging',
+                  'institution': 'NIH',
+                  'title': 'Human-based science reviewer recruitment',
+                  'summary': 'An expression of interest recruits scientists with human-based research expertise for potential peer-review service and a subject-matter-expert directory.',
+                  'why_it_matters': 'Could improve review-system competence for evaluating human-based methods; the recruitment notice is author-confirmed while its public locator remains pending.',
+                  'stage': ['review-infrastructure'],
+                  'domain': ['peer-review', 'expertise'],
+                  'materiality': 'medium',
+                  'major_milestone': False,
+                  'source_status': 'needs_public_source',
+                  'manuscript_ref': '[55]',
+                  'source_url': None,
+                  'manuscript_impacts': []
+              }
+              data['events'].append(record)
+          else:
+              record['date'] = '2026-09-01'
+              record['date_precision'] = 'month'
+              record['display_date'] = 'Sep 2026'
+          data['events'].sort(key=lambda r: r.get('date', ''))
+          data['updated'] = '2026-09-01'
+          path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+          PY
+      - name: Commit repair and remove one-off workflow
+        run: |
+          rm .github/workflows/oneoff-fix-reviewer-eoi-date.yml
+          git config user.name 'xnuxi'
+          git config user.email 'research@alethic.ai'
+          git add data/events.json .github/workflows/oneoff-fix-reviewer-eoi-date.yml
+          git commit -m 'Date NIH reviewer recruitment to September 2026'
+          git push
