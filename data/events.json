@@ -456,29 +456,6 @@
       ]
     },
     {
-      "id": "2026-nih-reviewer-eoi",
-      "date": "2026-01-01",
-      "display_date": "2026",
-      "temporal_status": "emerging",
-      "institution": "NIH",
-      "title": "Human-based science reviewer recruitment",
-      "summary": "An expression of interest recruits scientists with human-based research expertise for potential peer-review service and a subject-matter-expert directory.",
-      "why_it_matters": "Could improve review-system competence for evaluating human-based methods, but the public posting and durable implementation status still require confirmation.",
-      "stage": [
-        "review-infrastructure"
-      ],
-      "domain": [
-        "peer-review",
-        "expertise"
-      ],
-      "materiality": "medium",
-      "major_milestone": false,
-      "source_status": "needs_public_source",
-      "manuscript_ref": "[55]",
-      "source_url": null,
-      "manuscript_impacts": []
-    },
-    {
       "id": "2026-01-22-epa-2035",
       "date": "2026-01-22",
       "display_date": "Jan 22, 2026",
@@ -1171,6 +1148,30 @@
           "effect": "strengthens"
         }
       ]
+    },
+    {
+      "id": "2026-nih-reviewer-eoi",
+      "date": "2026-09-01",
+      "display_date": "Sep 2026",
+      "temporal_status": "emerging",
+      "institution": "NIH",
+      "title": "Human-based science reviewer recruitment",
+      "summary": "An expression of interest recruits scientists with human-based research expertise for potential peer-review service and a subject-matter-expert directory.",
+      "why_it_matters": "Could improve review-system competence for evaluating human-based methods, but the public posting and durable implementation status still require confirmation.",
+      "stage": [
+        "review-infrastructure"
+      ],
+      "domain": [
+        "peer-review",
+        "expertise"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "needs_public_source",
+      "manuscript_ref": "[55]",
+      "source_url": null,
+      "manuscript_impacts": [],
+      "date_precision": "month"
     }
   ]
 }
