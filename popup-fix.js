@@ -214,3 +214,48 @@ window.addEventListener('scroll',e=>{
   if(e.target instanceof Element && e.target.closest('.snake-tooltip')) return;
   requestAnimationFrame(positionActiveSnakePopup);
 },true);
+
+/* Final geometry refinement: inset the rows themselves and let the connectors occupy the outer gutter. */
+const compactRoadmapStyle=document.createElement('style');
+compactRoadmapStyle.textContent=`
+  .snake-timeline{padding-inline:0!important;overflow:visible!important}
+  .snake-row{height:78px!important;margin-inline:52px!important}
+  .snake-row-years{font-size:.59rem!important;padding:0 1px 4px!important}
+  .snake-track{height:42px!important;padding-inline:2px!important}
+  .snake-anchor-text{top:13px!important;width:102px!important;font-size:.57rem!important;line-height:1.08!important}
+  .snake-anchor-text b{font-size:.56rem!important}
+  .snake-turn{height:10px!important;margin-top:-34px!important;margin-bottom:24px!important}
+  .snake-turn span{width:44px!important;height:38px!important;top:-1px!important;border-radius:0 24px 24px 0!important}
+  .snake-turn.right span{right:4px!important}
+  .snake-turn.left span{left:4px!important}
+
+  #new-biology-roadmap .roadmap-record{padding-bottom:26px!important}
+  #new-biology-roadmap .roadmap-record .event-date{font-size:.70rem!important}
+  #new-biology-roadmap .roadmap-record .institution{font-size:.62rem!important;letter-spacing:.055em!important}
+  #new-biology-roadmap .roadmap-record h2{font-size:1.08rem!important;line-height:1.18!important;margin:.22rem 0 .42rem!important}
+  #new-biology-roadmap .roadmap-record p{font-size:.80rem!important;line-height:1.42!important;margin:.34rem 0!important}
+  #new-biology-roadmap .roadmap-record .record-sources{font-size:.66rem!important;line-height:1.35!important;margin-top:10px!important;padding-top:8px!important}
+  #new-biology-roadmap .roadmap-record .event-card{padding:15px 17px!important}
+
+  @media(max-width:960px) and (min-width:721px){
+    .snake-row{margin-inline:44px!important}
+    .snake-turn span{width:38px!important}
+    .snake-turn.right span{right:5px!important}
+    .snake-turn.left span{left:5px!important}
+  }
+  @media(max-width:720px){
+    .snake-row{height:70px!important;margin-inline:28px!important}
+    .snake-row-years{font-size:.53rem!important;padding-bottom:3px!important}
+    .snake-track{height:38px!important}
+    .snake-anchor-text{top:12px!important;width:66px!important;font-size:.50rem!important;line-height:1.04!important}
+    .snake-anchor-text b{font-size:.49rem!important}
+    .snake-turn{height:8px!important;margin-top:-29px!important;margin-bottom:21px!important}
+    .snake-turn span{width:25px!important;height:32px!important;border-radius:0 19px 19px 0!important}
+    .snake-turn.right span{right:3px!important}
+    .snake-turn.left span{left:3px!important}
+    #new-biology-roadmap .roadmap-record h2{font-size:1rem!important}
+    #new-biology-roadmap .roadmap-record p{font-size:.76rem!important}
+    #new-biology-roadmap .roadmap-record .event-card{padding:13px 14px!important}
+  }
+`;
+document.head.appendChild(compactRoadmapStyle);
