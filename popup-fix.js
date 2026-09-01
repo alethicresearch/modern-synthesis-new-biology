@@ -203,3 +203,31 @@ densityStyle.textContent=`
   }
 `;
 document.head.appendChild(densityStyle);
+
+/* Mobile roadmap is intentionally sparser: preserve every interactive dot, but keep only orientation anchors visible. */
+const mobileSnakeStyle=document.createElement('style');
+mobileSnakeStyle.textContent=`
+  @media(max-width:720px){
+    .snake-row{height:78px!important}
+    .snake-anchor-text{display:none!important;top:24px!important;width:76px!important;font-size:.43rem!important;line-height:1.08!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important}
+    .snake-node[data-node-id="2022-12-fda-modernization-2"] .snake-anchor-text,
+    .snake-node[data-node-id="2025-04-10-fda-roadmap"] .snake-anchor-text,
+    .snake-node[data-node-id="2025-12-aim-mash-qualification"] .snake-anchor-text,
+    .snake-node[data-node-id="2026-08-31-fda-icmra-endotoxin"] .snake-anchor-text,
+    .snake-node[data-node-id="prospective-mps-reusable-qualification"] .snake-anchor-text,
+    .snake-node[data-node-id="prospective-composable-qualification"] .snake-anchor-text{display:block!important}
+    .snake-node[data-node-id="2022-12-fda-modernization-2"] .snake-anchor-text,
+    .snake-node[data-node-id="2025-12-aim-mash-qualification"] .snake-anchor-text,
+    .snake-node[data-node-id="prospective-mps-reusable-qualification"] .snake-anchor-text{width:82px!important;text-align:left!important}
+    .snake-node[data-node-id="prospective-composable-qualification"] .snake-anchor-text{width:82px!important;text-align:right!important}
+    .snake-key{font-size:.54rem!important;gap:8px 10px!important}
+    .snake-key-dot{width:8px!important;height:8px!important}
+  }
+  @media(max-width:380px){
+    .snake-row{height:76px!important}
+    .snake-anchor-text{font-size:.41rem!important;width:70px!important}
+    .snake-node[data-node-id="2025-04-10-fda-roadmap"] .snake-anchor-text{display:none!important}
+    .snake-key{font-size:.52rem!important}
+  }
+`;
+document.head.appendChild(mobileSnakeStyle);
