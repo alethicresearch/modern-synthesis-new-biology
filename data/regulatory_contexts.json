@@ -178,6 +178,38 @@
       "source_url": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams",
       "source_note": "FDA's current inventory lists repeat-dose toxicity and DART as not warranted for microdose radiopharmaceutical diagnostic drugs under the cited guidance.",
       "manuscript_impacts": [{"section":"Table 2","claim":"Routine omission is an important endpoint of transition even when it is not branded as a NAM innovation","effect":"strengthens"}]
+    },
+    {
+      "id": "pmda-biopharma-nhp-dart-woe",
+      "regulator": "PMDA",
+      "jurisdiction": "Japan",
+      "decision_context": "Developmental and reproductive toxicity risk assessment for biopharmaceuticals when the nonhuman primate is the only relevant species",
+      "legacy_animal_component": "Nonhuman-primate developmental and reproductive toxicity testing",
+      "alternative": "Weight-of-evidence assessment drawing on mechanism/target biology, placental transfer, literature and databases, human experience with related drugs, existing genetically modified-animal information and other relevant evidence; alternative models may be used if needed",
+      "displacement_type": "replace_conditional",
+      "regulatory_status": "early_consideration_nonbinding",
+      "evidence_strength": "direct_regulator_early_consideration",
+      "human_based": "mixed",
+      "major_context": true,
+      "source_url": "https://www.pmda.go.jp/files/000278904.pdf",
+      "source_note": "PMDA's Oct. 24, 2025 Early Consideration explicitly states that even when a biopharmaceutical is pharmacologically active only in NHPs, an alternative scheme can be used in place of NHP DART testing with appropriate scientific justification. PMDA labels Early Consideration as reference information/current thinking that may change, so this is not binding final guidance.",
+      "manuscript_impacts": [{"section":"II/IV/VII","claim":"Regulatory movement toward conditional NHP replacement is international rather than FDA-specific","effect":"strongens international convergence with status caveat"}]
+    },
+    {
+      "id": "pmda-mab-six-month-monkey-woe",
+      "regulator": "PMDA",
+      "jurisdiction": "Japan",
+      "decision_context": "Need for a six-month repeated-dose toxicity study in monkeys for conventional monoclonal antibodies when monkeys are the only relevant species",
+      "legacy_animal_component": "Six-month repeated-dose monkey toxicity study beyond an available three-month study",
+      "alternative": "Case-by-case weight-of-evidence risk assessment using three-month monkey data, mechanism and target biology, literature/databases, NAM data, available clinical safety/pharmacokinetics and class experience",
+      "displacement_type": "omit_or_shorten_conditional",
+      "regulatory_status": "early_consideration_nonbinding",
+      "evidence_strength": "direct_regulator_early_consideration",
+      "human_based": "mixed",
+      "major_context": true,
+      "source_url": "https://www.pmda.go.jp/files/000280938.pdf",
+      "source_note": "PMDA's May 13, 2026 Early Consideration says retrospective evidence suggests a three-month study can often provide sufficient information and that the additional value of a six-month study may be limited when specified risk conditions do not apply; sponsors should discuss case-specific rationalization with PMDA. NAM data are one explicit WOE input. This is current reference thinking, not binding final guidance.",
+      "manuscript_impacts": [{"section":"II/IV/VII","claim":"Multiple regulators are converging on endpoint- and modality-specific rationalization of NHP toxicology using accumulated evidence and NAMs","effect":"strengthens with nonbinding-status caveat"}]
     }
   ]
 }
