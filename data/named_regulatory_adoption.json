@@ -32,6 +32,27 @@
       ]
     },
     {
+      "id": "ema-carvykti-no-relevant-animal-model",
+      "product": "Carvykti (ciltacabtagene autoleucel)",
+      "sponsor": "Janssen-Cilag International NV",
+      "regulator": "EMA / CHMP",
+      "jurisdiction": "European Union",
+      "approval_or_decision_year": 2022,
+      "indication": "Multiple myeloma",
+      "nam": "In vitro characterization and safety studies, literature-based on-target/off-tumour assessment, and clinical evidence for a patient-specific BCMA-directed CAR-T product",
+      "regulatory_impact": "EMA accepted a nonclinical safety package without formal GLP toxicology and without repeat-dose toxicity studies because no relevant animal model was available; key risks were addressed through in vitro studies, literature-based assessment and clinical risk management.",
+      "legacy_evidence_displaced_or_unavailable": "Formal GLP toxicology and repeat-dose toxicity studies were not performed; a cynomolgus model was explicitly considered non-relevant because the test construct did not bind cynomolgus BCMA.",
+      "animal_displacement_class": "formal_animal_toxicology_omitted_due_to_no_relevant_model_with_in_vitro_and_other_evidence",
+      "counts_as_animal_displacement": true,
+      "counts_as_named_nam_adoption": true,
+      "evidence_strength": "direct_regulator_public_assessment_report",
+      "ema_assessment_source": "https://www.ema.europa.eu/en/documents/assessment-report/carvykti-epar-public-assessment-report_en.pdf",
+      "note": "EMA states that the nonclinical safety evaluation was limited by lack of a relevant animal model, that no GLP-compliant formal toxicology studies were performed, that absence of repeat-dose toxicity was acceptable, and that no other in vivo nonclinical safety evaluation was performed after the non-relevance of the cynomolgus model was established. In vitro studies and literature addressed on-/off-target risks. Some in vivo proof-of-concept and a non-GLP monkey study existed, so this is omission of formal toxicology rather than a completely animal-free development program.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"Named advanced-therapy approvals can proceed without conventional formal animal toxicology when the models are scientifically non-relevant and alternative evidence addresses risk","effect":"strong direct EMA precedent"}
+      ]
+    },
+    {
       "id": "fda-veopoz-ex-vivo-complement-nam",
       "product": "Veopoz (pozelimab-bbfg)",
       "sponsor": "Regeneron",
@@ -49,9 +70,7 @@
       "fda_review_source": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761339Orig1s000Lbl.pdf",
       "regulator_authored_synthesis": "https://journals.sagepub.com/doi/full/10.1177/10915818251384270",
       "note": "Do not count as pure animal-study displacement: FDA's totality-of-evidence description also includes animal and human data. The significance is regulator-confirmed NAM reliance within a named approval where a pharmacologically relevant species was absent for the key mechanism.",
-      "manuscript_impacts": [
-        {"section":"IV","claim":"Regulatory adoption can take the form of NAM evidence filling questions that relevant species cannot answer","effect":"strengthens"}
-      ]
+      "manuscript_impacts": [{"section":"IV","claim":"Regulatory adoption can take the form of NAM evidence filling questions that relevant species cannot answer","effect":"strengthens"}]
     },
     {
       "id": "fda-kalydeco-cftr-in-vitro-expansion",
@@ -71,9 +90,7 @@
       "fda_approval_source": "https://www.accessdata.fda.gov/scripts/opdlisting/oopd/detailedIndex.cfm?cfgridkey=228306",
       "regulator_authored_synthesis": "https://journals.sagepub.com/doi/full/10.1177/10915818251384270",
       "note": "Important NAM adoption precedent but not animal displacement. Preserve this distinction in all counts and figures.",
-      "manuscript_impacts": [
-        {"section":"IV/VII","claim":"Validated NAM evidence can become reusable enough to extend regulatory decisions to otherwise impractical subpopulations","effect":"strong precedent"}
-      ]
+      "manuscript_impacts": [{"section":"IV/VII","claim":"Validated NAM evidence can become reusable enough to extend regulatory decisions to otherwise impractical subpopulations","effect":"strong precedent"}]
     },
     {
       "id": "fda-galafold-gla-in-vitro-expansion",
@@ -93,9 +110,7 @@
       "fda_approval_source": "https://www.accessdata.fda.gov/scripts/opdlisting/oopd/detailedIndex.cfm?cfgridkey=180003",
       "regulator_authored_synthesis": "https://journals.sagepub.com/doi/full/10.1177/10915818251384270",
       "note": "Important NAM adoption precedent but not animal displacement. FDA required post-approval clinical verification, illustrating that regulatory reliance can be conditional and staged.",
-      "manuscript_impacts": [
-        {"section":"IV/VII","claim":"Regulatory reliance can be staged: a validated in vitro model can support approval while residual uncertainty is handled through post-approval evidence generation","effect":"strengthens"}
-      ]
+      "manuscript_impacts": [{"section":"IV/VII","claim":"Regulatory reliance can be staged: a validated in vitro model can support approval while residual uncertainty is handled through post-approval evidence generation","effect":"strengthens"}]
     }
   ]
 }
