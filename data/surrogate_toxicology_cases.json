@@ -4,6 +4,20 @@
   "purpose": "Regulator-authored named product cases in which the clinical molecule lacks an ordinary pharmacologically relevant experimental animal species and a surrogate molecule/model was nevertheless used for substantive animal toxicology. This dataset is kept separate from direct relevant-species toxicology and from human-relevant omission cases.",
   "cases": [
     {
+      "id": "soliris-surrogate-c5-mouse-toxicology",
+      "product": "Soliris (eculizumab)",
+      "approval_year": 2009,
+      "regulator": "Health Canada",
+      "jurisdiction": "Canada",
+      "modality": "anti-C5 monoclonal antibody",
+      "clinical_product_species_relevance": "Eculizumab is specific for human C5 and no other tested species exhibited a pharmacologically active response.",
+      "surrogate_strategy": "Toxicity testing used BB5.1, a surrogate murine anti-mouse C5 antibody, including 4-week and 26-week repeat-dose studies and reproductive/developmental studies in mice; a human-C5-reconstituted mouse model was used for selected PK/PD questions.",
+      "general_repeat_toxicology_outcome": "surrogate_animal_toxicology_retained",
+      "why_it_matters": "Provides an early same-target precursor to Ultomiris showing the surrogate-C5 strategy used when the clinical antibody lacked a relevant animal species.",
+      "source_url": "https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD00136",
+      "source_strength": "direct_regulator_summary_basis_of_decision"
+    },
+    {
       "id": "blincyto-surrogate-mouse-toxicology",
       "product": "Blincyto (blinatumomab)",
       "approval_year": 2015,
