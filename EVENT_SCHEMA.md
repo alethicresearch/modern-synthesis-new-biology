@@ -65,17 +65,19 @@ Source ordering is intentional. Put the source that most directly establishes th
 
 `canonical_source_url` may update the public canonical locator while preserving the original ledger entry. `sources` supplies the ordered reader-facing source set. Existing single-source records remain valid through `source_url`.
 
-If a specific public claim cannot be verified, do not substitute a related source that establishes only a broader proposition. The overlay may instead use:
+If a specific claim does not yet have a public locator, do not substitute a related source that establishes only a broader proposition. An intentionally retained author-confirmed or manuscript-seeded record may remain in the public chronology with `source_status: "needs_public_source"` and a `source_note` explaining its provenance and that the public locator is pending. Such a record must not be labeled as independently primary-source verified.
+
+Where the underlying claim itself remains uncertain, rather than merely lacking a public locator, the overlay may instead use:
 
 ```json
 {
   "exclude_from_public": true,
   "source_status": "needs_public_source",
-  "reason": "Why the specific public claim could not be verified"
+  "reason": "Why the specific claim remains insufficiently established"
 }
 ```
 
-This withholds the record from the verified public rendering without deleting the research-side record. It is the preferred treatment for an author-supplied notice or other lead whose public source has not been confirmed.
+This withholds the record from public rendering without deleting the research-side record. Exclusion is therefore a claim-confidence decision, not an automatic consequence of a missing public URL.
 
 ## `data/prospective.json`
 
