@@ -295,7 +295,7 @@ mobilePolishStyle.textContent=`
 `;
 document.head.appendChild(mobilePolishStyle);
 
-/* Two-line hero hierarchy: smaller overall, with a quieter second line. */
+/* Two-line hero hierarchy: smaller overall, equal-sized lines. */
 const heroTitle=document.querySelector('.hero h1');
 if(heroTitle){
   heroTitle.innerHTML='<span class="hero-title-main">From Commitment to Adoption:</span><span class="hero-title-sub">A Roadmap for Human-Based Biomedicine</span>';
@@ -304,10 +304,10 @@ const heroTitleStyle=document.createElement('style');
 heroTitleStyle.textContent=`
   .hero h1{font-size:clamp(1.65rem,3.7vw,3.15rem)!important;line-height:1.02!important}
   .hero-title-main,.hero-title-sub{display:block}
-  .hero-title-sub{font-size:.78em!important;margin-top:.16em}
+  .hero-title-sub{font-size:1em!important;margin-top:.16em}
   @media(max-width:720px){
     .hero h1{font-size:clamp(1.5rem,7.2vw,2.15rem)!important}
-    .hero-title-sub{font-size:.76em!important;margin-top:.2em}
+    .hero-title-sub{font-size:1em!important;margin-top:.2em}
   }
   @media(max-width:380px){.hero h1{font-size:1.45rem!important}}
 `;
