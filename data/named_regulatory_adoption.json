@@ -1,0 +1,95 @@
+{
+  "updated": "2026-08-31",
+  "schema_version": 1,
+  "purpose": "Named product-level examples in which a regulator-authored or regulator-hosted source documents material use of a NAM in regulatory decision-making. This dataset is broader than animal-study displacement: every record explicitly states what evidence was displaced or supplemented, and records that did not replace animal studies must not be counted as animal displacement.",
+  "cases": [
+    {
+      "id": "fda-kimmtrak-human-tissue-nam",
+      "product": "Kimmtrak (tebentafusp-tebn)",
+      "sponsor": "Immunocore",
+      "regulator": "FDA CDER/OND",
+      "jurisdiction": "United States",
+      "approval_or_decision_year": 2022,
+      "indication": "HLA-A*02:01-positive unresectable or metastatic uveal melanoma",
+      "nam": "Human tissue and cell-based in vitro assays assessing target/species specificity, cross-reactivity in 35 human tissues, organ-specific toxicity potential in 13 tissues, cytokines and cytolytic proteins",
+      "regulatory_impact": "Supported the safety of clinical trials in the absence of a pharmacologically relevant animal model and contributed to development leading to approval.",
+      "legacy_evidence_displaced_or_unavailable": "Pharmacologically relevant animal model was unavailable; the human in vitro assay suite supplied nonclinical safety and mechanistic evidence needed to support clinical development.",
+      "animal_displacement_class": "human_based_evidence_used_when_relevant_animal_model_unavailable",
+      "counts_as_animal_displacement": true,
+      "counts_as_named_nam_adoption": true,
+      "evidence_strength": "regulator_authored_synthesis_of_public_fda_review",
+      "fda_review_source": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2022/761228Orig1s000MultidisciplineR.pdf",
+      "regulator_authored_synthesis": "https://journals.sagepub.com/doi/full/10.1177/10915818251384270",
+      "note": "FDA/CDER/OND authors explicitly identify Kimmtrak as a NAM regulatory-decision example and state that the human tissue/cell assay suite supported clinical-trial safety in the absence of pharmacologically relevant animal models. This is stronger than a sponsor claim, but it is not a one-for-one statement that a particular mandated animal study was waived.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"Human-based methods have already supported named drug programs when relevant animal models were unavailable","effect":"strong direct example"}
+      ]
+    },
+    {
+      "id": "fda-veopoz-ex-vivo-complement-nam",
+      "product": "Veopoz (pozelimab-bbfg)",
+      "sponsor": "Regeneron",
+      "regulator": "FDA CDER/OND",
+      "jurisdiction": "United States",
+      "approval_or_decision_year": 2023,
+      "indication": "CHAPLE disease",
+      "nam": "Cell-based complement assays and validated ex vivo CH50 hemolysis assay",
+      "regulatory_impact": "Mechanistic nonclinical NAM data, together with correlating clinical data, served as confirmatory evidence supporting substantial evidence of efficacy and approval.",
+      "legacy_evidence_displaced_or_unavailable": "FDA authors state that no pharmacologically relevant species existed for key complement pharmacology; cell-based and ex vivo assays were therefore central to demonstrating pharmacodynamic activity.",
+      "animal_displacement_class": "nam_central_when_relevant_species_unavailable_but_totality_included_other_animal_data",
+      "counts_as_animal_displacement": false,
+      "counts_as_named_nam_adoption": true,
+      "evidence_strength": "regulator_authored_synthesis_of_public_fda_review",
+      "fda_review_source": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761339Orig1s000Lbl.pdf",
+      "regulator_authored_synthesis": "https://journals.sagepub.com/doi/full/10.1177/10915818251384270",
+      "note": "Do not count as pure animal-study displacement: FDA's totality-of-evidence description also includes animal and human data. The significance is regulator-confirmed NAM reliance within a named approval where a pharmacologically relevant species was absent for the key mechanism.",
+      "manuscript_impacts": [
+        {"section":"IV","claim":"Regulatory adoption can take the form of NAM evidence filling questions that relevant species cannot answer","effect":"strengthens"}
+      ]
+    },
+    {
+      "id": "fda-kalydeco-cftr-in-vitro-expansion",
+      "product": "Kalydeco (ivacaftor)",
+      "sponsor": "Vertex Pharmaceuticals",
+      "regulator": "FDA CDER/OND",
+      "jurisdiction": "United States",
+      "approval_or_decision_year": 2017,
+      "indication": "Cystic fibrosis subpopulations defined by responsive CFTR variants",
+      "nam": "In vitro CFTR chloride-transport assays using mutant CFTR systems including human bronchial epithelial cells",
+      "regulatory_impact": "Supported expansion to specific CFTR variants without additional clinical trials for each variant; FDA accepted a defined in vitro response threshold linked to prior clinical efficacy.",
+      "legacy_evidence_displaced_or_unavailable": "Additional variant-specific clinical trials, not an animal study.",
+      "animal_displacement_class": "none_clinical_evidence_substitution",
+      "counts_as_animal_displacement": false,
+      "counts_as_named_nam_adoption": true,
+      "evidence_strength": "regulator_authored_synthesis_plus_fda_approval_records",
+      "fda_approval_source": "https://www.accessdata.fda.gov/scripts/opdlisting/oopd/detailedIndex.cfm?cfgridkey=228306",
+      "regulator_authored_synthesis": "https://journals.sagepub.com/doi/full/10.1177/10915818251384270",
+      "note": "Important NAM adoption precedent but not animal displacement. Preserve this distinction in all counts and figures.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"Validated NAM evidence can become reusable enough to extend regulatory decisions to otherwise impractical subpopulations","effect":"strong precedent"}
+      ]
+    },
+    {
+      "id": "fda-galafold-gla-in-vitro-expansion",
+      "product": "Galafold (migalastat)",
+      "sponsor": "Amicus Therapeutics",
+      "regulator": "FDA CDER/OND",
+      "jurisdiction": "United States",
+      "approval_or_decision_year": 2018,
+      "indication": "Fabry disease with amenable GLA variants",
+      "nam": "In vitro alpha-galactosidase A activity assay in cells expressing specific GLA variants",
+      "regulatory_impact": "FDA accepted assay-response thresholds to identify amenable variants and expand the indicated genetic population without separate pre-approval clinical trials for every variant, with a post-approval clinical verification requirement.",
+      "legacy_evidence_displaced_or_unavailable": "Additional variant-specific clinical trials, not an animal study.",
+      "animal_displacement_class": "none_clinical_evidence_substitution",
+      "counts_as_animal_displacement": false,
+      "counts_as_named_nam_adoption": true,
+      "evidence_strength": "regulator_authored_synthesis_plus_fda_approval_record",
+      "fda_approval_source": "https://www.accessdata.fda.gov/scripts/opdlisting/oopd/detailedIndex.cfm?cfgridkey=180003",
+      "regulator_authored_synthesis": "https://journals.sagepub.com/doi/full/10.1177/10915818251384270",
+      "note": "Important NAM adoption precedent but not animal displacement. FDA required post-approval clinical verification, illustrating that regulatory reliance can be conditional and staged.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"Regulatory reliance can be staged: a validated in vitro model can support approval while residual uncertainty is handled through post-approval evidence generation","effect":"strengthens"}
+      ]
+    }
+  ]
+}
