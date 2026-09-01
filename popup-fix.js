@@ -231,3 +231,29 @@ mobileSnakeStyle.textContent=`
   }
 `;
 document.head.appendChild(mobileSnakeStyle);
+
+/* Final mobile clearance: only rows carrying visible captions get extra depth. */
+const mobileCaptionClearance=document.createElement('style');
+mobileCaptionClearance.textContent=`
+  @media(max-width:720px){
+    .snake-timeline,.snake-row,.snake-track,.snake-node{overflow:visible!important}
+    .snake-anchor-text{max-height:none!important;overflow:visible!important;white-space:normal!important}
+    .snake-row:has(.snake-node[data-node-id="2022-12-fda-modernization-2"]),
+    .snake-row:has(.snake-node[data-node-id="2025-04-10-fda-roadmap"]),
+    .snake-row:has(.snake-node[data-node-id="2025-12-aim-mash-qualification"]),
+    .snake-row:has(.snake-node[data-node-id="2026-08-31-fda-icmra-endotoxin"]),
+    .snake-row:has(.snake-node[data-node-id="prospective-mps-reusable-qualification"]),
+    .snake-row:has(.snake-node[data-node-id="prospective-composable-qualification"]){height:98px!important}
+  }
+  @media(max-width:380px){
+    .snake-row:has(.snake-node[data-node-id="2022-12-fda-modernization-2"]),
+    .snake-row:has(.snake-node[data-node-id="2025-12-aim-mash-qualification"]),
+    .snake-row:has(.snake-node[data-node-id="2026-08-31-fda-icmra-endotoxin"]),
+    .snake-row:has(.snake-node[data-node-id="prospective-mps-reusable-qualification"]),
+    .snake-row:has(.snake-node[data-node-id="prospective-composable-qualification"]){height:94px!important}
+  }
+`;
+document.head.appendChild(mobileCaptionClearance);
+
+/* Header metadata: retain only the updated date. */
+document.querySelectorAll('.hero-meta span:not(#last-updated)').forEach(el=>el.remove());
