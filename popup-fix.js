@@ -43,6 +43,11 @@ popupPreviewStyle.textContent = `
   .snake-tooltip-why{display:block!important;color:#d8d2c9!important;margin:0 0 9px!important;padding-top:7px!important;border-top:1px solid rgba(255,255,255,.12)!important;font-size:.73rem!important}
   .snake-tooltip-why strong{display:inline!important;color:#fff!important;font-size:inherit!important}
 
+  /* Keep each serpentine connector outside the timeline row, in a dedicated side gutter. */
+  .snake-timeline{padding-inline:30px!important}
+  .snake-turn.right span{right:-26px!important}
+  .snake-turn.left span{left:-26px!important}
+
   .snake-node .snake-tooltip.snake-smart-popup{
     position:fixed!important;
     left:var(--popup-left)!important;
@@ -92,6 +97,9 @@ popupPreviewStyle.textContent = `
   .source-methods{margin-top:42px}
   @media(max-width:720px){
     .hero h1{font-size:clamp(1.8rem,9vw,2.6rem)!important}
+    .snake-timeline{padding-inline:18px!important}
+    .snake-turn.right span{right:-16px!important}
+    .snake-turn.left span{left:-16px!important}
     .snake-node.popup-open .snake-tooltip.snake-smart-popup{width:min(320px,calc(100vw - 20px))!important}
     .snake-tooltip-description{font-size:.78rem!important}
     .snake-tooltip-why{font-size:.74rem!important}
