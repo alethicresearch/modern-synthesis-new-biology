@@ -51,7 +51,7 @@ uiStyle.textContent=`
   .snake-track{height:46px!important;padding-inline:2px!important}
   .snake-node{min-width:12px!important}
   .snake-dot{width:11px!important;height:11px!important;margin-top:-6px!important}
-  .snake-node.anchor .snake-dot{width:15px!important;height:15px!important;margin-top:-8px!important}
+  .snake-node.anchor .snake-dot{width:11px!important;height:11px!important;margin-top:-6px!important;outline-width:1px!important}
   .snake-anchor-text{top:29px!important;width:100px!important;font-size:.54rem!important;line-height:1.12!important;color:#4e4b45!important;z-index:5!important;overflow-wrap:anywhere!important}
   .snake-anchor-text b{display:none!important}
   .snake-track>.snake-node:first-child .snake-anchor-text{left:0!important;right:auto!important;transform:none!important;text-align:left!important}
@@ -62,6 +62,20 @@ uiStyle.textContent=`
   .snake-turn span{width:24px!important;height:22px!important;top:-10px!important;border-width:1.5px!important;border-radius:0 14px 14px 0!important}
   .snake-turn.right span{right:28px!important}
   .snake-turn.left span{left:28px!important}
+
+  /* Direction: start at 2022, climb the turns, finish at 2030. */
+  .snake-row:last-child .snake-track::before,.snake-row:first-child .snake-track::after,.snake-turn::after{content:"";position:absolute;width:0;height:0;z-index:7}
+  .snake-row:last-child .snake-track::before{left:-2px;top:-5px;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid #9b958a;transform:translateX(-1px)}
+  .snake-row:first-child .snake-track::after{right:-8px;top:-5px;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid #9b958a}
+  .snake-turn.right::after{right:48px;top:-12px;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid #9b958a}
+  .snake-turn.left::after{left:48px;top:-12px;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:7px solid #9b958a}
+
+  /* One semantic dimension only: color/dash. All dots have the same base size. */
+  .snake-key{display:flex;align-items:center;justify-content:center;gap:13px;flex-wrap:wrap;margin:1px 0 7px;color:#706c64;font-size:.64rem;line-height:1.2}
+  .snake-key-label{font-weight:750;color:#5f5b54;margin-right:2px}
+  .snake-key-item{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+  .snake-key-dot{display:inline-block;width:9px;height:9px;border-radius:50%;border:2px solid #f7f6f2;outline:1px solid #7d786f;background:#706b63}
+  .snake-key-dot.commitment{background:#8d8578}.snake-key-dot.qualification{background:#526c80}.snake-key-dot.adoption{background:#4d7257}.snake-key-dot.prospective{background:#f7f6f2;outline:2px dashed #7d786f}
 
   /* Popup preview. */
   .snake-tooltip{width:330px!important;line-height:1.42!important;pointer-events:auto!important}
@@ -96,6 +110,7 @@ uiStyle.textContent=`
     .snake-anchor-text{width:88px!important;font-size:.51rem!important}
     .snake-turn span{width:20px!important;height:20px!important;top:-9px!important}
     .snake-turn.right span{right:26px!important}.snake-turn.left span{left:26px!important}
+    .snake-turn.right::after{right:43px!important}.snake-turn.left::after{left:43px!important}
   }
   @media(max-width:720px){
     .hero h1{font-size:clamp(1.8rem,9vw,2.6rem)!important}
@@ -110,15 +125,27 @@ uiStyle.textContent=`
     .snake-turn{margin-top:-23px!important;margin-bottom:15px!important}
     .snake-turn span{width:16px!important;height:17px!important;top:-8px!important;border-radius:0 11px 11px 0!important}
     .snake-turn.right span{right:10px!important}.snake-turn.left span{left:10px!important}
+    .snake-turn.right::after{right:23px!important;top:-10px!important}.snake-turn.left::after{left:23px!important;top:-10px!important}
+    .snake-key{justify-content:flex-start;gap:8px 11px;margin-top:2px;font-size:.58rem}.snake-key-label{flex-basis:100%;margin-bottom:-2px}
     .snake-node.popup-open .snake-tooltip.snake-smart-popup{width:min(320px,calc(100vw - 20px))!important}
     .snake-tooltip-description{font-size:.78rem!important}.snake-tooltip-why{font-size:.74rem!important}
     #new-biology-roadmap .roadmap-record h2{font-size:1rem!important}
     #new-biology-roadmap .roadmap-record p{font-size:.76rem!important}
     #new-biology-roadmap .roadmap-record .event-card{padding:13px 14px!important}
   }
-  @media(max-width:380px){.hero h1{font-size:1.8rem!important}.snake-row{margin-inline:25px!important}.snake-anchor-text{width:56px!important;font-size:.44rem!important}.snake-turn.right span{right:9px!important}.snake-turn.left span{left:9px!important}}
+  @media(max-width:380px){.hero h1{font-size:1.8rem!important}.snake-row{margin-inline:25px!important}.snake-anchor-text{width:56px!important;font-size:.44rem!important}.snake-turn.right span{right:9px!important}.snake-turn.left span{left:9px!important}.snake-turn.right::after{right:22px!important}.snake-turn.left::after{left:22px!important}}
 `;
 document.head.appendChild(uiStyle);
+
+/* Compact visual key: color is the furthest observed stage; dashed means prospective. */
+const snakeShell=document.querySelector('#view-roadmap .snake-shell');
+if(snakeShell&&!snakeShell.querySelector('.snake-key')){
+  const key=document.createElement('div');
+  key.className='snake-key';
+  key.setAttribute('aria-label','Roadmap dot key');
+  key.innerHTML='<span class="snake-key-label">Dot key:</span><span class="snake-key-item"><i class="snake-key-dot commitment"></i>Commitment</span><span class="snake-key-item"><i class="snake-key-dot qualification"></i>Qualification</span><span class="snake-key-item"><i class="snake-key-dot adoption"></i>Adoption</span><span class="snake-key-item"><i class="snake-key-dot prospective"></i>Prospective</span>';
+  snakeShell.appendChild(key);
+}
 
 function positionSnakePopup(node){
   if(!node)return;
