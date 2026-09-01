@@ -14,8 +14,20 @@ tooltip = function(r){
   </div>`;
 };
 
+/* Remove explanatory copy the public interface no longer needs. */
+const evidenceIntro=document.querySelector('#view-evidence .section-intro');
+if(evidenceIntro){
+  evidenceIntro.querySelector('h2')?.remove();
+  evidenceIntro.querySelectorAll(':scope > p:not(.kicker)').forEach(el=>el.remove());
+}
+const methodsIntro=document.querySelector('#view-methods .section-intro');
+if(methodsIntro){
+  methodsIntro.querySelector(':scope > p:not(.kicker)')?.remove();
+}
+
 const popupPreviewStyle = document.createElement('style');
 popupPreviewStyle.textContent = `
+  .hero h1{font-size:clamp(2rem,4.7vw,4rem)!important}
   .snake-tooltip{width:330px!important;line-height:1.42!important}
   .snake-tooltip-title{font-size:.88rem!important;margin:5px 0 7px!important}
   .snake-tooltip-description{display:block!important;color:#f4f1eb!important;margin:0 0 8px!important;font-size:.77rem!important}
@@ -30,9 +42,15 @@ popupPreviewStyle.textContent = `
     bottom:auto!important;
     transform:none!important;
     max-width:calc(100vw - 20px)!important;
-    max-height:calc(100vh - 20px)!important;
-    overflow:auto!important;
+    max-height:none!important;
+    overflow:visible!important;
     z-index:1000!important;
+  }
+  .snake-node .snake-tooltip.snake-smart-popup.snake-popup-scroll{
+    max-height:calc(100vh - 20px)!important;
+    overflow-y:auto!important;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
   }
   .snake-node .snake-tooltip.snake-smart-popup::after{
     content:""!important;
@@ -63,14 +81,12 @@ popupPreviewStyle.textContent = `
     border-color:transparent #22211f transparent transparent!important;
   }
   @media(max-width:720px){
-    .snake-node.popup-open .snake-tooltip.snake-smart-popup{
-      width:min(320px,calc(100vw - 20px))!important;
-      max-height:calc(100vh - 20px)!important;
-      overflow:auto!important;
-    }
+    .hero h1{font-size:clamp(1.8rem,9vw,2.6rem)!important}
+    .snake-node.popup-open .snake-tooltip.snake-smart-popup{width:min(320px,calc(100vw - 20px))!important}
     .snake-tooltip-description{font-size:.78rem!important}
     .snake-tooltip-why{font-size:.74rem!important}
   }
+  @media(max-width:380px){.hero h1{font-size:1.8rem!important}}
 `;
 document.head.appendChild(popupPreviewStyle);
 
@@ -85,6 +101,7 @@ function positionSnakePopup(node){
   const dr=dot.getBoundingClientRect();
 
   tip.classList.add('snake-smart-popup');
+  tip.classList.remove('snake-popup-scroll');
   const oldDisplay=tip.style.display;
   const oldVisibility=tip.style.visibility;
   tip.style.visibility='hidden';
@@ -92,32 +109,26 @@ function positionSnakePopup(node){
   tip.style.setProperty('--popup-left','0px');
   tip.style.setProperty('--popup-top','0px');
   tip.style.width=`${Math.min(330,Math.max(240,vw-margin*2))}px`;
-  tip.style.maxHeight=`${Math.max(180,vh-margin*2)}px`;
+  tip.style.maxHeight='none';
 
   const w=Math.min(tip.offsetWidth,vw-margin*2);
-  const h=Math.min(tip.offsetHeight,vh-margin*2);
-  const spaces={
-    top:dr.top-margin,
-    bottom:vh-dr.bottom-margin,
-    left:dr.left-margin,
-    right:vw-dr.right-margin
-  };
+  const naturalH=tip.scrollHeight;
+  const maxViewportH=Math.max(180,vh-margin*2);
+  const h=Math.min(naturalH,maxViewportH);
+  if(naturalH>maxViewportH) tip.classList.add('snake-popup-scroll');
+
+  const spaces={top:dr.top-margin,bottom:vh-dr.bottom-margin,left:dr.left-margin,right:vw-dr.right-margin};
   const need={top:h+gap,bottom:h+gap,left:w+gap,right:w+gap};
   const verticalBias=36;
   const candidates=['top','bottom','right','left'].map(p=>({p,space:spaces[p],fit:spaces[p]>=need[p],score:spaces[p]-need[p]+((p==='top'||p==='bottom')?verticalBias:0)}));
-  let placement=(candidates.filter(c=>c.fit).sort((a,b)=>b.score-a.score)[0]||candidates.sort((a,b)=>b.space-a.space)[0]).p;
+  const placement=(candidates.filter(c=>c.fit).sort((a,b)=>b.score-a.score)[0]||candidates.sort((a,b)=>b.space-a.space)[0]).p;
 
   const cx=dr.left+dr.width/2, cy=dr.top+dr.height/2;
   let left,top;
-  if(placement==='top'){
-    left=cx-w/2; top=dr.top-h-gap;
-  }else if(placement==='bottom'){
-    left=cx-w/2; top=dr.bottom+gap;
-  }else if(placement==='left'){
-    left=dr.left-w-gap; top=cy-h/2;
-  }else{
-    left=dr.right+gap; top=cy-h/2;
-  }
+  if(placement==='top'){left=cx-w/2;top=dr.top-h-gap}
+  else if(placement==='bottom'){left=cx-w/2;top=dr.bottom+gap}
+  else if(placement==='left'){left=dr.left-w-gap;top=cy-h/2}
+  else{left=dr.right+gap;top=cy-h/2}
 
   left=Math.max(margin,Math.min(left,vw-w-margin));
   top=Math.max(margin,Math.min(top,vh-h-margin));
@@ -138,7 +149,6 @@ function positionActiveSnakePopup(){
   if(node) positionSnakePopup(node);
 }
 
-/* Hover/focus previews get positioned before the reader can hit a viewport edge. */
 document.addEventListener('pointerover',e=>{
   const node=e.target.closest?.('.snake-node');
   if(node) requestAnimationFrame(()=>positionSnakePopup(node));
@@ -147,10 +157,12 @@ document.addEventListener('focusin',e=>{
   const node=e.target.closest?.('.snake-node');
   if(node) requestAnimationFrame(()=>positionSnakePopup(node));
 });
-/* app.js toggles popup-open on click; position immediately after that state change. */
 document.addEventListener('click',e=>{
   const dot=e.target.closest?.('.snake-dot');
   if(dot) requestAnimationFrame(()=>positionSnakePopup(dot.closest('.snake-node')));
 });
 window.addEventListener('resize',()=>requestAnimationFrame(positionActiveSnakePopup));
-window.addEventListener('scroll',()=>requestAnimationFrame(positionActiveSnakePopup),true);
+window.addEventListener('scroll',e=>{
+  if(e.target instanceof Element && e.target.closest('.snake-tooltip')) return;
+  requestAnimationFrame(positionActiveSnakePopup);
+},true);
