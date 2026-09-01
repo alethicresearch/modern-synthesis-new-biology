@@ -52,7 +52,7 @@ uiStyle.textContent=`
   .snake-node{min-width:12px!important}
   .snake-dot{width:11px!important;height:11px!important;margin-top:-6px!important}
   .snake-node.anchor .snake-dot{width:15px!important;height:15px!important;margin-top:-8px!important}
-  .snake-anchor-text{top:18px!important;width:100px!important;font-size:.54rem!important;line-height:1.12!important;color:#4e4b45!important;z-index:5!important;overflow-wrap:anywhere!important}
+  .snake-anchor-text{top:29px!important;width:100px!important;font-size:.54rem!important;line-height:1.12!important;color:#4e4b45!important;z-index:5!important;overflow-wrap:anywhere!important}
   .snake-anchor-text b{display:none!important}
   .snake-track>.snake-node:first-child .snake-anchor-text{left:0!important;right:auto!important;transform:none!important;text-align:left!important}
   .snake-track>.snake-node:last-child .snake-anchor-text{left:auto!important;right:0!important;transform:none!important;text-align:right!important}
@@ -106,7 +106,7 @@ uiStyle.textContent=`
     .snake-row:first-child{margin-top:1px!important}
     .snake-row-years{font-size:.51rem!important;padding-bottom:4px!important}
     .snake-track{height:39px!important}
-    .snake-anchor-text{top:15px!important;width:62px!important;font-size:.47rem!important;line-height:1.06!important}
+    .snake-anchor-text{top:24px!important;width:62px!important;font-size:.47rem!important;line-height:1.06!important}
     .snake-turn{margin-top:-23px!important;margin-bottom:15px!important}
     .snake-turn span{width:16px!important;height:17px!important;top:-8px!important;border-radius:0 11px 11px 0!important}
     .snake-turn.right span{right:10px!important}.snake-turn.left span{left:10px!important}
