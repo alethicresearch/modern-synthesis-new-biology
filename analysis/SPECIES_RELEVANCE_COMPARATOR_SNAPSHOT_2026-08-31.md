@@ -2,9 +2,9 @@
 
 ## Question
 
-Does pharmacological/model relevance appear to help explain when regulators retain conventional general/repeat-dose animal toxicology versus omit or radically tailor it?
+Does pharmacological/model relevance help explain when regulators retain conventional general/repeat-dose animal toxicology versus omit or radically tailor it?
 
-This is a **purposive, hypothesis-generating comparator set**, not a representative sample and not a causal analysis. No inferential p-values should be reported from the present dataset because cases were deliberately selected to expose both positive and negative regulatory patterns.
+This is a **purposive, hypothesis-generating comparator set**, not a representative sample and not a causal analysis. No inferential p-values should be reported from the present dataset because cases were deliberately selected to expose contrasting regulatory patterns.
 
 ## Structured comparator set
 
@@ -12,110 +12,136 @@ This is a **purposive, hypothesis-generating comparator set**, not a representat
 
 ### No or highly limited relevant species/model: 9
 
-- Kimmtrak — no relevant species; conventional toxicology unavailable/omitted.
-- Carvykti — no relevant species; formal GLP/repeat-dose toxicology omitted.
-- Kymriah — patient-specific product/model non-representative; single/repeat-dose toxicology omitted.
-- Yescarta — no representative toxicology model; traditional toxicology omitted.
-- Breyanzi — no representative conventional strategy / species cross-reactivity limitations; package tailored/omitted.
-- Abecma — no/limited appropriate model for conventional program; repeat-dose/traditional toxicity omitted.
-- Tecartus — no representative toxicology model; traditional toxicology omitted.
-- Tecelra — highly human-specific engineered TCR questions; conventional package tailored toward human cells/iPSC-derived cells/organotypic models, with selected animal pharmacology retained.
-- Sarclisa — species specificity limited the program; general toxicity was retained but embryofetal-development testing was specifically omitted because an appropriate model was absent.
+Kimmtrak, Carvykti, Kymriah, Yescarta, Breyanzi, Abecma, Tecartus, Tecelra and Sarclisa.
 
-Among these nine, **eight have general/repeat-dose toxicology coded as omitted, unavailable, or substantially tailored rather than conventionally retained**. Sarclisa is the important endpoint-specific exception: a general toxicity study remained informative, while a particular reproductive-developmental endpoint lacked an appropriate animal model.
+Among these nine, **eight have general/repeat-dose toxicology coded as omitted, unavailable, or substantially tailored rather than conventionally retained**. Sarclisa is the endpoint-specific exception: a general toxicity study remained informative, while embryofetal-development testing was omitted because an appropriate animal model was absent.
 
 ### Pharmacologically relevant species present: 5
 
-- Imdelltra (tarlatamab)
-- Taltz (ixekizumab)
-- Adtralza (tralokinumab)
-- Libtayo (cemiplimab)
-- Piasky (crovalimab)
+Imdelltra, Taltz, Adtralza, Libtayo and Piasky.
 
-All five regulator records explicitly identify cynomolgus monkeys as pharmacologically relevant or sufficiently cross-reactive for toxicological analysis, and all five retain substantive repeat-dose toxicology. The exact programs differ, but include studies extending to three months, six months, 26 weeks or 39 weeks, with reproductive/developmental work where scientifically relevant.
+All five regulator records explicitly identify cynomolgus monkeys as pharmacologically relevant or sufficiently cross-reactive for toxicological analysis, and all five retain substantive repeat-dose toxicology. The programs include studies extending to three months, six months, 26 weeks or 39 weeks, with reproductive/developmental work where scientifically relevant.
 
-Routine biologic exclusions such as genotoxicity/carcinogenicity not being warranted under ICH guidance are **not** counted as species-relevance displacement in these negative controls.
+Routine biologic exclusions such as genotoxicity/carcinogenicity not being warranted under ICH guidance are **not** counted as species-relevance displacement in these controls.
 
-## What the current 14 cases do support
+## What the 14-case structured set supports
 
-The present evidence is consistent with a strong descriptive association:
+The present set is consistent with a strong descriptive association:
 
 **relevant species/model available → conventional general/repeat-dose toxicology tends to be retained**
 
 **relevant species/model absent or severely limited → conventional toxicology is more often omitted or decomposed into a tailored evidence package**
 
-The more defensible explanatory mechanism is not “NAM availability automatically replaces animal testing.” It is that **model relevance governs information value**. When a conventional study cannot interrogate the relevant human pharmacology or product biology, regulators permit the safety question to be decomposed and answered using other evidence sources.
+The defensible mechanism is not “NAM availability automatically replaces animal testing.” It is that **model relevance changes information value**. When a conventional study cannot interrogate the relevant human pharmacology or product biology, the safety question may be decomposed and answered using other evidence sources.
 
-## Two edge cases prevent overclaiming
+## Critical counterexamples: species non-relevance does not mechanically imply omission
 
-### Blincyto (blinatumomab): species non-relevance can lead to surrogate substitution rather than omission
+The next search deliberately looked for products with poor species relevance in which regulators nevertheless retained animal toxicology through surrogate strategies. It found several.
 
-Health Canada's original Blincyto review states that blinatumomab has affinity for human and chimpanzee B/T cells but does not bind lymphocytes of other animal species. Apart from limited short-duration chimpanzee infusions, the majority of toxicology was therefore performed in mice using a surrogate anti-mouse CD19/CD3 construct, including a comprehensive general and specialized toxicity program.
+### Blincyto (blinatumomab), Canada 2015
+
+Health Canada states that blinatumomab has affinity for human and chimpanzee B and T cells but does not bind lymphocytes of other animal species. Apart from limited short-duration chimpanzee infusions, most nonclinical toxicology was performed in mice using a surrogate anti-mouse CD19/CD3 construct, including a comprehensive general and specialized toxicity program.
 
 Primary source:
 `https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD00207`
 
-This case is analytically critical. It shows that **absence of an ordinary pharmacologically relevant species does not mechanically imply animal-study omission**. A regulator/sponsor may instead construct a surrogate conventional-toxicology program.
+### Ultomiris (ravulizumab), Canada 2019
 
-It also creates a potentially important historical contrast with the March 2026 MHRA approach, which explicitly says that where a drug substance is not pharmacologically active in animals, MHRA does not support animal testing using surrogate molecules simply to reproduce human pharmacology. This suggests the regulatory response to species non-relevance may itself be changing over time.
+Health Canada states that ravulizumab does not bind non-human C5 and therefore has **no animal species with a pharmacologically active response**. A surrogate antibody directed against murine C5 was nevertheless used for a 26-week repeat-dose toxicity study and reproductive studies in mice.
 
-### Casgevy: non-traditional product biology produces tailoring without wholesale animal omission
+Primary source:
+`https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD00463`
 
-Health Canada's Casgevy review describes the nonclinical program as “non-traditional” because of the unique mechanism and single administration. The package included in-vitro proof of concept, extensive orthogonal off-target analyses, biodistribution and a **single-dose NSG-mouse study evaluating engraftment, toxicity and tumorigenicity**.
+### Tzield (teplizumab), Canada 2025
+
+This is the strongest contemporary counterexample to a simple time-trend account. Health Canada states that teplizumab cross-reactivity is limited to humans, chimpanzees, gorillas and other species that are not established experimental species. The submitted nonclinical package therefore used a single chimpanzee study plus **repeat-dose and reproductive/developmental toxicity with a surrogate anti-mouse CD3 antibody**, whose relevance was supported by in-vitro binding comparisons.
+
+Primary source:
+`https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD1750255396960/`
+
+Tzield was authorized in Canada on 5 May 2025. Surrogate toxicology is therefore not merely an older regulatory artifact.
+
+## Contemporary regulatory divergence
+
+The surrogate cases become especially important when compared with MHRA's **25 March 2026** operational policy.
+
+MHRA now states that, for drug substances that are not pharmacologically active in animals, it **does not support testing in animals, including with surrogate molecules**, and says non-animal-based methods can suffice to support efficacy and safety expectations for this group.
+
+Primary source:
+`https://www.gov.uk/guidance/mhra-approach-to-medicines-using-non-animal-methods`
+
+This creates a concrete international divergence in how species non-relevance can be handled:
+
+- **Health Canada / historical and recent product reviews:** surrogate animal toxicology may be accepted when the clinical molecule lacks a conventional relevant species.
+- **MHRA 2026 stated approach:** if the drug substance is not pharmacologically active in animals, surrogate-molecule animal testing is not supported; the regulator is willing to assess a human-relevant non-animal package instead.
+
+This is more analytically interesting than a simple “old versus new” transition. The response to model non-relevance depends on **regulatory jurisdiction and policy architecture**, as well as product biology.
+
+## Casgevy: a second source of tailoring independent of species relevance
+
+Health Canada's Casgevy review describes the nonclinical program as “non-traditional” because of the unique mechanism and single administration. It included in-vitro proof of concept, extensive orthogonal off-target analyses, biodistribution, and a **single-dose NSG-mouse study evaluating engraftment, toxicity and tumorigenicity**.
 
 Primary source:
 `https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD1739203842068/`
 
-Casgevy shows another route to tailored evidence: **product architecture and the risk question**, not species relevance alone, can determine which animal studies retain information value. The result is selective retention rather than a simple binary of “animal” versus “non-animal.”
+Casgevy shows that **product architecture and the regulatory risk question**, not species relevance alone, determine which animal studies retain information value. The result is selective retention rather than a binary of animal versus non-animal evidence.
 
 ## Revised working model
 
-The evidence now favors a multi-step model:
+The evidence now favors a decision architecture rather than a deterministic rule:
 
 1. Define the regulatory risk question.
-2. Ask whether an available animal species/model actually expresses the relevant target, pharmacology and product behavior.
-3. If yes, conventional animal toxicology may retain substantial information value and tends to remain in the package.
-4. If no, choose among several responses rather than assuming automatic omission:
-   - surrogate-animal substitution;
+2. Determine whether an available species/model expresses the relevant target, pharmacology and product behavior.
+3. If a directly relevant species exists, conventional toxicology often retains substantial information value.
+4. If it does not, regulators/sponsors can choose among several strategies:
+   - surrogate-animal toxicology;
    - limited purpose-built animal studies for questions they can answer;
    - human tissue/cell, iPSC, organotypic, genomic or computational evidence;
    - prior knowledge and literature;
    - clinical monitoring/risk mitigation; or
    - omission of a conventional study when its information value is inadequate.
-5. The regulator judges the **total evidentiary package**, not whether each legacy animal test has a one-for-one replacement.
+5. The regulator evaluates the **total evidentiary package**, not whether each legacy animal test has a one-for-one replacement.
 
-This formulation fits the named-product evidence and MHRA's 2026 operational framing better than a test-replacement narrative.
+Therefore the emerging dependent variable is not simply “animal study present/absent.” A better outcome classification is:
 
-## A possible historical transition worth testing
+**direct relevant-species toxicology / surrogate toxicology / selective animal retention / human-relevant tailored package / conventional-study omission**.
 
-Blincyto (authorized Canada 2015) versus the 2025–2026 policy environment raises a new hypothesis:
+## New variables required
 
-**species non-relevance may historically have been managed more often through surrogate animal models, whereas newer regulatory frameworks increasingly allow direct human-relevant evidence plus selective omission.**
+Before formal analysis, add at least:
 
-This is not yet established. Test it by identifying older and newer biologics with no relevant species and coding whether the response was:
+- approval/decision year;
+- regulator/jurisdiction;
+- directly relevant species available?;
+- surrogate molecule/model used?;
+- general/repeat-dose toxicology outcome;
+- endpoint-specific omissions;
+- human-relevant evidence types;
+- product/modality;
+- clinical prior knowledge;
+- regulator policy status at time of decision.
 
-- surrogate animal program;
-- limited/selective animal work;
-- human-relevant tailored package; or
-- conventional-study omission.
+Jurisdiction is now a particularly important candidate explanatory variable because Tzield and MHRA's 2026 policy point in different directions despite both being contemporary.
 
-A time variable should therefore be added before any formal manuscript analysis.
+## Sampling strategy
 
-## Next sampling strategy
+To reduce selection bias, the next expansion should be rules-based rather than convenience-based:
 
-To reduce selection bias, the next comparator expansion should be rules-based rather than convenience-based:
+1. Define a fixed set of regulator-reviewed biologics/advanced therapies over prespecified periods.
+2. Code species relevance from regulator wording **before** coding toxicology outcome.
+3. Separate direct relevant-species toxicology from surrogate-molecule toxicology.
+4. Separate general/repeat-dose toxicology from DART/genotoxicity/carcinogenicity.
+5. Stratify by modality, approval period and regulator.
+6. Only after that dataset is large enough should association measures be calculated.
 
-1. Define a set of approved biologics/advanced therapies from regulator public reviews over fixed periods.
-2. Code species relevance from the regulator's own wording before coding toxicology outcome.
-3. Code general/repeat-dose toxicology separately from endpoint-specific DART/genotoxicity/carcinogenicity.
-4. Record surrogate use as its own outcome, not as ordinary relevant-species toxicology.
-5. Stratify by modality and approval period.
-6. Only after the dataset is large enough should the project calculate association measures.
-
-Priority searches: older human-specific biologics using surrogate molecules; newer CD3 bispecifics; conventional mAbs with no relevant species; gene-edited/autologous cell products; and products where the regulator explicitly retained a relevant NHP program.
+Priority searches: CD3 bispecifics, human-specific monoclonal antibodies, complement biologics, gene-edited/autologous products, older surrogate-molecule cases, and matched products with a clearly relevant NHP species.
 
 ## Manuscript implication if replicated
 
-If this pattern persists in a more systematic sample, §IV can make a stronger and more original claim: **the transition is not fundamentally from animal tests to named replacement tests; it is from default species-based packages toward information-value-based evidence architectures in which model relevance determines what evidence is worth generating.**
+If this pattern survives a more systematic sample, §IV can make a more precise claim:
 
-That claim should remain provisional until the sampling frame is expanded beyond the current purposive set.
+**the transition is not fundamentally from animal tests to named replacement tests. It is toward information-value-based evidence architectures in which product biology, model relevance, regulator policy and the specific risk question determine whether animal evidence is retained directly, recreated through a surrogate, narrowed to selected questions, or omitted in favor of human-relevant evidence.**
+
+The Health Canada–MHRA surrogate-model divergence may also become a concrete example for §VII and the international-convergence discussion: convergence is not simply agreement that alternatives matter; it requires convergence on **what to do when the clinical product has no scientifically relevant animal species**.
+
+These claims remain provisional until the sampling frame is expanded systematically.
