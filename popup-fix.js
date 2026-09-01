@@ -45,17 +45,20 @@ uiStyle.textContent=`
   .snake-shell{margin:14px 0 10px!important;padding:8px 0 4px!important}
   .snake-scroll{padding:30px 0 8px!important;overflow:visible!important}
   .snake-timeline{padding-inline:0!important;min-width:900px!important;overflow:visible!important}
-  .snake-row{height:84px!important;margin-inline:56px!important}
+  .snake-row{height:84px!important;margin-inline:56px!important;overflow:visible!important}
   .snake-row:first-child{margin-top:2px!important}
   .snake-row-years{position:relative!important;z-index:4!important;font-size:.58rem!important;line-height:1!important;letter-spacing:.05em!important;padding:0 0 7px!important}
-  .snake-track{height:46px!important;padding-inline:2px!important}
-  .snake-node{min-width:12px!important}
+  .snake-track{height:46px!important;padding-inline:2px!important;overflow:visible!important}
+  .snake-node{min-width:12px!important;overflow:visible!important}
   .snake-dot{width:11px!important;height:11px!important;margin-top:-6px!important}
   .snake-node.anchor .snake-dot{width:11px!important;height:11px!important;margin-top:-6px!important;outline-width:1px!important}
-  .snake-anchor-text{top:29px!important;width:100px!important;font-size:.54rem!important;line-height:1.12!important;color:#4e4b45!important;z-index:5!important;overflow-wrap:anywhere!important}
+  .snake-anchor-text{top:29px!important;width:104px!important;font-size:.52rem!important;line-height:1.10!important;color:#4e4b45!important;z-index:5!important;overflow:visible!important;max-height:none!important;white-space:normal!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important}
   .snake-anchor-text b{display:none!important}
   .snake-track>.snake-node:first-child .snake-anchor-text{left:0!important;right:auto!important;transform:none!important;text-align:left!important}
   .snake-track>.snake-node:last-child .snake-anchor-text{left:auto!important;right:0!important;transform:none!important;text-align:right!important}
+
+  /* Give rows carrying visible anchor captions modest extra clearance. */
+  .snake-row:has(.snake-node.anchor){height:94px!important}
 
   /* A small symbolic turn: outside the row, ending before the next row-year label. */
   .snake-turn{height:0!important;margin-top:-27px!important;margin-bottom:18px!important;z-index:1!important;position:relative!important}
@@ -71,7 +74,7 @@ uiStyle.textContent=`
   .snake-turn.left::after{left:48px;top:-12px;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:7px solid #9b958a}
 
   /* One semantic dimension only: color/dash. All dots have the same base size. */
-  .snake-key{display:flex;align-items:center;justify-content:center;gap:13px;flex-wrap:wrap;margin:1px 0 7px;color:#706c64;font-size:.64rem;line-height:1.2}
+  .snake-key{display:flex;align-items:center;justify-content:center;gap:13px;flex-wrap:wrap;margin:18px 0 22px!important;color:#706c64;font-size:.64rem;line-height:1.2}
   .snake-key-label{font-weight:750;color:#5f5b54;margin-right:2px}
   .snake-key-item{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
   .snake-key-dot{display:inline-block;width:9px;height:9px;border-radius:50%;border:2px solid #f7f6f2;outline:1px solid #7d786f;background:#706b63}
@@ -104,10 +107,30 @@ uiStyle.textContent=`
   #view-roadmap .controls{padding:8px 0 16px!important}
   .source-methods{margin-top:42px}
 
+  /* Compact non-Roadmap views by ~20%. */
+  #view-evidence .kicker,#view-analysis .kicker,#view-sources .kicker{font-size:.61rem!important}
+  #view-evidence .section-intro h2,#view-analysis .section-intro h2,#view-sources .section-intro h2{font-size:clamp(1.45rem,3.2vw,2.5rem)!important}
+  #view-evidence .section-intro>p:not(.kicker),#view-analysis .section-intro>p:not(.kicker),#view-sources .section-intro>p:not(.kicker){font-size:.82rem!important;line-height:1.45!important}
+  #view-evidence .block-head h3,#view-analysis .block-head h3,#view-sources .block-head h3,#view-sources .resource-list h3,#view-evidence .prose-card h3,#view-analysis .prose-card h3,#view-sources .prose-card h3{font-size:1.24rem!important}
+  #view-evidence .data-card h4,#view-analysis .data-card h4,#view-sources .data-card h4,#view-evidence .metric-card h4,#view-analysis .metric-card h4,#view-sources .metric-card h4,#view-evidence .prose-card h4,#view-analysis .prose-card h4,#view-sources .prose-card h4{font-size:.92rem!important}
+  #view-evidence .data-card p,#view-analysis .data-card p,#view-sources .data-card p,#view-evidence .metric-card p,#view-analysis .metric-card p,#view-sources .metric-card p,#view-evidence .prose-card p,#view-analysis .prose-card p,#view-sources .prose-card p{font-size:.80rem!important;line-height:1.43!important}
+  #view-evidence .micro-note,#view-analysis .micro-note,#view-sources .micro-note{font-size:.66rem!important;line-height:1.4!important}
+  #view-evidence .caution,#view-analysis .caution,#view-sources .caution{font-size:.80rem!important;line-height:1.42!important}
+  #view-evidence .summary strong,#view-analysis .summary strong,#view-sources .summary strong,#view-evidence .evidence-summary strong,#view-analysis .analysis-summary strong{font-size:1.6rem!important}
+  #view-evidence .summary span,#view-analysis .summary span,#view-sources .summary span,#view-evidence .evidence-summary span,#view-analysis .analysis-summary span{font-size:.61rem!important}
+  #view-evidence .metric-card strong,#view-analysis .metric-card strong,#view-sources .metric-card strong,#view-sources .source-layer-card strong{font-size:1.64rem!important}
+  #view-evidence .institution,#view-analysis .institution,#view-sources .institution{font-size:.62rem!important}
+  #view-evidence .tag,#view-analysis .tag,#view-sources .tag{font-size:.58rem!important}
+  #view-evidence .source,#view-analysis .source,#view-sources .source{font-size:.62rem!important}
+  #view-evidence .status,#view-analysis .status,#view-sources .status{font-size:.56rem!important}
+  #view-evidence .inline-check,#view-analysis .inline-check,#view-sources .inline-check{font-size:.64rem!important}
+  #view-sources .source-layer-link,#view-sources .resource-list a{font-size:.80rem!important}
+
   @media(max-width:960px) and (min-width:721px){
     .snake-timeline{min-width:820px!important}
     .snake-row{margin-inline:48px!important}
-    .snake-anchor-text{width:88px!important;font-size:.51rem!important}
+    .snake-row:has(.snake-node.anchor){height:92px!important}
+    .snake-anchor-text{width:94px!important;font-size:.49rem!important}
     .snake-turn span{width:20px!important;height:20px!important;top:-9px!important}
     .snake-turn.right span{right:26px!important}.snake-turn.left span{left:26px!important}
     .snake-turn.right::after{right:43px!important}.snake-turn.left::after{left:43px!important}
@@ -116,24 +139,57 @@ uiStyle.textContent=`
     .hero h1{font-size:clamp(1.8rem,9vw,2.6rem)!important}
     .snake-shell{margin:10px 0 7px!important;padding:6px 0 3px!important}
     .snake-scroll{padding:22px 0 6px!important}
-    .snake-timeline{min-width:0!important;width:100%!important}
-    .snake-row{height:72px!important;margin-inline:28px!important}
+    .snake-timeline{min-width:0!important;width:100%!important;overflow:visible!important}
+    .snake-row{height:72px!important;margin-inline:28px!important;overflow:visible!important}
     .snake-row:first-child{margin-top:1px!important}
     .snake-row-years{font-size:.51rem!important;padding-bottom:4px!important}
-    .snake-track{height:39px!important}
-    .snake-anchor-text{top:24px!important;width:62px!important;font-size:.47rem!important;line-height:1.06!important}
-    .snake-turn{margin-top:-23px!important;margin-bottom:15px!important}
+    .snake-track{height:39px!important;overflow:visible!important}
+    .snake-anchor-text{display:none!important;top:24px!important;width:76px!important;font-size:.43rem!important;line-height:1.08!important;overflow:visible!important;max-height:none!important;white-space:normal!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important}
+    .snake-node[data-node-id="2022-12-fda-modernization-2"] .snake-anchor-text,
+    .snake-node[data-node-id="2025-04-10-fda-roadmap"] .snake-anchor-text,
+    .snake-node[data-node-id="2025-12-aim-mash-qualification"] .snake-anchor-text,
+    .snake-node[data-node-id="2026-08-31-fda-icmra-endotoxin"] .snake-anchor-text,
+    .snake-node[data-node-id="prospective-mps-reusable-qualification"] .snake-anchor-text,
+    .snake-node[data-node-id="prospective-composable-qualification"] .snake-anchor-text{display:block!important}
+    .snake-row:has(.snake-node[data-node-id="2022-12-fda-modernization-2"]),
+    .snake-row:has(.snake-node[data-node-id="2025-04-10-fda-roadmap"]),
+    .snake-row:has(.snake-node[data-node-id="2025-12-aim-mash-qualification"]),
+    .snake-row:has(.snake-node[data-node-id="2026-08-31-fda-icmra-endotoxin"]),
+    .snake-row:has(.snake-node[data-node-id="prospective-mps-reusable-qualification"]),
+    .snake-row:has(.snake-node[data-node-id="prospective-composable-qualification"]){height:84px!important}
+    .snake-node[data-node-id="2022-12-fda-modernization-2"] .snake-anchor-text,
+    .snake-node[data-node-id="2025-12-aim-mash-qualification"] .snake-anchor-text,
+    .snake-node[data-node-id="prospective-mps-reusable-qualification"] .snake-anchor-text{width:82px!important;text-align:left!important}
+    .snake-node[data-node-id="prospective-composable-qualification"] .snake-anchor-text{width:82px!important;text-align:right!important}
+    .snake-turn{margin-top:-21px!important;margin-bottom:12px!important}
     .snake-turn span{width:16px!important;height:17px!important;top:-8px!important;border-radius:0 11px 11px 0!important}
     .snake-turn.right span{right:10px!important}.snake-turn.left span{left:10px!important}
     .snake-turn.right::after{right:23px!important;top:-10px!important}.snake-turn.left::after{left:23px!important;top:-10px!important}
-    .snake-key{justify-content:flex-start;gap:8px 11px;margin-top:2px;font-size:.58rem}.snake-key-label{flex-basis:100%;margin-bottom:-2px}
+    .snake-key{justify-content:flex-start;gap:8px 10px!important;margin:16px 0 20px!important;font-size:.54rem!important}
+    .snake-key-label{flex-basis:100%;margin-bottom:-2px}
+    .snake-key-dot{width:8px!important;height:8px!important}
     .snake-node.popup-open .snake-tooltip.snake-smart-popup{width:min(320px,calc(100vw - 20px))!important}
     .snake-tooltip-description{font-size:.78rem!important}.snake-tooltip-why{font-size:.74rem!important}
     #new-biology-roadmap .roadmap-record h2{font-size:1rem!important}
     #new-biology-roadmap .roadmap-record p{font-size:.76rem!important}
     #new-biology-roadmap .roadmap-record .event-card{padding:13px 14px!important}
+    #view-evidence .section-intro h2,#view-analysis .section-intro h2,#view-sources .section-intro h2{font-size:1.38rem!important}
+    #view-evidence .block-head h3,#view-analysis .block-head h3,#view-sources .block-head h3,#view-sources .resource-list h3,#view-evidence .prose-card h3,#view-analysis .prose-card h3,#view-sources .prose-card h3{font-size:1.15rem!important}
   }
-  @media(max-width:380px){.hero h1{font-size:1.8rem!important}.snake-row{margin-inline:25px!important}.snake-anchor-text{width:56px!important;font-size:.44rem!important}.snake-turn.right span{right:9px!important}.snake-turn.left span{left:9px!important}.snake-turn.right::after{right:22px!important}.snake-turn.left::after{left:22px!important}}
+  @media(max-width:380px){
+    .hero h1{font-size:1.8rem!important}
+    .snake-row{height:70px!important;margin-inline:25px!important}
+    .snake-row:has(.snake-node[data-node-id="2022-12-fda-modernization-2"]),
+    .snake-row:has(.snake-node[data-node-id="2025-12-aim-mash-qualification"]),
+    .snake-row:has(.snake-node[data-node-id="2026-08-31-fda-icmra-endotoxin"]),
+    .snake-row:has(.snake-node[data-node-id="prospective-mps-reusable-qualification"]),
+    .snake-row:has(.snake-node[data-node-id="prospective-composable-qualification"]){height:82px!important}
+    .snake-anchor-text{font-size:.41rem!important;width:70px!important}
+    .snake-node[data-node-id="2025-04-10-fda-roadmap"] .snake-anchor-text{display:none!important}
+    .snake-turn.right span{right:9px!important}.snake-turn.left span{left:9px!important}
+    .snake-turn.right::after{right:22px!important}.snake-turn.left::after{left:22px!important}
+    .snake-key{font-size:.52rem!important}
+  }
 `;
 document.head.appendChild(uiStyle);
 
@@ -172,88 +228,6 @@ document.addEventListener('focusin',e=>{const n=e.target.closest?.('.snake-node'
 document.addEventListener('click',e=>{const d=e.target.closest?.('.snake-dot');if(d)requestAnimationFrame(()=>positionSnakePopup(d.closest('.snake-node')))});
 addEventListener('resize',()=>requestAnimationFrame(positionActiveSnakePopup));
 addEventListener('scroll',e=>{if(e.target instanceof Element&&e.target.closest('.snake-tooltip'))return;requestAnimationFrame(positionActiveSnakePopup)},true);
-
-/* Final density pass: give the dot key breathing room and compact non-Roadmap views by ~20%. */
-const densityStyle=document.createElement('style');
-densityStyle.textContent=`
-  .snake-key{margin:18px 0 22px!important}
-
-  #view-evidence .kicker,#view-analysis .kicker,#view-sources .kicker{font-size:.61rem!important}
-  #view-evidence .section-intro h2,#view-analysis .section-intro h2,#view-sources .section-intro h2{font-size:clamp(1.45rem,3.2vw,2.5rem)!important}
-  #view-evidence .section-intro>p:not(.kicker),#view-analysis .section-intro>p:not(.kicker),#view-sources .section-intro>p:not(.kicker){font-size:.82rem!important;line-height:1.45!important}
-  #view-evidence .block-head h3,#view-analysis .block-head h3,#view-sources .block-head h3,#view-sources .resource-list h3,#view-evidence .prose-card h3,#view-analysis .prose-card h3,#view-sources .prose-card h3{font-size:1.24rem!important}
-  #view-evidence .data-card h4,#view-analysis .data-card h4,#view-sources .data-card h4,#view-evidence .metric-card h4,#view-analysis .metric-card h4,#view-sources .metric-card h4,#view-evidence .prose-card h4,#view-analysis .prose-card h4,#view-sources .prose-card h4{font-size:.92rem!important}
-  #view-evidence .data-card p,#view-analysis .data-card p,#view-sources .data-card p,#view-evidence .metric-card p,#view-analysis .metric-card p,#view-sources .metric-card p,#view-evidence .prose-card p,#view-analysis .prose-card p,#view-sources .prose-card p{font-size:.80rem!important;line-height:1.43!important}
-  #view-evidence .micro-note,#view-analysis .micro-note,#view-sources .micro-note{font-size:.66rem!important;line-height:1.4!important}
-  #view-evidence .caution,#view-analysis .caution,#view-sources .caution{font-size:.80rem!important;line-height:1.42!important}
-  #view-evidence .summary strong,#view-analysis .summary strong,#view-sources .summary strong,#view-evidence .evidence-summary strong,#view-analysis .analysis-summary strong{font-size:1.6rem!important}
-  #view-evidence .summary span,#view-analysis .summary span,#view-sources .summary span,#view-evidence .evidence-summary span,#view-analysis .analysis-summary span{font-size:.61rem!important}
-  #view-evidence .metric-card strong,#view-analysis .metric-card strong,#view-sources .metric-card strong,#view-sources .source-layer-card strong{font-size:1.64rem!important}
-  #view-evidence .institution,#view-analysis .institution,#view-sources .institution{font-size:.62rem!important}
-  #view-evidence .tag,#view-analysis .tag,#view-sources .tag{font-size:.58rem!important}
-  #view-evidence .source,#view-analysis .source,#view-sources .source{font-size:.62rem!important}
-  #view-evidence .status,#view-analysis .status,#view-sources .status{font-size:.56rem!important}
-  #view-evidence .inline-check,#view-analysis .inline-check,#view-sources .inline-check{font-size:.64rem!important}
-  #view-sources .source-layer-link,#view-sources .resource-list a{font-size:.80rem!important}
-
-  @media(max-width:720px){
-    .snake-key{margin:16px 0 20px!important}
-    #view-evidence .section-intro h2,#view-analysis .section-intro h2,#view-sources .section-intro h2{font-size:1.38rem!important}
-    #view-evidence .block-head h3,#view-analysis .block-head h3,#view-sources .block-head h3,#view-sources .resource-list h3,#view-evidence .prose-card h3,#view-analysis .prose-card h3,#view-sources .prose-card h3{font-size:1.15rem!important}
-  }
-`;
-document.head.appendChild(densityStyle);
-
-/* Mobile roadmap is intentionally sparser: preserve every interactive dot, but keep only orientation anchors visible. */
-const mobileSnakeStyle=document.createElement('style');
-mobileSnakeStyle.textContent=`
-  @media(max-width:720px){
-    .snake-row{height:78px!important}
-    .snake-anchor-text{display:none!important;top:24px!important;width:76px!important;font-size:.43rem!important;line-height:1.08!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important}
-    .snake-node[data-node-id="2022-12-fda-modernization-2"] .snake-anchor-text,
-    .snake-node[data-node-id="2025-04-10-fda-roadmap"] .snake-anchor-text,
-    .snake-node[data-node-id="2025-12-aim-mash-qualification"] .snake-anchor-text,
-    .snake-node[data-node-id="2026-08-31-fda-icmra-endotoxin"] .snake-anchor-text,
-    .snake-node[data-node-id="prospective-mps-reusable-qualification"] .snake-anchor-text,
-    .snake-node[data-node-id="prospective-composable-qualification"] .snake-anchor-text{display:block!important}
-    .snake-node[data-node-id="2022-12-fda-modernization-2"] .snake-anchor-text,
-    .snake-node[data-node-id="2025-12-aim-mash-qualification"] .snake-anchor-text,
-    .snake-node[data-node-id="prospective-mps-reusable-qualification"] .snake-anchor-text{width:82px!important;text-align:left!important}
-    .snake-node[data-node-id="prospective-composable-qualification"] .snake-anchor-text{width:82px!important;text-align:right!important}
-    .snake-key{font-size:.54rem!important;gap:8px 10px!important}
-    .snake-key-dot{width:8px!important;height:8px!important}
-  }
-  @media(max-width:380px){
-    .snake-row{height:76px!important}
-    .snake-anchor-text{font-size:.41rem!important;width:70px!important}
-    .snake-node[data-node-id="2025-04-10-fda-roadmap"] .snake-anchor-text{display:none!important}
-    .snake-key{font-size:.52rem!important}
-  }
-`;
-document.head.appendChild(mobileSnakeStyle);
-
-/* Final mobile clearance: only rows carrying visible captions get extra depth. */
-const mobileCaptionClearance=document.createElement('style');
-mobileCaptionClearance.textContent=`
-  @media(max-width:720px){
-    .snake-timeline,.snake-row,.snake-track,.snake-node{overflow:visible!important}
-    .snake-anchor-text{max-height:none!important;overflow:visible!important;white-space:normal!important}
-    .snake-row:has(.snake-node[data-node-id="2022-12-fda-modernization-2"]),
-    .snake-row:has(.snake-node[data-node-id="2025-04-10-fda-roadmap"]),
-    .snake-row:has(.snake-node[data-node-id="2025-12-aim-mash-qualification"]),
-    .snake-row:has(.snake-node[data-node-id="2026-08-31-fda-icmra-endotoxin"]),
-    .snake-row:has(.snake-node[data-node-id="prospective-mps-reusable-qualification"]),
-    .snake-row:has(.snake-node[data-node-id="prospective-composable-qualification"]){height:98px!important}
-  }
-  @media(max-width:380px){
-    .snake-row:has(.snake-node[data-node-id="2022-12-fda-modernization-2"]),
-    .snake-row:has(.snake-node[data-node-id="2025-12-aim-mash-qualification"]),
-    .snake-row:has(.snake-node[data-node-id="2026-08-31-fda-icmra-endotoxin"]),
-    .snake-row:has(.snake-node[data-node-id="prospective-mps-reusable-qualification"]),
-    .snake-row:has(.snake-node[data-node-id="prospective-composable-qualification"]){height:94px!important}
-  }
-`;
-document.head.appendChild(mobileCaptionClearance);
 
 /* Header metadata: retain only the updated date visually, but keep loader targets in the DOM. */
 document.querySelectorAll('.hero-meta span:not(#last-updated)').forEach(el=>el.hidden=true);
