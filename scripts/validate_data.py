@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the roadmap evidence, adoption, displacement, and prospective data files."""
+"""Validate the roadmap evidence, adoption, displacement, comparator, and prospective data files."""
 
 import json
 from pathlib import Path
@@ -14,6 +14,7 @@ CANDIDATES = DATA / "candidates.json"
 ADOPTION_CANDIDATES = DATA / "adoption_candidates.json"
 NAMED_ADOPTION = DATA / "named_regulatory_adoption.json"
 DISPLACEMENT_METRICS = DATA / "displacement_metrics.json"
+SPECIES_COMPARATORS = DATA / "species_relevance_comparators.json"
 
 ERRORS = []
 
@@ -140,6 +141,31 @@ def validate_collection(path, key, required):
     check_urls(records, label)
 
 
+def validate_species_comparators(data):
+    records = data.get("comparators", [])
+    label = "species_relevance_comparators.json"
+    if not isinstance(records, list):
+        error(f"{label}: comparators must be an array")
+        return
+    check_unique(records, label)
+    require(records, label, ["id", "product", "modality", "target", "regulator", "jurisdiction", "relevant_species_status", "general_repeat_toxicology", "species_relevance_basis", "endpoint_specific_omissions", "human_relevant_evidence", "animal_studies_retained", "comparator_class", "source_url", "source_strength"])
+    allowed_species = {"none", "none_or_limited", "limited", "relevant"}
+    allowed_tox = {"omitted_or_unavailable", "omitted", "tailored_or_omitted", "tailored", "retained"}
+    for record in records:
+        rid = record.get("id", "<missing-id>")
+        if record.get("relevant_species_status") not in allowed_species:
+            error(f"{label}:{rid}: invalid relevant_species_status")
+        if record.get("general_repeat_toxicology") not in allowed_tox:
+            error(f"{label}:{rid}: invalid general_repeat_toxicology")
+        if not isinstance(record.get("endpoint_specific_omissions"), list):
+            error(f"{label}:{rid}: endpoint_specific_omissions must be an array")
+        if not isinstance(record.get("human_relevant_evidence"), list):
+            error(f"{label}:{rid}: human_relevant_evidence must be an array")
+        if not valid_url(record.get("source_url")):
+            error(f"{label}:{rid}: source_url must be an https URL")
+    check_urls(records, label)
+
+
 def main():
     validate_events(load(EVENTS))
     validate_prospective(load(PROSPECTIVE))
@@ -148,6 +174,7 @@ def main():
     validate_collection(ADOPTION_CANDIDATES, "candidates", ["id", "status", "product_or_program", "regulator", "claimed_displacement", "evidence_level"])
     validate_collection(NAMED_ADOPTION, "cases", ["id", "product", "regulator", "regulatory_impact", "animal_displacement_class", "counts_as_animal_displacement", "counts_as_named_nam_adoption", "evidence_strength"])
     validate_collection(DISPLACEMENT_METRICS, "metrics", ["id", "regulator", "jurisdiction", "context", "metric_type", "realized_or_estimated", "source_url", "source_strength"])
+    validate_species_comparators(load(SPECIES_COMPARATORS))
     if ERRORS:
         print("Roadmap data validation failed:")
         for item in ERRORS:
