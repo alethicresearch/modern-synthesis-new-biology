@@ -1,0 +1,122 @@
+{
+  "updated": "2026-09-01",
+  "schema_version": 1,
+  "purpose": "Verified source overlays for roadmap records. This registry can add multiple well-labeled sources, correct source status, or withhold an unresolved record from the verified public rendering without erasing the research-side record.",
+  "records": {
+    "2022-12-fda-modernization-2": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.govinfo.gov/app/details/PLAW-117publ328",
+      "sources": [
+        {
+          "label": "Enacted law · Public Law 117-328",
+          "short_label": "Enacted law",
+          "url": "https://www.govinfo.gov/app/details/PLAW-117publ328",
+          "type": "enacted_law",
+          "role": "legal_basis",
+          "verified_by": "official-government-text",
+          "checked_at": "2026-09-01"
+        },
+        {
+          "label": "FDA Modernization Act 2.0 · S. 5002 text",
+          "short_label": "Bill text",
+          "url": "https://www.govinfo.gov/app/details/BILLS-117s5002es",
+          "type": "bill_text",
+          "role": "legislative_text",
+          "verified_by": "official-government-text",
+          "checked_at": "2026-09-01"
+        },
+        {
+          "label": "FDA Roadmap · agency interpretation and implementation context",
+          "short_label": "FDA context",
+          "url": "https://www.fda.gov/media/186092/download",
+          "type": "agency_report",
+          "role": "implementation_context",
+          "verified_by": "official-agency-report",
+          "checked_at": "2026-09-01"
+        }
+      ]
+    },
+    "2025-04-10-fda-roadmap": {
+      "sources": [
+        {
+          "label": "FDA announcement",
+          "short_label": "FDA announcement",
+          "url": "https://www.fda.gov/news-events/press-announcements/fda-announces-plan-phase-out-animal-testing-requirement-monoclonal-antibodies-and-other-drugs",
+          "type": "agency_announcement",
+          "role": "announcement",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-09-01"
+        },
+        {
+          "label": "Roadmap to Reducing Animal Testing in Preclinical Safety Studies",
+          "short_label": "Roadmap PDF",
+          "url": "https://www.fda.gov/media/186092/download",
+          "type": "agency_report",
+          "role": "primary_document",
+          "verified_by": "official-agency-report",
+          "checked_at": "2026-09-01"
+        }
+      ]
+    },
+    "2026-03-18-fda-general-nam-guidance": {
+      "sources": [
+        {
+          "label": "FDA draft-guidance page",
+          "short_label": "Draft guidance",
+          "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-considerations-use-new-approach-methodologies-drug-development",
+          "type": "draft_guidance",
+          "role": "primary_document",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-09-01"
+        },
+        {
+          "label": "FDA announcement · alternatives to animal testing",
+          "short_label": "FDA announcement",
+          "url": "https://www.fda.gov/news-events/press-announcements/fda-releases-draft-guidance-alternatives-animal-testing-drug-development",
+          "type": "agency_announcement",
+          "role": "context",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-09-01"
+        }
+      ]
+    },
+    "2026-08-25-niehs-sciome": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://sam.gov/opp/4d90db3cbfbb4891888e60120c2a3747/view",
+      "sources": [
+        {
+          "label": "SAM.gov award notice · 75N94026C00002",
+          "short_label": "SAM.gov award",
+          "url": "https://sam.gov/opp/4d90db3cbfbb4891888e60120c2a3747/view",
+          "type": "federal_award_notice",
+          "role": "award_record",
+          "verified_by": "official-federal-procurement-record",
+          "checked_at": "2026-09-01"
+        },
+        {
+          "label": "SAM.gov solicitation · 75N96025R00004",
+          "short_label": "SAM.gov solicitation",
+          "url": "https://sam.gov/opp/b1aede92352c484990b2032c6801d113/view",
+          "type": "federal_solicitation",
+          "role": "scope_and_requirements",
+          "verified_by": "official-federal-procurement-record",
+          "checked_at": "2026-09-01"
+        },
+        {
+          "label": "SAM award-notice mirror · award amount and description",
+          "short_label": "Award mirror",
+          "url": "https://www.fbodaily.com/archive/2026/08-August/29-Aug-2026/FBO-07945627.htm",
+          "type": "government-record-mirror",
+          "role": "accessible_corroboration",
+          "verified_by": "mirror-of-sam-award-notice",
+          "checked_at": "2026-09-01"
+        }
+      ]
+    },
+    "2026-nih-reviewer-eoi": {
+      "exclude_from_public": true,
+      "source_status": "needs_public_source",
+      "reason": "The current manuscript source is an author-supplied recruitment notice. No public NIH posting for the specific Expression of Interest / subject-matter-expert directory could be verified on 2026-09-01. Broader NIH sources confirm plans to integrate alternative-method experts into study sections, but they do not verify this specific recruitment notice."
+    }
+  }
+}
