@@ -23,6 +23,70 @@
       ]
     },
     {
+      "id": "epa-acute-dermal-waivers-realized-2018-2023",
+      "regulator": "US EPA Office of Pesticide Programs",
+      "jurisdiction": "United States",
+      "date_range": "FY2018-FY2023",
+      "context": "Acute dermal toxicity waiver requests under EPA's 2016 formulation and 2020 technical-chemical guidance",
+      "metric_type": "realized_cumulative_waivers_and_animal_reduction",
+      "waivers_granted": 262,
+      "animal_reduction_min": 2620,
+      "animal_reduction_max": 7860,
+      "unit": "animals",
+      "basis": "Sum of EPA's annual reported acute-dermal waiver metrics: 31, 37, 30, 56, 61 and 47 waivers for FY2018-2023, with corresponding annual animal-reduction ranges.",
+      "realized_or_estimated": "realized_regulator_tracked",
+      "source_url": "https://www.epa.gov/pesticide-science-and-assessing-pesticide-risks/strategic-vision-adopting-new-approach-0",
+      "source_strength": "direct_regulator_metrics",
+      "human_based_replacement": false,
+      "note": "Unlike the 2016 prospective estimate, this is observed agency tracking of granted waivers. The range reflects test-design-dependent animal use.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"Regulators can and do track realized animal reductions from waiver policies","effect":"strong empirical support"}
+      ]
+    },
+    {
+      "id": "epa-branch-level-acute-testing-avoidance-fy2023",
+      "regulator": "US EPA Office of Pesticide Programs",
+      "jurisdiction": "United States",
+      "date": "FY2023",
+      "context": "Branch-level pesticide acute-toxicity decisions using citations, bridging, waivers and weight-of-evidence rationales",
+      "metric_type": "realized_studies_and_animal_reduction",
+      "studies_saved": 1122,
+      "animal_reduction_min": 9415,
+      "animal_reduction_max": 18026,
+      "unit": "animals",
+      "cost_savings_usd": 12004500,
+      "epa_review_cost_savings_usd": 1102702,
+      "basis": "EPA reports that OPP registering divisions began capturing branch-level decisions where acute toxicity testing was not necessary; FY2023 metrics include data citations, bridging requests, additional study waivers and weight-of-evidence rationales.",
+      "realized_or_estimated": "realized_regulator_tracked",
+      "source_url": "https://www.epa.gov/pesticide-science-and-assessing-pesticide-risks/strategic-vision-adopting-new-approach-0",
+      "source_strength": "direct_regulator_metrics",
+      "human_based_replacement": "mixed",
+      "note": "This is currently one of the strongest public denominators in the corpus. It measures avoided testing across multiple evidence strategies, not exclusively human-based NAM substitution, so it should be used as a broader transition metric rather than a human-model count.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"The transition can be measured at the decision level with both study and animal denominators","effect":"major empirical support"},
+        {"section":"VI","claim":"Public baselines and displacement metrics are feasible rather than merely aspirational","effect":"strongens recommendation"}
+      ]
+    },
+    {
+      "id": "fda-s1b-rat-carcinogenicity-per-study-animal-avoidance",
+      "regulator": "FDA CDER/OND / ICH",
+      "jurisdiction": "United States / ICH regions",
+      "date": "2022-present",
+      "context": "Omission of a two-year rat carcinogenicity study when an integrated weight-of-evidence assessment is sufficient under ICH S1B(R1)",
+      "metric_type": "per_omitted_study_animal_avoidance",
+      "value": 400,
+      "unit": "animals_per_omitted_study_more_than",
+      "basis": "FDA/CDER/OND authors state that when a two-year rat study is not conducted, more than 400 animals will not be used, depending on study design.",
+      "realized_or_estimated": "per_case_estimate",
+      "source_url": "https://journals.sagepub.com/doi/full/10.1177/10915818251384270",
+      "source_strength": "regulator_authored_peer_reviewed_synthesis",
+      "human_based_replacement": false,
+      "note": "This provides a useful per-decision conversion factor but not a national total because the number of actual S1B(R1) omissions is not supplied in the source.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"A single evidence-based omission decision can have substantial animal-use consequences","effect":"quantifies mature precedent"}
+      ]
+    },
+    {
       "id": "epa-2026-ghs-mixtures-validation-corpus",
       "regulator": "US EPA",
       "jurisdiction": "United States",
