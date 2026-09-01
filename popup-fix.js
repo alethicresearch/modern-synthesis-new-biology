@@ -41,25 +41,27 @@ const uiStyle=document.createElement('style');
 uiStyle.textContent=`
   .hero h1{font-size:clamp(2rem,4.7vw,4rem)!important}
 
-  /* Serpentine composition: compact rows, true outer connector gutters, protected caption lanes. */
-  .snake-shell{margin:16px 0 12px!important;padding:10px 0 6px!important}
-  .snake-scroll{padding:32px 0 10px!important;overflow:visible!important}
+  /* Serpentine: compact, with a protected caption lane and small outside turn cues. */
+  .snake-shell{margin:14px 0 10px!important;padding:8px 0 4px!important}
+  .snake-scroll{padding:30px 0 8px!important;overflow:visible!important}
   .snake-timeline{padding-inline:0!important;min-width:900px!important;overflow:visible!important}
-  .snake-row{height:82px!important;margin-inline:56px!important}
-  .snake-row:first-child{margin-top:4px!important}
-  .snake-row-years{font-size:.58rem!important;line-height:1!important;letter-spacing:.05em!important;padding:0 1px 6px!important}
+  .snake-row{height:84px!important;margin-inline:56px!important}
+  .snake-row:first-child{margin-top:2px!important}
+  .snake-row-years{position:relative!important;z-index:4!important;font-size:.58rem!important;line-height:1!important;letter-spacing:.05em!important;padding:0 0 7px!important}
   .snake-track{height:46px!important;padding-inline:2px!important}
   .snake-node{min-width:12px!important}
   .snake-dot{width:11px!important;height:11px!important;margin-top:-6px!important}
   .snake-node.anchor .snake-dot{width:15px!important;height:15px!important;margin-top:-8px!important}
-  .snake-anchor-text{top:16px!important;width:94px!important;font-size:.54rem!important;line-height:1.10!important;color:#4e4b45!important;z-index:5!important}
-  .snake-anchor-text b{font-size:.53rem!important;margin-bottom:2px!important}
+  .snake-anchor-text{top:18px!important;width:100px!important;font-size:.54rem!important;line-height:1.12!important;color:#4e4b45!important;z-index:5!important;overflow-wrap:anywhere!important}
+  .snake-anchor-text b{display:none!important}
   .snake-track>.snake-node:first-child .snake-anchor-text{left:0!important;right:auto!important;transform:none!important;text-align:left!important}
   .snake-track>.snake-node:last-child .snake-anchor-text{left:auto!important;right:0!important;transform:none!important;text-align:right!important}
-  .snake-turn{height:8px!important;margin-top:-34px!important;margin-bottom:22px!important;z-index:1!important}
-  .snake-turn span{width:50px!important;height:38px!important;top:-1px!important;border-radius:0 24px 24px 0!important}
-  .snake-turn.right span{right:6px!important}
-  .snake-turn.left span{left:6px!important}
+
+  /* A small symbolic turn: outside the row, ending before the next row-year label. */
+  .snake-turn{height:0!important;margin-top:-27px!important;margin-bottom:18px!important;z-index:1!important;position:relative!important}
+  .snake-turn span{width:24px!important;height:22px!important;top:-10px!important;border-width:1.5px!important;border-radius:0 14px 14px 0!important}
+  .snake-turn.right span{right:28px!important}
+  .snake-turn.left span{left:28px!important}
 
   /* Popup preview. */
   .snake-tooltip{width:330px!important;line-height:1.42!important;pointer-events:auto!important}
@@ -77,7 +79,7 @@ uiStyle.textContent=`
   .snake-node .snake-tooltip.snake-smart-popup[data-placement="right"]::after{left:-7px!important;right:auto!important;top:var(--arrow-y)!important;bottom:auto!important;border-width:7px 7px 7px 0!important;border-color:transparent #22211f transparent transparent!important}
 
   /* Compact complete Roadmap records. */
-  #new-biology-roadmap{margin-top:30px!important;padding-top:22px!important}
+  #new-biology-roadmap{margin-top:28px!important;padding-top:20px!important}
   #new-biology-roadmap .roadmap-record{padding-bottom:24px!important}
   #new-biology-roadmap .roadmap-record .event-date{font-size:.70rem!important}
   #new-biology-roadmap .roadmap-record .institution{font-size:.62rem!important;letter-spacing:.055em!important}
@@ -85,37 +87,36 @@ uiStyle.textContent=`
   #new-biology-roadmap .roadmap-record p{font-size:.80rem!important;line-height:1.42!important;margin:.34rem 0!important}
   #new-biology-roadmap .roadmap-record .record-sources{font-size:.66rem!important;line-height:1.35!important;margin-top:10px!important;padding-top:8px!important}
   #new-biology-roadmap .roadmap-record .event-card{padding:15px 17px!important}
-  #view-roadmap .controls{padding-top:10px!important}
+  #view-roadmap .controls{padding:8px 0 16px!important}
   .source-methods{margin-top:42px}
 
   @media(max-width:960px) and (min-width:721px){
     .snake-timeline{min-width:820px!important}
     .snake-row{margin-inline:48px!important}
-    .snake-turn span{width:42px!important}
-    .snake-turn.right span{right:6px!important}.snake-turn.left span{left:6px!important}
-    .snake-anchor-text{width:84px!important;font-size:.51rem!important}
+    .snake-anchor-text{width:88px!important;font-size:.51rem!important}
+    .snake-turn span{width:20px!important;height:20px!important;top:-9px!important}
+    .snake-turn.right span{right:26px!important}.snake-turn.left span{left:26px!important}
   }
   @media(max-width:720px){
     .hero h1{font-size:clamp(1.8rem,9vw,2.6rem)!important}
-    .snake-shell{margin:12px 0 8px!important;padding:8px 0 4px!important}
-    .snake-scroll{padding:24px 0 8px!important}
+    .snake-shell{margin:10px 0 7px!important;padding:6px 0 3px!important}
+    .snake-scroll{padding:22px 0 6px!important}
     .snake-timeline{min-width:0!important;width:100%!important}
-    .snake-row{height:72px!important;margin-inline:30px!important}
-    .snake-row:first-child{margin-top:2px!important}
-    .snake-row-years{font-size:.52rem!important;padding-bottom:4px!important}
-    .snake-track{height:40px!important}
-    .snake-anchor-text{top:14px!important;width:58px!important;font-size:.47rem!important;line-height:1.04!important}
-    .snake-anchor-text b{font-size:.46rem!important;margin-bottom:1px!important}
-    .snake-turn{height:7px!important;margin-top:-29px!important;margin-bottom:19px!important}
-    .snake-turn span{width:26px!important;height:32px!important;border-radius:0 19px 19px 0!important}
-    .snake-turn.right span{right:4px!important}.snake-turn.left span{left:4px!important}
+    .snake-row{height:72px!important;margin-inline:28px!important}
+    .snake-row:first-child{margin-top:1px!important}
+    .snake-row-years{font-size:.51rem!important;padding-bottom:4px!important}
+    .snake-track{height:39px!important}
+    .snake-anchor-text{top:15px!important;width:62px!important;font-size:.47rem!important;line-height:1.06!important}
+    .snake-turn{margin-top:-23px!important;margin-bottom:15px!important}
+    .snake-turn span{width:16px!important;height:17px!important;top:-8px!important;border-radius:0 11px 11px 0!important}
+    .snake-turn.right span{right:10px!important}.snake-turn.left span{left:10px!important}
     .snake-node.popup-open .snake-tooltip.snake-smart-popup{width:min(320px,calc(100vw - 20px))!important}
     .snake-tooltip-description{font-size:.78rem!important}.snake-tooltip-why{font-size:.74rem!important}
     #new-biology-roadmap .roadmap-record h2{font-size:1rem!important}
     #new-biology-roadmap .roadmap-record p{font-size:.76rem!important}
     #new-biology-roadmap .roadmap-record .event-card{padding:13px 14px!important}
   }
-  @media(max-width:380px){.hero h1{font-size:1.8rem!important}.snake-row{margin-inline:26px!important}.snake-anchor-text{width:54px!important;font-size:.45rem!important}}
+  @media(max-width:380px){.hero h1{font-size:1.8rem!important}.snake-row{margin-inline:25px!important}.snake-anchor-text{width:56px!important;font-size:.44rem!important}.snake-turn.right span{right:9px!important}.snake-turn.left span{left:9px!important}}
 `;
 document.head.appendChild(uiStyle);
 
