@@ -18,10 +18,7 @@
       "materiality_if_confirmed": "landmark",
       "evidence_level": 4,
       "provider_source": "https://qureator.com/qureator-achieves-worlds-first-fda-ind-approval-using-only-human-vascularized-organoid-efficacy-data/",
-      "sponsor_sources": [
-        "https://www.sillajen.com/eng/sub/company_history.html",
-        "https://www.sillajen.com/kor/sub/notice_list.html?chk=5&page=2&sv="
-      ],
+      "sponsor_sources": ["https://www.sillajen.com/eng/sub/company_history.html","https://www.sillajen.com/kor/sub/notice_list.html?chk=5&page=2&sv="],
       "regulator_source": null,
       "verification_note": "Qureator explicitly attributes the FDA IND amendment to an efficacy package using vTIME without traditional animal POC. SillaJen independently confirms the Qureator collaboration and the FDA approval of the combination IND amendment, but a public FDA document linking the regulatory decision to omission of animal POC has not yet been located.",
       "promotion_rule": "Promote to confirmed event/context only after a public FDA review document, FDA statement, sponsor regulatory filing with sufficiently detailed nonclinical package, or equivalent authoritative record verifies the displacement claim."
@@ -41,8 +38,76 @@
       "evidence_level": 2,
       "health_canada_source": "https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD00509",
       "ema_candidate_source": "https://www.ema.europa.eu/en/documents/rmp/sarclisa-epar-risk-management-plan_en.pdf",
-      "verification_note": "Health Canada directly confirms that the nonclinical package was limited by species specificity and that embryofetal-development effects were not investigated because appropriate animal models were absent; it also states that a GLP main toxicity study was conducted, so Sarclisa is not a wholesale animal-toxicology omission case. EMA search-indexed text indicates that target-organ identification relied on in vitro human-tissue studies because no relevant animal species or surrogate antibody existed, but direct EMA PDF access was rate-limited during this pass and the required page-image inspection has not yet been completed.",
-      "promotion_rule": "Promote the human-tissue NAM-reliance claim only after direct visual verification of the relevant EMA assessment/RMP page. If verified, code as named NAM regulatory reliance with a separate specific animal-study omission for embryofetal development; do not label the overall program animal-free."
+      "verification_note": "Health Canada directly confirms that the nonclinical package was limited by species specificity and that embryofetal-development effects were not investigated because appropriate animal models were absent; it also states that a GLP main toxicity study was conducted, so Sarclisa is not a wholesale animal-toxicology omission case. EMA search-indexed text indicates that target-organ identification relied on in vitro human-tissue studies because no relevant animal species or surrogate antibody existed, but the required page-image inspection has not yet been completed.",
+      "promotion_rule": "Promote the human-tissue NAM-reliance claim only after direct visual verification of the relevant EMA assessment/RMP page."
+    },
+    {
+      "id": "ema-yescarta-tailored-toxicology-audit",
+      "status": "direct_ema_text_pending_pdf_visual_verification",
+      "date": "2018-08-23",
+      "sponsor": "Kite/Gilead",
+      "product_or_program": "Yescarta (axicabtagene ciloleucel)",
+      "jurisdiction": "European Union",
+      "regulator": "EMA / CHMP",
+      "claimed_displacement": "EMA assessment text states that no representative in vitro, ex vivo or in vivo model can accurately address toxicological characteristics of the human CAR-T product and that traditional toxicology studies were therefore not performed; selected surrogate mouse pharmacology addressed limited questions.",
+      "alternative": "Product characterization, clinical evidence, integration-site analysis and tailored surrogate pharmacology rather than a conventional toxicology battery",
+      "stage_if_confirmed": "adoption",
+      "materiality_if_confirmed": "high",
+      "evidence_level": 2,
+      "ema_candidate_source": "https://www.ema.europa.eu/en/documents/assessment-report/yescarta-epar-public-assessment-report_en.pdf",
+      "verification_note": "Direct EMA search-indexed assessment text is strong, but the PDF page has not yet been visually inspected in this audit because EMA throttled repeated PDF access.",
+      "promotion_rule": "Promote after direct page-image verification of the initial CHMP assessment report."
+    },
+    {
+      "id": "ema-breyanzi-tailored-toxicology-audit",
+      "status": "direct_ema_text_pending_pdf_visual_verification",
+      "date": "2022-04-04",
+      "sponsor": "Bristol Myers Squibb",
+      "product_or_program": "Breyanzi (lisocabtagene maraleucel)",
+      "jurisdiction": "European Union",
+      "regulator": "EMA / CHMP",
+      "claimed_displacement": "EMA assessment text states that because the autologous CAR-T product lacks species cross-reactivity, traditional single/repeat-dose toxicity, genotoxicity, carcinogenicity, reproductive/developmental toxicity and local-tolerance studies were of negligible utility and were not conducted.",
+      "alternative": "Tailored cellular-product characterization and nonclinical evidence rather than conventional pharmacokinetic/toxicology batteries",
+      "stage_if_confirmed": "adoption",
+      "materiality_if_confirmed": "high",
+      "evidence_level": 2,
+      "ema_candidate_source": "https://www.ema.europa.eu/en/documents/assessment-report/breyanzi-epar-public-assessment-report_en.pdf",
+      "verification_note": "Direct EMA search-indexed assessment text supports the claim, but visual page verification remains outstanding because direct PDF fetches were rate-limited.",
+      "promotion_rule": "Promote after direct page-image verification of the CHMP assessment report."
+    },
+    {
+      "id": "ema-abecma-no-conventional-tox-audit",
+      "status": "direct_ema_text_pending_pdf_visual_verification",
+      "date": "2021-08-18",
+      "sponsor": "Bristol Myers Squibb",
+      "product_or_program": "Abecma (idecabtagene vicleucel)",
+      "jurisdiction": "European Union",
+      "regulator": "EMA / CHMP",
+      "claimed_displacement": "EMA assessment text states that no conventional toxicity studies were conducted because appropriate animal models for toxicity evaluation were lacking; safety evaluation was tailored to insertional-mutagenesis/tumorigenic-transformation risk and other product-specific questions.",
+      "alternative": "Insertion-site analysis, IL-2-independent growth/tumorigenicity testing, product-specific characterization and other tailored evidence",
+      "stage_if_confirmed": "adoption",
+      "materiality_if_confirmed": "high",
+      "evidence_level": 2,
+      "ema_candidate_source": "https://www.ema.europa.eu/en/documents/assessment-report/abecma-epar-public-assessment-report_en.pdf",
+      "verification_note": "Direct EMA assessment text is available, but the 10.6 MB PDF exceeded the web renderer's content limit and has not yet been page-image verified.",
+      "promotion_rule": "Promote after direct visual inspection through an alternate PDF-access route."
+    },
+    {
+      "id": "ema-tecartus-tailored-toxicology-audit",
+      "status": "direct_ema_text_pending_pdf_visual_verification",
+      "date": "2020-12-14",
+      "sponsor": "Kite/Gilead",
+      "product_or_program": "Tecartus (brexucabtagene autoleucel)",
+      "jurisdiction": "European Union",
+      "regulator": "EMA / CHMP",
+      "claimed_displacement": "EMA assessment text states that formal single-dose testing was not performed, repeat-dose testing was not conducted for the single-infusion product, and safety pharmacology, reproductive/developmental toxicity and genotoxicity/carcinogenicity studies were not conducted because of lack of a suitable animal model and applicability of traditional toxicology tests.",
+      "alternative": "Selected on-target/off-tumour surrogate pharmacology and vector-integration analyses rather than a conventional toxicology battery",
+      "stage_if_confirmed": "adoption",
+      "materiality_if_confirmed": "high",
+      "evidence_level": 2,
+      "ema_candidate_source": "https://www.ema.europa.eu/en/documents/assessment-report/tecartus-epar-public-assessment-report_en.pdf",
+      "verification_note": "Direct EMA search-indexed assessment text is strong; visual page verification remains outstanding.",
+      "promotion_rule": "Promote after direct page-image verification of the CHMP assessment report."
     }
   ]
 }
