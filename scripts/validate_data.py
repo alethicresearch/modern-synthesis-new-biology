@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-"""Validate the roadmap evidence and prospective data files."""
+"""Validate the roadmap evidence, adoption, displacement, and prospective data files."""
 
 import json
 from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-EVENTS = ROOT / "data" / "events.json"
-PROSPECTIVE = ROOT / "data" / "prospective.json"
+DATA = ROOT / "data"
+EVENTS = DATA / "events.json"
+PROSPECTIVE = DATA / "prospective.json"
+REGULATORY_CONTEXTS = DATA / "regulatory_contexts.json"
+CANDIDATES = DATA / "candidates.json"
+ADOPTION_CANDIDATES = DATA / "adoption_candidates.json"
+NAMED_ADOPTION = DATA / "named_regulatory_adoption.json"
+DISPLACEMENT_METRICS = DATA / "displacement_metrics.json"
 
 ERRORS = []
 
@@ -46,6 +52,27 @@ def check_unique(records, label):
         seen.add(rid)
 
 
+def require(records, label, fields):
+    for record in records:
+        rid = record.get("id", "<missing-id>")
+        for field in fields:
+            if field not in record:
+                error(f"{label}:{rid}: missing {field}")
+
+
+def check_urls(obj, label, prefix=""):
+    if isinstance(obj, dict):
+        for key, value in obj.items():
+            path = f"{prefix}.{key}" if prefix else key
+            if key.endswith("_url") or key.endswith("_source") or key.endswith("_source_url"):
+                if isinstance(value, str) and not valid_url(value):
+                    error(f"{label}:{path}: must be an https URL")
+            check_urls(value, label, path)
+    elif isinstance(obj, list):
+        for i, value in enumerate(obj):
+            check_urls(value, label, f"{prefix}[{i}]")
+
+
 def validate_events(data):
     events = data.get("events", [])
     if not isinstance(events, list):
@@ -53,14 +80,12 @@ def validate_events(data):
         return
     check_unique(events, "events.json")
     required = ["id", "date", "display_date", "temporal_status", "institution", "title", "summary", "stage", "domain", "materiality", "major_milestone", "source_status"]
+    require(events, "events.json", required)
     allowed_temporal = {"foundation", "observed", "emerging"}
     allowed_materiality = {"high", "medium", "low"}
     allowed_source = {"primary_source_verified", "manuscript_seed", "needs_public_source", "secondary_source_only"}
     for e in events:
         rid = e.get("id", "<missing-id>")
-        for key in required:
-            if key not in e:
-                error(f"events.json:{rid}: missing {key}")
         if e.get("temporal_status") not in allowed_temporal:
             error(f"events.json:{rid}: invalid temporal_status")
         if e.get("materiality") not in allowed_materiality:
@@ -86,13 +111,11 @@ def validate_prospective(data):
         return
     check_unique(items, "prospective.json")
     required = ["id", "target_date", "display_date", "title", "summary", "rationale", "stage", "domain", "major_milestone", "type", "status", "actors", "success_criteria"]
+    require(items, "prospective.json", required)
     allowed_types = {"forecast", "recommendation", "catalytic_proposal"}
     allowed_status = {"watch", "in_progress", "achieved", "stalled", "missed", "superseded"}
     for m in items:
         rid = m.get("id", "<missing-id>")
-        for key in required:
-            if key not in m:
-                error(f"prospective.json:{rid}: missing {key}")
         if m.get("type") not in allowed_types:
             error(f"prospective.json:{rid}: invalid type")
         if m.get("status") not in allowed_status:
@@ -105,9 +128,26 @@ def validate_prospective(data):
             error(f"prospective.json:{rid}: actors must be a non-empty array")
 
 
+def validate_collection(path, key, required):
+    data = load(path)
+    records = data.get(key, [])
+    label = path.name
+    if not isinstance(records, list):
+        error(f"{label}: {key} must be an array")
+        return
+    check_unique(records, label)
+    require(records, label, required)
+    check_urls(records, label)
+
+
 def main():
     validate_events(load(EVENTS))
     validate_prospective(load(PROSPECTIVE))
+    validate_collection(REGULATORY_CONTEXTS, "contexts", ["id", "regulator", "jurisdiction", "decision_context", "alternative", "displacement_type", "regulatory_status", "evidence_strength", "source_url"])
+    validate_collection(CANDIDATES, "candidates", ["id", "status", "action", "institution"])
+    validate_collection(ADOPTION_CANDIDATES, "candidates", ["id", "status", "product_or_program", "regulator", "claimed_displacement", "evidence_level"])
+    validate_collection(NAMED_ADOPTION, "cases", ["id", "product", "regulator", "regulatory_impact", "animal_displacement_class", "counts_as_animal_displacement", "counts_as_named_nam_adoption", "evidence_strength"])
+    validate_collection(DISPLACEMENT_METRICS, "metrics", ["id", "regulator", "jurisdiction", "context", "metric_type", "realized_or_estimated", "source_url", "source_strength"])
     if ERRORS:
         print("Roadmap data validation failed:")
         for item in ERRORS:
