@@ -274,3 +274,23 @@ mobileUniformDotStyle.textContent=`
   }
 `;
 document.head.appendChild(mobileUniformDotStyle);
+
+/* Final mobile polish: turn margin + centered key. */
+const mobilePolishStyle=document.createElement('style');
+mobilePolishStyle.textContent=`
+  @media(max-width:720px){
+    /* Pull the right-side curls away from the screen edge. */
+    .snake-turn.right span{right:18px!important}
+    .snake-turn.right::after{right:31px!important}
+
+    /* Center the key like desktop, with slightly less space above only. */
+    .snake-key{justify-content:center!important;text-align:center!important;margin:10px 0 20px!important}
+    .snake-key-label{flex-basis:100%!important;text-align:center!important;margin-right:0!important;margin-bottom:-2px!important}
+  }
+  @media(max-width:380px){
+    .snake-turn.right span{right:17px!important}
+    .snake-turn.right::after{right:30px!important}
+    .snake-key{margin-top:9px!important}
+  }
+`;
+document.head.appendChild(mobilePolishStyle);
