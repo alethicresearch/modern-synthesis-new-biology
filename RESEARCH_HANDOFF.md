@@ -4,261 +4,178 @@ Updated: 2026-08-31
 
 ## Current objective
 
-Build the repository into a living empirical companion to *From Commitment to Adoption: The Path Ahead for New Biology*. The resource should maintain a broader evidence corpus than the paper, preserve regulatory-stage distinctions, expose a compact major-milestones view, maintain a prospective agenda with observable success criteria, and separately measure what happens at the point of adoption.
+Build this repository into the living empirical companion to *From Commitment to Adoption: The Path Ahead for New Biology*. Preserve the manuscript's Commitment → Qualification → Adoption framework while measuring what actually happens at adoption: animal-study displacement, NAM regulatory reliance, other evidence substitution, and institutional routinization.
 
-The research question has sharpened from “what NAM/new-biology developments occurred?” to: **where has commitment become reusable qualification, where has qualification become regulatory reliance, and where has reliance actually displaced legacy animal studies or other evidence requirements?**
+Do **not** substantively revise the manuscript automatically. Complete the evidence corpus and comparator analyses first so later manuscript claims, figures and tables are derived from the ledger rather than added anecdotally.
 
-Do not substantively revise the manuscript yet. Complete the contemporary and international corpus far enough that figures and claims can be derived from the evidence ledger rather than added anecdotally.
+## Architecture and current state
 
-## Current architecture
+- `data/events.json` — 36 contemporary observed/emerging events.
+- `data/prospective.json` — forward targets with observable success criteria, including structured public reporting of NAM regulatory adoption.
+- `data/regulatory_contexts.json` — defined regulatory contexts for omission/replacement/shortening/avoidance.
+- `data/named_regulatory_adoption.json` — 12 regulator-verified named product cases.
+- `data/adoption_candidates.json` — unresolved named cases; currently SillaJen/Qureator BAL0891 and Ebvallo.
+- `data/displacement_metrics.json` — realized or interpretable displacement denominators.
+- `data/candidates.json` — chronology leads awaiting promotion/correction/rejection.
+- `analysis/CORPUS_SNAPSHOT_2026-08-31.md` — current descriptive synthesis.
+- `RESEARCH_PROTOCOL.md`, `EVENT_SCHEMA.md`, `PAPER_INTEGRATION.md` — governing protocol/schema/manuscript linkage.
+- `scripts/validate_data.py` + `.github/workflows/validate.yml` — automated data validation.
 
-- `data/events.json` — observed/foundation/emerging chronology.
-- `data/prospective.json` — forward-looking targets, recommendations, forecasts and catalytic proposals.
-- `data/regulatory_contexts.json` — defined contexts in which a legacy animal study or animal-derived test component can be omitted, replaced, shortened or avoided.
-- `data/named_regulatory_adoption.json` — regulator-verified named product/program cases; explicitly distinguishes animal displacement from broader NAM reliance.
-- `data/adoption_candidates.json` — named product/program cases awaiting the final verification step.
-- `data/displacement_metrics.json` — quantified study/animal reductions, avoidance estimates and relevant denominators.
-- `data/candidates.json` — chronology candidates awaiting promotion, correction, merge or rejection.
-- `RESEARCH_PROTOCOL.md` — inclusion/exclusion, evidence hierarchy, stage discipline and research rounds.
-- `EVENT_SCHEMA.md` — event schema.
-- `PAPER_INTEGRATION.md` — manuscript/linking/freeze plan.
-- `research/ROUND_1_ADOPTION_DISPLACEMENT_SWEEP_2026-08-31.md` — first displacement audit.
-- `research/ROUND_1_NAMED_ADOPTION_CASES_2026-08-31.md` — named sponsor-case search.
-- `research/ROUND_1_REGULATOR_VERIFIED_NAM_ADOPTION_2026-08-31.md` — regulator-authored named cases and realized metrics.
-- `research/ROUND_1_INTERNATIONAL_PRODUCT_PRECEDENTS_2026-08-31.md` — FDA/EMA/TGA/Health Canada/PMDA/UK product and regulatory precedents.
-- `scripts/validate_data.py` + `.github/workflows/validate.yml` — validation covers chronology, prospective milestones, regulatory contexts, candidate ledgers, named adoption cases and displacement metrics.
+Latest confirmed CI state: the prospective-roadmap refinement validated successfully; the named-adoption and candidate-ledger updates validated successfully; the current public Pages build after the latest analysis commit completed successfully. A validator run should only be claimed for commits/files actually covered by the workflow trigger.
 
-## Adoption is explicitly multidimensional
+## Adoption is multidimensional
 
-Do not use one undifferentiated “adoption” count. Current evidence supports at least four outcomes:
+Never use one undifferentiated adoption count.
 
-1. **Animal-study displacement** — an animal study is omitted, replaced, shortened or avoided.
-2. **NAM regulatory reliance** — NAM evidence materially supports a named regulatory decision even if no animal study is displaced.
-3. **Other evidence substitution** — NAM evidence substitutes for otherwise impractical clinical or other evidence requirements.
-4. **Institutional routinization** — an alternative/waiver pathway becomes ordinary enough to migrate from exceptional specialist review into routine workflow or explicit general guidance.
+1. **Animal-study displacement** — a legacy animal study/component is omitted, replaced, shortened or avoided for a defined decision.
+2. **NAM regulatory reliance** — NAM evidence materially supports a named decision even if an animal study is not displaced.
+3. **Other evidence substitution** — NAM evidence substitutes for clinical or other evidence rather than animals.
+4. **Institutional routinization** — an alternative pathway migrates from exceptional review into ordinary workflow, general policy or dedicated review infrastructure.
 
-The stricter animal-displacement measure remains: an authoritative record supports that a legacy animal study/component can actually be omitted, replaced, shortened or avoided for a defined decision.
+Current routinization examples:
 
-Two distinct routinization pathways are now visible:
+- EPA: specialist exception review → ordinary branch-level decisions.
+- UK/MHRA: case-by-case animal-study omission → explicit regulator-wide approach → planned advance Module 4 review mechanism.
 
-- **EPA:** specialist exception review → ordinary branch-level decisions.
-- **UK/MHRA:** case-by-case scientific exceptions → explicit regulator-wide assessment approach → planned pre-review mechanism for animal-free Module 4 packages.
-
-This may become an important measurable concept in the paper: adoption is not only the first accepted exception but the process by which exceptions become normal review practice.
-
-## Named product evidence: strongest current precedents
-
-### Kimmtrak (tebentafusp)
-
-Kimmtrak is a **four-regulator independent-convergence precedent**.
-
-- FDA/CDER/OND reviewers identify human tissue/cell assays as supporting clinical-trial safety when no pharmacologically relevant animal model existed.
-- EMA states that tebentafusp is human-specific and that there are no relevant animal species in which its nonclinical toxicology could be tested; carcinogenicity, genotoxicity and DART studies were not conducted.
-- TGA states that omission of animal-species toxicity studies was justified by human specificity and absence of equivalent targets and describes the supporting human binding/tissue/cytokine evidence.
-- Health Canada's independent Summary Basis of Decision likewise states that tebentafusp is human-specific, no relevant animal species existed for nonclinical toxicology, and long-term carcinogenicity, genotoxicity and reproductive/developmental studies were not conducted.
-
-Coding: confirmed named human-based regulatory adoption and strict animal displacement in the sense that conventional animal toxicology could not appropriately supply the evidence. Do **not** describe it as a one-for-one waiver of a named mandatory test.
-
-This case supports a precise convergence claim: multiple regulators can independently recognize the same scientific constraint and evidentiary solution before formal harmonization or a shared regulatory review occurs.
-
-### Carvykti (ciltacabtagene autoleucel)
-
-Carvykti is now a **two-regulator species-relevance/NAM precedent**.
-
-EMA/CHMP states that no relevant animal model existed for formal safety evaluation. No GLP-compliant formal toxicology studies were performed and absence of repeat-dose toxicology was accepted. The cynomolgus model used in a non-GLP study was considered non-relevant because the construct did not bind cynomolgus BCMA. On-/off-target risks were addressed through literature, in-vitro studies and clinical risk management.
-
-PMDA's review independently states that Carvykti lacks cross-reactivity to rodent and NHP BCMA and therefore has no pharmacologically relevant animal species. The Japanese review includes a tailored safety package with in-vitro human-membrane-protein/off-target assays and other product-specific studies. PMDA did use a mouse xenograft model for selected pharmacology/off-target observations, so it corroborates species irrelevance and tailored NAM reliance but should not be described as an identical animal-free toxicology decision.
-
-Coding: confirmed named animal-displacement precedent for EMA omission of conventional formal GLP/repeat-dose toxicology, with PMDA cross-jurisdiction corroboration of the scientific logic. Not an animal-free development program.
-
-### Kymriah (tisagenlecleucel)
-
-Kymriah is now promoted to the verified named-adoption ledger after direct visual inspection of the EMA assessment report.
-
-CHMP states that the lack of single-dose toxicity studies was acceptable because the patient-specific product is not appropriate to administer to immunocompetent animals and that the absence of repeat-dose toxicity studies was also acceptable for a single-infusion patient-specific product. The report states that conventional rodent genotoxicity/carcinogenicity models are not appropriate for genetically modified cell therapies and that animal germline-transmission studies of genetically modified human cells are not recommended. It describes in-vitro expansion/transformation studies, genomic insertion-site analysis and selected immunocompromised-mouse studies addressing narrower questions.
-
-Coding: confirmed named animal-study displacement, not an animal-free development program.
-
-The combination of Carvykti and Kymriah strongly suggests that conventional-toxicology omission may be a **modality-level pattern in patient-specific CAR-T development**, not an isolated product exception.
-
-### CAR-T class audit now underway
-
-EMA assessment text for four additional products points in the same direction, but the project is deliberately withholding promotion until the underlying PDF pages are visually verified:
-
-- **Yescarta (axicabtagene ciloleucel):** EMA assessment text states that no representative model can accurately address toxicological characteristics of the human product and that traditional toxicology studies were not performed, while a surrogate mouse pharmacology model addressed selected questions.
-- **Breyanzi (lisocabtagene maraleucel):** EMA assessment text states that lack of species cross-reactivity made traditional single/repeat-dose toxicity, genotoxicity, carcinogenicity, reproductive/developmental toxicity and local-tolerance studies of negligible utility and they were not conducted.
-- **Abecma (idecabtagene vicleucel):** EMA assessment text states that no conventional toxicity studies were conducted because appropriate animal toxicity models were lacking; safety evaluation was tailored to insertional-mutagenesis/tumorigenic-transformation and other product-specific risks.
-- **Tecartus (brexucabtagene autoleucel):** EMA assessment text states that formal single-dose, repeat-dose, safety-pharmacology, reproductive/developmental and genotoxicity/carcinogenicity studies were not conducted because of lack of a suitable model/applicability of traditional toxicology.
-
-All four are in `data/adoption_candidates.json` with status requiring direct page-image verification. Do not count them in confirmed case totals yet.
-
-### Veopoz (pozelimab-bbfg)
-
-FDA reviewers report no pharmacologically relevant species for key complement pharmacology. Cell-based assays and validated ex-vivo CH50 testing materially supported approval with clinical and other evidence.
-
-Coding: named NAM regulatory reliance, **not pure animal displacement**, because the totality included animal and human data.
-
-### Kalydeco and Galafold
-
-FDA accepted validated in-vitro functional assays to extend genetically defined treatment populations without separate clinical trials for every variant/subpopulation.
-
-Coding: strong NAM regulatory reliance and **clinical-evidence substitution**, not animal displacement. Galafold is useful as an example of staged reliance because residual uncertainty was handled through post-approval clinical verification.
-
-## Other named-product candidates
-
-### SillaJen/Qureator BAL0891
-
-Qureator says the combination IND amendment used a human vascularized tumor-immune organoid efficacy package without traditional animal proof-of-concept testing; SillaJen independently confirms the collaboration and FDA IND amendment. A public FDA document directly linking the decision to omitted animal POC has not been located.
-
-Status: quarantine in `data/adoption_candidates.json` until regulator-level or equivalent authoritative causal confirmation is found.
-
-### Sarclisa (isatuximab)
-
-Health Canada directly confirms that the nonclinical assessment was limited by species specificity and that embryofetal-development effects were not investigated because appropriate animal models were absent; a GLP main toxicity study did exist, so this is not wholesale animal-toxicology omission.
-
-EMA indexed material indicates a stronger NAM-reliance claim: target-organ identification reportedly relied on human-tissue in-vitro studies because no relevant animal species or surrogate antibody existed. Direct EMA PDF page-image verification remains outstanding because of rate limiting.
-
-Status: partial regulator confirmation, pending direct visual verification of the EMA human-tissue statement.
-
-## MHRA: current operational policy, not only future strategy
-
-A major new chronology candidate is the **25 March 2026 MHRA approach to medicines using non-animal methods**.
-
-Direct source: `https://www.gov.uk/guidance/mhra-approach-to-medicines-using-non-animal-methods`
-
-The regulator states that:
-
-- scientifically justified applications may omit animal studies when alternative methods address safety and deviation from current international expectations poses no human-health risk;
-- MHRA does not expect one-for-one replacement of individual animal tests but evaluates the adequacy of the total evidence package;
-- developers are encouraged to submit in-silico methods, MPS and complex in-vitro models;
-- for drug substances that are **not pharmacologically active in animals, MHRA does not support animal testing**, including use of surrogate molecules; non-animal approaches can suffice for efficacy and safety expectations;
-- generic and biosimilar products should not require animal testing;
-- products with well-recognized pharmacology may be permitted into UK clinical trials without animal studies;
-- biological products and ATMPs can follow human-relevant non-animal pathways when relevant animal models do not exist and residual risk is addressed by target biology, prior knowledge, human-relevant nonclinical data and clinical mitigation.
-
-The guidance is current regulator policy for CTA/MA assessment. Distinguish it from the **future** Module 4 pre-review mechanism that MHRA says it will establish by the end of 2026; that mechanism will provide a nonbinding advance opinion on animal-free Module 4 packages.
-
-This event is queued in `data/candidates.json` as a high-materiality major milestone.
-
-## United Kingdom: additional current practice
-
-The November 2025 UK strategy documents current use of non-animal-only pathways for a small number of biologicals where no relevant animal model exists. The strategy's future end-2026 target to formalize such submissions must remain distinct from this already-existing case-by-case practice.
-
-The strategy also states that MHRA now accepts a validated non-animal potency method for specified Type A botulinum-toxin drug-substance strengths (500U BAS and 300U BAS) and that since 2024 it no longer licenses LD50 testing for third countries. This is mature implemented quality-control replacement, distinct from the future end-2027 goal of using validated alternative pharmacopoeial methods except rare safety cases.
-
-These UK findings reinforce the routinization hypothesis: regulatory practice can begin as case-specific scientific judgment and later be formalized into general guidance and review infrastructure.
-
-## PMDA: international streamlining signals with exact status
-
-Two PMDA records are in `data/regulatory_contexts.json` and queued for chronology promotion. Both are **Early Consideration** documents: PMDA describes these as reference information/current thinking that may change, not binding final guidance.
-
-### 24 October 2025 — NHP DART
-
-PMDA states that when NHP is the only relevant species for a biopharmaceutical, an alternative Weight-of-Evidence scheme can be used **in place of NHP DART testing** with appropriate scientific justification. Inputs can include mechanism and target biology, placental transfer, literature/databases, human experience with related drugs, existing genetically modified-animal information and other evidence.
-
-### 13 May 2026 — monoclonal antibody repeated-dose toxicity
-
-PMDA states that retrospective evidence suggests a three-month monkey study can often provide sufficient information for conventional mAbs, identifies NAM data plus mechanism/class/clinical evidence as WOE inputs, and says the incremental value of a six-month study may be limited when specified risk conditions do not apply.
-
-These are important international streamlining signals but should not be analyzed as final guidance or named-product adoption decisions.
-
-## Quantified displacement: strongest current evidence
-
-EPA Office of Pesticide Programs remains the best public source for realized denominators.
-
-### FY2023 branch-level acute-toxicity decisions
-
-EPA reports:
-
-- 1,122 studies saved;
-- 9,415–18,026 animals reduced;
-- $12,004,500 estimated study-cost savings; and
-- $1,102,702 EPA review-cost savings.
-
-This includes data citations, bridging, additional study waivers and WOE rationales, so it measures broader evidence-based reduction, not only human-based NAM substitution.
-
-### Acute dermal waivers, FY2018-FY2023
-
-EPA annual data sum to 262 granted waivers and 2,620–7,860 animals reduced. This is observed agency tracking, not the 2016 prospective estimate.
-
-### FDA/ICH S1B(R1)
-
-FDA/CDER/OND authors state that omission of one two-year rat carcinogenicity study avoids more than 400 animals, depending on study design. This is a per-decision conversion factor, not a national total.
-
-### EPA freshness limit
-
-EPA's public metrics page was rechecked on 2026-08-31. It was last updated 5 March 2026 and its reported tables still stop at FY2023. Do not imply FY2024/FY2025 realized denominators are public until EPA posts them.
-
-## Institutional routinization
-
-EPA reports that by FY2022 most acute-toxicity determinations could be made at branch level rather than requiring CATSAC consultation. Successful adoption can therefore be measured not only through accepted methods or animal counts but through **where a decision sits organizationally**.
-
-The UK supplies a complementary pattern: case-by-case applications omitting animal studies are already scientifically reviewable; MHRA has now published a general assessment approach; and it plans an advance Module 4 review mechanism. This is a measurable path from exceptional acceptance to explicit infrastructure.
-
-Potential later adoption-maturity sequence:
+Provisional maturity sequence to test, not assume universally:
 
 **exceptional case → repeated precedent → explicit regulator approach → dedicated review pathway → routine review → harmonized/standardized context**
 
-This should be tested against the wider corpus rather than asserted as universal.
+## Named product adoption: current totals
 
-## Contemporary chronology: major verified/source-audited developments
+`data/named_regulatory_adoption.json` contains **12 confirmed named cases**.
 
-Round 1 remains in progress. High-value milestones already verified or queued include FDA Modernization Act 2.0; first organ-chip ISTAND LOI; Complement-ARIE VQN; FDA 2025 Roadmap; NIH April 2025 human-based initiative; NIH July 2025 funding-opportunity policy implementation; permanent ISTAND; NIH $87M Standardized Organoid Modeling Center; Reduction to Practice Challenge; UK Replacing Animals in Science strategy; FDA draft mAb guidance; AIM-NASH qualification through BQP; EPA 2035 recommitment; FDA ISTAND pipeline metrics; FDA general draft NAM guidance; >$150M Complement-ARIE awards; **MHRA March 2026 operational non-animal medicines approach**; FDA Year One; FDA oncology draft guidance; PMDA mAb Early Consideration; first in-silico ISTAND LOI; ORIVA; Reduction to Practice Phase 1; NCI animal-use justification policy; QSP-MABEL; EPA Aug. 27 implemented regulatory use; and FDA/ICMRA recombinant-endotoxin collaborative assessment.
+### Strict animal-displacement flag: 9
 
-## Existing regulatory-context examples
+- Kimmtrak (tebentafusp)
+- Carvykti (ciltacabtagene autoleucel)
+- Kymriah (tisagenlecleucel)
+- Yescarta (axicabtagene ciloleucel)
+- Breyanzi (lisocabtagene maraleucel)
+- Abecma (idecabtagene vicleucel)
+- Tecartus (brexucabtagene autoleucel)
+- Tecelra (afamitresgene autoleucel)
+- Sarclisa (isatuximab), endpoint-specific rather than wholesale toxicology omission
 
-`data/regulatory_contexts.json` includes examples across FDA, EPA, PMDA and the UK:
+### NAM reliance but not strict animal displacement: 1
 
-- FDA hiPSC-derived cardiomyocytes substituting for an otherwise-conducted animal QT/proarrhythmia study in a defined anticancer context.
-- EPA 3D human airway tissue + digital models avoiding new inhalation studies for covered surfactant assessments.
-- EPA GHS mixtures equation avoiding some acute-oral testing; computational, not human-biological.
-- FDA recombinant endotoxin reagents replacing an animal-derived reagent; distinguish from in-vivo replacement.
-- FDA/ICH S1B(R1) WOE pathway supporting conditional omission of a two-year rat carcinogenicity study.
-- Mature FDA photosafety reliance on non-animal/clinical evidence.
-- FDA draft mAb/oncology conditional omission/shortening contexts, preserving draft status.
-- PMDA NHP DART WOE alternative and PMDA six-month mAb monkey-study rationalization, both preserving Early Consideration status.
-- UK case-by-case non-animal first-in-human biological-development practice where no relevant species exists.
-- UK/MHRA implemented non-animal botulinum-toxin potency testing for specified strengths.
+- Veopoz (pozelimab)
 
-The UK biological context should eventually cite/align directly with the March 2026 MHRA guidance as the strongest regulator-level source rather than relying only on the 2025 government strategy.
+### Other evidence substitution: 2
 
-## Source gaps and audits
+- Kalydeco (ivacaftor) — additional variant-specific clinical evidence
+- Galafold (migalastat) — additional variant-specific clinical evidence
 
-Resolve before declaring Round 1 audit-ready:
+## CAR-T is now a regulator-record-supported modality-level pattern
 
-- FDA Modernization Act 2.0 statutory source normalization.
-- OHSU/ONPRC: verified Feb. 9, 2026 board resolution does not yet substantiate the current July 27 NAM-center-of-excellence wording; resolve/correct.
-- NIH reviewer EOI/public posting status.
-- NIEHS/SCIOME award source normalization.
-- IAMPS launch and Liver MPS Ring Trial must remain separate; find actual reproducibility/results evidence.
-- Inspect original Drugs@FDA review passages underlying Kimmtrak and Veopoz directly.
-- Complete visual verification for Yescarta, Breyanzi, Abecma and Tecartus before promoting them from `data/adoption_candidates.json`.
-- Complete EMA visual verification for Sarclisa's human-tissue target-organ assessment.
-- Find named UK biological products underlying the government's description of non-animal-only first-in-human packages.
-- Find PMDA named review reports implementing the 2025/2026 Early Consideration logic beyond Carvykti's species-relevance precedent.
-- Find independently corroborated industry animal-use denominators.
+The earlier hypothesis is resolved strongly enough to analyze as a repeated pattern rather than two or three anecdotes. Six approved CAR-T products now have regulator-authored evidence of conventional-study omission or tailored nonclinical architecture: **Carvykti, Kymriah, Yescarta, Breyanzi, Abecma and Tecartus**.
+
+Health Canada independently confirmed the four cases that had been waiting on EMA PDF rendering:
+
+- **Yescarta:** Health Canada records that no representative model could accurately examine the toxicological characteristics of the individualized human product; traditional toxicology, carcinogenicity and genotoxicity studies were not performed, while surrogate animal pharmacology addressed selected questions.
+- **Breyanzi:** human-tissue cross-reactivity, insertion-site mapping and in-vitro transformation/expansion evidence were part of the tailored package; conventional genotoxicity/carcinogenicity and fertility studies were omitted.
+- **Abecma:** repeat-dose studies were not conducted for the single-infusion autologous product and traditional toxicity/fertility studies were omitted; selected xenograft pharmacology remained informative.
+- **Tecartus:** Health Canada states that no representative model could accurately address toxicological characteristics and traditional toxicology was not performed; selected murine surrogate pharmacology remained.
+
+The defensible class-level claim is **not** that CAR-T development is animal-free. It is that patient-specific/autologous CAR-T repeatedly creates circumstances in which conventional whole-animal toxicology is scientifically non-representative or low-utility, and regulators accept tailored evidence packages that decompose risk questions across human-tissue/in-vitro assays, genomic/insertional-risk evidence, prior knowledge, selected surrogate/xenograft animal studies and clinical monitoring.
+
+## Cross-modality extension
+
+### Tecelra (afamitresgene autoleucel)
+
+FDA CBER's 2024 Summary Basis for Regulatory Action was directly inspected. The accepted TCR-T nonclinical package includes in-silico and in-vitro healthy-human-tissue characterization, peptide cross-reactivity screening, primary human cells, **iPSC-derived cells**, **organotypic models**, and vector-integration analysis. Traditional genotoxicity/carcinogenicity assessments and animal reproductive/developmental studies were not conducted; murine xenografts remained useful for antitumour pharmacology.
+
+This extends the pattern beyond CAR-T to an affinity-enhanced TCR-T therapy and supplies one of the clearest FDA examples in which explicit human-relevant models are visible inside the accepted product package.
+
+### Sarclisa (isatuximab)
+
+Health Canada records that the nonclinical assessment was limited by species specificity and that embryofetal-development effects were not investigated because appropriate animal models were absent. A GLP main toxicity study did exist, so Sarclisa is **endpoint-specific displacement**, not wholesale animal-toxicology omission. EMA indexed material additionally describes human-tissue in-vitro assessment where no relevant species/surrogate antibody existed; direct EMA page rendering remains useful but is no longer required to support the narrower Health Canada-confirmed endpoint claim.
+
+## The sharper adoption mechanism
+
+The evidence now supports this provisional route:
+
+**human/product specificity or other species-relevance failure → conventional animal study loses information value → regulatory questions are decomposed → human-relevant assays + computational/genomic evidence + prior knowledge + selective animal studies + clinical mitigation are combined → regulator accepts omission of the low-information conventional study**
+
+This is a better empirical description than one-for-one test replacement and aligns with MHRA's March 2026 position that regulators should assess the adequacy of the total evidence package rather than demand one replacement test for every animal test.
+
+The next task is to test whether this route predicts study omission outside advanced cell therapies.
+
+## Negative comparator established: Imdelltra (tarlatamab)
+
+Health Canada's review is an important negative control. Cynomolgus monkeys were selected because monkey CD3 and DLL3 were sufficiently similar to their human counterparts for tarlatamab binding; 10-day, one-month and three-month repeat-dose toxicology studies were conducted. Mouse surrogate/xenograft systems were also used for narrower questions.
+
+Do not generalize the positive pattern as “T-cell engager = no animal model.” The more precise variable is whether the **specific product/target biology leaves an animal species pharmacologically informative**.
+
+## Comparator research now underway
+
+Build a positive/negative species-relevance comparator layer. Candidate negative controls already identified in Health Canada records include:
+
+- **Taltz (ixekizumab):** cynomolgus monkey was the sole pharmacologically relevant species; general toxicity was studied for up to 39 weeks and reproductive/developmental studies were performed.
+- **Adtralza (tralokinumab):** pivotal repeat-dose and reproductive/developmental toxicology was conducted in cynomolgus monkeys explicitly described as pharmacologically relevant.
+- **Libtayo (cemiplimab):** cynomolgus monkey was the only pharmacologically relevant species; three repeat-dose toxicology studies up to 26 weeks were conducted.
+- **Piasky (crovalimab):** binding to human and cynomolgus C5 supported cynomolgus as the only pharmacologically relevant species; 5-week and 6-month repeat-dose studies plus enhanced pre/postnatal development studies were conducted.
+- **Imdelltra (tarlatamab):** species relevance discussed above.
+
+Methodological rule: routine ICH exclusions such as conventional biologic genotoxicity/carcinogenicity omissions must **not** be counted as evidence that species irrelevance caused displacement. The primary comparator outcome should focus on general/repeat-dose toxicology or a specific endpoint that the regulator explicitly links to species/model relevance.
+
+Recommended comparator fields: product, modality, target, regulator, relevant-species status (`none`, `limited`, `relevant`), general/repeat toxicology (`omitted`, `tailored`, `retained`), endpoint-specific omissions, human-relevant evidence, animal studies retained, regulator wording and primary source.
+
+## Other unresolved candidates
+
+### SillaJen/Qureator BAL0891
+
+Provider/sponsor records claim a human vascularized tumor-immune organoid package replaced traditional animal proof-of-concept for an FDA IND amendment, but no public FDA record has yet causally confirmed the omission. Keep quarantined.
+
+### Ebvallo (tabelecleucel)
+
+EMA indexed assessment text states that conventional toxicology, carcinogenicity, genotoxicity, mutagenicity and reproductive toxicology studies were not performed for the allogeneic EBV-specific T-cell product, with selected immunodeficient-animal studies used for narrower questions. Direct EMA PDF rendering remained rate-limited and an independent equivalent regulator source has not yet been located. Keep as candidate until visual or independent regulator confirmation.
+
+## Regulatory-context and quantified-displacement evidence
+
+`data/regulatory_contexts.json` includes 15 defined contexts spanning FDA, EPA, PMDA and the UK. Preserve exact regulatory maturity: applied/final/established, draft guidance, and PMDA Early Consideration are not interchangeable.
+
+Strong realized public denominators remain EPA:
+
+- FY2023 branch-level acute-toxicity decisions: **1,122 studies saved** and **9,415–18,026 animals reduced**.
+- Acute-dermal waivers FY2018–FY2023: **262 waivers** and **2,620–7,860 animals reduced**.
+- FDA/ICH S1B(R1): omission of a two-year rat carcinogenicity study can avoid **>400 animals per study**, depending on design; this is a per-case conversion factor, not a national observed total.
+
+Do not sum these categories. EPA's public realized metrics currently stop at FY2023.
+
+## Main corpus signal
+
+The event ledger contains **36 contemporary events**: 15 commitment-tagged, 18 qualification-tagged and 12 adoption-tagged, with overlapping stages. There are 25 major milestones.
+
+The adoption audit changes how that asymmetry should be interpreted. Qualification infrastructure remains highly visible and reusable qualification remains a genuine bottleneck, but product-specific regulator reviews reveal substantially more adoption than high-level policy pages do. The apparent scarcity of adoption is therefore partly substantive and partly a **measurement/transparency problem**.
+
+This supports the prospective target for **structured public reporting of NAM regulatory adoption**: regulators should expose the context/question, whether a legacy animal study was actually displaced, what evidence replaced or supplemented it, and the underlying precedent.
 
 ## Next research priority
 
-1. **Complete the CAR-T class audit.** Obtain page-image verification for Yescarta, Breyanzi, Abecma and Tecartus; add only confirmed products to the named ledger. Determine whether the pattern is strong enough to analyze as a modality-level regulatory practice rather than a collection of anecdotes.
-2. **Broaden beyond CAR-T.** Search bispecific proteins, human-specific antibodies, oligonucleotides and other advanced modalities for named products in which conventional toxicity or DART was omitted because no scientifically relevant animal species existed.
-3. **MHRA implementation.** Find named UK products and monitor whether the planned Module 4 pre-review mechanism is actually established by end-2026.
-4. **Health Canada/TGA/PMDA.** Mine public assessment records for named cases and cross-jurisdiction convergence.
-5. **EPA metrics.** Extend realized denominators when FY2024/FY2025 data become public; do not invent missing years.
-6. **Industry.** Prioritize regulator-linked submissions, ring-trial outcomes and audited/measured animal displacement over internal platform-use claims.
+1. Build `data/species_relevance_comparators.json` (or equivalent analysis file) with confirmed positive and negative controls.
+2. Verify the negative-control set from regulator-authored sources and expand it across conventional antibodies/biologics.
+3. Add more positives outside CAR-T/TCR-T, prioritizing explicit regulator language linking species/model non-relevance to omitted general/repeat-dose toxicology or a named endpoint.
+4. Resolve Ebvallo if possible.
+5. Seek ring-trial **results**, not launch announcements.
+6. Extend realized displacement denominators when agencies publish them.
+7. Recompute comparator and corpus summaries reproducibly before making manuscript changes.
 
-## Manuscript implications
+## Manuscript implications — provisional, do not auto-edit
 
-The paper can now plausibly move beyond a conceptual Commitment → Qualification → Adoption sequence toward an empirically specified adoption layer. A later figure/table could show downstream outputs of qualification as separate branches: **animal displacement, named regulatory reliance, other evidence substitution, and routinization**.
+If the comparator analysis survives expansion, likely manuscript effects are:
 
-Three stronger empirical claims are emerging but should remain provisional until Round 1 coverage is adequate:
+- **§IV:** adoption should be described as risk-question decomposition and evidence substitution conditioned by model relevance, not simply one-for-one replacement.
+- **§VII:** repeated product precedents and routinization may show how regulatory credibility becomes reusable before formal method-level qualification is complete.
+- **Table 2:** add carefully chosen named adoption examples and distinguish mature routine practice, endpoint-specific omission, and product-specific tailored evidence.
+- **Table 3:** retain/publicly strengthen adoption-reporting and denominator/accountability milestones.
 
-1. **Species relevance is becoming a regulatory decision variable across jurisdictions.** Kimmtrak demonstrates independent recognition across four regulators; Carvykti demonstrates EMA/PMDA convergence in an advanced therapy.
-2. **Advanced therapies may provide an early modality-level example of conventional toxicology being replaced by tailored evidence rather than one-for-one NAM substitution.** Kymriah and Carvykti are confirmed; Yescarta, Breyanzi, Abecma and Tecartus are high-priority verification candidates.
-3. **Routinization is measurable.** EPA shows specialist-to-routine workflow migration, while MHRA shows exception-to-explicit-policy-to-dedicated-review-pathway progression.
+Three provisional empirical claims now merit testing:
 
-The opacity finding remains important: EPA proves that study/animal denominators can be published, while FDA/EMA/Health Canada/TGA/PMDA product records show that named regulatory reliance can be reconstructed. Lack of comparable systematic reporting elsewhere is therefore an infrastructure/transparency gap rather than an inherently unmeasurable phenomenon.
+1. **Species/model relevance is a regulatory decision variable across jurisdictions.**
+2. **Advanced cell therapies provide a clear modality-level example of conventional toxicology being selectively displaced by tailored evidence packages.**
+3. **Routinization is measurable independently of first acceptance.**
 
 ## Quality bar
 
-Primary/regulator-authored sources whenever possible. Preserve draft/final/Early Consideration, current policy/future mechanism, accepted/qualified, funded/awarded, validation/qualification/adoption, intent/implementation, human-based/broader-NAM, in-vivo-study/animal-derived-component, animal-displacement/clinical-evidence-substitution, independent-convergence/formal-harmonization, and sponsor-claim/regulator-confirmed distinctions. Never infer animals avoided from validation-corpus size, method announcements or absent studies without an authoritative causal basis.
+Use primary/regulator-authored sources whenever possible. Preserve draft/final/Early Consideration, accepted/qualified, validation/qualification/adoption, human-based/broader NAM, animal-study displacement/other evidence substitution, independent convergence/formal harmonization, and sponsor claim/regulator confirmation. Never infer animals avoided merely from absent studies, validation-corpus size or announcements without an authoritative causal basis.
