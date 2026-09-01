@@ -40,18 +40,43 @@
       "jurisdiction": "European Union",
       "approval_or_decision_year": 2022,
       "indication": "Multiple myeloma",
-      "nam": "In vitro characterization and safety studies, literature-based on-target/off-tumour assessment, and clinical evidence for a patient-specific BCMA-directed CAR-T product",
-      "regulatory_impact": "EMA accepted a nonclinical safety package without formal GLP toxicology and without repeat-dose toxicity studies because no relevant animal model was available; key risks were addressed through in vitro studies, literature-based assessment and clinical risk management.",
-      "legacy_evidence_displaced_or_unavailable": "Formal GLP toxicology and repeat-dose toxicity studies were not performed; a cynomolgus model was explicitly considered non-relevant because the test construct did not bind cynomolgus BCMA.",
+      "nam": "In vitro characterization and safety studies, literature-based on-target/off-tumour assessment, human-membrane-protein/off-target assays, and clinical evidence for a patient-specific BCMA-directed CAR-T product",
+      "regulatory_impact": "EMA accepted a nonclinical safety package without formal GLP toxicology and without repeat-dose toxicity studies because no relevant animal model was available; PMDA independently concluded that Carvykti has no pharmacologically relevant rodent or nonhuman-primate species because of absent BCMA cross-reactivity and evaluated a tailored package including human-membrane and other in vitro safety assays.",
+      "legacy_evidence_displaced_or_unavailable": "EMA: formal GLP toxicology and repeat-dose toxicity studies were not performed; a cynomolgus model was explicitly considered non-relevant. PMDA: no pharmacologically relevant rodent or NHP species existed for Carvykti itself, although a mouse xenograft model was used for selected pharmacology/off-target observations.",
       "animal_displacement_class": "formal_animal_toxicology_omitted_due_to_no_relevant_model_with_in_vitro_and_other_evidence",
       "counts_as_animal_displacement": true,
       "counts_as_named_nam_adoption": true,
-      "evidence_strength": "direct_regulator_public_assessment_report",
+      "evidence_strength": "multi_regulator_corroborated_named_advanced_therapy_precedent",
       "ema_assessment_source": "https://www.ema.europa.eu/en/documents/assessment-report/carvykti-epar-public-assessment-report_en.pdf",
+      "pmda_assessment_source": "https://www.pmda.go.jp/files/000252610.pdf",
       "health_canada_supporting_source": "https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD1684955300002/",
-      "note": "EMA states that the nonclinical safety evaluation was limited by lack of a relevant animal model, that no GLP-compliant formal toxicology studies were performed, that absence of repeat-dose toxicity was acceptable, and that no other in vivo nonclinical safety evaluation was performed after the non-relevance of the cynomolgus model was established. In vitro studies and literature addressed on-/off-target risks. Some in vivo proof-of-concept and a non-GLP monkey study existed, so this is omission of formal toxicology rather than a completely animal-free development program. Health Canada's later authorization independently documents human-cell in vitro functional assays and in vitro approaches to insertional-mutagenesis risk, but does not make the same explicit no-relevant-model/repeat-dose-omission statement; therefore it is supporting evidence, not counted as independent confirmation of the EMA displacement decision.",
+      "cross_jurisdiction_confirmed": true,
+      "jurisdictions_confirming_species_irrelevance": ["European Union/EMA", "Japan/PMDA"],
+      "cross_jurisdiction_note": "EMA provides the clearest displacement statement: no GLP formal toxicology, no repeat-dose toxicology, and explicit acceptance of the absence because no relevant model existed. PMDA independently states that Carvykti lacks cross-reactivity to rodent and NHP BCMA and therefore has no pharmacologically relevant animal species, while reviewing tailored in vitro human-membrane/off-target assays and a limited mouse xenograft model. PMDA corroborates species irrelevance and tailored NAM reliance but should not be described as an identical animal-free toxicology decision.",
+      "note": "This is omission of conventional formal toxicology rather than a completely animal-free development program. Some in vivo proof-of-concept and non-GLP animal work existed. Health Canada's later authorization documents human-cell in vitro functional assays and in vitro approaches to insertional-mutagenesis risk but does not make the same explicit repeat-dose-omission statement.",
       "manuscript_impacts": [
-        {"section":"IV/VII","claim":"Named advanced-therapy approvals can proceed without conventional formal animal toxicology when the models are scientifically non-relevant and alternative evidence addresses risk","effect":"strong direct EMA precedent"}
+        {"section":"IV/VII","claim":"Named advanced-therapy approvals can proceed without conventional formal animal toxicology when the models are scientifically non-relevant and alternative evidence addresses risk","effect":"strong direct multi-regulator precedent"}
+      ]
+    },
+    {
+      "id": "ema-kymriah-tailored-nonclinical-package",
+      "product": "Kymriah (tisagenlecleucel)",
+      "sponsor": "Novartis",
+      "regulator": "EMA / CHMP",
+      "jurisdiction": "European Union",
+      "approval_or_decision_year": 2018,
+      "indication": "CD19-positive B-cell malignancies within the authorised indications",
+      "nam": "Product-specific in vitro expansion/transformation studies, genomic insertion-site analysis and tailored evidence for a patient-specific genetically modified T-cell product, integrated with nonstandard in vivo pharmacology where informative",
+      "regulatory_impact": "CHMP accepted the absence of standard single-dose and repeat-dose toxicity studies because tisagenlecleucel is patient-specific and not appropriate to administer to immunocompetent animals; it also considered conventional rodent genotoxicity/carcinogenicity models inappropriate and noted that animal germline-transmission studies of genetically modified human cells are not recommended.",
+      "legacy_evidence_displaced_or_unavailable": "Standard single-dose toxicity, repeat-dose toxicity and conventional rodent genotoxicity/carcinogenicity testing were not used as the relevant safety strategy; comparative in vivo pharmacology for a manufacturing-site comparability change was also considered inappropriate and unnecessary.",
+      "animal_displacement_class": "standard_toxicology_omitted_due_to_patient_specific_product_and_model_nonrelevance",
+      "counts_as_animal_displacement": true,
+      "counts_as_named_nam_adoption": true,
+      "evidence_strength": "direct_regulator_public_assessment_report_visually_verified",
+      "ema_assessment_source": "https://www.ema.europa.eu/en/documents/assessment-report/kymriah-epar-public-assessment-report_en.pdf",
+      "note": "CHMP's public assessment report directly states that lack of single-dose toxicity studies was acceptable because the patient-specific product is not appropriate for immunocompetent animals and that repeat-dose studies were likewise acceptable to omit for a single-infusion patient-specific product. In vitro and genomic analyses were used for transformation/insertional-risk questions, while immunocompromised-mouse studies were used for selected persistence/tumour-growth questions. This is not an animal-free development program.",
+      "manuscript_impacts": [
+        {"section":"IV/VII","claim":"Omission of conventional toxicology is not isolated to one CAR-T product but appears across approved patient-specific advanced therapies when model relevance is poor","effect":"strengthens emerging modality-level pattern"}
       ]
     },
     {
