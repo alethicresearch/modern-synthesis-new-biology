@@ -1,7 +1,7 @@
 {
   "updated": "2026-08-31",
   "schema_version": 1,
-  "purpose": "Named sponsor/product cases that may represent real animal-study displacement but do not yet meet the regulator-verified threshold for inclusion as confirmed adoption precedents.",
+  "purpose": "Named sponsor/product cases that may represent real animal-study displacement or regulator reliance but do not yet meet the full regulator-verified threshold for inclusion as confirmed adoption precedents.",
   "candidates": [
     {
       "id": "2025-10-sillajen-bal0891-qureator-vtime",
@@ -25,6 +25,24 @@
       "regulator_source": null,
       "verification_note": "Qureator explicitly attributes the FDA IND amendment to an efficacy package using vTIME without traditional animal POC. SillaJen independently confirms the Qureator collaboration and the FDA approval of the combination IND amendment, but a public FDA document linking the regulatory decision to omission of animal POC has not yet been located.",
       "promotion_rule": "Promote to confirmed event/context only after a public FDA review document, FDA statement, sponsor regulatory filing with sufficiently detailed nonclinical package, or equivalent authoritative record verifies the displacement claim."
+    },
+    {
+      "id": "2020-sarclisa-isatuximab-human-tissue-risk-assessment",
+      "status": "partial_regulator_confirmation_pending_pdf_visual_verification",
+      "date": "2020-04-29",
+      "sponsor": "Sanofi",
+      "product_or_program": "Sarclisa (isatuximab)",
+      "jurisdiction": "Canada / European Union / Australia-led work-share",
+      "regulator": "Health Canada / EMA / TGA",
+      "claimed_displacement": "Species specificity limited conventional nonclinical assessment; embryofetal development testing was omitted because appropriate animal models were absent, and EMA materials indicate human-tissue in vitro studies were used to identify potential target organs where no relevant animal species or surrogate antibody existed.",
+      "alternative": "Human-tissue in vitro cross-reactivity/target-organ assessment plus clinical monitoring and other weight-of-evidence inputs",
+      "stage_if_confirmed": "adoption",
+      "materiality_if_confirmed": "high",
+      "evidence_level": 2,
+      "health_canada_source": "https://dhpp.hpfb-dgpsa.ca/review-documents/resource/SBD00509",
+      "ema_candidate_source": "https://www.ema.europa.eu/en/documents/rmp/sarclisa-epar-risk-management-plan_en.pdf",
+      "verification_note": "Health Canada directly confirms that the nonclinical package was limited by species specificity and that embryofetal-development effects were not investigated because appropriate animal models were absent; it also states that a GLP main toxicity study was conducted, so Sarclisa is not a wholesale animal-toxicology omission case. EMA search-indexed text indicates that target-organ identification relied on in vitro human-tissue studies because no relevant animal species or surrogate antibody existed, but direct EMA PDF access was rate-limited during this pass and the required page-image inspection has not yet been completed.",
+      "promotion_rule": "Promote the human-tissue NAM-reliance claim only after direct visual verification of the relevant EMA assessment/RMP page. If verified, code as named NAM regulatory reliance with a separate specific animal-study omission for embryofetal development; do not label the overall program animal-free."
     }
   ]
 }
