@@ -172,3 +172,34 @@ document.addEventListener('focusin',e=>{const n=e.target.closest?.('.snake-node'
 document.addEventListener('click',e=>{const d=e.target.closest?.('.snake-dot');if(d)requestAnimationFrame(()=>positionSnakePopup(d.closest('.snake-node')))});
 addEventListener('resize',()=>requestAnimationFrame(positionActiveSnakePopup));
 addEventListener('scroll',e=>{if(e.target instanceof Element&&e.target.closest('.snake-tooltip'))return;requestAnimationFrame(positionActiveSnakePopup)},true);
+
+/* Final density pass: give the dot key breathing room and compact non-Roadmap views by ~20%. */
+const densityStyle=document.createElement('style');
+densityStyle.textContent=`
+  .snake-key{margin:18px 0 22px!important}
+
+  #view-evidence .kicker,#view-analysis .kicker,#view-sources .kicker{font-size:.61rem!important}
+  #view-evidence .section-intro h2,#view-analysis .section-intro h2,#view-sources .section-intro h2{font-size:clamp(1.45rem,3.2vw,2.5rem)!important}
+  #view-evidence .section-intro>p:not(.kicker),#view-analysis .section-intro>p:not(.kicker),#view-sources .section-intro>p:not(.kicker){font-size:.82rem!important;line-height:1.45!important}
+  #view-evidence .block-head h3,#view-analysis .block-head h3,#view-sources .block-head h3,#view-sources .resource-list h3,#view-evidence .prose-card h3,#view-analysis .prose-card h3,#view-sources .prose-card h3{font-size:1.24rem!important}
+  #view-evidence .data-card h4,#view-analysis .data-card h4,#view-sources .data-card h4,#view-evidence .metric-card h4,#view-analysis .metric-card h4,#view-sources .metric-card h4,#view-evidence .prose-card h4,#view-analysis .prose-card h4,#view-sources .prose-card h4{font-size:.92rem!important}
+  #view-evidence .data-card p,#view-analysis .data-card p,#view-sources .data-card p,#view-evidence .metric-card p,#view-analysis .metric-card p,#view-sources .metric-card p,#view-evidence .prose-card p,#view-analysis .prose-card p,#view-sources .prose-card p{font-size:.80rem!important;line-height:1.43!important}
+  #view-evidence .micro-note,#view-analysis .micro-note,#view-sources .micro-note{font-size:.66rem!important;line-height:1.4!important}
+  #view-evidence .caution,#view-analysis .caution,#view-sources .caution{font-size:.80rem!important;line-height:1.42!important}
+  #view-evidence .summary strong,#view-analysis .summary strong,#view-sources .summary strong,#view-evidence .evidence-summary strong,#view-analysis .analysis-summary strong{font-size:1.6rem!important}
+  #view-evidence .summary span,#view-analysis .summary span,#view-sources .summary span,#view-evidence .evidence-summary span,#view-analysis .analysis-summary span{font-size:.61rem!important}
+  #view-evidence .metric-card strong,#view-analysis .metric-card strong,#view-sources .metric-card strong,#view-sources .source-layer-card strong{font-size:1.64rem!important}
+  #view-evidence .institution,#view-analysis .institution,#view-sources .institution{font-size:.62rem!important}
+  #view-evidence .tag,#view-analysis .tag,#view-sources .tag{font-size:.58rem!important}
+  #view-evidence .source,#view-analysis .source,#view-sources .source{font-size:.62rem!important}
+  #view-evidence .status,#view-analysis .status,#view-sources .status{font-size:.56rem!important}
+  #view-evidence .inline-check,#view-analysis .inline-check,#view-sources .inline-check{font-size:.64rem!important}
+  #view-sources .source-layer-link,#view-sources .resource-list a{font-size:.80rem!important}
+
+  @media(max-width:720px){
+    .snake-key{margin:16px 0 20px!important}
+    #view-evidence .section-intro h2,#view-analysis .section-intro h2,#view-sources .section-intro h2{font-size:1.38rem!important}
+    #view-evidence .block-head h3,#view-analysis .block-head h3,#view-sources .block-head h3,#view-sources .resource-list h3,#view-evidence .prose-card h3,#view-analysis .prose-card h3,#view-sources .prose-card h3{font-size:1.15rem!important}
+  }
+`;
+document.head.appendChild(densityStyle);
