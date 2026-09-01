@@ -15,6 +15,7 @@ ADOPTION_CANDIDATES = DATA / "adoption_candidates.json"
 NAMED_ADOPTION = DATA / "named_regulatory_adoption.json"
 DISPLACEMENT_METRICS = DATA / "displacement_metrics.json"
 SPECIES_COMPARATORS = DATA / "species_relevance_comparators.json"
+SURROGATE_CASES = DATA / "surrogate_toxicology_cases.json"
 
 ERRORS = []
 
@@ -166,6 +167,32 @@ def validate_species_comparators(data):
     check_urls(records, label)
 
 
+def validate_surrogate_cases(data):
+    records = data.get("cases", [])
+    label = "surrogate_toxicology_cases.json"
+    if not isinstance(records, list):
+        error(f"{label}: cases must be an array")
+        return
+    check_unique(records, label)
+    require(records, label, ["id", "product", "approval_year", "regulator", "jurisdiction", "modality", "clinical_product_species_relevance", "surrogate_strategy", "general_repeat_toxicology_outcome", "why_it_matters", "source_url", "source_strength"])
+    for record in records:
+        rid = record.get("id", "<missing-id>")
+        if record.get("general_repeat_toxicology_outcome") != "surrogate_animal_toxicology_retained":
+            error(f"{label}:{rid}: unexpected general_repeat_toxicology_outcome")
+        if not valid_url(record.get("source_url")):
+            error(f"{label}:{rid}: source_url must be an https URL")
+    policy = data.get("policy_contrast")
+    if not isinstance(policy, dict):
+        error(f"{label}: policy_contrast must be an object")
+    else:
+        for field in ["regulator", "jurisdiction", "date", "policy", "source_url", "interpretation"]:
+            if field not in policy:
+                error(f"{label}: policy_contrast missing {field}")
+        if not valid_url(policy.get("source_url")):
+            error(f"{label}: policy_contrast source_url must be an https URL")
+    check_urls(data, label)
+
+
 def main():
     validate_events(load(EVENTS))
     validate_prospective(load(PROSPECTIVE))
@@ -175,6 +202,7 @@ def main():
     validate_collection(NAMED_ADOPTION, "cases", ["id", "product", "regulator", "regulatory_impact", "animal_displacement_class", "counts_as_animal_displacement", "counts_as_named_nam_adoption", "evidence_strength"])
     validate_collection(DISPLACEMENT_METRICS, "metrics", ["id", "regulator", "jurisdiction", "context", "metric_type", "realized_or_estimated", "source_url", "source_strength"])
     validate_species_comparators(load(SPECIES_COMPARATORS))
+    validate_surrogate_cases(load(SURROGATE_CASES))
     if ERRORS:
         print("Roadmap data validation failed:")
         for item in ERRORS:
