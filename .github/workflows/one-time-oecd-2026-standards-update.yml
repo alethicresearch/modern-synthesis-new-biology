@@ -1,3 +1,4 @@
+# one-time updater trigger
 name: One-time OECD 2026 standards update
 
 on:
