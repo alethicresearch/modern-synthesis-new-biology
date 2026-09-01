@@ -250,3 +250,27 @@ mobileEndpointStyle.textContent=`
   }
 `;
 document.head.appendChild(mobileEndpointStyle);
+
+/* Mobile dots: one resting visual size for every milestone. */
+const mobileUniformDotStyle=document.createElement('style');
+mobileUniformDotStyle.textContent=`
+  @media(max-width:720px){
+    .snake-dot,.snake-node.anchor .snake-dot{
+      width:30px!important;height:30px!important;margin-top:-15px!important;
+      border:0!important;outline:0!important;background:transparent!important;
+      box-shadow:none!important;transform:none!important;display:grid!important;place-items:center!important
+    }
+    .snake-dot::before,.snake-node.anchor .snake-dot::before{
+      width:10px!important;height:10px!important;
+      border:2px solid #f7f6f2!important;outline:1px solid #7d786f!important;
+      transform:none!important;box-shadow:none!important
+    }
+    .snake-dot.prospective-dot::before,.snake-node.anchor .snake-dot.prospective-dot::before{
+      outline:1px dashed #7d786f!important
+    }
+    .snake-dot.selected::before,.snake-dot:focus-visible::before{
+      transform:none!important;box-shadow:none!important
+    }
+  }
+`;
+document.head.appendChild(mobileUniformDotStyle);
