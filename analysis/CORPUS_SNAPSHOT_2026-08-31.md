@@ -2,30 +2,24 @@
 
 ## Scope and counting rules
 
-This snapshot is a first descriptive analysis of the living corpus supporting *From Commitment to Adoption: The Path Ahead for New Biology*. It is not yet the manuscript results section.
+This snapshot is a descriptive analysis of the living corpus supporting *From Commitment to Adoption: The Path Ahead for New Biology*. It is not yet the manuscript results section.
 
-Counts use the current verified/source-audited files. Event-stage tags are **not mutually exclusive**: one event may mark commitment plus qualification or commitment plus adoption. Named product adoption and regulatory contexts are analyzed separately so event density is not mistaken for actual animal-study displacement.
+Event-stage tags are **not mutually exclusive**. Named product adoption and regulatory contexts are analyzed separately so event density is not mistaken for actual animal-study displacement.
 
 ## Contemporary event corpus
 
 Current `data/events.json` contains **36 events**.
 
-### Overlapping Commitment → Qualification → Adoption tags
+Overlapping Commitment → Qualification → Adoption tags:
 
-- Commitment: **15** events
-- Qualification: **18** events
-- Adoption: **12** events
+- Commitment: **15**
+- Qualification: **18**
+- Adoption: **12**
+- Validation infrastructure: **6**
+- Review infrastructure: **5**
+- Major milestones: **25 of 36**
 
-Secondary infrastructure tags:
-
-- Validation infrastructure: **6** events
-- Review infrastructure: **5** events
-
-Major milestones: **25 of 36** events are currently coded `major_milestone: true`.
-
-### Main-stage combinations
-
-Ignoring secondary tags such as review infrastructure, validation infrastructure, guidance and international convergence:
+Ignoring secondary tags, the main-stage combinations are:
 
 - Commitment only: **7**
 - Qualification only: **13**
@@ -35,40 +29,83 @@ Ignoring secondary tags such as review infrastructure, validation infrastructure
 - Qualification + Adoption: **2**
 - Review-infrastructure only / no main-stage tag: **1**
 
-No current event is simultaneously tagged Commitment + Qualification + Adoption.
+The corpus remains qualification-heavy, but qualification activity should not be confused with completed reusable qualification. FDA's Feb. 2026 metrics reported 16 ISTAND projects in development but **zero completed ISTAND qualifications** as of Jan. 1, 2026. AIM-NASH is a genuine formal qualification through the Biomarker Qualification Program rather than ISTAND.
 
-### Initial interpretation
-
-The corpus is already **qualification-heavy**. There are more qualification-tagged events than commitment-tagged or adoption-tagged events, reflecting the rapid construction of validation networks, permanent qualification pathways, standards/reproducibility programs and staged candidate pipelines.
-
-However, qualification activity should not be confused with completed reusable qualification. FDA's own Feb. 2026 metrics reported 16 ISTAND projects in development but **zero completed ISTAND qualifications** as of Jan. 1, 2026. AIM-NASH is a genuine formal qualification, but it came through the Biomarker Qualification Program rather than ISTAND.
-
-The adoption count also overstates strict displacement if read naively. Seven of the twelve adoption-tagged events are combined with commitment or qualification, often because they are draft guidance, nonbinding regulator thinking, expanding accepted-method lists or infrastructure that has begun to affect decisions. Only five events are currently adoption-only at the event level.
-
-This supports a central methodological rule: **event-stage counts are indicators of transition activity, not direct measures of animal-study displacement.**
+The event-level adoption count also overstates strict displacement if read naively because it includes draft guidance, nonbinding regulator thinking, accepted-method lists, infrastructure and decision-level adoption. **Event-stage counts are indicators of transition activity, not direct measures of animal-study displacement.**
 
 ## Named regulator-verified adoption
 
-Current `data/named_regulatory_adoption.json` contains **6 confirmed named product cases**:
+Current `data/named_regulatory_adoption.json` contains **12 confirmed named product cases**.
+
+### Strict animal-displacement flag: 9
 
 - Kimmtrak
 - Carvykti
 - Kymriah
+- Yescarta
+- Breyanzi
+- Abecma
+- Tecartus
+- Tecelra
+- Sarclisa
+
+### NAM regulatory reliance without strict animal-displacement flag: 1
+
 - Veopoz
+
+### NAM substitution for additional clinical evidence rather than animal evidence: 2
+
 - Kalydeco
 - Galafold
 
-Of these:
+The largest change from the first snapshot is that the CAR-T hypothesis is no longer based on two or three examples. **Six approved CAR-T products now have regulator-authored evidence of conventional-study omission or tailored nonclinical architecture:** Carvykti, Kymriah, Yescarta, Breyanzi, Abecma and Tecartus.
 
-- Strict animal-displacement flag: **3** — Kimmtrak, Carvykti, Kymriah
-- NAM regulatory reliance without a strict animal-displacement flag: **1** — Veopoz
-- NAM substitution for additional clinical evidence rather than animal evidence: **2** — Kalydeco, Galafold
+The exact omitted studies differ by product and regulator. The defensible class-level claim is therefore not that CAR-T development is animal-free. It is that patient-specific/autologous CAR-T products repeatedly create situations in which conventional whole-animal toxicology is scientifically non-representative or of limited utility, and regulators accept **tailored evidence packages** that allocate different questions to human-tissue/in-vitro assays, genomic/insertional-risk analyses, limited surrogate or xenograft studies, clinical monitoring and prior knowledge.
 
-The strict cases are disproportionately associated with **species relevance** and advanced/human-specific modalities. Kimmtrak is now corroborated across FDA, EMA, TGA and Health Canada. Carvykti is supported by EMA with PMDA corroboration of species irrelevance. Kymriah provides a second directly verified CAR-T example from EMA.
+This now supports a genuine **modality-level adoption pattern**, with an important caveat: the relevant outcome is selective displacement of low-information conventional studies, not elimination of every animal experiment.
 
-This concentration suggests a testable hypothesis: **one early route to animal-study displacement is not the arrival of a universally superior replacement assay, but recognition that a conventional animal model is scientifically non-relevant for a human-specific product, followed by a tailored evidence package.**
+## Cross-modality test
 
-That hypothesis should be tested against the pending Yescarta, Breyanzi, Abecma and Tecartus audits and against non-CAR-T modalities before it is elevated into a manuscript claim.
+The species-relevance route is not confined to CAR-T.
+
+### Tecelra: TCR-T extension
+
+FDA's 2024 Summary Basis for Regulatory Action for Tecelra documents an accepted package including:
+
+- in-silico and in-vitro healthy-human-tissue characterization;
+- peptide cross-reactivity screening;
+- primary human cells;
+- iPSC-derived cells;
+- organotypic models; and
+- vector-integration analysis.
+
+FDA also records that traditional genotoxicity/carcinogenicity assessments were not conducted and that animal reproductive/developmental studies were omitted as acceptable based on the product characteristics and safety profile. Murine xenografts remained useful for antitumour pharmacology.
+
+This extends the pattern from CAR-T to an **affinity-enhanced TCR-T therapy** and is particularly valuable because the human-relevant assays are explicit in the FDA review rather than inferred from absence of an animal model.
+
+### Sarclisa: monoclonal-antibody endpoint-specific extension
+
+Health Canada records that Sarclisa's nonclinical assessment was limited by species specificity and that embryofetal-development effects were not investigated because appropriate animal models were absent. A GLP main toxicity study did exist, so Sarclisa is not a wholesale toxicology-omission case.
+
+EMA materials additionally describe use of human-tissue in-vitro studies for target-organ identification because no relevant animal species or surrogate antibody existed. The stronger human-tissue claim remains supported by EMA indexed material while direct page rendering is still rate-limited.
+
+Sarclisa therefore supports a narrower but important claim: **species non-relevance can displace specific endpoints even in a conventional monoclonal-antibody program.**
+
+### Negative comparator: Imdelltra (tarlatamab)
+
+Health Canada's review of tarlatamab shows why the mechanism must not be generalized from modality labels alone. Cynomolgus monkeys were selected because monkey CD3 and DLL3 are sufficiently similar to the human targets; the program included 10-day, one-month and three-month repeat-dose toxicology.
+
+This is an analytically useful negative control. It suggests that the relevant predictor is not simply “T-cell engager” or “biologic,” but whether the **specific target/product biology makes the animal species pharmacologically informative**.
+
+## Revised adoption hypothesis
+
+The evidence now supports a more precise route to adoption:
+
+**human/product specificity or other species-relevance failure → conventional animal study loses information value → risk questions are decomposed → human-relevant assays, computational/genomic evidence, prior knowledge, limited purpose-built animal studies and clinical mitigation are combined → regulators accept omission of the low-value conventional study**
+
+This is stronger than the earlier claim that new methods simply replace old tests one-for-one. It also fits MHRA's explicit 2026 position that it does not expect one-for-one replacement and instead evaluates the adequacy of the total evidence package.
+
+The next research question is whether this route appears frequently enough outside advanced cell therapies to become a general adoption mechanism rather than a special feature of highly human-specific products.
 
 ## Regulatory context-of-use corpus
 
@@ -83,59 +120,55 @@ By regulatory maturity:
 By relationship to human biology:
 
 - Explicitly human-based: **3**
-- Mixed/weight-of-evidence, potentially including human-based evidence: **6**
+- Mixed/weight-of-evidence: **6**
 - Broader non-animal/computational/omission contexts not specifically human-based: **6**
 
-This confirms that the transition is not synonymous with “human organ models.” Regulatory displacement currently occurs through multiple mechanisms: human cell/tissue systems, computational methods, weight of evidence, accumulated prior knowledge, scientifically justified omission, and replacement of animal-derived reagents.
+Regulatory displacement currently occurs through multiple mechanisms: human cell/tissue systems, computational methods, weight of evidence, accumulated prior knowledge, scientifically justified omission, and replacement of animal-derived reagents.
 
 ## Quantified displacement
 
 The strongest realized public denominators still come from EPA rather than medicines regulators.
 
-- FY2023 EPA branch-level acute-toxicity decisions: **1,122 studies saved** and **9,415–18,026 animals reduced**, with published study- and regulator-cost savings.
+- FY2023 EPA branch-level acute-toxicity decisions: **1,122 studies saved** and **9,415–18,026 animals reduced**.
 - EPA acute-dermal waivers FY2018–FY2023: **262 waivers** and **2,620–7,860 animals reduced**.
 - FDA/CDER/OND estimate for an omitted two-year rat carcinogenicity study under ICH S1B(R1): **more than 400 animals per omitted study**, depending on design.
 
-These figures should **not be summed** into one displacement total because the EPA categories can overlap and the FDA figure is a per-case conversion factor rather than a national observed total.
+These figures should **not be summed** because EPA categories can overlap and the FDA figure is a per-case conversion factor rather than a national observed total. EPA's public metrics page currently stops at FY2023.
 
-EPA's public metrics page currently stops at FY2023. The absence of FY2024/FY2025 data must remain explicit.
+## Routinization as an adoption variable
 
-## Routinization as an emerging adoption variable
+Two distinct patterns remain visible:
 
-Two distinct patterns suggest that routinization may be measurable:
+1. **EPA:** specialist exception review → ordinary branch-level decisions.
+2. **UK/MHRA:** case-by-case non-animal submissions → explicit regulator-wide assessment approach → planned dedicated advance-review mechanism.
 
-1. **EPA:** acute-toxicity alternative/waiver decisions migrate from specialist CATSAC review toward ordinary branch-level determination.
-2. **UK/MHRA:** selected case-by-case non-animal submissions are followed by an explicit regulator-wide assessment approach and a planned dedicated advance-review mechanism for animal-free Module 4 packages.
-
-A provisional sequence to test is:
+A provisional adoption-maturity sequence is:
 
 **exceptional case → repeated precedent → explicit regulator approach → dedicated review pathway → routine review → harmonized/standardized context**
 
-This should remain a hypothesis rather than a universal model until more domains are coded.
+The newly confirmed CAR-T series supplies evidence for the “repeated precedent” step at product level.
 
 ## The strongest empirical asymmetry so far
 
-The evidence base is becoming much easier to populate for **commitment and qualification infrastructure** than for **named adoption and realized displacement**.
+Commitment and qualification infrastructure remain easier to observe publicly than named adoption and realized displacement. But the new product audit shows that some of the earlier apparent adoption scarcity was a **measurement problem**: regulator review records contain more adoption than high-level policy pages reveal.
 
-That asymmetry has at least two possible explanations that future analysis must distinguish:
+The evidence now supports two simultaneous conclusions:
 
-1. adoption is genuinely less common than commitment/qualification; and/or
-2. adoption is systematically less visible because it is buried in product review documents, sponsor-regulator interactions, waivers and routine review decisions rather than published as structured public data.
+1. qualification remains a genuine bottleneck, especially for reusable method-level qualification; and
+2. adoption is systematically undercounted when research looks only for announcements, because important precedents are buried in product-specific regulatory reviews.
 
-The existing corpus supports the second explanation as a real transparency problem: FDA, EMA, TGA, Health Canada and PMDA records allow named adoption to be reconstructed case by case, while EPA demonstrates that realized animal/study denominators can be published directly.
+That makes **structured public reporting of NAM regulatory adoption** a defensible prospective target rather than merely a documentation preference.
 
-A later manuscript claim may therefore be stronger if framed as a **measurement and infrastructure gap** rather than simply “there is little adoption.”
+## Next evidence threshold
 
-## What would materially change the picture
+Before converting these findings into manuscript results:
 
-Before turning this into manuscript results, the next evidence threshold should be:
+- continue the cross-modality named-product audit beyond CAR-T/TCR-T;
+- use negative comparators such as tarlatamab to test when species relevance predicts study retention;
+- resolve Ebvallo through direct visual or independent regulator confirmation;
+- find additional conventional biologics with endpoint-specific species-relevance omissions;
+- identify ring-trial outcomes rather than launches;
+- obtain additional realized displacement denominators; and
+- rerun the corpus from a reproducible summary script rather than hand-counting.
 
-- visually verify the remaining high-confidence CAR-T assessment reports;
-- expand named-product audits beyond CAR-T/human-specific biologics;
-- add named MHRA/PMDA/Health Canada/TGA cases where possible;
-- identify ring-trial outcomes rather than trial launches;
-- obtain any additional realized displacement denominators;
-- finish source normalization/removal of remaining manuscript-seed records; and
-- then rerun this snapshot from a reproducible summary script rather than hand-counting.
-
-At that point the manuscript can test, rather than assume, whether the transition is bottlenecked primarily at qualification, at adoption, or at public visibility of adoption.
+The central empirical question is now more specific: **is species/model relevance a measurable predictor of when regulators accept tailored human-relevant evidence and omit conventional animal studies, and how does that route interact with reusable qualification and routinization?**
