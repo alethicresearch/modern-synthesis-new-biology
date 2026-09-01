@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A living, source-linked roadmap of historical, emerging, and prospective milestones in the transition to human-based biomedicine.">
+  <meta name="description" content="A living, source-linked roadmap and evidence companion for the transition to human-based biomedicine.">
   <title>New Biology — Living Roadmap</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,62 +11,179 @@
   <header class="hero">
     <div class="eyebrow">Modern Synthesis · New Biology</div>
     <h1>A living roadmap of the transition to human-based biomedicine</h1>
-    <p class="lede">A source-linked record of what has happened, what is emerging, and what should happen next. The roadmap distinguishes institutional commitment from reusable qualification and real-world adoption—and turns the paper’s forward agenda into milestones that can be monitored over time.</p>
+    <p class="lede">A source-linked research companion separating what institutions have committed to, what has been qualified, what has entered real decisions, and what should happen next. The public record is intentionally layered so the chronology stays readable while regulatory evidence and exploratory analysis remain inspectable.</p>
     <div class="hero-meta">
       <span id="last-updated">Updated —</span>
       <span id="event-count">— records</span>
-      <span>Primary-source links where verified</span>
+      <span>Primary or regulator-authored sources prioritized</span>
     </div>
   </header>
 
   <main>
-    <section class="controls" aria-label="Roadmap filters">
-      <label>Search
-        <input id="search" type="search" placeholder="FDA, organ chip, qualification…">
-      </label>
-      <label>Time
-        <select id="temporal">
-          <option value="all">All time classes</option>
-          <option value="observed">Observed</option>
-          <option value="emerging">Emerging</option>
-          <option value="foundation">Foundations</option>
-          <option value="prospective">Prospective</option>
-        </select>
-      </label>
-      <label>Stage
-        <select id="stage"><option value="all">All stages</option></select>
-      </label>
-      <label>Institution / actor
-        <select id="institution"><option value="all">All institutions</option></select>
-      </label>
-      <label>Year
-        <select id="year"><option value="all">All years</option></select>
-      </label>
-      <label class="check"><input id="major" type="checkbox" checked> Major milestones only</label>
-      <button id="reset" type="button">Reset</button>
+    <nav class="view-nav" aria-label="Research companion views">
+      <button class="view-tab active" data-view="roadmap" type="button">Roadmap</button>
+      <button class="view-tab" data-view="evidence" type="button">Evidence</button>
+      <button class="view-tab" data-view="analysis" type="button">Analysis</button>
+      <button class="view-tab" data-view="methods" type="button">Methods</button>
+    </nav>
+
+    <section id="view-roadmap" class="view-panel">
+      <div class="section-intro">
+        <p class="kicker">Chronology + prospective agenda</p>
+        <h2>What changed, what is emerging, and what should happen next</h2>
+        <p>The roadmap is the public-facing chronology. It keeps observed and emerging developments separate from prospective author recommendations and defaults to major milestones so the institutional trajectory remains legible.</p>
+      </div>
+
+      <section class="controls" aria-label="Roadmap filters">
+        <label>Search
+          <input id="search" type="search" placeholder="FDA, organ chip, qualification…">
+        </label>
+        <label>Time
+          <select id="temporal">
+            <option value="all">All time classes</option>
+            <option value="observed">Observed</option>
+            <option value="emerging">Emerging</option>
+            <option value="foundation">Foundations</option>
+            <option value="prospective">Prospective</option>
+          </select>
+        </label>
+        <label>Stage
+          <select id="stage"><option value="all">All stages</option></select>
+        </label>
+        <label>Institution / actor
+          <select id="institution"><option value="all">All institutions</option></select>
+        </label>
+        <label>Year
+          <select id="year"><option value="all">All years</option></select>
+        </label>
+        <label class="check"><input id="major" type="checkbox" checked> Major milestones only</label>
+        <button id="reset" type="button">Reset</button>
+      </section>
+
+      <section class="summary" aria-label="Roadmap summary">
+        <div><strong id="visible-count">0</strong><span>visible records</span></div>
+        <div><strong id="commitment-count">0</strong><span>commitment</span></div>
+        <div><strong id="qualification-count">0</strong><span>qualification</span></div>
+        <div><strong id="adoption-count">0</strong><span>adoption</span></div>
+        <div><strong id="prospective-count">0</strong><span>prospective</span></div>
+      </section>
+
+      <section class="legend" aria-label="Roadmap definitions">
+        <p><b>Commitment</b> changes institutional direction.</p>
+        <p><b>Qualification</b> makes scientific confidence explicit and reusable.</p>
+        <p><b>Adoption</b> shows methods entering real decisions or routine practice.</p>
+        <p><b>Prospective</b> marks observable targets, recommendations, or catalytic proposals—not completed facts.</p>
+      </section>
+
+      <section id="timeline" class="timeline" aria-live="polite"></section>
+      <p id="empty" class="empty" hidden>No records match the current filters.</p>
     </section>
 
-    <section class="summary" aria-label="Roadmap summary">
-      <div><strong id="visible-count">0</strong><span>visible records</span></div>
-      <div><strong id="commitment-count">0</strong><span>commitment</span></div>
-      <div><strong id="qualification-count">0</strong><span>qualification</span></div>
-      <div><strong id="adoption-count">0</strong><span>adoption</span></div>
-      <div><strong id="prospective-count">0</strong><span>prospective</span></div>
+    <section id="view-evidence" class="view-panel" hidden>
+      <div class="section-intro">
+        <p class="kicker">Regulatory evidence</p>
+        <h2>What has actually been accepted, omitted, replaced, or measured</h2>
+        <p>This view is deliberately narrower than the timeline. It separates named regulator-confirmed product cases, defined regulatory contexts, and quantified displacement. A NAM adoption case is not automatically counted as animal-study displacement.</p>
+      </div>
+
+      <section class="evidence-summary" aria-label="Evidence summary">
+        <div><strong id="named-count">0</strong><span>named regulator-confirmed cases</span></div>
+        <div><strong id="strict-displacement-count">0</strong><span>strict animal-displacement cases</span></div>
+        <div><strong id="context-count">0</strong><span>defined regulatory contexts</span></div>
+        <div><strong id="realized-metric-count">0</strong><span>realized displacement metrics</span></div>
+      </section>
+
+      <section class="evidence-block">
+        <div class="block-head">
+          <div><p class="kicker">Measured outcomes</p><h3>Quantified displacement</h3></div>
+        </div>
+        <div id="metric-grid" class="metric-grid"></div>
+      </section>
+
+      <section class="evidence-block">
+        <div class="block-head">
+          <div><p class="kicker">Product-level precedent</p><h3>Named regulatory adoption</h3></div>
+          <label class="inline-check"><input id="strict-only" type="checkbox"> Strict animal displacement only</label>
+        </div>
+        <p class="micro-note">Every case below is regulator-authored or regulator-hosted. Cases that substituted clinical evidence or relied on NAMs without a demonstrable animal-study displacement remain visible but are labeled separately.</p>
+        <div id="named-case-grid" class="card-grid"></div>
+      </section>
+
+      <section class="evidence-block">
+        <div class="block-head">
+          <div><p class="kicker">Decision context</p><h3>Regulatory contexts of use</h3></div>
+          <label class="inline-check"><input id="major-contexts-only" type="checkbox" checked> Major contexts only</label>
+        </div>
+        <div id="context-grid" class="card-grid"></div>
+      </section>
     </section>
 
-    <section class="legend" aria-label="Roadmap definitions">
-      <p><b>Commitment</b> changes institutional direction.</p>
-      <p><b>Qualification</b> makes scientific confidence explicit and reusable.</p>
-      <p><b>Adoption</b> shows methods entering real decisions or routine practice.</p>
-      <p><b>Prospective</b> marks observable targets, recommendations, or catalytic proposals—not completed facts.</p>
+    <section id="view-analysis" class="view-panel" hidden>
+      <div class="section-intro">
+        <p class="kicker">Exploratory analysis</p>
+        <h2>How model relevance may shape evidence architecture</h2>
+        <div class="caution"><b>Exploratory / purposive comparator set — not a prevalence estimate.</b> These cases were assembled to test and falsify hypotheses. They should not be used for inferential claims until a prespecified sampling frame is completed.</div>
+      </div>
+
+      <section class="analysis-summary" aria-label="Comparator summary">
+        <div><strong id="comparator-count">0</strong><span>comparator products</span></div>
+        <div><strong id="nonrelevant-count">0</strong><span>no / limited relevant species</span></div>
+        <div><strong id="relevant-count">0</strong><span>relevant species present</span></div>
+        <div><strong id="surrogate-count">0</strong><span>surrogate-toxicology cases</span></div>
+      </section>
+
+      <section class="evidence-block">
+        <div class="block-head"><div><p class="kicker">Working model</p><h3>Information value, not a one-for-one replacement test</h3></div></div>
+        <div class="prose-card">
+          <p>Current regulator-authored cases support a narrower proposition: target and model relevance help determine whether the clinical molecule can generate informative direct animal evidence. When direct relevance fails, the regulatory response is not uniform. It can include surrogate-animal toxicology, selective purpose-built animal studies, human tissue or cell systems, genomic or computational evidence, prior knowledge, clinical mitigation, or omission of conventional studies.</p>
+          <p>The key open question is therefore not simply whether a therapy class “uses animals” or “uses NAMs,” but how the total evidence package changes when particular legacy studies lose decision-relevant information value.</p>
+        </div>
+      </section>
+
+      <section class="evidence-block">
+        <div class="block-head"><div><p class="kicker">Comparator set</p><h3>Species/model relevance and general toxicology</h3></div></div>
+        <div id="comparator-grid" class="card-grid"></div>
+      </section>
+
+      <section class="evidence-block">
+        <div class="block-head"><div><p class="kicker">Falsification set</p><h3>Species non-relevance can still lead to surrogate animal toxicology</h3></div></div>
+        <p class="micro-note">These cases prevent the analysis from collapsing into “no relevant species → omission.” The current MHRA policy contrast is shown separately because it reflects regulator approach, not proof that another jurisdiction would reject a surrogate program.</p>
+        <div id="surrogate-grid" class="card-grid"></div>
+        <div id="policy-contrast" class="prose-card contrast-card"></div>
+      </section>
     </section>
 
-    <section id="timeline" class="timeline" aria-live="polite"></section>
-    <p id="empty" class="empty" hidden>No records match the current filters.</p>
+    <section id="view-methods" class="view-panel" hidden>
+      <div class="section-intro">
+        <p class="kicker">Methods + provenance</p>
+        <h2>How the living evidence companion is maintained</h2>
+        <p>The paper is the stable scholarly argument; this site is the larger evidence record. Data layers are kept separate so a policy announcement, a qualified tool, a named product decision, and a measured reduction cannot silently become the same kind of evidence.</p>
+      </div>
+
+      <div class="methods-grid">
+        <article class="prose-card"><h3>Evidence hierarchy</h3><p>Primary agency, legislative, regulator-authored, and regulator-hosted sources are preferred. Sponsor claims that lack regulator confirmation remain in research-side candidate files and are not rendered here as verified adoption.</p></article>
+        <article class="prose-card"><h3>Stage discipline</h3><p>Accepted into a pathway is not qualified. Draft guidance is not final guidance. Collaboration is not regulatory acceptance. Funding is not implementation. A NAM can support a decision without demonstrably displacing an animal study.</p></article>
+        <article class="prose-card"><h3>Prospective separation</h3><p>Forward milestones live in a separate dataset and are visibly labeled as recommendations, forecasts, or catalytic proposals. They never become historical facts without a separately sourced observed event.</p></article>
+        <article class="prose-card"><h3>Publication freeze</h3><p>At manuscript submission, the evidence state used for the paper should be tagged and archived as a dated release. The live resource can then continue to evolve without changing the evidentiary basis reviewed with the manuscript.</p></article>
+      </div>
+
+      <section class="resource-list">
+        <h3>Inspect the source layers</h3>
+        <a href="RESEARCH_PROTOCOL.md">Research protocol ↗</a>
+        <a href="EVENT_SCHEMA.md">Event schema ↗</a>
+        <a href="data/events.json">Observed / emerging events ↗</a>
+        <a href="data/prospective.json">Prospective milestones ↗</a>
+        <a href="data/regulatory_contexts.json">Regulatory contexts ↗</a>
+        <a href="data/named_regulatory_adoption.json">Named regulatory adoption ↗</a>
+        <a href="data/displacement_metrics.json">Displacement metrics ↗</a>
+        <a href="data/species_relevance_comparators.json">Exploratory species comparators ↗</a>
+        <a href="data/surrogate_toxicology_cases.json">Surrogate-toxicology cases ↗</a>
+      </section>
+    </section>
   </main>
 
   <footer>
-    <p>The observed evidence ledger is maintained in <code>data/events.json</code>; forward-looking targets are kept separately in <code>data/prospective.json</code>. The default view shows major milestones, while the full corpus is available by clearing that filter. See <code>RESEARCH_PROTOCOL.md</code> for inclusion, evidence, and stage rules. This site is an evolving research companion, not an agency publication.</p>
+    <p>This site is an evolving research companion, not an agency publication. Candidate or unresolved cases are intentionally kept out of the public evidence views until the evidence standard is met.</p>
   </footer>
   <script src="app.js"></script>
 </body>
