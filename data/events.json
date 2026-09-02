@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01",
+  "updated": "2026-09-02",
   "schema_version": 2,
   "events": [
     {
@@ -962,6 +962,46 @@
           "section": "VI",
           "claim": "Qualification pipelines are beginning to acquire staged candidates",
           "effect": "supports"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-22-fnih-vqn-three-additional-pilots",
+      "date": "2026-07-22",
+      "display_date": "Jul 22, 2026",
+      "temporal_status": "observed",
+      "institution": "FNIH / NIH Complement-ARIE VQN",
+      "title": "VQN expands to seven human-based NAM pilot projects",
+      "summary": "FNIH selected three additional human-based research platforms for development into Validation and Qualification Network pilot projects, bringing the total under development to seven. The new pilots address developmental toxicity, cardiac safety, and cancer-therapy response. Selection initiates pilot development and validation-oriented team formation; it is not a regulatory qualification decision.",
+      "why_it_matters": "Shows the Complement-ARIE VQN moving from partnership design into a concrete portfolio of human-based platforms intended for validation and regulatory-readiness work, while preserving the distinction between pilot selection, validation, qualification, and adoption.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "complement-arie",
+        "vqn",
+        "validation",
+        "human-based-models",
+        "developmental-toxicity",
+        "cardiac-safety",
+        "cancer"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "manuscript_ref": null,
+      "source_url": "https://fnih.org/news/three-more-nams-pilot-projects-selected/",
+      "manuscript_impacts": [
+        {
+          "section": "III/VI",
+          "claim": "Complement-ARIE VQN is becoming operational validation infrastructure rather than remaining only a proposed partnership",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / validation milestones",
+          "claim": "Priority human-based platforms are entering structured validation-oriented development pipelines",
+          "effect": "strengthens"
         }
       ]
     },
