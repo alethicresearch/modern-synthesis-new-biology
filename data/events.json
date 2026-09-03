@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02",
+  "updated": "2026-09-03",
   "schema_version": 2,
   "events": [
     {
@@ -1212,6 +1212,49 @@
       "source_url": null,
       "manuscript_impacts": [],
       "date_precision": "month"
+    },
+    {
+      "id": "2026-09-01-ema-nam-vds-pilot",
+      "date": "2026-09-01",
+      "display_date": "Sep 1, 2026",
+      "temporal_status": "observed",
+      "institution": "European Medicines Agency (EMA)",
+      "title": "EMA launches voluntary NAM data-submission pilot",
+      "summary": "EMA launches a voluntary data submission pilot allowing companies, method developers, CROs and academic laboratories to submit NAM data outside marketing-authorisation applications for independent, non-binding scientific assessment and feedback on regulatory readiness. The pilot is intended to build regulatory experience and direct developers toward next steps such as the Innovation Task Force, scientific advice or qualification advice; it does not itself confer qualification or regulatory acceptance.",
+      "why_it_matters": "Creates a structured regulatory-learning pathway that decouples NAM evidence review from individual product applications, lowering the cost and perceived submission risk of early regulator engagement while building experience that could support later qualification and harmonised assessment.",
+      "stage": [
+        "qualification",
+        "review-infrastructure"
+      ],
+      "domain": [
+        "nams",
+        "regulatory-science",
+        "qualification",
+        "regulatory-readiness",
+        "international-convergence"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/ethical-use-animals-medicine-testing/regulatory-acceptance-new-approach-methodologies-nams-reduce-animal-use-testing/new-approach-methodologies-replace-reduce-animal-testing-voluntary-data-submission-pilot",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III/VI",
+          "claim": "Regulatory confidence in human-based methods increasingly depends on institutional pathways that accumulate and assess evidence before routine product adoption",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VII",
+          "claim": "Regulatory learning can be made more reusable and harmonised rather than remaining confined to individual sponsor submissions",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3",
+          "claim": "Qualification and regulatory-engagement milestones should track structured pathways for regulator review of NAM evidence outside marketing-authorisation applications",
+          "effect": "requires_update"
+        }
+      ]
     }
   ]
 }
