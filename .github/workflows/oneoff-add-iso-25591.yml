@@ -1,0 +1,76 @@
+name: One-off add ISO 25591 roadmap event
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/oneoff-add-iso-25591.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Add ISO 25591 emerging event and advance prospective dependency status
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          events_path = Path('data/events.json')
+          events = json.loads(events_path.read_text())
+          rid = '2026-07-08-iso-mps-digital-twin-cd'
+          if not any(r.get('id') == rid for r in events['events']):
+              events['events'].append({
+                  'id': rid,
+                  'date': '2026-07-08',
+                  'display_date': 'Jul 8, 2026',
+                  'temporal_status': 'emerging',
+                  'institution': 'ISO/TC 276/SC 2',
+                  'title': 'ISO advances MPS/OoC digital-twin data framework to Committee Draft',
+                  'summary': 'ISO advances ISO 25591 from working draft to Committee Draft. The draft is intended to standardize FAIR and regulatory-ready data and metadata for organ-on-chip and microphysiological systems used with digital twins and computational modelling, including experimental-design requirements supporting reproducibility plus provenance and versioning. The standard remains under development and is not yet an International Standard.',
+                  'why_it_matters': 'Moves MPS/OoC standardization beyond device terminology toward interoperable data, reproducibility and provenance requirements that could make validation evidence more reusable across computational and experimental components. It is standards-development infrastructure, not regulatory qualification or adoption.',
+                  'stage': ['qualification', 'validation-infrastructure'],
+                  'domain': ['mps', 'organ-on-chip', 'standards', 'digital-twins', 'computational-modeling', 'reproducibility', 'provenance'],
+                  'materiality': 'medium',
+                  'major_milestone': False,
+                  'source_status': 'primary_source_verified',
+                  'source_url': 'https://www.iso.org/standard/90834.html',
+                  'manuscript_ref': None,
+                  'manuscript_impacts': [
+                      {'section': 'III/VI', 'claim': 'Reusable qualification depends on standardized reporting, reproducibility and provenance infrastructure', 'effect': 'strengthens'},
+                      {'section': 'Table 3 / qualification milestones', 'claim': 'Standards bodies are beginning to formalize regulatory-ready MPS/OoC data and metadata requirements', 'effect': 'requires_update'},
+                      {'section': 'VII', 'claim': 'Credibility can become reusable when evidence and provenance are standardized across platforms and jurisdictions', 'effect': 'strengthens'}
+                  ]
+              })
+              events['events'].sort(key=lambda r: (r.get('date',''), r.get('id','')))
+          events['updated'] = '2026-09-05'
+          events_path.write_text(json.dumps(events, indent=2, ensure_ascii=False) + '\n')
+
+          prosp_path = Path('data/prospective.json')
+          prosp = json.loads(prosp_path.read_text())
+          for m in prosp['milestones']:
+              if m.get('id') == 'prospective-composable-qualification':
+                  m['status'] = 'in_progress'
+                  links = m.setdefault('linked_event_ids', [])
+                  if rid not in links:
+                      links.append(rid)
+                  deps = m.setdefault('dependencies', [])
+                  break
+          prosp['updated'] = '2026-09-05'
+          prosp_path.write_text(json.dumps(prosp, indent=2, ensure_ascii=False) + '\n')
+          PY
+      - name: Commit update and remove one-off workflow
+        run: |
+          rm .github/workflows/oneoff-add-iso-25591.yml
+          git config user.name 'xnuxi'
+          git config user.email 'research@alethic.ai'
+          git add data/events.json data/prospective.json .github/workflows/oneoff-add-iso-25591.yml
+          git commit -m 'Add ISO MPS digital-twin Committee Draft milestone'
+          git push
