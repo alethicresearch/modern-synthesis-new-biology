@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03",
+  "updated": "2026-09-05",
   "schema_version": 2,
   "events": [
     {
@@ -936,6 +936,51 @@
       ]
     },
     {
+      "id": "2026-07-08-iso-mps-digital-twin-cd",
+      "date": "2026-07-08",
+      "display_date": "Jul 8, 2026",
+      "temporal_status": "emerging",
+      "institution": "ISO/TC 276/SC 2",
+      "title": "ISO advances MPS/OoC digital-twin data framework to Committee Draft",
+      "summary": "ISO advances ISO 25591 from working draft to Committee Draft. The draft is intended to standardize FAIR and regulatory-ready data and metadata for organ-on-chip and microphysiological systems used with digital twins and computational modelling, including experimental-design requirements supporting reproducibility plus provenance and versioning. The standard remains under development and is not yet an International Standard.",
+      "why_it_matters": "Moves MPS/OoC standardization beyond device terminology toward interoperable data, reproducibility and provenance requirements that could make validation evidence more reusable across computational and experimental components. It is standards-development infrastructure, not regulatory qualification or adoption.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "mps",
+        "organ-on-chip",
+        "standards",
+        "digital-twins",
+        "computational-modeling",
+        "reproducibility",
+        "provenance"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.iso.org/standard/90834.html",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III/VI",
+          "claim": "Reusable qualification depends on standardized reporting, reproducibility and provenance infrastructure",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / qualification milestones",
+          "claim": "Standards bodies are beginning to formalize regulatory-ready MPS/OoC data and metadata requirements",
+          "effect": "requires_update"
+        },
+        {
+          "section": "VII",
+          "claim": "Credibility can become reusable when evidence and provenance are standardized across platforms and jurisdictions",
+          "effect": "strengthens"
+        }
+      ]
+    },
+    {
       "id": "2026-07-20-complement-r2p-phase1",
       "date": "2026-07-20",
       "display_date": "Jul 20, 2026",
@@ -1190,30 +1235,6 @@
       ]
     },
     {
-      "id": "2026-nih-reviewer-eoi",
-      "date": "2026-09-01",
-      "display_date": "Sep 2026",
-      "temporal_status": "emerging",
-      "institution": "NIH",
-      "title": "Human-based science reviewer recruitment",
-      "summary": "An expression of interest recruits scientists with human-based research expertise for potential peer-review service and a subject-matter-expert directory.",
-      "why_it_matters": "Could improve review-system competence for evaluating human-based methods, but the public posting and durable implementation status still require confirmation.",
-      "stage": [
-        "review-infrastructure"
-      ],
-      "domain": [
-        "peer-review",
-        "expertise"
-      ],
-      "materiality": "medium",
-      "major_milestone": false,
-      "source_status": "needs_public_source",
-      "manuscript_ref": "[55]",
-      "source_url": null,
-      "manuscript_impacts": [],
-      "date_precision": "month"
-    },
-    {
       "id": "2026-09-01-ema-nam-vds-pilot",
       "date": "2026-09-01",
       "display_date": "Sep 1, 2026",
@@ -1255,6 +1276,30 @@
           "effect": "requires_update"
         }
       ]
+    },
+    {
+      "id": "2026-nih-reviewer-eoi",
+      "date": "2026-09-01",
+      "display_date": "Sep 2026",
+      "temporal_status": "emerging",
+      "institution": "NIH",
+      "title": "Human-based science reviewer recruitment",
+      "summary": "An expression of interest recruits scientists with human-based research expertise for potential peer-review service and a subject-matter-expert directory.",
+      "why_it_matters": "Could improve review-system competence for evaluating human-based methods, but the public posting and durable implementation status still require confirmation.",
+      "stage": [
+        "review-infrastructure"
+      ],
+      "domain": [
+        "peer-review",
+        "expertise"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "needs_public_source",
+      "manuscript_ref": "[55]",
+      "source_url": null,
+      "manuscript_impacts": [],
+      "date_precision": "month"
     }
   ]
 }
