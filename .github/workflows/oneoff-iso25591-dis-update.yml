@@ -1,0 +1,94 @@
+name: One-off ISO 25591 DIS update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/oneoff-iso25591-dis-update.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update roadmap records
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          events_path = Path('data/events.json')
+          data = json.loads(events_path.read_text())
+          rid = '2026-09-04-iso-mps-digital-twin-dis'
+          if not any(r.get('id') == rid for r in data['events']):
+              data['events'].append({
+                  'id': rid,
+                  'date': '2026-09-04',
+                  'display_date': 'Sep 4, 2026',
+                  'temporal_status': 'emerging',
+                  'institution': 'ISO/TC 276/SC 2',
+                  'title': 'ISO MPS/OoC digital-twin framework advances toward Draft International Standard',
+                  'summary': 'Following closure of Committee Draft consultation, ISO 25591 was referred back to the working group and approved for registration as a Draft International Standard (DIS). The draft standardizes FAIR and regulatory-ready MPS/OoC data and metadata, reproducibility-oriented experimental design, and computational-model linkages including provenance and versioning. It remains under development and is not yet an International Standard.',
+                  'why_it_matters': 'Advances MPS/OoC data, reproducibility, provenance and digital-twin standardization one formal ISO stage beyond Committee Draft, strengthening infrastructure for reusable and composable qualification. It is a standards-development milestone, not regulatory qualification, routine adoption, or a published International Standard.',
+                  'stage': ['qualification', 'validation-infrastructure'],
+                  'domain': ['mps', 'organ-on-chip', 'standards', 'digital-twins', 'computational-modeling', 'reproducibility', 'provenance'],
+                  'materiality': 'medium',
+                  'major_milestone': False,
+                  'source_status': 'primary_source_verified',
+                  'source_url': 'https://www.iso.org/standard/90834.html',
+                  'manuscript_ref': None,
+                  'manuscript_impacts': [
+                      {
+                          'section': 'III/VI',
+                          'claim': 'Reusable qualification depends on standardized reporting, reproducibility, interoperability and provenance infrastructure',
+                          'effect': 'strengthens'
+                      },
+                      {
+                          'section': 'Table 3 / qualification milestones',
+                          'claim': 'Standards bodies are progressing regulatory-ready MPS/OoC data and metadata frameworks through formal international-standard stages',
+                          'effect': 'requires_update'
+                      },
+                      {
+                          'section': 'VII',
+                          'claim': 'Credibility can become reusable and composable when evidence, metadata, provenance and versioning are standardized across experimental and computational components',
+                          'effect': 'strengthens'
+                      }
+                  ]
+              })
+              data['events'].sort(key=lambda r: r.get('date', ''))
+          data['updated'] = '2026-09-06'
+          events_path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+
+          prospective_path = Path('data/prospective.json')
+          p = json.loads(prospective_path.read_text())
+          for m in p['milestones']:
+              if m.get('id') == 'prospective-composable-qualification':
+                  links = m.setdefault('linked_event_ids', [])
+                  if rid not in links:
+                      links.append(rid)
+          p['updated'] = '2026-09-06'
+          prospective_path.write_text(json.dumps(p, indent=2, ensure_ascii=False) + '\n')
+
+          handoff = Path('RESEARCH_HANDOFF.md')
+          text = handoff.read_text()
+          note = '''\n\n## Research round — 2026-09-06\n\nFresh primary-source scan covered FDA, NIH/Common Fund/FNIH, EPA, EMA, MHRA/UK, PMDA, Health Canada, TGA, Swissmedic, OECD, ISO, and major MPS/OoC industry developers. One material advancement was verified: ISO 25591 progressed beyond Committee Draft consultation and was approved for registration as a Draft International Standard on 4 Sep 2026. Added as a separate emerging qualification/validation-infrastructure event rather than rewriting the July Committee Draft record. No prospective milestone changed status; `prospective-composable-qualification` remains `in_progress` and now links the DIS-stage event. No other new item found in this round cleared the protocol's materiality/verification threshold.\n'''
+          if '## Research round — 2026-09-06' not in text:
+              text += note
+          handoff.write_text(text)
+          PY
+      - name: Validate
+        run: python scripts/validate_data.py
+      - name: Commit update and remove workflow
+        run: |
+          rm .github/workflows/oneoff-iso25591-dis-update.yml
+          git config user.name 'xnuxi'
+          git config user.email 'research@alethic.ai'
+          git add data/events.json data/prospective.json RESEARCH_HANDOFF.md .github/workflows/oneoff-iso25591-dis-update.yml
+          git commit -m 'Advance ISO 25591 MPS digital-twin standard toward DIS'
+          git push
