@@ -215,3 +215,8 @@ The strongest provisional claim is now:
 ## Quality bar
 
 Use primary/regulator-authored sources whenever possible. Preserve draft/final/Early Consideration, accepted/qualified, validation/qualification/adoption, human-based/broader NAM, animal-study displacement/other evidence substitution, direct-species/surrogate toxicology, independent convergence/formal harmonization, and sponsor claim/regulator confirmation. Never infer animals avoided merely from absent studies, validation-corpus size or announcements without an authoritative causal basis.
+
+
+## Research round — 2026-09-06
+
+Fresh primary-source scan covered FDA, NIH/Common Fund/FNIH, EPA, EMA, MHRA/UK, PMDA, Health Canada, TGA, Swissmedic, OECD, ISO, and major MPS/OoC industry developers. One material advancement was verified: ISO 25591 progressed beyond Committee Draft consultation and was approved for registration as a Draft International Standard on 4 Sep 2026. Added as a separate emerging qualification/validation-infrastructure event rather than rewriting the July Committee Draft record. No prospective milestone changed status; `prospective-composable-qualification` remains `in_progress` and now links the DIS-stage event. No other new item found in this round cleared the protocol's materiality/verification threshold.

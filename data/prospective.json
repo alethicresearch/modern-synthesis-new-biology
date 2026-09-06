@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "schema_version": 1,
   "milestones": [
     {
@@ -370,7 +370,8 @@
       ],
       "paper_origin": "new roadmap synthesis from reusable-qualification argument",
       "linked_event_ids": [
-        "2026-07-08-iso-mps-digital-twin-cd"
+        "2026-07-08-iso-mps-digital-twin-cd",
+        "2026-09-04-iso-mps-digital-twin-dis"
       ]
     }
   ]
