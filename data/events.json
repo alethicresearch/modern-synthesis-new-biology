@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06",
+  "updated": "2026-09-08",
   "schema_version": 2,
   "events": [
     {
@@ -1300,51 +1300,6 @@
       "source_url": null,
       "manuscript_impacts": [],
       "date_precision": "month"
-    },
-    {
-      "id": "2026-09-04-iso-mps-digital-twin-dis",
-      "date": "2026-09-04",
-      "display_date": "Sep 4, 2026",
-      "temporal_status": "emerging",
-      "institution": "ISO/TC 276/SC 2",
-      "title": "ISO MPS/OoC digital-twin framework advances toward Draft International Standard",
-      "summary": "Following closure of Committee Draft consultation, ISO 25591 was referred back to the working group and approved for registration as a Draft International Standard (DIS). The draft standardizes FAIR and regulatory-ready MPS/OoC data and metadata, reproducibility-oriented experimental design, and computational-model linkages including provenance and versioning. It remains under development and is not yet an International Standard.",
-      "why_it_matters": "Advances MPS/OoC data, reproducibility, provenance and digital-twin standardization one formal ISO stage beyond Committee Draft, strengthening infrastructure for reusable and composable qualification. It is a standards-development milestone, not regulatory qualification, routine adoption, or a published International Standard.",
-      "stage": [
-        "qualification",
-        "validation-infrastructure"
-      ],
-      "domain": [
-        "mps",
-        "organ-on-chip",
-        "standards",
-        "digital-twins",
-        "computational-modeling",
-        "reproducibility",
-        "provenance"
-      ],
-      "materiality": "medium",
-      "major_milestone": false,
-      "source_status": "primary_source_verified",
-      "source_url": "https://www.iso.org/standard/90834.html",
-      "manuscript_ref": null,
-      "manuscript_impacts": [
-        {
-          "section": "III/VI",
-          "claim": "Reusable qualification depends on standardized reporting, reproducibility, interoperability and provenance infrastructure",
-          "effect": "strengthens"
-        },
-        {
-          "section": "Table 3 / qualification milestones",
-          "claim": "Standards bodies are progressing regulatory-ready MPS/OoC data and metadata frameworks through formal international-standard stages",
-          "effect": "requires_update"
-        },
-        {
-          "section": "VII",
-          "claim": "Credibility can become reusable and composable when evidence, metadata, provenance and versioning are standardized across experimental and computational components",
-          "effect": "strengthens"
-        }
-      ]
     }
   ]
 }

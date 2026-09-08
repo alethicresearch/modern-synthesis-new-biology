@@ -1,6 +1,6 @@
 # Research handoff
 
-Updated: 2026-08-31
+Updated: 2026-09-08
 
 ## Current objective
 
@@ -217,6 +217,8 @@ The strongest provisional claim is now:
 Use primary/regulator-authored sources whenever possible. Preserve draft/final/Early Consideration, accepted/qualified, validation/qualification/adoption, human-based/broader NAM, animal-study displacement/other evidence substitution, direct-species/surrogate toxicology, independent convergence/formal harmonization, and sponsor claim/regulator confirmation. Never infer animals avoided merely from absent studies, validation-corpus size or announcements without an authoritative causal basis.
 
 
-## Research round — 2026-09-06
+## Research round — 2026-09-06 (corrected 2026-09-08)
 
-Fresh primary-source scan covered FDA, NIH/Common Fund/FNIH, EPA, EMA, MHRA/UK, PMDA, Health Canada, TGA, Swissmedic, OECD, ISO, and major MPS/OoC industry developers. One material advancement was verified: ISO 25591 progressed beyond Committee Draft consultation and was approved for registration as a Draft International Standard on 4 Sep 2026. Added as a separate emerging qualification/validation-infrastructure event rather than rewriting the July Committee Draft record. No prospective milestone changed status; `prospective-composable-qualification` remains `in_progress` and now links the DIS-stage event. No other new item found in this round cleared the protocol's materiality/verification threshold.
+The prior round overstated the ISO 25591 stage. On re-checking ISO's current primary record on 8 Sep 2026, ISO 25591 is still listed as **ISO/CD 25591 — Committee Draft, under development, being reviewed by the committee**. No primary ISO record could be verified showing registration as a Draft International Standard. The unsupported 4 Sep DIS-stage event was therefore removed from `data/events.json`, and its link was removed from `prospective-composable-qualification`. The verified 8 Jul Committee Draft event remains. The prospective composable-qualification milestone remains `in_progress` because the Committee Draft itself still represents active standards work on regulatory-ready MPS/OoC data, reproducibility, provenance, and versioning.
+
+A fresh 8 Sep primary-source scan across FDA, NIH/Common Fund/FNIH, EPA, EMA, MHRA/UK, PMDA, Health Canada, TGA, European Commission/JRC, OECD, ISO, and industry/MPS searches found no additional development since the prior verified roadmap updates that cleared the protocol's materiality and verification thresholds.
