@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08",
+  "updated": "2026-09-09",
   "schema_version": 1,
   "milestones": [
     {
@@ -19,7 +19,7 @@
       ],
       "major_milestone": true,
       "type": "catalytic_proposal",
-      "status": "watch",
+      "status": "in_progress",
       "actors": [
         "FDA",
         "other regulators",
@@ -38,7 +38,8 @@
       ],
       "paper_origin": "Table 3 / qualification program",
       "linked_event_ids": [
-        "2024-09-24-fda-istand-liver-chip"
+        "2024-09-24-fda-istand-liver-chip",
+        "2026-09-09-emulate-liver-chip-fqp"
       ]
     },
     {
@@ -80,7 +81,8 @@
       "linked_event_ids": [
         "2024-05-29-liver-mps-ring-trial",
         "2025-04-03-complement-arie-vqn",
-        "2026-07-20-complement-r2p-phase1"
+        "2026-07-20-complement-r2p-phase1",
+        "2026-09-09-emulate-liver-chip-fqp"
       ]
     },
     {
