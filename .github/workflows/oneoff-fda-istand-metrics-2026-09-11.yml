@@ -1,0 +1,87 @@
+name: One-off FDA ISTAND metrics update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/oneoff-fda-istand-metrics-2026-09-11.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update roadmap records
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          events_path = Path('data/events.json')
+          events = json.loads(events_path.read_text())
+          rid = '2026-09-02-fda-istand-metrics'
+          if not any(r.get('id') == rid for r in events['events']):
+              events['events'].append({
+                  'id': rid,
+                  'date': '2026-09-02',
+                  'display_date': 'Sep 2, 2026',
+                  'temporal_status': 'observed',
+                  'institution': 'FDA',
+                  'title': 'FDA metrics show ISTAND pipeline expansion without a completed qualification',
+                  'summary': 'FDA\'s September 2, 2026 biannual Drug Development Tool metrics update reports, as of July 31, 2026, 27 ISTAND projects in development: 24 accepted Letters of Intent and three accepted Qualification Plans, with zero newly qualified ISTAND tools in the preceding 12 months and zero qualified ISTAND tools to date.',
+                  'why_it_matters': 'Updates the formal denominator for the qualification pipeline: ISTAND increased from 16 projects, 14 LOIs and two QPs as of January 1, 2026 to 27 projects, 24 LOIs and three QPs as of July 31, while still producing no completed reusable qualification. This strengthens the claim that qualification activity is expanding faster than completed qualification and provides the correct baseline for interpreting the later Liver-Chip full qualification package submission.',
+                  'stage': ['qualification'],
+                  'domain': ['istand', 'metrics', 'qualification-pipeline', 'drug-development-tools'],
+                  'materiality': 'medium',
+                  'major_milestone': False,
+                  'source_status': 'primary_source_verified',
+                  'source_url': 'https://www.fda.gov/drugs/drug-development-tool-ddt-qualification-programs/summary-metrics-drug-development-tool-qualification-projects-submitted-fda',
+                  'manuscript_ref': None,
+                  'manuscript_impacts': [
+                      {
+                          'section': 'III',
+                          'claim': 'ISTAND pipeline denominator and the claim that qualification activity is growing before completed reusable qualification',
+                          'effect': 'requires_update'
+                      },
+                      {
+                          'section': 'References / working source 14',
+                          'claim': 'FDA DDT qualification metrics date and denominator',
+                          'effect': 'requires_update'
+                      },
+                      {
+                          'section': 'VII',
+                          'claim': 'Qualification activity is accumulating faster than completed reusable precedents',
+                          'effect': 'strengthens'
+                      }
+                  ]
+              })
+          events['events'].sort(key=lambda r: r.get('date', ''))
+          events['updated'] = '2026-09-11'
+          events_path.write_text(json.dumps(events, indent=2, ensure_ascii=False) + '\n')
+
+          handoff_path = Path('RESEARCH_HANDOFF.md')
+          handoff = handoff_path.read_text()
+          old = "Qualification activity remains much more visible than completed reusable qualification. FDA's Feb. 2026 metrics show 16 ISTAND projects in development as of Jan. 1, 2026 but **zero completed ISTAND qualifications**. AIM-NASH is a genuine formal qualification through the Biomarker Qualification Program rather than ISTAND."
+          new = "Qualification activity remains much more visible than completed reusable qualification. FDA's Sep. 2, 2026 biannual metrics (status as of Jul. 31, 2026) show **27 ISTAND projects in development: 24 accepted LOIs and 3 accepted Qualification Plans, with zero completed ISTAND qualifications**. This is up from 16 projects, 14 LOIs and 2 QPs as of Jan. 1, 2026. AIM-NASH is a genuine formal qualification through the Biomarker Qualification Program rather than ISTAND."
+          if old in handoff:
+              handoff = handoff.replace(old, new)
+          note = "\n\n## Research round — 2026-09-11\n\nA fresh primary-source scan identified FDA's Sep. 2, 2026 biannual DDT qualification metrics update as a material quantitative correction to the current ISTAND baseline. As of Jul. 31, ISTAND had 27 projects in development, including 24 accepted LOIs and 3 accepted Qualification Plans, but still zero qualified tools. A new observed event was added to `data/events.json`. This requires a later deliberate manuscript update in §III: replace the Jan. 1 denominator (16 projects / 14 LOIs / 2 QPs) with the Jul. 31 denominator (27 / 24 / 3) and update working source 14 to the Sep. 2 FDA release. The finding strengthens, rather than overturns, the manuscript's claim that qualification activity is growing faster than completed reusable qualification. No prospective milestone changes status: reusable MPS qualification remains `in_progress`, not achieved.\n\nThe same scan found no additional FDA, NIH, EPA, EMA, MHRA, OECD/ISO, or industry development since the Sep. 9 Liver-Chip FQP submission that independently cleared both the materiality and primary-source verification thresholds. NIH/NIA's Sep. 10–11 brain-aging NAM workshop and EMA's upcoming Eco-NAMs webinar are substantive scientific/regulatory-learning activities but not formal funding, qualification, standards, guidance, or adoption actions, so they were not promoted to verified events.\n"
+          if '## Research round — 2026-09-11' not in handoff:
+              handoff = handoff.rstrip() + note + '\n'
+          handoff = handoff.replace('Updated: 2026-09-08', 'Updated: 2026-09-11')
+          handoff_path.write_text(handoff)
+          PY
+      - name: Commit update and remove one-off workflow
+        run: |
+          rm .github/workflows/oneoff-fda-istand-metrics-2026-09-11.yml
+          git config user.name 'xnuxi'
+          git config user.email 'research@alethic.ai'
+          git add data/events.json RESEARCH_HANDOFF.md .github/workflows/oneoff-fda-istand-metrics-2026-09-11.yml
+          git commit -m 'Update FDA ISTAND qualification pipeline metrics'
+          git push
