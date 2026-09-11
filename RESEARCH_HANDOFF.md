@@ -1,6 +1,6 @@
 # Research handoff
 
-Updated: 2026-09-08
+Updated: 2026-09-11
 
 ## Current objective
 
@@ -34,7 +34,7 @@ Current event tags overlap:
 - Adoption: **12**
 - Major milestones: **25 of 37**
 
-Qualification activity remains much more visible than completed reusable qualification. FDA's Feb. 2026 metrics show 16 ISTAND projects in development as of Jan. 1, 2026 but **zero completed ISTAND qualifications**. AIM-NASH is a genuine formal qualification through the Biomarker Qualification Program rather than ISTAND.
+Qualification activity remains much more visible than completed reusable qualification. FDA's Sep. 2, 2026 biannual metrics (status as of Jul. 31, 2026) show **27 ISTAND projects in development: 24 accepted LOIs and 3 accepted Qualification Plans, with zero completed ISTAND qualifications**. This is up from 16 projects, 14 LOIs and 2 QPs as of Jan. 1, 2026. AIM-NASH is a genuine formal qualification through the Biomarker Qualification Program rather than ISTAND.
 
 ## Named product adoption
 
@@ -222,3 +222,10 @@ Use primary/regulator-authored sources whenever possible. Preserve draft/final/E
 The prior round overstated the ISO 25591 stage. On re-checking ISO's current primary record on 8 Sep 2026, ISO 25591 is still listed as **ISO/CD 25591 — Committee Draft, under development, being reviewed by the committee**. No primary ISO record could be verified showing registration as a Draft International Standard. The unsupported 4 Sep DIS-stage event was therefore removed from `data/events.json`, and its link was removed from `prospective-composable-qualification`. The verified 8 Jul Committee Draft event remains. The prospective composable-qualification milestone remains `in_progress` because the Committee Draft itself still represents active standards work on regulatory-ready MPS/OoC data, reproducibility, provenance, and versioning.
 
 A fresh 8 Sep primary-source scan across FDA, NIH/Common Fund/FNIH, EPA, EMA, MHRA/UK, PMDA, Health Canada, TGA, European Commission/JRC, OECD, ISO, and industry/MPS searches found no additional development since the prior verified roadmap updates that cleared the protocol's materiality and verification thresholds.
+
+## Research round — 2026-09-11
+
+A fresh primary-source scan identified FDA's Sep. 2, 2026 biannual DDT qualification metrics update as a material quantitative correction to the current ISTAND baseline. As of Jul. 31, ISTAND had 27 projects in development, including 24 accepted LOIs and 3 accepted Qualification Plans, but still zero qualified tools. A new observed event was added to `data/events.json`. This requires a later deliberate manuscript update in §III: replace the Jan. 1 denominator (16 projects / 14 LOIs / 2 QPs) with the Jul. 31 denominator (27 / 24 / 3) and update working source 14 to the Sep. 2 FDA release. The finding strengthens, rather than overturns, the manuscript's claim that qualification activity is growing faster than completed reusable qualification. No prospective milestone changes status: reusable MPS qualification remains `in_progress`, not achieved.
+
+The same scan found no additional FDA, NIH, EPA, EMA, MHRA, OECD/ISO, or industry development since the Sep. 9 Liver-Chip FQP submission that independently cleared both the materiality and primary-source verification thresholds. NIH/NIA's Sep. 10–11 brain-aging NAM workshop and EMA's upcoming Eco-NAMs webinar are substantive scientific/regulatory-learning activities but not formal funding, qualification, standards, guidance, or adoption actions, so they were not promoted to verified events.
+

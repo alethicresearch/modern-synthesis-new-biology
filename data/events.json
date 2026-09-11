@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09",
+  "updated": "2026-09-11",
   "schema_version": 2,
   "events": [
     {
@@ -1300,6 +1300,47 @@
       "source_url": null,
       "manuscript_impacts": [],
       "date_precision": "month"
+    },
+    {
+      "id": "2026-09-02-fda-istand-metrics",
+      "date": "2026-09-02",
+      "display_date": "Sep 2, 2026",
+      "temporal_status": "observed",
+      "institution": "FDA",
+      "title": "FDA metrics show ISTAND pipeline expansion without a completed qualification",
+      "summary": "FDA's September 2, 2026 biannual Drug Development Tool metrics update reports, as of July 31, 2026, 27 ISTAND projects in development: 24 accepted Letters of Intent and three accepted Qualification Plans, with zero newly qualified ISTAND tools in the preceding 12 months and zero qualified ISTAND tools to date.",
+      "why_it_matters": "Updates the formal denominator for the qualification pipeline: ISTAND increased from 16 projects, 14 LOIs and two QPs as of January 1, 2026 to 27 projects, 24 LOIs and three QPs as of July 31, while still producing no completed reusable qualification. This strengthens the claim that qualification activity is expanding faster than completed qualification and provides the correct baseline for interpreting the later Liver-Chip full qualification package submission.",
+      "stage": [
+        "qualification"
+      ],
+      "domain": [
+        "istand",
+        "metrics",
+        "qualification-pipeline",
+        "drug-development-tools"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.fda.gov/drugs/drug-development-tool-ddt-qualification-programs/summary-metrics-drug-development-tool-qualification-projects-submitted-fda",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III",
+          "claim": "ISTAND pipeline denominator and the claim that qualification activity is growing before completed reusable qualification",
+          "effect": "requires_update"
+        },
+        {
+          "section": "References / working source 14",
+          "claim": "FDA DDT qualification metrics date and denominator",
+          "effect": "requires_update"
+        },
+        {
+          "section": "VII",
+          "claim": "Qualification activity is accumulating faster than completed reusable precedents",
+          "effect": "strengthens"
+        }
+      ]
     },
     {
       "id": "2026-09-09-emulate-liver-chip-fqp",
