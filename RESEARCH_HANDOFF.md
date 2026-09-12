@@ -1,6 +1,6 @@
 # Research handoff
 
-Updated: 2026-09-11
+Updated: 2026-09-12
 
 ## Current objective
 
@@ -229,3 +229,8 @@ A fresh primary-source scan identified FDA's Sep. 2, 2026 biannual DDT qualifica
 
 The same scan found no additional FDA, NIH, EPA, EMA, MHRA, OECD/ISO, or industry development since the Sep. 9 Liver-Chip FQP submission that independently cleared both the materiality and primary-source verification thresholds. NIH/NIA's Sep. 10–11 brain-aging NAM workshop and EMA's upcoming Eco-NAMs webinar are substantive scientific/regulatory-learning activities but not formal funding, qualification, standards, guidance, or adoption actions, so they were not promoted to verified events.
 
+## Research round — 2026-09-12
+
+A fresh primary-source scan across FDA, NIH, EPA, EMA, MHRA/UK, European Commission, OECD/ISO and industry sources found no new development since the Sep. 11 round that independently cleared both the protocol's materiality and verification thresholds. EMA's Sep. 1 Voluntary Data Submission pilot, FDA's Sep. 2 ISTAND metrics update, and Emulate's Sep. 9 Liver-Chip Full Qualification Package submission are already represented in `data/events.json`; they were not duplicated.
+
+Potential device-method lead: FDA held a Sep. 9, 2026 Town Hall on Biocompatibility Risk Assessment focused on updates to ISO 10993-1:2025 and least-burdensome risk-assessment approaches for material-mediated pyrogenicity and systemic endpoints. As of this scan, FDA's event page states that presentation materials, printable slides and a transcript will be posted, but they are not yet available there. Do not promote this to a verified roadmap event unless the posted materials show a substantive change in method recognition, accepted non-animal evidence, or test-avoidance expectations beyond the already known risk-based framework.
