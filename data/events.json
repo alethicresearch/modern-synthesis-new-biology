@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11",
+  "updated": "2026-09-20",
   "schema_version": 2,
   "events": [
     {
@@ -1382,6 +1382,104 @@
           "section": "VII",
           "claim": "Cross-site reproducibility and scalable platform transfer are becoming part of the evidence package for reusable regulatory credibility",
           "effect": "strengthens"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-15-curi-bio-nmj-istand-loi",
+      "date": "2026-09-15",
+      "display_date": "Sep 15, 2026",
+      "temporal_status": "observed",
+      "institution": "Curi Bio / FDA CDER ISTAND",
+      "title": "Human 3D neuromuscular-junction assay LOI accepted into ISTAND",
+      "summary": "FDA CDER accepted Curi Bio's Letter of Intent into ISTAND for a human iPSC-derived 3D neuromuscular-junction contractility assay proposed as a non-animal Drug Development Tool for botulinum-neurotoxin potency testing. The next step is development of a Qualification Plan including cross-laboratory validation and a defined context of use; LOI acceptance is not Qualification Plan acceptance, qualification, regulatory adoption, or demonstrated displacement.",
+      "why_it_matters": "Extends the ISTAND qualification pipeline to a human functional tissue assay aimed at replacing a legacy mouse potency bioassay, providing a concrete prospective displacement use case while remaining short of qualification.",
+      "stage": [
+        "qualification"
+      ],
+      "domain": [
+        "istand",
+        "drug-development-tools",
+        "ipsc",
+        "neuromuscular-junction",
+        "botulinum-toxin",
+        "potency-testing",
+        "animal-replacement"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.curibio.com/news/fda-accepts-curi-bios-letter-of-intent-into-istand-program-to-qualify-3d-neuromuscular-junction-assay-as-a-non-animal-replacement-for-botulinum-toxin-potency-testing",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III",
+          "claim": "ISTAND is becoming reusable qualification infrastructure across distinct human-based technologies and decision contexts",
+          "effect": "strengthens"
+        },
+        {
+          "section": "IV",
+          "claim": "Qualification efforts can target defined legacy animal tests where a human-relevant functional assay is available",
+          "effect": "strengthens with LOI-only caveat"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-18-fda-cder-nam-use-infrastructure",
+      "date": "2026-09-18",
+      "display_date": "Sep 18, 2026",
+      "temporal_status": "observed",
+      "institution": "FDA CDER",
+      "title": "CDER publishes structured NAM use-case and streamlined-nonclinical infrastructure",
+      "summary": "FDA CDER published a searchable NAM Use Case Database linking selected NAM examples to public review materials from approved drug applications and an inventory of drug-development contexts for which CDER is open to streamlined nonclinical programs, including reduced animal use, omission in defined circumstances, and fit-for-purpose NAMs. FDA states that the database is illustrative, non-exhaustive, does not constitute guidance or approval of a method for other uses, and that regulatory conclusions remain context-specific. CDER also identifies a NAMs Coordinating Committee as a central point of contact to promote consistency, knowledge sharing, and appropriate NAM integration.",
+      "why_it_matters": "Converts dispersed product-level regulatory experience into searchable institutional knowledge and makes context-specific streamlining practices more legible and reusable, while stopping short of method qualification or blanket prospective acceptance.",
+      "stage": [
+        "adoption",
+        "review-infrastructure"
+      ],
+      "domain": [
+        "nams",
+        "regulatory-transparency",
+        "regulatory-learning",
+        "drug-development",
+        "review-infrastructure",
+        "animal-reduction"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.fda.gov/drugs/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams/new-approach-methodologies-nams-database-use-case-examples",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III",
+          "claim": "Regulatory learning should become public, legible, and reusable rather than remain confined to individual submissions",
+          "effect": "direct implementation evidence"
+        },
+        {
+          "section": "VI",
+          "claim": "Reviewer capacity and institutional mechanisms are needed to evaluate unfamiliar evidence consistently",
+          "effect": "strengthens through CDER NAMs Coordinating Committee"
+        },
+        {
+          "section": "VII",
+          "claim": "Routinization requires repeated precedent and public regulatory learning",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / adoption transparency",
+          "claim": "Structured public reporting of NAM regulatory adoption/use examples",
+          "effect": "material progress; target remains in progress"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
+          "effect": "requires_update"
         }
       ]
     }
