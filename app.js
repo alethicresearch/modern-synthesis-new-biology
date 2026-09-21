@@ -4,7 +4,7 @@ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const lab=v=>String(v??'').replace(/[_-]/g,' ').replace(/\b\w/g,m=>m.toUpperCase());
 const year=r=>String(r.date||r.target_date||'').slice(0,4), dkey=r=>r.date||r.target_date||'', tclass=r=>r.record_type==='prospective'?'prospective':(r.temporal_status||'observed');
 const actors=r=>r.record_type==='prospective'?(r.actors||[]):[r.institution];
-const ANCHORS=new Set(['2022-12-fda-modernization-2','2024-09-24-fda-istand-liver-chip','2025-04-10-fda-roadmap','2025-04-29-nih-human-based-initiative','2025-12-aim-mash-qualification','2026-08-27-epa-regulatory-use','2026-08-31-fda-icmra-endotoxin','prospective-mps-reusable-qualification','prospective-international-convergence','prospective-multi-context-displacement','prospective-composable-qualification']);
+const ANCHORS=new Set(['2022-12-fda-modernization-2','2024-09-24-fda-istand-liver-chip','2025-04-10-fda-roadmap','2025-04-29-nih-human-based-initiative','2025-12-aim-mash-qualification','2026-08-27-epa-regulatory-use','2026-08-31-fda-icmra-endotoxin','2026-09-21-fda-nonclinical-rule-nam-database','prospective-mps-reusable-qualification','prospective-international-convergence','prospective-multi-context-displacement','prospective-composable-qualification']);
 async function json(path){const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error(`${path}: HTTP ${r.status}`);return r.json()}
 function link(url,text='Source ↗'){return url?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`:''}
 function fill(sel,vals){const el=$(sel);if(!el)return;vals.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=lab(v);el.appendChild(o)})}
