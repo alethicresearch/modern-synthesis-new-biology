@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "schema_version": 2,
   "events": [
     {
@@ -1480,6 +1480,60 @@
           "section": "Supplementary Table S1",
           "claim": "Selected institutional milestones, 2022–2026",
           "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-21-fda-nonclinical-rule-nam-database",
+      "date": "2026-09-21",
+      "display_date": "Sep 21, 2026",
+      "temporal_status": "observed",
+      "institution": "FDA",
+      "title": "FDA updates nonclinical-testing regulations and formalizes NAM-use transparency",
+      "summary": "FDA issued a direct final rule updating human drug and biologics regulations to replace animal-specific terminology with broader “nonclinical tests” and “nonclinical studies,” aligning implementing regulations with the statutory framework that permits scientifically appropriate non-animal methods. FDA states that the rule does not prohibit animal studies or change evidentiary standards. In parallel, FDA highlighted its new NAM Use Case Database, initially containing 25 selected examples from public review materials for approved drugs; inclusion is illustrative and does not constitute general qualification or prospective acceptance.",
+      "why_it_matters": "Moves the transition beyond statutory permission into implementing-regulation language and makes product-level NAM use more visible. It strengthens the manuscript’s Commitment → Qualification → Adoption framework while preserving the distinction between application-level use, reusable qualification, and routine displacement. The direct final rule remains subject to withdrawal if FDA receives significant adverse comments.",
+      "stage": [
+        "commitment",
+        "adoption",
+        "review-infrastructure"
+      ],
+      "domain": [
+        "nams",
+        "drug-development",
+        "regulatory-implementation",
+        "regulatory-transparency",
+        "animal-reduction"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-updates-regulations-advance-innovative-alternatives-animal-testing",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "II",
+          "claim": "The U.S. transition has moved from statutory permission into conforming FDA implementing regulations",
+          "effect": "requires_update"
+        },
+        {
+          "section": "III/VI",
+          "claim": "Public regulatory learning and reviewer infrastructure can make NAM evidence more legible and reusable",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VII",
+          "claim": "Permission is not adoption: qualification and context-specific evidentiary acceptance remain necessary after legal and regulatory barriers are removed",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 1 / Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
+          "effect": "requires_update"
+        },
+        {
+          "section": "Table 3 / adoption transparency",
+          "claim": "Application-level NAM use should become publicly measurable without being conflated with animal-study displacement",
+          "effect": "material progress; target remains in progress"
         }
       ]
     }
