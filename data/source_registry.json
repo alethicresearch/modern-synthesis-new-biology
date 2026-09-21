@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01",
+  "updated": "2026-09-21",
   "schema_version": 1,
   "purpose": "Verified source overlays for roadmap records. This registry can add multiple well-labeled sources, correct source status, or annotate unresolved sourcing without erasing the research-side record.",
   "records": {
@@ -116,6 +116,30 @@
     "2026-nih-reviewer-eoi": {
       "source_status": "needs_public_source",
       "source_note": "Author-confirmed NIH recruitment notice dated September 2026; retain as an emerging roadmap record while the public locator is pending."
+    },
+    "2026-09-21-fda-nonclinical-rule-nam-database": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.fda.gov/news-events/press-announcements/fda-updates-regulations-advance-innovative-alternatives-animal-testing",
+      "sources": [
+        {
+          "label": "FDA announcement · regulatory update and NAM use-case database",
+          "short_label": "FDA announcement",
+          "url": "https://www.fda.gov/news-events/press-announcements/fda-updates-regulations-advance-innovative-alternatives-animal-testing",
+          "type": "agency_announcement",
+          "role": "rule_summary",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-09-21"
+        },
+        {
+          "label": "FDA NAMs Database of Use Case Examples",
+          "short_label": "NAM use cases",
+          "url": "https://www.fda.gov/drugs/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams/new-approach-methodologies-nams-database-use-case-examples",
+          "type": "agency_database",
+          "role": "application_level_use_examples",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-09-21"
+        }
+      ]
     }
   }
 }
