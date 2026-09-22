@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "schema_version": 2,
   "events": [
     {
@@ -1536,6 +1536,116 @@
           "effect": "material progress; target remains in progress"
         }
       ]
+    },
+    {
+      "id": "2026-09-21-nih-human-based-infrastructure",
+      "date": "2026-09-21",
+      "display_date": "Sep 21, 2026",
+      "temporal_status": "observed",
+      "institution": "NIH",
+      "title": "NIH expands human-based research infrastructure and launches Bio Genesis laboratory",
+      "summary": "NIH announced more than $88 million for 10 Biomedical Research Facilities projects supporting human-based science and plans for a Bio Genesis Autonomous Human Biology Laboratory within the NIH Clinical Center integrating standardized human organoids, robotics, AI, and advanced data systems in a closed-loop experimental platform.",
+      "why_it_matters": "Materially expands physical and technical infrastructure for standardized, reproducible human biology. This is infrastructure for method development, reproducibility, and scale—not by itself regulatory qualification or demonstrated animal-study displacement.",
+      "stage": [
+        "commitment",
+        "qualification",
+        "review-infrastructure"
+      ],
+      "domain": [
+        "human-based-research",
+        "organoids",
+        "reproducibility",
+        "infrastructure"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.nih.gov/news-events/news-releases/nih-makes-major-investments-advance-human-based-research-infrastructure-technologies",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.B",
+          "claim": "Standardization and reproducibility require dedicated infrastructure",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VIII",
+          "claim": "Funders can treat standardized resources and reproducibility as infrastructure deserving direct investment",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-21-nih-animal-use-reporting-reviewers",
+      "date": "2026-09-21",
+      "display_date": "Sep 21, 2026",
+      "temporal_status": "observed",
+      "institution": "NIH / OLAW",
+      "title": "NIH opens animal-use reporting RFI and publicly recruits human-based-science reviewers",
+      "summary": "OLAW opened an RFI on yearly public institutional reporting of all live vertebrate animals covered by PHS Policy, including USDA pain and distress categories. NIH also publicly launched recruitment of grant reviewers with expertise in human-based science through a dedicated REDCap portal.",
+      "why_it_matters": "Two manuscript milestones have moved into formal implementation activity: animal-use measurement is now an active federal policy-development question, and reviewer expertise is being publicly recruited. Neither success condition is yet complete: no annual reporting requirement or baseline has been adopted, and reviewer access/use is not yet quantified.",
+      "stage": [
+        "commitment",
+        "adoption",
+        "review-infrastructure"
+      ],
+      "domain": [
+        "animal-use-baseline",
+        "peer-review",
+        "human-based-research",
+        "measurement"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-27-001.html",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "Table 3 / Animal-use baseline",
+          "claim": "Publish domain-specific baseline use for NIH-funded research and update annually",
+          "effect": "formal policy development underway; endpoint not achieved"
+        },
+        {
+          "section": "Table 3 / Reviewer expertise",
+          "claim": "Report access to human-based-method expertise in study sections and review teams",
+          "effect": "public recruitment underway; measurable access/use remains outstanding"
+        },
+        {
+          "section": "III.B / VII",
+          "claim": "Reviewer expertise is a managed component of qualification and adoption infrastructure",
+          "effect": "strengthens"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-21-hhs-reducing-animal-testing-tracker",
+      "date": "2026-09-21",
+      "display_date": "Sep 21, 2026",
+      "temporal_status": "observed",
+      "institution": "HHS",
+      "title": "HHS launches cross-agency human-based research and animal-testing action tracker",
+      "summary": "HHS launched a public cross-agency page cataloguing federal actions to reduce animal testing and advance human-based research across innovation, investment, validation, regulatory implementation, and review infrastructure.",
+      "why_it_matters": "Creates an official cross-agency chronology and transparency layer. It is useful as a navigation and corroboration source, while substantive claims should continue to rely on the underlying NIH, FDA, and other agency primary records.",
+      "stage": [
+        "commitment",
+        "adoption"
+      ],
+      "domain": [
+        "cross-agency",
+        "transparency",
+        "nams"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.hhs.gov/reducing-animal-testing/index.html",
+      "manuscript_ref": null
     }
   ]
 }
