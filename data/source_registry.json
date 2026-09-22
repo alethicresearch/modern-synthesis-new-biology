@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "schema_version": 1,
   "purpose": "Verified source overlays for roadmap records. This registry can add multiple well-labeled sources, correct source status, or annotate unresolved sourcing without erasing the research-side record.",
   "records": {
@@ -138,6 +138,69 @@
           "role": "application_level_use_examples",
           "verified_by": "official-agency-page",
           "checked_at": "2026-09-21"
+        }
+      ]
+    },
+    "2026-09-21-nih-human-based-infrastructure": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.nih.gov/news-events/news-releases/nih-makes-major-investments-advance-human-based-research-infrastructure-technologies",
+      "sources": [
+        {
+          "label": "NIH — Major investments to advance human-based research infrastructure and technologies",
+          "short_label": "NIH infrastructure announcement",
+          "url": "https://www.nih.gov/news-events/news-releases/nih-makes-major-investments-advance-human-based-research-infrastructure-technologies",
+          "type": "agency_announcement",
+          "role": "primary",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-09-22"
+        }
+      ]
+    },
+    "2026-09-21-nih-animal-use-reporting-reviewers": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-27-001.html",
+      "sources": [
+        {
+          "label": "NIH OLAW — RFI on Feasibility of Annual Reporting of Live Vertebrate Animal Numbers",
+          "short_label": "OLAW reporting RFI",
+          "url": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-27-001.html",
+          "type": "agency_notice",
+          "role": "animal_use_reporting",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "label": "NIH — Human-Based Reviewer Recruitment",
+          "short_label": "Reviewer recruitment",
+          "url": "https://redcap.nih.gov/surveys/?s=KNTDTMXTAP794ADA",
+          "type": "agency_recruitment",
+          "role": "reviewer_expertise",
+          "verified_by": "official-nih-redcap",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "label": "NIH — Human-based research infrastructure announcement",
+          "short_label": "NIH announcement",
+          "url": "https://www.nih.gov/news-events/news-releases/nih-makes-major-investments-advance-human-based-research-infrastructure-technologies",
+          "type": "agency_announcement",
+          "role": "implementation_context",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-09-22"
+        }
+      ]
+    },
+    "2026-09-21-hhs-reducing-animal-testing-tracker": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.hhs.gov/reducing-animal-testing/index.html",
+      "sources": [
+        {
+          "label": "HHS — Reducing Animal Testing",
+          "short_label": "HHS action tracker",
+          "url": "https://www.hhs.gov/reducing-animal-testing/index.html",
+          "type": "agency_tracker",
+          "role": "cross_agency_chronology",
+          "verified_by": "official-hhs-page",
+          "checked_at": "2026-09-22"
         }
       ]
     }
