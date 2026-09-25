@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22",
+  "updated": "2026-09-25",
   "schema_version": 2,
   "events": [
     {
@@ -1646,6 +1646,55 @@
       "source_status": "primary_source_verified",
       "source_url": "https://www.hhs.gov/reducing-animal-testing/index.html",
       "manuscript_ref": null
+    },
+    {
+      "id": "2026-09-22-systimmune-si-b037-nam-ind",
+      "date": "2026-09-22",
+      "display_date": "Sep 22, 2026",
+      "temporal_status": "observed",
+      "institution": "SystImmune / FDA",
+      "title": "SI-B037 IND advances with human NAM-based nonclinical package",
+      "summary": "SystImmune reported FDA clearance of its IND for SI-B037 and reported that human organ-on-chip systems and primary human tissue models were used in place of conventional animal toxicology studies in the integrated nonclinical safety and translational package. This is a sponsor-reported application-level use case, not reusable method qualification or general FDA acceptance.",
+      "why_it_matters": "Adds a contemporary sponsor-specific example of human-relevant methods entering a real regulatory development decision with reported displacement of conventional animal toxicology, while remaining distinct from regulator-authored precedent and reusable qualification.",
+      "stage": [
+        "adoption"
+      ],
+      "domain": [
+        "oncology",
+        "bispecific-antibody",
+        "ind",
+        "organ-on-chip",
+        "primary-human-tissue",
+        "nams",
+        "animal-displacement"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.prnewswire.com/news-releases/systimmune-receives-fda-clearance-of-ind-application-for-bispecific-antibody-si-b037-302885194.html",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "IV/V",
+          "claim": "Human-relevant evidence can enter a real IND decision and replace conventional animal toxicology in a sponsor-specific program",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VII",
+          "claim": "Application-level adoption is emerging but isolated sponsor cases remain distinct from reusable qualification or routine displacement",
+          "effect": "strengthens with sponsor-source caveat"
+        },
+        {
+          "section": "Table 3 / multi-context displacement",
+          "claim": "Documented replacement or avoidance of specified animal studies across multiple development contexts",
+          "effect": "material progress; target remains in progress"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional and adoption milestones, 2022–2026",
+          "effect": "requires_update"
+        }
+      ]
     }
   ]
 }
