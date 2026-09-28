@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25",
+  "updated": "2026-09-28",
   "schema_version": 2,
   "events": [
     {
@@ -1382,6 +1382,49 @@
           "section": "VII",
           "claim": "Cross-site reproducibility and scalable platform transfer are becoming part of the evidence package for reusable regulatory credibility",
           "effect": "strengthens"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-10-iso-mps-ooc-vocabulary-dis",
+      "date": "2026-09-10",
+      "display_date": "Sep 10, 2026",
+      "temporal_status": "observed",
+      "institution": "ISO/TC 276/SC 2",
+      "title": "ISO MPS/Organ-on-Chip vocabulary advances to Draft International Standard ballot",
+      "summary": "ISO initiated the 12-week Draft International Standard ballot for ISO/DIS 25448, a vocabulary standard defining terms for microphysiological systems and Organ-on-Chip systems. The project remains under development at stage 40.20 and is not yet a published International Standard.",
+      "why_it_matters": "Advances a shared terminology layer for MPS and Organ-on-Chip technologies into ISO member enquiry, supporting interoperability, reproducibility and regulatory communication while remaining short of final publication.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "standards",
+        "mps",
+        "organ-on-chip",
+        "vocabulary",
+        "interoperability"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.iso.org/standard/90423.html",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III/VI",
+          "claim": "Reusable qualification infrastructure depends on shared terminology and standards as well as validation data",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3",
+          "claim": "Common terminology is a concrete standards dependency for reproducibility and cross-jurisdictional reuse",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional and standards milestones, 2022–2026",
+          "effect": "requires_update"
         }
       ]
     },
