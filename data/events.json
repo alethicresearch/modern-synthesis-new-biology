@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28",
+  "updated": "2026-09-30",
   "schema_version": 2,
   "events": [
     {
@@ -1736,6 +1736,45 @@
           "section": "Supplementary Table S1",
           "claim": "Selected institutional and adoption milestones, 2022–2026",
           "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-28-nist-tbmnk-interlaboratory-standardization",
+      "date": "2026-09-28",
+      "display_date": "Sep 28, 2026",
+      "temporal_status": "observed",
+      "institution": "NIST Flow Cytometry Standards Consortium",
+      "title": "21-site human-cell assay study demonstrates cross-platform standardization",
+      "summary": "NIST reported an interlaboratory study of a human TBMNK cell assay across 42 cytometers from seven manufacturers at 21 sites. Common samples, reagents and SOPs plus SI-traceable units enabled comparable measurements across instrument platforms.",
+      "why_it_matters": "Provides a standards-body example of cross-site reproducibility, reference data and measurement traceability for a human-based assay. It is not an MPS qualification, regulatory acceptance decision, or animal-study displacement result.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "human-based-models",
+        "reproducibility",
+        "interlaboratory-study",
+        "standards",
+        "flow-cytometry",
+        "reference-data"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.nist.gov/publications/standardizing-human-tbmnk-cell-assay-across-instrument-platforms-new-framework",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.B / VI",
+          "claim": "Reusable confidence requires cross-site reproducibility, common procedures and measurement comparability",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / cross-site reproducibility",
+          "claim": "Human-based platform reproducibility can be demonstrated through multi-site standards studies",
+          "effect": "strengthens"
         }
       ]
     }
