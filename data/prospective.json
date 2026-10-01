@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "schema_version": 1,
   "milestones": [
     {
@@ -83,7 +83,8 @@
         "2025-04-03-complement-arie-vqn",
         "2026-07-20-complement-r2p-phase1",
         "2026-09-09-emulate-liver-chip-fqp",
-        "2026-09-28-nist-tbmnk-interlaboratory-standardization"
+        "2026-09-28-nist-tbmnk-interlaboratory-standardization",
+        "2026-09-30-atcc-fda-niaid-nam-contracts"
       ]
     },
     {
@@ -125,7 +126,8 @@
       ],
       "paper_origin": "Table 3 / accountability milestones",
       "linked_event_ids": [
-        "2026-08-27-epa-regulatory-use"
+        "2026-08-27-epa-regulatory-use",
+        "2026-09-21-nih-animal-use-reporting-reviewers"
       ]
     },
     {
@@ -173,7 +175,8 @@
       "linked_event_ids": [
         "2026-04-20-fda-year-one",
         "2026-03-25-mhra-nonanimal-medicines-approach",
-        "2026-09-18-fda-cder-nam-use-infrastructure"
+        "2026-09-18-fda-cder-nam-use-infrastructure",
+        "2026-09-09-fda-invitro-nam-scoping"
       ]
     },
     {
@@ -213,7 +216,8 @@
       "paper_origin": "Table 3 / reviewer expertise",
       "linked_event_ids": [
         "2026-nih-reviewer-eoi",
-        "2026-06-15-nih-oriva"
+        "2026-06-15-nih-oriva",
+        "2026-09-21-nih-animal-use-reporting-reviewers"
       ]
     },
     {
@@ -375,7 +379,9 @@
       ],
       "paper_origin": "new roadmap synthesis from reusable-qualification argument",
       "linked_event_ids": [
-        "2026-07-08-iso-mps-digital-twin-cd"
+        "2026-07-08-iso-mps-digital-twin-cd",
+        "2026-09-22-arpa-h-circle-digital-twin-regulatory",
+        "2026-09-30-arpa-h-surpass"
       ]
     }
   ]

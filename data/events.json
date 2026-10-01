@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "schema_version": 2,
   "events": [
     {
@@ -1386,6 +1386,49 @@
       ]
     },
     {
+      "id": "2026-09-09-fda-invitro-nam-scoping",
+      "date": "2026-09-09",
+      "display_date": "Sep 9, 2026",
+      "temporal_status": "observed",
+      "institution": "FDA CDER authors",
+      "title": "FDA-authored analysis quantifies in-vitro NAM use in drug submissions",
+      "summary": "A peer-reviewed scoping analysis by CDER scientists examined 574,963 nonclinical study reports submitted from 2011–2025 and identified 1,381 in-vitro NAM-related reports across 981 applications (0.24% overall). Annual representation increased from 0.14% in 2014 to 0.40% in 2025; most identified reports were in INDs, while more complex 3D, reconstructed-tissue and MPS/organ-on-chip systems remained less common.",
+      "why_it_matters": "Provides a rare submission-level denominator for adoption. It shows that NAM use is real and increasing but remains quantitatively sparse and predominantly complementary, strengthening the distinction between institutional commitment, product-level use and routine adoption.",
+      "stage": [
+        "adoption",
+        "measurement"
+      ],
+      "domain": [
+        "nams",
+        "in-vitro",
+        "drug-development",
+        "regulatory-submissions",
+        "adoption-measurement"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "peer_reviewed_fda_authored",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42716173/",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "I",
+          "claim": "Human-based methods are entering regulatory workflows, but routine submission-level adoption remains early",
+          "effect": "requires_nuance"
+        },
+        {
+          "section": "III.D/VIII",
+          "claim": "Adoption should be measured with denominators rather than examples alone",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional and evidentiary milestones, 2022–2026",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
       "id": "2026-09-10-iso-mps-ooc-vocabulary-dis",
       "date": "2026-09-10",
       "display_date": "Sep 10, 2026",
@@ -1740,6 +1783,164 @@
       ]
     },
     {
+      "id": "2026-09-22-arpa-h-circle-digital-twin-regulatory",
+      "date": "2026-09-22",
+      "display_date": "Sep 22, 2026",
+      "temporal_status": "observed",
+      "institution": "ARPA-H",
+      "title": "CIRCLE awards build regulatory-ready digital-twin validation infrastructure",
+      "summary": "ARPA-H announced CIRCLE performer awards totaling up to $144.9 million over five years. The program combines mechanistic and AI-enabled digital twins with critical-care data and clinical testing. Its Twin-TECC acceleration platform, awarded up to $18.3 million to Sage Bionetworks, is designed as a development, validation and testing sandbox supporting simulated clinical trials and readiness for future FDA digital-twin and Software-as-a-Medical-Device applications.",
+      "why_it_matters": "Creates funded verification, validation, uncertainty and regulatory-readiness infrastructure for digital twins rather than treating computational models as standalone demonstrations. It remains development infrastructure, not FDA acceptance or qualification.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure",
+        "computational-credibility"
+      ],
+      "domain": [
+        "digital-twins",
+        "computational-modeling",
+        "clinical-trials",
+        "regulatory-readiness"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://arpa-h.gov/news-and-events/arpa-h-selects-teams-transform-critical-care-new-lifesaving-technology",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.C",
+          "claim": "Computational methods require explicit credibility, validation and applicability infrastructure",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 2 / Frontier",
+          "claim": "Digital twins remain frontier but now have formal federal regulatory-readiness infrastructure",
+          "effect": "requires_update"
+        },
+        {
+          "section": "Table 3 / Computational credibility",
+          "claim": "Formal infrastructure for digital-twin validation and FDA readiness is emerging",
+          "effect": "material_progress"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-23-fda-cber-ngs-adventitious",
+      "date": "2026-09-23",
+      "display_date": "Sep 23, 2026",
+      "temporal_status": "observed",
+      "institution": "FDA CBER",
+      "title": "CBER evaluates NGS NAM readiness for adventitious-agent testing in biologics",
+      "summary": "FDA CBER convened a scientific public workshop on next-generation sequencing for adventitious-agent detection in biological products. FDA described NGS-based detection as a NAM that can enhance biologics safety while reducing reliance on animal testing and focused discussion on analytical validation, data interpretation, implementation challenges and integration into existing safety-testing frameworks across cell and gene therapies, vaccines, blood products and xenotransplantation products.",
+      "why_it_matters": "Extends regulator-facing NAM implementation work into a broad biologics safety context beyond early monoclonal-antibody and DILI examples, while remaining workshop and readiness activity rather than method qualification or blanket acceptance.",
+      "stage": [
+        "qualification",
+        "adoption",
+        "review-infrastructure"
+      ],
+      "domain": [
+        "biologics",
+        "ngs",
+        "adventitious-agents",
+        "cell-and-gene-therapy",
+        "vaccines"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.fda.gov/vaccines-blood-biologics/office-therapeutic-products-otp-events-meetings-and-workshops/fda-scientific-public-workshop-next-generation-sequencing-adventitious-agent-detection-biologics",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "VI",
+          "claim": "Domain readiness should be tracked at the decision-context level",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / Expansion beyond early modalities",
+          "claim": "FDA activity is extending into additional biologics safety contexts",
+          "effect": "leading_indicator"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-23-react4life-cbrn-ooc-prototype",
+      "date": "2026-09-23",
+      "display_date": "Sep 23, 2026",
+      "temporal_status": "observed",
+      "institution": "React4life / U.S. CBRN program",
+      "title": "Organ-on-chip platform enters U.S. CBRN medical-countermeasure prototype program",
+      "summary": "React4life reported a prototype agreement under U.S. government Other Transaction Authority to adapt its organ-on-chip and microphysiological-system platform for medical-countermeasure development. The company identifies Agreement W911SR-26-9-A035 and includes a government funding acknowledgement. The work is aimed at human-relevant nonclinical applications; successful prototype work could support later evaluation but does not establish FDA qualification or Animal Rule displacement.",
+      "why_it_matters": "Provides an operational example of human-based MPS technology entering the federal medical-countermeasure ecosystem, where the manuscript identifies a structural Animal Rule boundary. Evidence is company-reported with a government funding acknowledgement rather than an FDA regulatory decision.",
+      "stage": [
+        "commitment",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "mps",
+        "organ-on-chip",
+        "cbrn",
+        "medical-countermeasures",
+        "animal-rule"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "company_report_with_government_acknowledgment",
+      "source_url": "https://www.react4life.com/organ-on-chip-technology-medical-countermeasures/",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "VI / Animal Rule discussion",
+          "claim": "Human-based methods can contribute supporting evidence in medical-countermeasure programs even where Animal Rule efficacy requirements remain",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / Animal Rule boundary",
+          "claim": "Federal countermeasure programs are beginning to operationalize MPS platforms, but formal interagency boundary guidance remains outstanding",
+          "effect": "leading_indicator"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-25-arpa-h-cosmos-mps-organoid",
+      "date": "2026-09-25",
+      "display_date": "Sep 25, 2026",
+      "temporal_status": "observed",
+      "institution": "ARPA-H",
+      "title": "COSMOS solicitation requires human MPS and organoid platforms for drug-testing research",
+      "summary": "ARPA-H opened the COSMOS solicitation, which requires microphysiological systems derived from heart, brain, kidney and uterine tissues in Phase 1 and contemplates using the best-performing MPS or organoid systems for targeted drug testing with pharmaceutical partners in Phase 2.",
+      "why_it_matters": "Makes advanced human MPS/organoid systems the required experimental substrate of a formal federal R&D program and creates a potential path into pharma screening. It is a solicitation and method-development investment, not a validation result, qualification or adoption outcome.",
+      "stage": [
+        "commitment",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "mps",
+        "organoids",
+        "drug-screening",
+        "arpa-h",
+        "federal-funding"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://arpa-h.gov/explore-funding/initiatives-and-sprints/cosmos",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.B",
+          "claim": "Federal investment increasingly supports scalable human-model infrastructure",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
       "id": "2026-09-28-nist-tbmnk-interlaboratory-standardization",
       "date": "2026-09-28",
       "display_date": "Sep 28, 2026",
@@ -1775,6 +1976,104 @@
           "section": "Table 3 / cross-site reproducibility",
           "claim": "Human-based platform reproducibility can be demonstrated through multi-site standards studies",
           "effect": "strengthens"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-atcc-fda-niaid-nam-contracts",
+      "date": "2026-09-30",
+      "display_date": "Sep 30, 2026",
+      "temporal_status": "observed",
+      "institution": "FDA OCE / NIAID / ATCC",
+      "title": "FDA and NIAID contracts fund standardized organoids and human MPS platforms",
+      "summary": "ATCC announced three federal NAM contracts totaling $8.3 million: $4.2 million from NIAID for a human lung-on-chip system for influenza vaccine and therapeutic testing; $2.4 million from NIAID for a human brain/blood-brain-barrier chip for antiviral countermeasure screening; and $1.7 million from FDA's Oncology Center of Excellence for standardized, cryopreserved pediatric brain-tumor organoids with built-in quality controls to support regulatory-science evaluation.",
+      "why_it_matters": "Directly funds the standardization, quality-control and transferable biological resources that the manuscript identifies as prerequisites for reproducibility and reusable qualification. The FDA oncology award also extends formal regulatory-science investment beyond early mAb/DILI contexts, but no method has thereby been qualified or generally accepted.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "organoids",
+        "mps",
+        "oncology",
+        "infectious-disease",
+        "standardization",
+        "quality-control"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified_company_details_hhs_corrob",
+      "source_url": "https://www.atcc.org/about-us/newsroom/2026-news-releases/atcc-advanced-models-platform-define-nonclinical-research",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.B",
+          "claim": "Standardized resources and built-in quality controls are becoming regulator-funded infrastructure",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / Cross-site reproducibility",
+          "claim": "Standardization infrastructure is advancing ahead of the requested regulatory-grade ring-trial endpoint",
+          "effect": "leading_indicator"
+        },
+        {
+          "section": "Table 3 / Expansion beyond early modalities",
+          "claim": "FDA OCE is directly funding organoid regulatory-science infrastructure in pediatric oncology",
+          "effect": "material_progress"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-arpa-h-surpass",
+      "date": "2026-09-30",
+      "display_date": "Sep 30, 2026",
+      "temporal_status": "observed",
+      "institution": "HHS / ARPA-H",
+      "title": "SURPASS launches to integrate digital twins into phaseless adaptive clinical trials",
+      "summary": "HHS and ARPA-H launched the SURPASS program to develop continuous adaptive platform trials using predictive computational models, digital twins, common controls, real-time inference and agentic operations. The program explicitly seeks to simulate clinical and operational outcomes before launch, reduce reliance on large conventional control groups and develop evidence needed to support regulatory confidence in digital-twin-enabled trial designs. The funding opportunity is open; these approaches are not yet established regulatory standards.",
+      "why_it_matters": "Moves digital twins from a prospective modeling concept toward a federally funded clinical-evidence architecture and creates a direct bridge between computational credibility and clinical trial design. It strengthens the manuscript's Frontier and composability arguments without establishing FDA acceptance.",
+      "stage": [
+        "commitment",
+        "validation-infrastructure",
+        "computational-credibility"
+      ],
+      "domain": [
+        "digital-twins",
+        "clinical-trials",
+        "adaptive-trials",
+        "computational-modeling",
+        "regulatory-science"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://arpa-h.gov/explore-funding/programs/surpass",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.C/IV",
+          "claim": "Computational models can become components of integrated evidence packages when validation and regulatory confidence are developed explicitly",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 2 / Frontier",
+          "claim": "Digital twins and in-silico clinical-trial components now have formal federal trial-integration infrastructure",
+          "effect": "requires_update"
+        },
+        {
+          "section": "Table 3 / Computational credibility",
+          "claim": "Formal federal programs are building validation and regulatory-confidence infrastructure",
+          "effect": "material_progress"
+        },
+        {
+          "section": "Table 3 / Composability",
+          "claim": "SURPASS integrates predictive models, common controls, real-time inference and clinical operations into a shared trial architecture",
+          "effect": "leading_indicator"
         }
       ]
     }

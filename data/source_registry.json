@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22",
+  "updated": "2026-10-01",
   "schema_version": 1,
   "purpose": "Verified source overlays for roadmap records. This registry can add multiple well-labeled sources, correct source status, or annotate unresolved sourcing without erasing the research-side record.",
   "records": {
@@ -201,6 +201,147 @@
           "role": "cross_agency_chronology",
           "verified_by": "official-hhs-page",
           "checked_at": "2026-09-22"
+        }
+      ]
+    },
+    "2026-09-09-fda-invitro-nam-scoping": {
+      "source_status": "peer_reviewed_fda_authored",
+      "canonical_source_url": "https://pubmed.ncbi.nlm.nih.gov/42716173/",
+      "sources": [
+        {
+          "label": "Peer-reviewed article · FDA CDER authors",
+          "short_label": "FDA-authored paper",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42716173/",
+          "type": "peer_reviewed_article",
+          "role": "primary_evidence",
+          "verified_by": "PubMed/FDA affiliations",
+          "checked_at": "2026-10-01"
+        },
+        {
+          "label": "ScienceDirect article",
+          "short_label": "Journal article",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0273230026002199",
+          "type": "peer_reviewed_article",
+          "role": "full_article",
+          "verified_by": "publisher",
+          "checked_at": "2026-10-01"
+        }
+      ]
+    },
+    "2026-09-22-arpa-h-circle-digital-twin-regulatory": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://arpa-h.gov/news-and-events/arpa-h-selects-teams-transform-critical-care-new-lifesaving-technology",
+      "sources": [
+        {
+          "label": "ARPA-H CIRCLE performer announcement",
+          "short_label": "ARPA-H CIRCLE",
+          "url": "https://arpa-h.gov/news-and-events/arpa-h-selects-teams-transform-critical-care-new-lifesaving-technology",
+          "type": "agency_announcement",
+          "role": "program_awards",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-10-01"
+        },
+        {
+          "label": "ARPA-H Twin-TECC award",
+          "short_label": "Twin-TECC",
+          "url": "https://arpa-h.gov/explore-funding/awards/4722",
+          "type": "federal_award_page",
+          "role": "regulatory_readiness_details",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-10-01"
+        }
+      ]
+    },
+    "2026-09-23-fda-cber-ngs-adventitious": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.fda.gov/vaccines-blood-biologics/office-therapeutic-products-otp-events-meetings-and-workshops/fda-scientific-public-workshop-next-generation-sequencing-adventitious-agent-detection-biologics",
+      "sources": [
+        {
+          "label": "FDA CBER scientific workshop",
+          "short_label": "FDA workshop",
+          "url": "https://www.fda.gov/vaccines-blood-biologics/office-therapeutic-products-otp-events-meetings-and-workshops/fda-scientific-public-workshop-next-generation-sequencing-adventitious-agent-detection-biologics",
+          "type": "agency_workshop",
+          "role": "primary_record",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-10-01"
+        }
+      ]
+    },
+    "2026-09-23-react4life-cbrn-ooc-prototype": {
+      "source_status": "company_report_with_government_acknowledgment",
+      "canonical_source_url": "https://www.react4life.com/organ-on-chip-technology-medical-countermeasures/",
+      "sources": [
+        {
+          "label": "React4life announcement with U.S. government funding acknowledgement",
+          "short_label": "Company announcement",
+          "url": "https://www.react4life.com/organ-on-chip-technology-medical-countermeasures/",
+          "type": "company_announcement",
+          "role": "prototype_agreement_report",
+          "verified_by": "company page with agreement identifier and government acknowledgement",
+          "checked_at": "2026-10-01"
+        }
+      ]
+    },
+    "2026-09-25-arpa-h-cosmos-mps-organoid": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://arpa-h.gov/explore-funding/initiatives-and-sprints/cosmos",
+      "sources": [
+        {
+          "label": "ARPA-H COSMOS solicitation",
+          "short_label": "ARPA-H COSMOS",
+          "url": "https://arpa-h.gov/explore-funding/initiatives-and-sprints/cosmos",
+          "type": "federal_solicitation",
+          "role": "primary_document",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-10-01"
+        }
+      ]
+    },
+    "2026-09-30-atcc-fda-niaid-nam-contracts": {
+      "source_status": "primary_source_verified_company_details_hhs_corrob",
+      "canonical_source_url": "https://www.atcc.org/about-us/newsroom/2026-news-releases/atcc-advanced-models-platform-define-nonclinical-research",
+      "sources": [
+        {
+          "label": "ATCC federal NAM contract announcement",
+          "short_label": "ATCC awards",
+          "url": "https://www.atcc.org/about-us/newsroom/2026-news-releases/atcc-advanced-models-platform-define-nonclinical-research",
+          "type": "awardee_announcement",
+          "role": "contract_details",
+          "verified_by": "awardee primary page",
+          "checked_at": "2026-10-01"
+        },
+        {
+          "label": "HHS reducing-animal-testing tracker",
+          "short_label": "HHS corroboration",
+          "url": "https://www.hhs.gov/reducing-animal-testing/index.html",
+          "type": "agency_tracker",
+          "role": "fda_atcc_selection_corroboration",
+          "verified_by": "official-department-page",
+          "checked_at": "2026-10-01"
+        }
+      ]
+    },
+    "2026-09-30-arpa-h-surpass": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://arpa-h.gov/explore-funding/programs/surpass",
+      "sources": [
+        {
+          "label": "ARPA-H SURPASS program page",
+          "short_label": "SURPASS",
+          "url": "https://arpa-h.gov/explore-funding/programs/surpass",
+          "type": "federal_funding_program",
+          "role": "primary_program",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-10-01"
+        },
+        {
+          "label": "HHS/ARPA-H SURPASS announcement",
+          "short_label": "HHS announcement",
+          "url": "https://www.hhs.gov/press-room/hhs-arpa-h-launch-surpass-modernize-clinical-trials.html",
+          "type": "agency_announcement",
+          "role": "launch_context",
+          "verified_by": "official-department-page",
+          "checked_at": "2026-10-01"
         }
       ]
     }
