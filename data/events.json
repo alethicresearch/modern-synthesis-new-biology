@@ -1407,7 +1407,7 @@
       ],
       "materiality": "high",
       "major_milestone": true,
-      "source_status": "peer_reviewed_fda_authored",
+      "source_status": "primary_source_verified",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42716173/",
       "manuscript_ref": null,
       "manuscript_impacts": [
@@ -1886,7 +1886,7 @@
       ],
       "materiality": "medium",
       "major_milestone": false,
-      "source_status": "company_report_with_government_acknowledgment",
+      "source_status": "primary_source_verified",
       "source_url": "https://www.react4life.com/organ-on-chip-technology-medical-countermeasures/",
       "manuscript_ref": null,
       "manuscript_impacts": [
@@ -2002,7 +2002,7 @@
       ],
       "materiality": "high",
       "major_milestone": true,
-      "source_status": "primary_source_verified_company_details_hhs_corrob",
+      "source_status": "primary_source_verified",
       "source_url": "https://www.atcc.org/about-us/newsroom/2026-news-releases/atcc-advanced-models-platform-define-nonclinical-research",
       "manuscript_ref": null,
       "manuscript_impacts": [
