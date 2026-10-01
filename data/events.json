@@ -1624,47 +1624,28 @@
       ]
     },
     {
-      "id": "2026-09-21-nih-human-based-infrastructure",
+      "id": "2026-09-21-hhs-reducing-animal-testing-tracker",
       "date": "2026-09-21",
       "display_date": "Sep 21, 2026",
       "temporal_status": "observed",
-      "institution": "NIH",
-      "title": "NIH expands human-based research infrastructure and launches Bio Genesis laboratory",
-      "summary": "NIH announced more than $88 million for 10 Biomedical Research Facilities projects supporting human-based science and plans for a Bio Genesis Autonomous Human Biology Laboratory within the NIH Clinical Center integrating standardized human organoids, robotics, AI, and advanced data systems in a closed-loop experimental platform.",
-      "why_it_matters": "Materially expands physical and technical infrastructure for standardized, reproducible human biology. This is infrastructure for method development, reproducibility, and scale—not by itself regulatory qualification or demonstrated animal-study displacement.",
+      "institution": "HHS",
+      "title": "HHS launches cross-agency human-based research and animal-testing action tracker",
+      "summary": "HHS launched a public cross-agency page cataloguing federal actions to reduce animal testing and advance human-based research across innovation, investment, validation, regulatory implementation, and review infrastructure.",
+      "why_it_matters": "Creates an official cross-agency chronology and transparency layer. It is useful as a navigation and corroboration source, while substantive claims should continue to rely on the underlying NIH, FDA, and other agency primary records.",
       "stage": [
         "commitment",
-        "qualification",
-        "review-infrastructure"
+        "adoption"
       ],
       "domain": [
-        "human-based-research",
-        "organoids",
-        "reproducibility",
-        "infrastructure"
+        "cross-agency",
+        "transparency",
+        "nams"
       ],
-      "materiality": "high",
-      "major_milestone": true,
+      "materiality": "medium",
+      "major_milestone": false,
       "source_status": "primary_source_verified",
-      "source_url": "https://www.nih.gov/news-events/news-releases/nih-makes-major-investments-advance-human-based-research-infrastructure-technologies",
-      "manuscript_ref": null,
-      "manuscript_impacts": [
-        {
-          "section": "III.B",
-          "claim": "Standardization and reproducibility require dedicated infrastructure",
-          "effect": "strengthens"
-        },
-        {
-          "section": "VIII",
-          "claim": "Funders can treat standardized resources and reproducibility as infrastructure deserving direct investment",
-          "effect": "strengthens"
-        },
-        {
-          "section": "Supplementary Table S1",
-          "claim": "Selected institutional milestones, 2022–2026",
-          "effect": "requires_update"
-        }
-      ]
+      "source_url": "https://www.hhs.gov/reducing-animal-testing/index.html",
+      "manuscript_ref": null
     },
     {
       "id": "2026-09-21-nih-animal-use-reporting-reviewers",
@@ -1710,28 +1691,90 @@
       ]
     },
     {
-      "id": "2026-09-21-hhs-reducing-animal-testing-tracker",
+      "id": "2026-09-21-nih-human-based-infrastructure",
       "date": "2026-09-21",
       "display_date": "Sep 21, 2026",
       "temporal_status": "observed",
-      "institution": "HHS",
-      "title": "HHS launches cross-agency human-based research and animal-testing action tracker",
-      "summary": "HHS launched a public cross-agency page cataloguing federal actions to reduce animal testing and advance human-based research across innovation, investment, validation, regulatory implementation, and review infrastructure.",
-      "why_it_matters": "Creates an official cross-agency chronology and transparency layer. It is useful as a navigation and corroboration source, while substantive claims should continue to rely on the underlying NIH, FDA, and other agency primary records.",
+      "institution": "NIH",
+      "title": "NIH expands human-based research infrastructure and launches Bio Genesis laboratory",
+      "summary": "NIH announced more than $88 million for 10 Biomedical Research Facilities projects supporting human-based science and plans for a Bio Genesis Autonomous Human Biology Laboratory within the NIH Clinical Center integrating standardized human organoids, robotics, AI, and advanced data systems in a closed-loop experimental platform.",
+      "why_it_matters": "Materially expands physical and technical infrastructure for standardized, reproducible human biology. This is infrastructure for method development, reproducibility, and scale—not by itself regulatory qualification or demonstrated animal-study displacement.",
       "stage": [
         "commitment",
-        "adoption"
+        "qualification",
+        "review-infrastructure"
       ],
       "domain": [
-        "cross-agency",
-        "transparency",
-        "nams"
+        "human-based-research",
+        "organoids",
+        "reproducibility",
+        "infrastructure"
       ],
-      "materiality": "medium",
-      "major_milestone": false,
+      "materiality": "high",
+      "major_milestone": true,
       "source_status": "primary_source_verified",
-      "source_url": "https://www.hhs.gov/reducing-animal-testing/index.html",
-      "manuscript_ref": null
+      "source_url": "https://www.nih.gov/news-events/news-releases/nih-makes-major-investments-advance-human-based-research-infrastructure-technologies",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.B",
+          "claim": "Standardization and reproducibility require dedicated infrastructure",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VIII",
+          "claim": "Funders can treat standardized resources and reproducibility as infrastructure deserving direct investment",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-22-arpa-h-circle-digital-twin-regulatory",
+      "date": "2026-09-22",
+      "display_date": "Sep 22, 2026",
+      "temporal_status": "observed",
+      "institution": "ARPA-H",
+      "title": "CIRCLE awards build regulatory-ready digital-twin validation infrastructure",
+      "summary": "ARPA-H announced CIRCLE performer awards totaling up to $144.9 million over five years. The program combines mechanistic and AI-enabled digital twins with critical-care data and clinical testing. Its Twin-TECC acceleration platform, awarded up to $18.3 million to Sage Bionetworks, is designed as a development, validation and testing sandbox supporting simulated clinical trials and readiness for future FDA digital-twin and Software-as-a-Medical-Device applications.",
+      "why_it_matters": "Creates funded verification, validation, uncertainty and regulatory-readiness infrastructure for digital twins rather than treating computational models as standalone demonstrations. It remains development infrastructure, not FDA acceptance or qualification.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure",
+        "computational-credibility"
+      ],
+      "domain": [
+        "digital-twins",
+        "computational-modeling",
+        "clinical-trials",
+        "regulatory-readiness"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://arpa-h.gov/news-and-events/arpa-h-selects-teams-transform-critical-care-new-lifesaving-technology",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.C",
+          "claim": "Computational methods require explicit credibility, validation and applicability infrastructure",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 2 / Frontier",
+          "claim": "Digital twins remain frontier but now have formal federal regulatory-readiness infrastructure",
+          "effect": "requires_update"
+        },
+        {
+          "section": "Table 3 / Computational credibility",
+          "claim": "Formal infrastructure for digital-twin validation and FDA readiness is emerging",
+          "effect": "material_progress"
+        }
+      ]
     },
     {
       "id": "2026-09-22-systimmune-si-b037-nam-ind",
@@ -1779,49 +1822,6 @@
           "section": "Supplementary Table S1",
           "claim": "Selected institutional and adoption milestones, 2022–2026",
           "effect": "requires_update"
-        }
-      ]
-    },
-    {
-      "id": "2026-09-22-arpa-h-circle-digital-twin-regulatory",
-      "date": "2026-09-22",
-      "display_date": "Sep 22, 2026",
-      "temporal_status": "observed",
-      "institution": "ARPA-H",
-      "title": "CIRCLE awards build regulatory-ready digital-twin validation infrastructure",
-      "summary": "ARPA-H announced CIRCLE performer awards totaling up to $144.9 million over five years. The program combines mechanistic and AI-enabled digital twins with critical-care data and clinical testing. Its Twin-TECC acceleration platform, awarded up to $18.3 million to Sage Bionetworks, is designed as a development, validation and testing sandbox supporting simulated clinical trials and readiness for future FDA digital-twin and Software-as-a-Medical-Device applications.",
-      "why_it_matters": "Creates funded verification, validation, uncertainty and regulatory-readiness infrastructure for digital twins rather than treating computational models as standalone demonstrations. It remains development infrastructure, not FDA acceptance or qualification.",
-      "stage": [
-        "qualification",
-        "validation-infrastructure",
-        "computational-credibility"
-      ],
-      "domain": [
-        "digital-twins",
-        "computational-modeling",
-        "clinical-trials",
-        "regulatory-readiness"
-      ],
-      "materiality": "high",
-      "major_milestone": true,
-      "source_status": "primary_source_verified",
-      "source_url": "https://arpa-h.gov/news-and-events/arpa-h-selects-teams-transform-critical-care-new-lifesaving-technology",
-      "manuscript_ref": null,
-      "manuscript_impacts": [
-        {
-          "section": "III.C",
-          "claim": "Computational methods require explicit credibility, validation and applicability infrastructure",
-          "effect": "strengthens"
-        },
-        {
-          "section": "Table 2 / Frontier",
-          "claim": "Digital twins remain frontier but now have formal federal regulatory-readiness infrastructure",
-          "effect": "requires_update"
-        },
-        {
-          "section": "Table 3 / Computational credibility",
-          "claim": "Formal infrastructure for digital-twin validation and FDA readiness is emerging",
-          "effect": "material_progress"
         }
       ]
     },
@@ -1980,6 +1980,55 @@
       ]
     },
     {
+      "id": "2026-09-30-arpa-h-surpass",
+      "date": "2026-09-30",
+      "display_date": "Sep 30, 2026",
+      "temporal_status": "observed",
+      "institution": "HHS / ARPA-H",
+      "title": "SURPASS launches to integrate digital twins into phaseless adaptive clinical trials",
+      "summary": "HHS and ARPA-H launched the SURPASS program to develop continuous adaptive platform trials using predictive computational models, digital twins, common controls, real-time inference and agentic operations. The program explicitly seeks to simulate clinical and operational outcomes before launch, reduce reliance on large conventional control groups and develop evidence needed to support regulatory confidence in digital-twin-enabled trial designs. The funding opportunity is open; these approaches are not yet established regulatory standards.",
+      "why_it_matters": "Moves digital twins from a prospective modeling concept toward a federally funded clinical-evidence architecture and creates a direct bridge between computational credibility and clinical trial design. It strengthens the manuscript's Frontier and composability arguments without establishing FDA acceptance.",
+      "stage": [
+        "commitment",
+        "validation-infrastructure",
+        "computational-credibility"
+      ],
+      "domain": [
+        "digital-twins",
+        "clinical-trials",
+        "adaptive-trials",
+        "computational-modeling",
+        "regulatory-science"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://arpa-h.gov/explore-funding/programs/surpass",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.C/IV",
+          "claim": "Computational models can become components of integrated evidence packages when validation and regulatory confidence are developed explicitly",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 2 / Frontier",
+          "claim": "Digital twins and in-silico clinical-trial components now have formal federal trial-integration infrastructure",
+          "effect": "requires_update"
+        },
+        {
+          "section": "Table 3 / Computational credibility",
+          "claim": "Formal federal programs are building validation and regulatory-confidence infrastructure",
+          "effect": "material_progress"
+        },
+        {
+          "section": "Table 3 / Composability",
+          "claim": "SURPASS integrates predictive models, common controls, real-time inference and clinical operations into a shared trial architecture",
+          "effect": "leading_indicator"
+        }
+      ]
+    },
+    {
       "id": "2026-09-30-atcc-fda-niaid-nam-contracts",
       "date": "2026-09-30",
       "display_date": "Sep 30, 2026",
@@ -2029,51 +2078,56 @@
       ]
     },
     {
-      "id": "2026-09-30-arpa-h-surpass",
-      "date": "2026-09-30",
-      "display_date": "Sep 30, 2026",
+      "id": "2026-10-01-icmra-animal-testing-statement",
+      "date": "2026-10-01",
+      "display_date": "Oct 1, 2026",
       "temporal_status": "observed",
-      "institution": "HHS / ARPA-H",
-      "title": "SURPASS launches to integrate digital twins into phaseless adaptive clinical trials",
-      "summary": "HHS and ARPA-H launched the SURPASS program to develop continuous adaptive platform trials using predictive computational models, digital twins, common controls, real-time inference and agentic operations. The program explicitly seeks to simulate clinical and operational outcomes before launch, reduce reliance on large conventional control groups and develop evidence needed to support regulatory confidence in digital-twin-enabled trial designs. The funding opportunity is open; these approaches are not yet established regulatory standards.",
-      "why_it_matters": "Moves digital twins from a prospective modeling concept toward a federally funded clinical-evidence architecture and creates a direct bridge between computational credibility and clinical trial design. It strengthens the manuscript's Frontier and composability arguments without establishing FDA acceptance.",
+      "institution": "International Coalition of Medicines Regulatory Authorities (ICMRA)",
+      "title": "ICMRA adopts global statement on replacing animal testing across the medicines lifecycle",
+      "summary": "ICMRA publishes a plenary-adopted statement calling on medicine developers, manufacturers, regulators and national control laboratories to advance and implement scientifically valid non-animal methods throughout the lifecycle of human medicines. The statement distinguishes formal validation or qualification for broad applications from product-specific regulatory use, and calls for international harmonisation, with particular emphasis on non-animal batch-release testing. It is a shared regulatory-policy statement rather than a binding harmonised guideline, qualification decision, or automatic acceptance of any specific method.",
+      "why_it_matters": "Moves international convergence beyond isolated collaborative reviews toward an explicit shared regulatory direction across major medicines authorities, while preserving the distinction between common policy intent and reusable method qualification or legally binding implementation.",
       "stage": [
         "commitment",
-        "validation-infrastructure",
-        "computational-credibility"
+        "international-convergence"
       ],
       "domain": [
-        "digital-twins",
-        "clinical-trials",
-        "adaptive-trials",
-        "computational-modeling",
-        "regulatory-science"
+        "human-medicines",
+        "nams",
+        "non-animal-methods",
+        "batch-release",
+        "international-convergence",
+        "regulatory-policy"
       ],
       "materiality": "high",
       "major_milestone": true,
       "source_status": "primary_source_verified",
-      "source_url": "https://arpa-h.gov/explore-funding/programs/surpass",
+      "source_url": "https://icmra.info/drupal/en/strategicinitiatives/animaltesting/statement_1oct2026",
       "manuscript_ref": null,
       "manuscript_impacts": [
         {
-          "section": "III.C/IV",
-          "claim": "Computational models can become components of integrated evidence packages when validation and regulatory confidence are developed explicitly",
+          "section": "III.D",
+          "claim": "International alignment can make regulatory confidence more reusable across jurisdictions",
           "effect": "strengthens"
         },
         {
-          "section": "Table 2 / Frontier",
-          "claim": "Digital twins and in-silico clinical-trial components now have formal federal trial-integration infrastructure",
+          "section": "VI/VII",
+          "claim": "Convergence is moving from isolated coordinated reviews toward shared regulator expectations across the medicines lifecycle",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / international convergence",
+          "claim": "International convergence on reusable NAM evidence packages",
+          "effect": "supports progress but does not achieve the milestone"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
           "effect": "requires_update"
         },
         {
-          "section": "Table 3 / Computational credibility",
-          "claim": "Formal federal programs are building validation and regulatory-confidence infrastructure",
-          "effect": "material_progress"
-        },
-        {
-          "section": "Table 3 / Composability",
-          "claim": "SURPASS integrates predictive models, common controls, real-time inference and clinical operations into a shared trial architecture",
-          "effect": "leading_indicator"
+          "section": "Verification checklist",
+          "claim": "International-convergence evidence current through manuscript cutoff",
+          "effect": "requires_update"
         }
       ]
     }
