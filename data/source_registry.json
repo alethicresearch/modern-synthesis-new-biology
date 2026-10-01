@@ -344,6 +344,21 @@
           "checked_at": "2026-10-01"
         }
       ]
+    },
+    "2026-10-01-icmra-animal-testing-statement": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://icmra.info/drupal/en/strategicinitiatives/animaltesting/statement_1oct2026",
+      "sources": [
+        {
+          "label": "ICMRA statement on animal testing for human medicines",
+          "short_label": "ICMRA statement",
+          "url": "https://icmra.info/drupal/en/strategicinitiatives/animaltesting/statement_1oct2026",
+          "type": "international_regulator_statement",
+          "role": "primary_document",
+          "verified_by": "official-icmra-page",
+          "checked_at": "2026-10-01"
+        }
+      ]
     }
   }
 }
