@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-10-04",
   "schema_version": 2,
   "events": [
     {
@@ -1424,6 +1424,49 @@
         {
           "section": "Supplementary Table S1",
           "claim": "Selected institutional and evidentiary milestones, 2022–2026",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-10-iso-25448-dis-ballot",
+      "date": "2026-09-10",
+      "display_date": "Sep 10, 2026",
+      "temporal_status": "observed",
+      "institution": "ISO",
+      "title": "MPS and Organ-on-Chip vocabulary advances to Draft International Standard ballot",
+      "summary": "ISO/TC 276/SC 2 advanced ISO 25448, Microphysiological systems and Organ-on-Chip — Vocabulary, into the Draft International Standard enquiry stage, with a 12-week member ballot initiated on September 10, 2026. It remains a draft under development and is not yet a published International Standard.",
+      "why_it_matters": "Creates an international standardization pathway for shared MPS/OoC terminology while remaining distinct from method validation, qualification or regulatory acceptance.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "standards",
+        "mps",
+        "organ-on-chip",
+        "terminology",
+        "international-convergence"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.iso.org/standard/90423.html",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III/VI",
+          "claim": "Reusable qualification infrastructure depends on shared terminology and standards as well as validation data",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / standards and reproducibility",
+          "claim": "International MPS/OoC standardization has progressed into formal DIS enquiry",
+          "effect": "requires_update"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
           "effect": "requires_update"
         }
       ]
