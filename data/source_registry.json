@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-10-06",
   "schema_version": 1,
   "purpose": "Verified source overlays for roadmap records. This registry can add multiple well-labeled sources, correct source status, or annotate unresolved sourcing without erasing the research-side record.",
   "records": {
@@ -357,6 +357,45 @@
           "role": "primary_document",
           "verified_by": "official-icmra-page",
           "checked_at": "2026-10-01"
+        }
+      ]
+    },
+    "2026-10-01-ncac-launch": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://c-path.org/federal-investment-launches-national-facility-dedicated-to-advancing-non-animal-drug-development-tools/",
+      "sources": [
+        {
+          "label": "Critical Path Institute announcement of NCAC launch",
+          "short_label": "C-Path NCAC launch",
+          "url": "https://c-path.org/federal-investment-launches-national-facility-dedicated-to-advancing-non-animal-drug-development-tools/",
+          "type": "organization_announcement",
+          "role": "primary_document",
+          "verified_by": "official-cpath-page",
+          "checked_at": "2026-10-06"
+        },
+        {
+          "label": "FY26 federal funding record for the National Center to Accelerate Cures",
+          "short_label": "Federal funding record",
+          "url": "https://www.govinfo.gov/content/pkg/CRPT-119srpt44/html/CRPT-119srpt44.htm",
+          "type": "congressional_funding_record",
+          "role": "funding_corroboration",
+          "verified_by": "official-government-text",
+          "checked_at": "2026-10-06"
+        }
+      ]
+    },
+    "2026-10-02-fda-transparency-roadmap-nams": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.fda.gov/news-events/fda-voices/transparency-makes-modern-regulatory-science-stronger-fdas-transparency-roadmap",
+      "sources": [
+        {
+          "label": "FDA Transparency Roadmap",
+          "short_label": "FDA Transparency Roadmap",
+          "url": "https://www.fda.gov/news-events/fda-voices/transparency-makes-modern-regulatory-science-stronger-fdas-transparency-roadmap",
+          "type": "agency_roadmap",
+          "role": "primary_document",
+          "verified_by": "official-agency-page",
+          "checked_at": "2026-10-06"
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-10-06",
   "schema_version": 2,
   "events": [
     {
@@ -2127,6 +2127,99 @@
         {
           "section": "Verification checklist",
           "claim": "International-convergence evidence current through manuscript cutoff",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-01-ncac-launch",
+      "date": "2026-10-01",
+      "display_date": "Oct 1, 2026",
+      "temporal_status": "observed",
+      "institution": "National Center to Accelerate Cures (NCAC)",
+      "title": "National Center to Accelerate Cures launches as dedicated NAM qualification infrastructure",
+      "summary": "The National Center to Accelerate Cures officially launched in Baltimore as a partnership of Blackbird Laboratories, Critical Path Institute and Arrowpoint Labs Foundation, backed by $3 million in congressionally directed NIST funding. NCAC is intended to provide laboratory infrastructure, regulatory-science expertise and data capabilities so NAM developers can build regulatory-grade evidence packages. Its first-year plans include supporting novel-method submissions, developing shared terminology and establishing an open data standard; these are implementation plans, not completed standards, qualifications or regulatory acceptances.",
+      "why_it_matters": "Creates dedicated precompetitive infrastructure aimed at the validation-to-regulatory-acceptance bottleneck identified in the roadmap, with federal funding and concrete standards/data objectives, while remaining distinct from a completed qualification decision.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "nams",
+        "qualification",
+        "validation",
+        "regulatory-science",
+        "standards",
+        "data-infrastructure",
+        "federal-funding"
+      ],
+      "materiality": "high",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://c-path.org/federal-investment-launches-national-facility-dedicated-to-advancing-non-animal-drug-development-tools/",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.B / VI",
+          "claim": "Reusable qualification requires shared validation, standards, data and regulatory-science infrastructure rather than technology development alone",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / qualification infrastructure",
+          "claim": "Shared terminology, open-data infrastructure and regulator-ready evidence generation are moving from recommendation toward funded implementation",
+          "effect": "requires_update"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-02-fda-transparency-roadmap-nams",
+      "date": "2026-10-02",
+      "display_date": "Oct 2, 2026",
+      "temporal_status": "observed",
+      "institution": "FDA",
+      "title": "FDA makes NAM submission transparency an FY27 implementation priority",
+      "summary": "FDA's Transparency Roadmap identifies expanded visibility into successful and unsuccessful uses of new approach methodologies in regulatory submissions as an FY27 priority, building on the September 2026 NAM Use Case Database. FDA frames this transparency as a way to help sponsors learn how novel evidence is actually used and to facilitate adoption. The roadmap is a forward-looking transparency agenda, not guidance, qualification of a method, or blanket regulatory acceptance.",
+      "why_it_matters": "Strengthens the roadmap's 'publish the learning' mechanism by making systematic disclosure of NAM regulatory experience an explicit agency priority rather than only a recommendation inferred from isolated public reviews.",
+      "stage": [
+        "commitment",
+        "review-infrastructure"
+      ],
+      "domain": [
+        "nams",
+        "regulatory-transparency",
+        "regulatory-learning",
+        "drug-development",
+        "review-infrastructure"
+      ],
+      "materiality": "high",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.fda.gov/news-events/fda-voices/transparency-makes-modern-regulatory-science-stronger-fdas-transparency-roadmap",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III",
+          "claim": "Regulatory learning should be published so successful and unsuccessful NAM use becomes reusable across sponsors",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VII",
+          "claim": "Routinization depends on visible precedent and institutionalized public learning",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Table 3 / adoption transparency",
+          "claim": "Structured public reporting of NAM regulatory use is moving into active FDA implementation planning",
+          "effect": "requires_update"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
           "effect": "requires_update"
         }
       ]
