@@ -1,4 +1,4 @@
-name: Validate roadmap data
+name: Validate roadmap data and UI
 
 on:
   push:
@@ -6,11 +6,17 @@ on:
     paths:
       - 'data/**'
       - 'scripts/validate_data.py'
+      - 'app.js'
+      - 'index.html'
+      - 'styles.css'
       - '.github/workflows/validate.yml'
   pull_request:
     paths:
       - 'data/**'
       - 'scripts/validate_data.py'
+      - 'app.js'
+      - 'index.html'
+      - 'styles.css'
       - '.github/workflows/validate.yml'
 
 permissions:
@@ -28,3 +34,23 @@ jobs:
           python-version: '3.12'
       - name: Validate data
         run: python scripts/validate_data.py
+      - name: Check front-end JavaScript syntax
+        run: node --check app.js
+      - name: Check roadmap tier wiring
+        run: |
+          node <<'JS'
+          const fs = require('fs');
+          const events = JSON.parse(fs.readFileSync('data/events.json', 'utf8')).events;
+          const html = fs.readFileSync('index.html', 'utf8');
+          const js = fs.readFileSync('app.js', 'utf8');
+          const counts = {major: 0, supporting: 0, watchlist: 0};
+          for (const e of events) {
+            if (!(e.editorial_tier in counts)) throw Error('Unknown tier: '+e.id);
+            if (e.major_milestone !== (e.editorial_tier === 'major')) throw Error('Mismatched major flag: '+e.id);
+            counts[e.editorial_tier]++;
+          }
+          if (counts.major > 25 || counts.major < 15) throw Error('Curated major tier must contain 15–25 events');
+          if (!html.includes('id="detail-tier"') || !html.includes('id="tier-summary"')) throw Error('Missing tier controls');
+          if (!js.includes('function tierVisible(r)') || !js.includes("detailTier:'major'")) throw Error('Missing default major-only filter');
+          console.log('Roadmap tier UI wired:', counts);
+          JS
