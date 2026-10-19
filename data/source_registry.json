@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-10-19",
   "schema_version": 1,
   "purpose": "Verified source overlays for roadmap records. This registry can add multiple well-labeled sources, correct source status, or annotate unresolved sourcing without erasing the research-side record.",
   "records": {
@@ -357,6 +357,108 @@
           "role": "primary_document",
           "verified_by": "official-icmra-page",
           "checked_at": "2026-10-01"
+        }
+      ]
+    },
+    "2026-10-07-doe-nih-biohub-predictive-biology-mou": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.energy.gov/science/articles/doe-nih-and-biohub-partner-build-foundational-data-predictive-biological-super",
+      "sources": [
+        {
+          "label": "DOE Office of Science — DOE, NIH, and Biohub sign predictive-biology data MOU",
+          "short_label": "DOE signed MOU",
+          "url": "https://www.energy.gov/science/articles/doe-nih-and-biohub-partner-build-foundational-data-predictive-biological-super",
+          "type": "agency_announcement",
+          "role": "primary_document",
+          "verified_by": "official-doe-page",
+          "checked_at": "2026-10-19"
+        },
+        {
+          "label": "NIH — coordination of biological data under Bio Genesis",
+          "short_label": "NIH coordination",
+          "url": "https://www.nih.gov/news-events/news-releases/nih-joins-effort-build-si-ready-data-predictive-models-human-biology",
+          "type": "agency_announcement",
+          "role": "corroboration",
+          "verified_by": "official-nih-page",
+          "checked_at": "2026-10-19"
+        },
+        {
+          "label": "Biohub — Virtual Biology Initiative expansion and investment context",
+          "short_label": "Biohub consortium",
+          "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
+          "type": "industry_announcement",
+          "role": "funding_context",
+          "verified_by": "official-biohub-page",
+          "checked_at": "2026-10-19"
+        }
+      ]
+    },
+    "2026-10-07-vbi-industry-300m-predictive-biology": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
+      "sources": [
+        {
+          "label": "Biohub — collective $300 million VBI commitment reported for three industry partners",
+          "short_label": "Biohub investment statement",
+          "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
+          "type": "industry_announcement",
+          "role": "primary_document",
+          "verified_by": "official-consortium-page",
+          "checked_at": "2026-10-19"
+        },
+        {
+          "label": "DOE — separate formal MOU and public investment commitments",
+          "short_label": "DOE MOU context",
+          "url": "https://www.energy.gov/science/articles/doe-nih-and-biohub-partner-build-foundational-data-predictive-biological-super",
+          "type": "agency_announcement",
+          "role": "implementation_context",
+          "verified_by": "official-doe-page",
+          "checked_at": "2026-10-19"
+        }
+      ]
+    },
+    "2026-10-09-oecd-rts-skin-sensitisation-consultation": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.oecd.org/en/events/public-consultations/2026/10/first-commenting-round-on-the-reconstructed-human-epidermis-based-test-strategy-based-defined-approach-for-skin-sensitisation.html",
+      "sources": [
+        {
+          "label": "OECD — first consultation on RTS defined approach to TG 497",
+          "short_label": "OECD TG 497 consultation",
+          "url": "https://www.oecd.org/en/events/public-consultations/2026/10/first-commenting-round-on-the-reconstructed-human-epidermis-based-test-strategy-based-defined-approach-for-skin-sensitisation.html",
+          "type": "draft_test_guideline",
+          "role": "primary_document",
+          "verified_by": "official-oecd-page",
+          "checked_at": "2026-10-19"
+        }
+      ]
+    },
+    "2026-10-12-ema-nam-operational-expert-group": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.ema.europa.eu/en/committees/working-parties-other-groups/chmp-working-parties-other-groups/new-approach-methodologies-operational-expert-group",
+      "sources": [
+        {
+          "label": "EMA — NAMs Operational Expert Group composition and provisional mandate",
+          "short_label": "EMA NAMs OEG",
+          "url": "https://www.ema.europa.eu/en/committees/working-parties-other-groups/chmp-working-parties-other-groups/new-approach-methodologies-operational-expert-group",
+          "type": "regulator_operational_group",
+          "role": "primary_document",
+          "verified_by": "official-ema-page",
+          "checked_at": "2026-10-19"
+        }
+      ]
+    },
+    "2026-10-16-oecd-biotransformation-givimp-reporting-draft": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.oecd.org/en/events/public-consultations/2026/10/first-commenting-round-on-the-draft-reporting-guidance-for-biotransformation-systems-addition-to-the-guidance-document-on-good-in-vitro-method-practice.html",
+      "sources": [
+        {
+          "label": "OECD — draft reporting guidance for biotransformation systems under GIVIMP",
+          "short_label": "OECD GIVIMP draft",
+          "url": "https://www.oecd.org/en/events/public-consultations/2026/10/first-commenting-round-on-the-draft-reporting-guidance-for-biotransformation-systems-addition-to-the-guidance-document-on-good-in-vitro-method-practice.html",
+          "type": "draft_guidance",
+          "role": "primary_document",
+          "verified_by": "official-oecd-page",
+          "checked_at": "2026-10-19"
         }
       ]
     }
