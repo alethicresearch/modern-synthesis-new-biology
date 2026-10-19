@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-10-19",
   "schema_version": 2,
   "events": [
     {
@@ -2127,6 +2127,243 @@
         {
           "section": "Verification checklist",
           "claim": "International-convergence evidence current through manuscript cutoff",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-07-doe-nih-biohub-predictive-biology-mou",
+      "date": "2026-10-07",
+      "display_date": "Oct 7, 2026",
+      "temporal_status": "observed",
+      "institution": "U.S. Department of Energy / NIH / Biohub",
+      "title": "DOE, NIH and Biohub sign predictive-biology data partnership",
+      "summary": "DOE's Office of Science, NIH and Biohub announced a signed memorandum of understanding to coordinate open, high-quality biological datasets, measurements, computation and shared infrastructure for predictive models of cellular responses to interventions. DOE reports a commitment of more than $500 million over five years to fundamental cell research, measurement, modelling and computational capabilities. NIH contributes coordination of existing resources and datasets; Biohub's separately announced $500 million Virtual Biology Initiative commitment predates this MOU. No completed validated virtual-cell model or demonstrated animal-study displacement is reported.",
+      "why_it_matters": "A documented cross-agency and philanthropic institutional partnership mobilizes data, standards, computational infrastructure and experimental measurement at scale, a concrete commitment toward composable computational biology. It is not a NAM validation, reusable regulatory qualification, regulatory adoption, or realized displacement.",
+      "stage": [
+        "commitment",
+        "research-infrastructure",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "computational-biology",
+        "virtual-cell",
+        "data-standards",
+        "industry-partnership",
+        "federal-funding",
+        "bio-genesis",
+        "predictive-models"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.energy.gov/science/articles/doe-nih-and-biohub-partner-build-foundational-data-predictive-biological-super",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.B/III.C",
+          "claim": "Cross-institutional reproducibility and high-quality model-training data infrastructure",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VIII / Table 3",
+          "claim": "Shared computational standards and composable qualification must precede claims of regulatory confidence",
+          "effect": "supports"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected material institutional infrastructure milestones, 2022–2026",
+          "effect": "requires_update"
+        },
+        {
+          "section": "Verification checklist",
+          "claim": "Clarify Bio Genesis data partnership versus NIH autonomous human-biology laboratory and do not aggregate previously pledged funding as newly awarded",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-07-vbi-industry-300m-predictive-biology",
+      "date": "2026-10-07",
+      "display_date": "Oct 7, 2026",
+      "temporal_status": "observed",
+      "institution": "Google DeepMind / Isomorphic Labs / Meta / Biohub",
+      "title": "Three industry partners commit $300 million collectively to Virtual Biology Initiative",
+      "summary": "Biohub publicly reports that Google DeepMind, Isomorphic Labs and Meta collectively committed $300 million to its Virtual Biology Initiative to develop measurement technologies and multimodal datasets for predictive models of life. The report is a consortium-level statement of industry investment commitments, not individual verified transfers, grant awards, delivered data, validated model performance or regulatory adoption. Biohub's existing $500 million pledge and NIH datasets built using earlier federal investment should not be treated as new October disbursements.",
+      "why_it_matters": "Substantive multi-company investment supports industrial-scale data generation and predictive-biology platform infrastructure, while remaining at a commitment rather than implementation, qualification, or demonstrated animal-study replacement stage.",
+      "stage": [
+        "commitment",
+        "research-infrastructure"
+      ],
+      "domain": [
+        "industry-investment",
+        "biohub",
+        "virtual-biology",
+        "computational-biology",
+        "data-infrastructure",
+        "pharma-rd"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "VII",
+          "claim": "Private co-investment can help address shared first-mover data and infrastructure costs",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VIII / Table 3",
+          "claim": "Funding and collaborative data commitments are leading indicators, not completed validation or acceptance",
+          "effect": "supports"
+        },
+        {
+          "section": "Verification checklist",
+          "claim": "Company-reported $300 million aggregate commitment should not be equated with cash disbursement, novel NIH funding, or published performance results",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09-oecd-rts-skin-sensitisation-consultation",
+      "date": "2026-10-09",
+      "display_date": "Oct 9, 2026",
+      "temporal_status": "emerging",
+      "institution": "OECD Working Party of the National Coordinators of the Test Guidelines Programme",
+      "title": "OECD consults on human-epidermis and in-silico skin-sensitisation defined approach",
+      "summary": "OECD published a first commenting round (open October 8–November 19, 2026) on a draft revision to Test Guideline 497. The proposed Reconstructed Human Epidermis-based Test Strategy (RTS) defined approach combines the EpiSensA method already described in OECD TG 442D with the OECD QSAR Toolbox automated workflow to classify skin-sensitisation hazard and potency under the UN GHS. This is a draft proposed addition to an existing guideline; the revised approach has not been adopted or internationally recognized through a final revised TG 497.",
+      "why_it_matters": "A formal OECD guideline-revision process demonstrates a possible route for joining human-tissue and computational evidence into reusable chemical-safety decision rules; the regulatory standardization outcome remains pending consultation.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure",
+        "international-convergence"
+      ],
+      "domain": [
+        "oecd",
+        "standards",
+        "draft-guideline",
+        "skin-sensitisation",
+        "human-epidermis",
+        "in-silico",
+        "defined-approaches"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.oecd.org/en/events/public-consultations/2026/10/first-commenting-round-on-the-reconstructed-human-epidermis-based-test-strategy-based-defined-approach-for-skin-sensitisation.html",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.A/III.D",
+          "claim": "Context-of-use-specific, multimodal defined approaches continue to enter formal standards review",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VIII / Table 3",
+          "claim": "Distinguish draft standards and open consultations from finalized reusable regulatory recognition",
+          "effect": "supports"
+        },
+        {
+          "section": "Verification checklist",
+          "claim": "TG 497 RTS defined approach is under consultation, not yet an adopted guideline",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-12-ema-nam-operational-expert-group",
+      "date": "2026-10-12",
+      "display_date": "Oct 12, 2026",
+      "temporal_status": "observed",
+      "institution": "European Medicines Agency (EMA)",
+      "title": "EMA establishes NAM Operational Expert Group to assess regulatory use cases",
+      "summary": "EMA published its New Approach Methodologies Operational Expert Group (NAMs OEG) with a provisional mandate document first published October 6. The named expert group reports to EMA's 3Rs and Non-clinical Working Parties, reviews submitted NAM evidence, proposed contexts of use and potential regulatory applicability, and supports the previously launched voluntary data-submission pilot and planned aggregated lessons-learned report. Its establishment strengthens EMA review capacity but confers neither regulatory qualification nor binding method acceptance.",
+      "why_it_matters": "Converts the September voluntary NAM evidence-submission channel into named expert review infrastructure with cross-network learning; builds assessment capacity while leaving reusable qualification and demonstrable decisions outstanding.",
+      "stage": [
+        "qualification",
+        "review-infrastructure"
+      ],
+      "domain": [
+        "ema",
+        "europe",
+        "nams",
+        "regulatory-review",
+        "reviewer-expertise",
+        "qualification",
+        "voluntary-data-submission"
+      ],
+      "materiality": "high",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.ema.europa.eu/en/committees/working-parties-other-groups/chmp-working-parties-other-groups/new-approach-methodologies-operational-expert-group",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.D",
+          "claim": "Formal regulator review capacity and aggregated lessons help make qualification knowledge reusable",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VIII / Table 3",
+          "claim": "Reviewer expertise, structured submission assessment and regulatory-learning milestones",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "Selected institutional milestones, 2022–2026",
+          "effect": "requires_update"
+        },
+        {
+          "section": "Verification checklist",
+          "claim": "Separate completed establishment of operational expert group from future feedback, accepted methods or qualifications",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-oecd-biotransformation-givimp-reporting-draft",
+      "date": "2026-10-16",
+      "display_date": "Oct 16, 2026",
+      "temporal_status": "emerging",
+      "institution": "OECD Working Party of the National Coordinators of the Test Guidelines Programme",
+      "title": "OECD opens draft biotransformation reporting guidance to consultation",
+      "summary": "OECD published a first commenting round (open October 15–November 24, 2026) on proposed Reporting Guidance for Biotransformation Systems as an addition to its Good In Vitro Method Practice (GIVIMP) guidance. Led by the Czech Republic, Sweden and the United Kingdom, the project proposes reporting recommendations and a checklist for biotransformation additions to in-vitro cell culture methods, with new and amended GIVIMP sections and annexes. The amendments remain a draft under review, not final OECD guidance or an accepted test method.",
+      "why_it_matters": "Develops reporting and reproducibility infrastructure for metabolic competence in human-relevant in-vitro models, a constraint on cross-site evidence reuse; the public consultation is a process milestone, not validated multi-laboratory performance.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure",
+        "international-convergence"
+      ],
+      "domain": [
+        "oecd",
+        "standards",
+        "draft-guidance",
+        "in-vitro",
+        "biotransformation",
+        "reporting",
+        "reproducibility"
+      ],
+      "materiality": "medium",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.oecd.org/en/events/public-consultations/2026/10/first-commenting-round-on-the-draft-reporting-guidance-for-biotransformation-systems-addition-to-the-guidance-document-on-good-in-vitro-method-practice.html",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.B/III.D",
+          "claim": "Standardized reporting of biological model characteristics and metabolism is part of reproducible qualification infrastructure",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VIII / Table 3",
+          "claim": "Draft guidance and open consultation are not a completed inter-laboratory standard",
+          "effect": "supports"
+        },
+        {
+          "section": "Verification checklist",
+          "claim": "GIVIMP biotransformation reporting addition remains a draft consultation",
           "effect": "requires_update"
         }
       ]
