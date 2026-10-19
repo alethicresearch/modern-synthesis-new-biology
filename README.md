@@ -9,7 +9,7 @@ The project now has two connected layers:
 - a **historical and emerging evidence corpus** documenting what has actually happened;
 - a **prospective roadmap** specifying observable milestones that could mark, accelerate, or test the next stages of the transition.
 
-The public site defaults to **major milestones only** so the history remains readable. Clear that checkbox to expose the larger research corpus.
+The public site defaults to a **curated major-milestone timeline and chronology**. Use the roadmap's **Show** selector to expand to major plus supporting events, or the full source-linked record including pending-process watchlist entries. The three tiers affect editorial visibility, not factual status or evidentiary reliability. Forecasts and recommendations remain distinct in `prospective.json`.
 
 Observed developments are interpreted through three analytically different forms of progress:
 
@@ -21,7 +21,7 @@ The roadmap also distinguishes **foundations**, **observed events**, **emerging 
 
 ## Data
 
-`data/events.json` is the source of truth for historical, observed, and emerging evidence. It now includes fields for temporal status, analytical significance, a `major_milestone` flag, source status, and manuscript impact.
+`data/events.json` is the source of truth for historical, observed, and emerging evidence. It includes temporal status, analytical significance, editorial tier (`major`, `supporting`, `watchlist`), backward-compatible `major_milestone` flag, source status and manuscript impact. A coordinated initiative is normally one event with multiple primary-source records.
 
 `data/prospective.json` stores forward-looking targets. Each prospective milestone can specify a target date, type (`forecast`, `recommendation`, or `catalytic_proposal`), actors, observable success criteria, dependencies, current status, and links to related observed events.
 

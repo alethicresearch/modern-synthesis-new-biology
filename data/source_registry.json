@@ -383,39 +383,16 @@
           "checked_at": "2026-10-19"
         },
         {
-          "label": "Biohub — Virtual Biology Initiative expansion and investment context",
-          "short_label": "Biohub consortium",
+          "label": "Biohub — Virtual Biology Initiative expansion and three-industry-partner $300 million commitment",
+          "short_label": "Biohub industry commitment",
           "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
           "type": "industry_announcement",
           "role": "funding_context",
           "verified_by": "official-biohub-page",
           "checked_at": "2026-10-19"
         }
-      ]
-    },
-    "2026-10-07-vbi-industry-300m-predictive-biology": {
-      "source_status": "primary_source_verified",
-      "canonical_source_url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
-      "sources": [
-        {
-          "label": "Biohub — collective $300 million VBI commitment reported for three industry partners",
-          "short_label": "Biohub investment statement",
-          "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
-          "type": "industry_announcement",
-          "role": "primary_document",
-          "verified_by": "official-consortium-page",
-          "checked_at": "2026-10-19"
-        },
-        {
-          "label": "DOE — separate formal MOU and public investment commitments",
-          "short_label": "DOE MOU context",
-          "url": "https://www.energy.gov/science/articles/doe-nih-and-biohub-partner-build-foundational-data-predictive-biological-super",
-          "type": "agency_announcement",
-          "role": "implementation_context",
-          "verified_by": "official-doe-page",
-          "checked_at": "2026-10-19"
-        }
-      ]
+      ],
+      "merge_note": "The Biohub VBI industry commitment formerly appeared under 2026-10-07-vbi-industry-300m-predictive-biology; it was merged into this October 7 coordinated-initiative record to avoid double-counting."
     },
     "2026-10-09-oecd-rts-skin-sensitisation-consultation": {
       "source_status": "primary_source_verified",

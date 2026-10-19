@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-19",
-  "schema_version": 2,
+  "schema_version": 3,
   "events": [
     {
       "id": "2022-12-fda-modernization-2",
@@ -23,7 +23,8 @@
       "source_status": "manuscript_seed",
       "manuscript_ref": "[2]",
       "source_url": null,
-      "manuscript_impacts": []
+      "manuscript_impacts": [],
+      "editorial_tier": "major"
     },
     {
       "id": "2024-01-complement-arie-concept",
@@ -42,7 +43,7 @@
         "infrastructure"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "manuscript_ref": "[18,19]",
       "source_url": "https://commonfund.nih.gov/complementarie",
@@ -52,7 +53,8 @@
           "claim": "Large-scale human-based research infrastructure was institutionally planned before the later awards",
           "effect": "supports chronology"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2024-05-29-liver-mps-ring-trial",
@@ -85,7 +87,8 @@
           "claim": "Cross-site reproducibility is a concrete qualification bottleneck being tested by industry",
           "effect": "supports"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2024-09-24-fda-istand-liver-chip",
@@ -116,7 +119,8 @@
           "claim": "ISTAND as reusable qualification infrastructure",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2025-04-03-complement-arie-vqn",
@@ -147,7 +151,8 @@
           "claim": "Qualification requires reusable infrastructure",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2025-04-10-fda-roadmap",
@@ -177,7 +182,8 @@
           "claim": "Statutory flexibility became an operational FDA transition program",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2025-04-29-nih-human-based-initiative",
@@ -208,7 +214,8 @@
           "claim": "The transition includes funding and review institutions as well as product regulation",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2025-07-10-nih-nofo-model-policy",
@@ -238,7 +245,8 @@
           "claim": "Institutional commitment can be traced into concrete funding rules",
           "effect": "strongens implementation evidence"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2025-07-31-fda-istand-permanent",
@@ -267,7 +275,8 @@
           "claim": "Reusable regulatory credibility requires durable qualification infrastructure",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2025-09-25-nih-standardized-organoid-center",
@@ -289,7 +298,7 @@
         "funding"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "manuscript_ref": null,
       "source_url": "https://www.nih.gov/news-events/news-releases/nih-establishes-nations-first-dedicated-organoid-development-center-reduce-reliance-animal-modeling",
@@ -299,7 +308,8 @@
           "claim": "Investment is shifting toward reproducibility and standardization rather than invention alone",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2025-09-30-complement-r2p-launch",
@@ -330,7 +340,8 @@
           "claim": "Funding should connect development to qualification and use",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2025-10-24-pmda-nhp-dart-woe",
@@ -352,7 +363,7 @@
         "weight-of-evidence"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "manuscript_ref": null,
       "source_url": "https://www.pmda.go.jp/files/000278904.pdf",
@@ -362,7 +373,8 @@
           "claim": "Conditional NHP replacement is emerging outside FDA",
           "effect": "strengthens international-convergence argument with nonbinding-status caveat"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2025-11-11-uk-replacing-animals",
@@ -392,7 +404,8 @@
           "claim": "National commitments can be made operational through dated validation and uptake milestones",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2025-12-fda-mab-guidance",
@@ -413,7 +426,7 @@
         "guidance"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "manuscript_ref": "[6]",
       "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/monoclonal-antibodies-streamlined-nonclinical-safety-studies",
@@ -423,7 +436,8 @@
           "claim": "Policy is beginning to alter modality-specific nonclinical expectations",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2025-12-aim-mash-qualification",
@@ -453,7 +467,8 @@
           "claim": "Formal qualification can make computational tools reusable across development programs",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-01-22-epa-2035",
@@ -473,7 +488,7 @@
         "animal-use"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "manuscript_ref": null,
       "source_url": "https://www.epa.gov/newsreleases/administrator-zeldin-gets-epa-back-track-eliminate-animal-testing-after-biden-admin",
@@ -483,7 +498,8 @@
           "claim": "Commitments are becoming time-bounded and operational",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-02-02-fda-istand-metrics",
@@ -513,7 +529,8 @@
           "claim": "Qualification activity is growing faster than completed qualification",
           "effect": "provides denominator"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-02-10-iamps-launch",
@@ -544,7 +561,8 @@
           "claim": "Industry coordination can support shared standards and regulatory engagement",
           "effect": "supports"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-03-18-complement-arie-awards",
@@ -575,7 +593,8 @@
           "claim": "Funding is shifting toward validation and implementation infrastructure",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-03-18-fda-general-nam-guidance",
@@ -605,7 +624,8 @@
           "claim": "Qualification can become a generalizable regulatory function",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-03-25-mhra-nonanimal-medicines-approach",
@@ -638,7 +658,8 @@
           "claim": "Case-by-case non-animal regulatory practice can become explicit general review policy",
           "effect": "strengthens routinization argument"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-04-20-fda-year-one",
@@ -670,7 +691,8 @@
           "claim": "Publishing accepted contexts can make regulatory learning reusable",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-05-13-pmda-mab-toxicity-rationalization",
@@ -701,7 +723,8 @@
           "claim": "Regulators are converging on endpoint- and modality-specific rationalization of NHP toxicology",
           "effect": "strengthens with nonbinding-status caveat"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-05-27-isscr-consortium",
@@ -733,7 +756,8 @@
           "claim": "Cross-sector standards infrastructure is expanding around human stem-cell models",
           "effect": "supports"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-05-29-fda-oncology-guidance",
@@ -764,7 +788,8 @@
           "claim": "Animal-reduction policy is spreading across drug-development contexts",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-06-01-eu-roadmap",
@@ -794,7 +819,8 @@
           "claim": "International commitments increasingly include implementation architecture",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-06-02-epa-nams",
@@ -815,7 +841,7 @@
         "method-acceptance"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "manuscript_ref": "[50]",
       "source_url": "https://www.epa.gov/newsreleases/trump-epa-takes-new-action-eliminate-animal-testing",
@@ -825,7 +851,8 @@
           "claim": "Regulatory acceptance can be made extensible through a continuing nomination mechanism",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-06-03-fda-istand-digital-liver",
@@ -847,7 +874,7 @@
         "istand"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "manuscript_ref": null,
       "source_url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-accepts-first-silico-drug-development-tool-under-istand-program-help-predict-drug-induced-liver",
@@ -857,7 +884,8 @@
           "claim": "Multiple NAM classes are entering reusable qualification pathways",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-06-15-nih-oriva",
@@ -888,7 +916,8 @@
           "claim": "Institutional capacity is needed for transition from development to application",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-07-02-oecd-invitro-test-guidelines",
@@ -933,7 +962,8 @@
           "claim": "Standards and qualification milestones should recognize OECD-level method standardization as an observable transition outcome",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-07-08-iso-mps-digital-twin-cd",
@@ -978,7 +1008,8 @@
           "claim": "Credibility can become reusable when evidence and provenance are standardized across platforms and jurisdictions",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "watchlist"
     },
     {
       "id": "2026-07-20-complement-r2p-phase1",
@@ -1008,7 +1039,8 @@
           "claim": "Qualification pipelines are beginning to acquire staged candidates",
           "effect": "supports"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-07-22-fnih-vqn-three-additional-pilots",
@@ -1048,7 +1080,8 @@
           "claim": "Priority human-based platforms are entering structured validation-oriented development pipelines",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-08-04-nci-animal-justification",
@@ -1068,7 +1101,7 @@
         "human-models"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "manuscript_ref": "[20]",
       "source_url": "https://www.cancer.gov/grants-training/nci-bottom-line-blog/2026/guidance-animal-models",
@@ -1078,7 +1111,8 @@
           "claim": "Funding review can make model relevance and human validation explicit decision criteria",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-08-06-fda-qsp-mabel",
@@ -1099,7 +1133,7 @@
         "dose-selection"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "manuscript_ref": "[9,10]",
       "source_url": "https://www.fda.gov/industry/fda-actions-accelerate-and-modernize-early-and-late-stage-clinical-development",
@@ -1109,7 +1143,8 @@
           "claim": "Computational methods are entering defined decisions historically informed by animal toxicology",
           "effect": "strengthens with draft-status caveat"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-08-18-mhra-microbiome-position",
@@ -1141,7 +1176,8 @@
           "claim": "Information-value and species-relevance constraints extend beyond highly human-specific biologics",
           "effect": "broadens provisional generality"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-08-25-niehs-sciome",
@@ -1166,7 +1202,8 @@
       "source_status": "manuscript_seed",
       "manuscript_ref": "[57]",
       "source_url": null,
-      "manuscript_impacts": []
+      "manuscript_impacts": [],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-08-27-epa-regulatory-use",
@@ -1196,7 +1233,8 @@
           "claim": "Regulatory adoption should be measured by avoided studies in defined contexts",
           "effect": "direct evidence"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-08-31-fda-icmra-endotoxin",
@@ -1232,7 +1270,8 @@
           "claim": "Credibility can become reusable and internationally portable",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-09-01-ema-nam-vds-pilot",
@@ -1255,7 +1294,7 @@
         "international-convergence"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "source_url": "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/ethical-use-animals-medicine-testing/regulatory-acceptance-new-approach-methodologies-nams-reduce-animal-use-testing/new-approach-methodologies-replace-reduce-animal-testing-voluntary-data-submission-pilot",
       "manuscript_ref": null,
@@ -1275,7 +1314,8 @@
           "claim": "Qualification and regulatory-engagement milestones should track structured pathways for regulator review of NAM evidence outside marketing-authorisation applications",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-nih-reviewer-eoi",
@@ -1299,7 +1339,8 @@
       "manuscript_ref": "[55]",
       "source_url": null,
       "manuscript_impacts": [],
-      "date_precision": "month"
+      "date_precision": "month",
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-09-02-fda-istand-metrics",
@@ -1340,7 +1381,8 @@
           "claim": "Qualification activity is accumulating faster than completed reusable precedents",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-09-09-emulate-liver-chip-fqp",
@@ -1383,7 +1425,8 @@
           "claim": "Cross-site reproducibility and scalable platform transfer are becoming part of the evidence package for reusable regulatory credibility",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-09-09-fda-invitro-nam-scoping",
@@ -1406,7 +1449,7 @@
         "adoption-measurement"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/42716173/",
       "manuscript_ref": null,
@@ -1426,7 +1469,8 @@
           "claim": "Selected institutional and evidentiary milestones, 2022–2026",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-09-10-iso-mps-ooc-vocabulary-dis",
@@ -1469,7 +1513,8 @@
           "claim": "Selected institutional and standards milestones, 2022–2026",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "watchlist"
     },
     {
       "id": "2026-09-15-curi-bio-nmj-istand-loi",
@@ -1493,7 +1538,7 @@
         "animal-replacement"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "source_url": "https://www.curibio.com/news/fda-accepts-curi-bios-letter-of-intent-into-istand-program-to-qualify-3d-neuromuscular-junction-assay-as-a-non-animal-replacement-for-botulinum-toxin-potency-testing",
       "manuscript_ref": null,
@@ -1513,7 +1558,8 @@
           "claim": "Selected institutional milestones, 2022–2026",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-09-18-fda-cder-nam-use-infrastructure",
@@ -1537,7 +1583,7 @@
         "animal-reduction"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "source_url": "https://www.fda.gov/drugs/cder-streamlined-nonclinical-studies-and-acceptable-new-approach-methodologies-nams/new-approach-methodologies-nams-database-use-case-examples",
       "manuscript_ref": null,
@@ -1567,7 +1613,8 @@
           "claim": "Selected institutional milestones, 2022–2026",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-09-21-fda-nonclinical-rule-nam-database",
@@ -1621,7 +1668,8 @@
           "claim": "Application-level NAM use should become publicly measurable without being conflated with animal-study displacement",
           "effect": "material progress; target remains in progress"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-09-21-hhs-reducing-animal-testing-tracker",
@@ -1645,7 +1693,8 @@
       "major_milestone": false,
       "source_status": "primary_source_verified",
       "source_url": "https://www.hhs.gov/reducing-animal-testing/index.html",
-      "manuscript_ref": null
+      "manuscript_ref": null,
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-09-21-nih-animal-use-reporting-reviewers",
@@ -1668,7 +1717,7 @@
         "measurement"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "source_url": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-27-001.html",
       "manuscript_ref": null,
@@ -1688,7 +1737,8 @@
           "claim": "Reviewer expertise is a managed component of qualification and adoption infrastructure",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-09-21-nih-human-based-infrastructure",
@@ -1731,7 +1781,8 @@
           "claim": "Selected institutional milestones, 2022–2026",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-09-22-arpa-h-circle-digital-twin-regulatory",
@@ -1754,7 +1805,7 @@
         "regulatory-readiness"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "source_url": "https://arpa-h.gov/news-and-events/arpa-h-selects-teams-transform-critical-care-new-lifesaving-technology",
       "manuscript_ref": null,
@@ -1774,7 +1825,8 @@
           "claim": "Formal infrastructure for digital-twin validation and FDA readiness is emerging",
           "effect": "material_progress"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-09-22-systimmune-si-b037-nam-ind",
@@ -1823,7 +1875,8 @@
           "claim": "Selected institutional and adoption milestones, 2022–2026",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-09-23-fda-cber-ngs-adventitious",
@@ -1862,7 +1915,8 @@
           "claim": "FDA activity is extending into additional biologics safety contexts",
           "effect": "leading_indicator"
         }
-      ]
+      ],
+      "editorial_tier": "watchlist"
     },
     {
       "id": "2026-09-23-react4life-cbrn-ooc-prototype",
@@ -1900,7 +1954,8 @@
           "claim": "Federal countermeasure programs are beginning to operationalize MPS platforms, but formal interagency boundary guidance remains outstanding",
           "effect": "leading_indicator"
         }
-      ]
+      ],
+      "editorial_tier": "watchlist"
     },
     {
       "id": "2026-09-25-arpa-h-cosmos-mps-organoid",
@@ -1938,7 +1993,8 @@
           "claim": "Selected institutional milestones, 2022–2026",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "watchlist"
     },
     {
       "id": "2026-09-28-nist-tbmnk-interlaboratory-standardization",
@@ -1962,7 +2018,7 @@
         "reference-data"
       ],
       "materiality": "medium",
-      "major_milestone": false,
+      "major_milestone": true,
       "source_status": "primary_source_verified",
       "source_url": "https://www.nist.gov/publications/standardizing-human-tbmnk-cell-assay-across-instrument-platforms-new-framework",
       "manuscript_ref": null,
@@ -1977,7 +2033,8 @@
           "claim": "Human-based platform reproducibility can be demonstrated through multi-site standards studies",
           "effect": "strengthens"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-09-30-arpa-h-surpass",
@@ -2001,7 +2058,7 @@
         "regulatory-science"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "source_url": "https://arpa-h.gov/explore-funding/programs/surpass",
       "manuscript_ref": null,
@@ -2026,7 +2083,8 @@
           "claim": "SURPASS integrates predictive models, common controls, real-time inference and clinical operations into a shared trial architecture",
           "effect": "leading_indicator"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-09-30-atcc-fda-niaid-nam-contracts",
@@ -2050,7 +2108,7 @@
         "quality-control"
       ],
       "materiality": "high",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "source_url": "https://www.atcc.org/about-us/newsroom/2026-news-releases/atcc-advanced-models-platform-define-nonclinical-research",
       "manuscript_ref": null,
@@ -2075,7 +2133,8 @@
           "claim": "Selected institutional milestones, 2022–2026",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-10-01-icmra-animal-testing-statement",
@@ -2129,17 +2188,18 @@
           "claim": "International-convergence evidence current through manuscript cutoff",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-10-07-doe-nih-biohub-predictive-biology-mou",
       "date": "2026-10-07",
       "display_date": "Oct 7, 2026",
       "temporal_status": "observed",
-      "institution": "U.S. Department of Energy / NIH / Biohub",
-      "title": "DOE, NIH and Biohub sign predictive-biology data partnership",
-      "summary": "DOE's Office of Science, NIH and Biohub announced a signed memorandum of understanding to coordinate open, high-quality biological datasets, measurements, computation and shared infrastructure for predictive models of cellular responses to interventions. DOE reports a commitment of more than $500 million over five years to fundamental cell research, measurement, modelling and computational capabilities. NIH contributes coordination of existing resources and datasets; Biohub's separately announced $500 million Virtual Biology Initiative commitment predates this MOU. No completed validated virtual-cell model or demonstrated animal-study displacement is reported.",
-      "why_it_matters": "A documented cross-agency and philanthropic institutional partnership mobilizes data, standards, computational infrastructure and experimental measurement at scale, a concrete commitment toward composable computational biology. It is not a NAM validation, reusable regulatory qualification, regulatory adoption, or realized displacement.",
+      "institution": "U.S. Department of Energy / NIH / Biohub / industry partners",
+      "title": "DOE, NIH, Biohub and industry partners commit to predictive-biology infrastructure",
+      "summary": "On October 7, DOE, NIH and Biohub announced a signed memorandum of understanding to coordinate open biological datasets, measurements and computational infrastructure for predictive models of human cellular responses. DOE described a commitment of more than $500 million over five years toward fundamental cell research and modeling. In the same initiative, Biohub separately reported a collective $300 million commitment from Google DeepMind, Isomorphic Labs and Meta, alongside its pre-existing $500 million Virtual Biology Initiative pledge. These are distinct reported commitments, not evidence of funds disbursed or models validated. No regulatory qualification, acceptance or measured animal-study displacement was announced.",
+      "why_it_matters": "A single coordinated initiative links federal research, philanthropic data-generation infrastructure and substantive industry investment, strengthening commitment to transferable predictive-biology models without demonstrating their validation or regulatory adoption.",
       "stage": [
         "commitment",
         "research-infrastructure",
@@ -2179,36 +2239,7 @@
           "section": "Verification checklist",
           "claim": "Clarify Bio Genesis data partnership versus NIH autonomous human-biology laboratory and do not aggregate previously pledged funding as newly awarded",
           "effect": "requires_update"
-        }
-      ]
-    },
-    {
-      "id": "2026-10-07-vbi-industry-300m-predictive-biology",
-      "date": "2026-10-07",
-      "display_date": "Oct 7, 2026",
-      "temporal_status": "observed",
-      "institution": "Google DeepMind / Isomorphic Labs / Meta / Biohub",
-      "title": "Three industry partners commit $300 million collectively to Virtual Biology Initiative",
-      "summary": "Biohub publicly reports that Google DeepMind, Isomorphic Labs and Meta collectively committed $300 million to its Virtual Biology Initiative to develop measurement technologies and multimodal datasets for predictive models of life. The report is a consortium-level statement of industry investment commitments, not individual verified transfers, grant awards, delivered data, validated model performance or regulatory adoption. Biohub's existing $500 million pledge and NIH datasets built using earlier federal investment should not be treated as new October disbursements.",
-      "why_it_matters": "Substantive multi-company investment supports industrial-scale data generation and predictive-biology platform infrastructure, while remaining at a commitment rather than implementation, qualification, or demonstrated animal-study replacement stage.",
-      "stage": [
-        "commitment",
-        "research-infrastructure"
-      ],
-      "domain": [
-        "industry-investment",
-        "biohub",
-        "virtual-biology",
-        "computational-biology",
-        "data-infrastructure",
-        "pharma-rd"
-      ],
-      "materiality": "medium",
-      "major_milestone": false,
-      "source_status": "primary_source_verified",
-      "source_url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
-      "manuscript_ref": null,
-      "manuscript_impacts": [
+        },
         {
           "section": "VII",
           "claim": "Private co-investment can help address shared first-mover data and infrastructure costs",
@@ -2224,7 +2255,11 @@
           "claim": "Company-reported $300 million aggregate commitment should not be equated with cash disbursement, novel NIH funding, or published performance results",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "merged_from_event_ids": [
+        "2026-10-07-vbi-industry-300m-predictive-biology"
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-10-09-oecd-rts-skin-sensitisation-consultation",
@@ -2270,7 +2305,8 @@
           "claim": "TG 497 RTS defined approach is under consultation, not yet an adopted guideline",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "watchlist"
     },
     {
       "id": "2026-10-12-ema-nam-operational-expert-group",
@@ -2320,7 +2356,8 @@
           "claim": "Separate completed establishment of operational expert group from future feedback, accepted methods or qualifications",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "major"
     },
     {
       "id": "2026-10-16-oecd-biotransformation-givimp-reporting-draft",
@@ -2366,7 +2403,8 @@
           "claim": "GIVIMP biotransformation reporting addition remains a draft consultation",
           "effect": "requires_update"
         }
-      ]
+      ],
+      "editorial_tier": "watchlist"
     }
   ]
 }

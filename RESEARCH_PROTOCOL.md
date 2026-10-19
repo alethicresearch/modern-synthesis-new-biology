@@ -40,6 +40,16 @@ Record an observed event when at least one of the following is true:
 
 Exclude routine publicity, conference announcements without a substantive action, duplicate announcements, commentary, aspirational statements without institutional action, and minor updates that do not alter the trajectory or evidence base.
 
+## Editorial visibility: major, supporting, watchlist
+
+- **Major**: a selective, readable sequence (target ~15–25 historical events) that carries the core Commitment → Qualification → Adoption argument. This is the public default, including in the detailed chronology.
+- **Supporting**: source-grounded institutional, regulatory, industry, reproducibility or methodological evidence worth retaining without making the primary chronology dense.
+- **Watchlist**: a documented emerging process whose key outcome has not yet occurred—such as a consultation, draft standard, solicitation or prototype. Keep the completed act of opening a consultation distinct from future adoption or qualification. Prospective *recommendations and forecasts* remain in their separate dataset.
+
+Editorial tiers are explicitly separate from evidence strength (`source_status`), importance (`materiality`), temporal class (`temporal_status`), and transition stage (`stage`). A major label is a display judgment, not a declaration of regulatory acceptance.
+
+**Deduplication:** A coordinated initiative with several partner announcements on the same substantive action should have one ledger event, with all distinct official sources retained in the source registry. Keep separate events for genuinely independent later decisions, e.g. formal qualification or demonstrated displacement. Avoid double-counting investor commitments, awards, and payments.
+
 ## Major milestone flag
 
 `major_milestone: true` is a display and analytical judgment, not a truth-status field. It means the event is sufficiently consequential to belong in a compact overview of the transition. The full corpus remains available through the site.

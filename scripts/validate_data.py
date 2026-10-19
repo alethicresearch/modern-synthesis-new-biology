@@ -81,10 +81,11 @@ def validate_events(data):
         error("events.json: events must be an array")
         return
     check_unique(events, "events.json")
-    required = ["id", "date", "display_date", "temporal_status", "institution", "title", "summary", "stage", "domain", "materiality", "major_milestone", "source_status"]
+    required = ["id", "date", "display_date", "temporal_status", "institution", "title", "summary", "stage", "domain", "materiality", "editorial_tier", "major_milestone", "source_status"]
     require(events, "events.json", required)
     allowed_temporal = {"foundation", "observed", "emerging"}
     allowed_materiality = {"high", "medium", "low"}
+    allowed_tier = {"major", "supporting", "watchlist"}
     allowed_source = {"primary_source_verified", "manuscript_seed", "needs_public_source", "secondary_source_only"}
     for e in events:
         rid = e.get("id", "<missing-id>")
@@ -96,6 +97,10 @@ def validate_events(data):
             error(f"events.json:{rid}: invalid source_status")
         if not isinstance(e.get("major_milestone"), bool):
             error(f"events.json:{rid}: major_milestone must be boolean")
+        if e.get("editorial_tier") not in allowed_tier:
+            error(f"events.json:{rid}: invalid editorial_tier")
+        elif e.get("major_milestone") != (e["editorial_tier"] == "major"):
+            error(f"events.json:{rid}: major_milestone must agree with editorial_tier")
         if not isinstance(e.get("stage"), list) or not e.get("stage"):
             error(f"events.json:{rid}: stage must be a non-empty array")
         if not isinstance(e.get("domain"), list):

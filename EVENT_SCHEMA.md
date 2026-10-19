@@ -2,7 +2,7 @@
 
 ## `data/events.json`
 
-Top-level fields: `updated`, `schema_version`, `events`.
+Top-level fields: `updated`, `schema_version` (currently 3), `events`.
 
 Each observed/foundation/emerging event should use:
 
@@ -19,6 +19,7 @@ Each observed/foundation/emerging event should use:
   "stage": ["commitment", "qualification", "adoption"],
   "domain": ["tags"],
   "materiality": "high | medium | low",
+  "editorial_tier": "major | supporting | watchlist",
   "major_milestone": true,
   "source_status": "primary_source_verified | manuscript_seed | needs_public_source | secondary_source_only",
   "source_url": "https://... or null",
@@ -33,7 +34,9 @@ Each observed/foundation/emerging event should use:
 
 `stage` may contain supplemental process tags where useful, but at least one of the core stages should be used whenever the event can be classified as commitment, qualification, or adoption.
 
-`major_milestone` controls the compact/default roadmap view. It is independent of `materiality`: a high-materiality specialist development may still be omitted from the major-milestones view if it does not improve the compact explanatory history.
+`editorial_tier` controls three levels of **editorial visibility**, independently of scientific confidence or `materiality`: `major` for the curated transition narrative (target ~15–25 events), `supporting` for verified substantive details, and `watchlist` for recorded emerging processes awaiting consequential outcomes (e.g., draft standards, consultations or prototypes). Watchlist records can be verified observations of an incomplete process; their outcomes must not be described as achieved. Neither `watchlist` nor `supporting` makes a record a prospective milestone.
+
+`major_milestone` remains the backward-compatible boolean display flag and **must be true iff `editorial_tier` is `major`**. The public site defaults to major records and allows expansion to supporting and watchlist entries. The tiers affect display, not historical truth or evidentiary status. A high-materiality development need not be a major milestone.
 
 `temporal_status: emerging` is reserved for processes with concrete institutional evidence whose outcome is not complete. The summary must state the incomplete stage explicitly.
 
@@ -111,3 +114,7 @@ Prospective records are hypotheses, recommendations, or programmatic targets, no
 IDs should remain stable after publication. Correcting a date, stage, source, or wording should not create a new ID. A genuinely distinct institutional action receives its own record even when it occurs on the same day or is announced in the same press release.
 
 Combined records should be avoided when they merge distinct institutions or distinct transition stages. This is especially important for quantitative analyses of Commitment → Qualification → Adoption.
+
+## Coordinated announcements and deduplication
+
+Announcements concerning the same coordinated initiative should normally be represented as one observed event with multiple provenance sources and separate financial-stage caveats. Distinct later qualification or adoption decisions may be separate events. If a briefly published duplicate is merged, preserve its original identifier under `merged_from_event_ids` in the surviving event and a merge note in its source registry overlay.
