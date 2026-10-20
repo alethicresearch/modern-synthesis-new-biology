@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "schema_version": 3,
   "events": [
     {
@@ -727,6 +727,50 @@
       "editorial_tier": "supporting"
     },
     {
+      "id": "2026-05-25-fda-cdrh-iso10993-1-recognition",
+      "date": "2026-05-25",
+      "display_date": "May 25, 2026",
+      "temporal_status": "observed",
+      "institution": "FDA Center for Devices and Radiological Health (CDRH)",
+      "title": "FDA partially recognizes ISO 10993-1:2025 for device biological-risk evaluation",
+      "summary": "FDA CDRH entered partial recognition 2-313 for the sixth edition of ISO 10993-1:2025, a risk-management framework for biological safety evaluation of medical devices. Recognition excludes the words 'consumer products' in clause 6.5.11.3 and clause 6.9 on biological-risk estimation. FDA continues accepting conformity declarations for the fifth edition through July 1, 2029. This is recognition of identified portions of a consensus standard, not qualification of a particular NAM, acceptance of all approaches in every device submission, or evidence that animal testing was displaced.",
+      "why_it_matters": "A formal medical-device standards-recognition action creates a concrete regulatory pathway for risk-based biological evidence beyond drug-development qualification programs. Its scope and FDA exclusions make explicit the distinction between recognizing a framework and accepting any specific non-animal method or avoided study.",
+      "stage": [
+        "qualification"
+      ],
+      "domain": [
+        "fda",
+        "medical-devices",
+        "biocompatibility",
+        "consensus-standards",
+        "ISO-10993",
+        "risk-based-evidence"
+      ],
+      "materiality": "medium",
+      "editorial_tier": "supporting",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfStandards/detail.cfm?standard__identification_no=47116",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.C/III.D",
+          "claim": "Formal FDA recognition of risk-based device evaluation standards illustrates a device-specific route to reusable regulatory evidence distinct from drug DDT qualification",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VI",
+          "claim": "Recognition has a defined partial scope and transition period, not blanket acceptance of individual NAMs",
+          "effect": "qualifies"
+        },
+        {
+          "section": "References / verification checklist",
+          "claim": "Record CDRH recognition 2-313, two excluded provisions and July 2029 transition; do not infer avoided animal studies",
+          "effect": "requires_update"
+        }
+      ]
+    },
+    {
       "id": "2026-05-27-isscr-consortium",
       "date": "2026-05-27",
       "display_date": "May 27, 2026",
@@ -1082,6 +1126,53 @@
         }
       ],
       "editorial_tier": "supporting"
+    },
+    {
+      "id": "2026-07-24-efsa-nams4nano-qualification-plan",
+      "date": "2026-07-24",
+      "display_date": "Jul 24, 2026",
+      "temporal_status": "emerging",
+      "institution": "European Food Safety Authority (EFSA) / NAMs4NANO consortium",
+      "title": "EFSA-backed consortium publishes proposed NAM qualification-system implementation plan",
+      "summary": "An EFSA-funded consortium published an implementation plan for a proposed voluntary, expert-led, context-of-use-specific NAM qualification system in food and feed safety assessment, initially emphasizing nanomaterials. EFSA describes consultation and invites external case studies through October 31, 2026. The plan includes readiness criteria and stakeholder testing, but EFSA has not established the proposed system as an operational regulatory qualification route or qualified a named method under it.",
+      "why_it_matters": "Provides a concrete non-pharmaceutical European proposal for evaluating non-guideline NAM evidence within a defined regulatory context, distinguishing flexible context-specific qualification from broad OECD Test Guideline validation and Mutual Acceptance of Data. It remains a proposal under consultation, not implemented recognition.",
+      "stage": [
+        "qualification",
+        "validation-infrastructure",
+        "international-convergence"
+      ],
+      "domain": [
+        "efsa",
+        "food-and-feed",
+        "nanomaterials",
+        "qualification",
+        "context-of-use",
+        "consultation",
+        "regulatory-science"
+      ],
+      "materiality": "medium",
+      "editorial_tier": "watchlist",
+      "major_milestone": false,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.efsa.europa.eu/en/topics/topic/nanotechnology",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "III.B/III.D",
+          "claim": "Formalization of context-of-use-specific NAM qualification is being proposed beyond medicines regulation, with explicit readiness criteria",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VI / Table 3",
+          "claim": "Convergence and reusable qualification remain pending; consultation and a commissioned plan are not evidence of regulator acceptance",
+          "effect": "qualifies"
+        },
+        {
+          "section": "References / verification checklist",
+          "claim": "Add EFSA-supported 24 July implementation report and 31 October case-study consultation, clearly marked proposed",
+          "effect": "requires_update"
+        }
+      ]
     },
     {
       "id": "2026-08-04-nci-animal-justification",
