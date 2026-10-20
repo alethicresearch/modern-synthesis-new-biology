@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "schema_version": 1,
   "purpose": "Verified source overlays for roadmap records. This registry can add multiple well-labeled sources, correct source status, or annotate unresolved sourcing without erasing the research-side record.",
   "records": {
@@ -436,6 +436,45 @@
           "role": "primary_document",
           "verified_by": "official-oecd-page",
           "checked_at": "2026-10-19"
+        }
+      ]
+    },
+    "2026-05-25-fda-cdrh-iso10993-1-recognition": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfStandards/detail.cfm?standard__identification_no=47116",
+      "sources": [
+        {
+          "label": "FDA CDRH recognition of ISO 10993-1:2025, number 2-313",
+          "short_label": "FDA recognition 2-313",
+          "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfStandards/detail.cfm?standard__identification_no=47116",
+          "type": "recognized_consensus_standard",
+          "role": "primary_document",
+          "verified_by": "official-fda-database",
+          "checked_at": "2026-10-20"
+        }
+      ]
+    },
+    "2026-07-24-efsa-nams4nano-qualification-plan": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.efsa.europa.eu/en/topics/topic/nanotechnology",
+      "sources": [
+        {
+          "label": "EFSA qualification-plan status and invitation for case studies",
+          "short_label": "EFSA status",
+          "url": "https://www.efsa.europa.eu/en/topics/topic/nanotechnology",
+          "type": "agency_report",
+          "role": "primary_document",
+          "verified_by": "official-efsa-page",
+          "checked_at": "2026-10-20"
+        },
+        {
+          "label": "EFSA implementation plan, report EN-10282",
+          "short_label": "EFSA report",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-10282",
+          "type": "agency_commissioned_report",
+          "role": "technical_evidence",
+          "verified_by": "efsa-report",
+          "checked_at": "2026-10-20"
         }
       ]
     }
