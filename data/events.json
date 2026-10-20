@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "schema_version": 3,
   "events": [
     {
@@ -1084,6 +1084,54 @@
       "editorial_tier": "supporting"
     },
     {
+      "id": "2026-07-27-ohsu-onprc",
+      "date": "2026-07-27",
+      "display_date": "Jul 27, 2026",
+      "temporal_status": "observed",
+      "institution": "Oregon Health & Science University (OHSU) Board of Directors",
+      "title": "OHSU directs primate-center transition toward NAMs and a smaller colony",
+      "summary": "On July 27, 2026, OHSU's Board adopted Resolution 2026-07-27 directing leadership to prepare a strategic plan for transforming the Oregon National Primate Research Center into a center of excellence in NAM development, validation and benchmarking, while substantially reducing its nonhuman-primate colony and ending its role as a nationwide primate supplier. The plan is to retain research not readily feasible elsewhere and work involving model development, with possible renaming and federal designation changes. The earlier February proposal for full sanctuary conversion did not proceed; the July resolution establishes a hybrid institutional direction, not an implemented facility conversion. The precise population reduction, schedule, implementation funding and NIH approval remain outstanding.",
+      "why_it_matters": "A governing-board decision explicitly connects physical research-infrastructure transition and reduction of legacy animal use to scientific readiness, fiscal constraints, staff and animal welfare. Its potential downstream impact is substantial, but the observable milestone is adoption of a planning mandate: it does not prove animals have been displaced, a sanctuary has opened, an NIH program award has been made, or a NAM has been qualified.",
+      "stage": [
+        "commitment",
+        "research-infrastructure",
+        "validation-infrastructure"
+      ],
+      "domain": [
+        "animal-use",
+        "nonhuman-primates",
+        "institutional-transition",
+        "nams",
+        "qualification",
+        "research-infrastructure",
+        "ohsu",
+        "animal-welfare"
+      ],
+      "materiality": "high",
+      "editorial_tier": "major",
+      "major_milestone": true,
+      "source_status": "primary_source_verified",
+      "source_url": "https://www.ohsu.edu/sites/default/files/2026-07/ohsu-bod-meeting-agenda-and-materials-7-27-2026-accessible.pdf",
+      "manuscript_ref": null,
+      "manuscript_impacts": [
+        {
+          "section": "VI / Table 2",
+          "claim": "Domain maturity and remaining integrated-biology limits constrain how primate-research programs can change",
+          "effect": "strengthens"
+        },
+        {
+          "section": "VIII",
+          "claim": "Large animal-research infrastructures can adopt transition plans without demonstrating completed qualification, conversion or displacement",
+          "effect": "strengthens"
+        },
+        {
+          "section": "Supplementary Table S1",
+          "claim": "High-consequence institutional commitment in 2026 should be distinguished from its planned future outcomes",
+          "effect": "supports"
+        }
+      ]
+    },
+    {
       "id": "2026-08-04-nci-animal-justification",
       "date": "2026-08-04",
       "display_date": "Aug 4, 2026",
@@ -2018,7 +2066,7 @@
         "reference-data"
       ],
       "materiality": "medium",
-      "major_milestone": true,
+      "major_milestone": false,
       "source_status": "primary_source_verified",
       "source_url": "https://www.nist.gov/publications/standardizing-human-tbmnk-cell-assay-across-instrument-platforms-new-framework",
       "manuscript_ref": null,
@@ -2034,7 +2082,7 @@
           "effect": "strengthens"
         }
       ],
-      "editorial_tier": "major"
+      "editorial_tier": "supporting"
     },
     {
       "id": "2026-09-30-arpa-h-surpass",

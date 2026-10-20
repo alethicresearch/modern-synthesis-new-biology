@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "schema_version": 1,
   "purpose": "Verified source overlays for roadmap records. This registry can add multiple well-labeled sources, correct source status, or annotate unresolved sourcing without erasing the research-side record.",
   "records": {
@@ -438,6 +438,40 @@
           "checked_at": "2026-10-19"
         }
       ]
+    },
+    "2026-07-27-ohsu-onprc": {
+      "source_status": "primary_source_verified",
+      "canonical_source_url": "https://www.ohsu.edu/sites/default/files/2026-07/ohsu-bod-meeting-agenda-and-materials-7-27-2026-accessible.pdf",
+      "sources": [
+        {
+          "label": "OHSU Board — Resolution 2026-07-27, strategic framework for ONPRC",
+          "short_label": "OHSU July board resolution",
+          "url": "https://www.ohsu.edu/sites/default/files/2026-07/ohsu-bod-meeting-agenda-and-materials-7-27-2026-accessible.pdf",
+          "type": "board_resolution",
+          "role": "primary_document",
+          "verified_by": "official-institution-board-material",
+          "checked_at": "2026-10-20"
+        },
+        {
+          "label": "OHSU — February 2026 authorization of sanctuary negotiations (superseded proposal)",
+          "short_label": "OHSU February announcement",
+          "url": "https://news.ohsu.edu/2026/02/11/ohsu-enters-discussions-to-transition-onprc-to-primate-sanctuary",
+          "type": "institutional_announcement",
+          "role": "historical_context",
+          "verified_by": "official-institution-page",
+          "checked_at": "2026-10-20"
+        },
+        {
+          "label": "Oregon Public Broadcasting — report confirming the July board vote and implementation caveats",
+          "short_label": "OPB vote report",
+          "url": "https://www.opb.org/article/2026/07/27/ohsu-board-greenlights-plan-for-fewer-monkeys-in-research-investments-in-alternatives/",
+          "type": "news_report",
+          "role": "corroboration",
+          "verified_by": "independent-local-reporting",
+          "checked_at": "2026-10-20"
+        }
+      ],
+      "source_note": "July board resolution is verified institutional commitment to planning. NIH approval, funding, facility renaming, colony reduction, and any displacement remain prospective. February sanctuary conversion was negotiated but not adopted."
     }
   }
 }
